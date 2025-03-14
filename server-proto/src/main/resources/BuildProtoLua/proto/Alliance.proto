@@ -1,0 +1,368 @@
+option java_package = "com.guaji.game.protocol";
+
+//快照需要对象
+message AllianceInfo
+{
+	required int32 id = 1;//唯一ID
+	required int32 allianceId = 2;//公会ID
+	required int32 playerId = 3;//角色名字
+	required int32 contribution = 4;//公会贡献
+	required int32 postion = 5;//公会贡献
+	optional int32 autoFight = 6; // 自动参加Boss战标记，0是没有选中，1是选中
+	optional int32 totalVitality = 7;
+	optional string allianceName = 8;
+}
+
+//公会创建
+message HPAllianceCreateC
+{
+	required string name = 1;//公会名字
+}
+
+//返回的公会基础信息
+message HPAllianceInfoS
+{
+	required int32  id = 1;//公会ID
+	required int32  level = 2;//等级
+	required int32  currentExp = 3;//当前经验
+	required int32  nextExp = 4;//升级经验
+	required int32  currentPop = 5;//当前人数
+	required int32  maxPop = 6;//最大人数
+	required int32  bossFunRemSize = 7;//魔兽入侵免费次数
+	required int32  bossState = 8;//魔兽入侵状态  value=1为没有开启入侵  value=2为开启可以加入 value=3 bossTime hp属性
+	required int32  bossId = 9;//根据ID加载数据
+	optional int64  bossTime = 10;//魔兽入侵倒计时。
+	optional int32  bossPropAdd = 11;//鼓舞当前加成攻击百分比
+	optional int32  bossHp = 12;//当前剩余血量
+	required string annoucement = 13; // 公会公告
+	required int32  battleLimit = 14; //战力限制条件
+	required int32  bossGold = 15;//需要消耗钻石
+	required int32  remGold = 16;//剩余钻石
+	required string name = 17; // 公会名称
+	required int32  curBossVitality = 18; // 当前联盟声望值
+	required int32  openBossVitality = 19; // 开启boss消耗声望值
+	required int32  remainderBossTimes = 20; // 今日已开启boss次数
+	required int32  allBossTimes = 21; // 可开启boss总次数
+	required int32  hasCheckButton = 22; // 是否勾选公会会长发邮件同意的按钮 0.未勾选 1.已勾选
+	repeated string openTimeList = 23; // 公会BOSS自动解禁时间
+	required bool   canChangeName = 24; // 公会是否可以改名
+}
+
+//公会操作 更换会长.提升职位  操作成功后返回HPAllianceMemberS成员信息
+message HPAllianceOperC
+{
+	required int32  operType = 1;//1:更换会长,2:更换副会长,3:加入公会,4:退出公会,5:解除副会长,6:踢人
+	required int32  targetId = 2;//需要操作角色ID
+}
+
+//公会成员信息
+message AllianceMember
+{
+	required int32  level = 1;//等级
+	required string  name = 2;//名字
+	required int32  battlePoint = 3;//战斗力
+	required int32  contribution = 4;//贡献值
+	required int32  postion = 5;//职位: 0:普通成员,2:会长,1:副会长
+	required int32  id = 6;//唯一ID
+	required bool hasReported = 7; // 今日是否已经签到
+	required int32  profession = 8;//职业
+	optional int32 autoFight=9; // 自动参加Boss战标记，0是没有选中，1是选中
+	optional int32 roleItemId=10; // 角色配置Id
+	// 如果在线是0
+	optional int32 leftLogoutTime = 11;
+	// 总贡献元气
+	optional int32 totalVitality = 12;
+	// 转生阶段
+	optional int32 rebirthStage = 13;
+	//主角avatar ID
+	optional int32 avatarId = 14;
+	//头像
+	optional int32 headIcon = 15;
+}
+
+//获取公会成员
+message HPAllianceMemberC
+{
+}
+
+//返回公会成员信息
+message HPAllianceMemberS
+{
+	repeated AllianceMember memberList = 1;//列表成员	
+}
+
+//公会排行榜
+message AllianceRanking
+{
+	required int32  sort = 1;//等级
+	required int32  id = 2;//id
+	required int32  level = 3;//等级
+	required string name = 4;//公会名字
+	required string  handName = 5;//公会会长名字
+	required int32  currnetPop = 6;//当前人数
+	required int32  maxPoj = 7;//最大人数
+	optional int32  hasCheckButton = 8; //  是否勾选公会会长发邮件同意的按钮 0.未勾选 1.已勾选
+}
+
+//公会排行榜
+message AllianceScoreRanking
+{
+	required int32  sort = 1;//等级
+	required int32  id = 2;//id
+	required int32  level = 3;//等级
+	required string name = 4;//公会名字
+	required string  handName = 5;//公会会长名字
+	required int32  currnetPop = 6;//当前人数
+	required int32  maxPoj = 7;//最大人数
+	required int32  score = 8;//等级
+	optional int32  hasCheckButton = 9; //  是否勾选公会会长发邮件同意的按钮 0.未勾选 1.已勾选
+}
+
+
+//获取公会排行榜N
+message HPAllianceRankingC
+{
+}
+//返回公会排行榜N
+message HPAllianceRankingS
+{
+	repeated AllianceRanking rankings = 1;//公会排行榜
+	required bool  showTag = 2;//true有效数据,false为列表空的
+}
+
+//获取公会排行榜N
+message AllianceScoreRankingC
+{
+}
+message AllianceScoreRankingS
+{
+repeated AllianceScoreRanking rankings = 1;//公会战力排行榜
+required bool  showTag = 2;//true有效数据,false为列表空的
+}
+
+
+//公员排行榜
+message AllianceHarm
+{
+	required int32  sort = 1;//等级
+	required int32  level = 2;//等级
+	required string name = 3;//公会名字
+	required int32  harmValue = 4;//伤害值
+	required int32  harmPercent = 5;//伤害百分比
+	required int32  id = 6;//角色ID
+	optional int32  rebirthStage = 7;	//转生阶段
+}
+
+//获取公会伤害排行榜
+message HPAllianceHarmSortC
+{
+}
+
+message HPAllianceHarmSortS
+{
+	repeated AllianceHarm harms = 1;//伤害排行榜
+	required bool  showTag = 2;//true有效数据,false为列表空的
+}
+
+//设置公会加入条件
+message HPAllianceJoinSetC
+{
+	required int32  battlePoint = 1;//战力值
+	//勾选按钮. 0.未勾选 1.已勾选
+	required int32 checkButton = 2;//勾选按钮
+}
+
+//设置公会公告
+message HPAllianceNoticeC
+{
+	required string  notice = 1;//公告内容
+}
+
+//开启入侵
+message HPAllianceBossFunOpenC
+{
+	required int32  operType = 1;//1:开启BOSS战 2:加入boss战 3:鼓舞
+}
+
+//公会报道
+message HPAllianceReportC
+{
+}
+
+message AllianceShopItem
+{
+	required int32  type = 1;//类型
+	required int32  id = 2;//id
+	required int32  remTime = 3;//剩余次数
+	required int32  contribution = 4;//贡献值
+}
+
+//公会商店列表
+message HPAllianceShopC
+{
+}
+
+// 公会商店刷新
+message HPAlilianceShopRefresh 
+{
+}
+
+//返回公会商店列表
+message HPAllianceShopS
+{
+	repeated AllianceShopItem items = 1;
+	required int32 luckyScore = 2;// 当前幸运值
+	required int32 refreshCost = 3;// 消耗的贡献值
+}
+
+//公会商店列表
+message HPAllianceShopBuyC
+{
+	required int32  type = 1;//道具类型
+	required int32  id = 2;//道具ID
+}
+
+message ApplyAllianceState 
+{
+	required int32  allianceId = 1;//申请的公会Id
+	required int32  state = 2;//申请的公会状态  1.待审核. 2.失败拒绝加入
+	required int64  refusedJoinTime = 3;//拒绝加入CD
+}
+
+//可加入公会列表
+message HPAllianceJoinListC
+{
+	required int32 reqPage = 1; // 推荐工会页码
+}
+
+//返回可加入公会列表
+message HPAllianceJoinListS
+{
+	repeated AllianceRanking rankings = 1;//公会排行榜
+	optional bool  showTag = 2;//true有效数据,false为列表空的
+	optional int32 maxPage = 3; // 推荐工会最大页码
+	optional int32 curPage = 4; // 当前所在的推荐工会页码
+	repeated ApplyAllianceState allianceState  = 5;//玩家申请各个公会的状态结果集(勾选按钮的情况下有意义)
+}
+
+//进入公会
+message HPAllianceEnterC
+{
+}
+
+//返回自己在公员基本信息
+message HPAllianceEnterS 
+{
+	required bool hasAlliance = 1; // 是否有公会 true为有
+	optional AllianceMember myInfo = 2; // 个人公会信息
+	optional bool isInBattle = 3; // 是否在公会争霸战斗中
+}
+
+//返回boss战伤害
+message HPAllianceBossHarmS
+{
+	required int32  value = 1;//伤害值
+}
+
+//查找公会
+message HPAllianceFindC
+{
+	required int32 id = 1;//伤害值
+}
+
+//同步公会boss元气信息
+message HPBossVitalitySyncS
+{
+	required int32  curBossVitality = 1; // 当前boss元气值
+	required int32  openBossVitality = 2; // 开启boss消耗元气值
+} 
+
+//公会邮件
+message HPAllianceEmailC
+{
+	required string emailContent = 1;//邮件内容
+}
+
+//返回公会邮件
+message HPAllianceEmailS
+{  
+	required string emailSendResult= 1;//邮件发送结果
+}
+
+//申请加入公会
+message HPApplyIntoAllianceC
+{
+	//公会Id
+	required int32 allianceId = 1;
+}
+
+//申请加入公会
+message HPApplyIntoAllianceS
+{
+	//玩家申请各个公会的状态结果集(勾选按钮的情况下有意义)
+	repeated ApplyAllianceState allianceState  = 5;
+}
+
+//批准拒绝加入公会(公会长操作)
+message HPApprovalRefusedOperC
+{
+	//加入的公会id
+	required int32 allianceId = 1;
+	//玩家id
+	required int32 playerId = 2;
+	//操作状态 0.拒绝 1.批准
+	required int32 state = 3; 
+	//拒绝内容(在拒绝的时候才有内容)
+	optional string content = 4;
+	//邮件id
+	required int32 emailId = 5; 
+}
+
+//批准拒绝加入公会
+message HPApprovalRefusedOperS
+{
+	//公会id
+	required int32 allianceId = 1;
+	//玩家id
+	required int32 playerId = 2;
+	//操作状态 0.拒绝 1.批准
+	required int32 state = 3; 
+	//邮件id
+	required int32 emailId = 4; 
+}
+
+//删除未审核邮件
+message HPApplyAllianceEmailRemoves
+{
+	//删除的邮件Id
+	required int32 emailId = 1; 
+}
+
+// 设置自动开启BOSS时间
+message OpenBossTimeRequest
+{
+	repeated string openTimeList = 1; // 公会BOSS自动解禁时间
+}
+
+//返回修改公会名字,请求和返回包一样
+message HPChangeAllianceName {
+	required string newName = 1; //要修改的名称
+}
+
+message HPAllianceDonateInfoItem {
+	required int32 activeValueAward = 1;//联盟活跃值奖励
+	required int32 dotateEnable = 2;	//1代表可捐献，2代表以捐献，3代表不可捐献
+	required string allianceAward = 3;	//联盟奖励
+	required string personAward = 4; 	//个人奖励
+	required string cosume = 5;//个人消耗
+}
+
+message HPAllianceDonateReq{
+required int32 donateId = 1;
+}
+
+message HPAllianceDonateInfoResp{
+	required int32 activeValue = 1;
+	repeated HPAllianceDonateInfoItem items = 2;
+}
+

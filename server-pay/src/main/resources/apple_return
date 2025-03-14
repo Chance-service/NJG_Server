@@ -1,0 +1,43 @@
+/*返回数据参照样例
+        array (
+          'status' => 0,
+          'environment' => 'Sandbox',
+          'receipt' => 
+          array (
+            'receipt_type' => 'ProductionSandbox',
+            'adam_id' => 0,
+            'app_item_id' => 0,
+            'bundle_id' => 'com.abcde.www',
+            'application_version' => '0.0.9',
+            'download_id' => 0,
+            'version_external_identifier' => 0,
+            'receipt_creation_date' => '2016-07-13 18:22:19 Etc/GMT',
+            'receipt_creation_date_ms' => '1468434139000',
+            'receipt_creation_date_pst' => '2016-07-13 11:22:19 America/Los_Angeles',
+            'request_date' => '2016-07-13 18:22:22 Etc/GMT',
+            'request_date_ms' => '1468434142143',
+            'request_date_pst' => '2016-07-13 11:22:22 America/Los_Angeles',
+            'original_purchase_date' => '2013-08-01 07:00:00 Etc/GMT',
+            'original_purchase_date_ms' => '1375340400000',
+            'original_purchase_date_pst' => '2013-08-01 00:00:00 America/Los_Angeles',
+            'original_application_version' => '1.0',
+            'in_app' => 
+            array (
+              0 => 
+              array (
+                'quantity' => '1',
+                'product_id' => 'price_1',//去看$this->product里对应的价格，就是你的充值额
+                'transaction_id' => '1000000223463280',
+                'original_transaction_id' => '1000000223463280',
+                'purchase_date' => '2016-07-13 18:22:19 Etc/GMT',
+                'purchase_date_ms' => '1468434139000',
+                'purchase_date_pst' => '2016-07-13 11:22:19 America/Los_Angeles',
+                'original_purchase_date' => '2016-07-13 18:22:19 Etc/GMT',
+                'original_purchase_date_ms' => '1468434139000',
+                'original_purchase_date_pst' => '2016-07-13 11:22:19 America/Los_Angeles',
+                'is_trial_period' => 'false',
+              ),
+            ),
+          ),
+        )
+        */

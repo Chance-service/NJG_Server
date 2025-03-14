@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.server.paynotice.mapper.PayNoticeInfoMapper">
+	<resultMap type="com.server.paynotice.pojo.PayNoticeInfo"
+		id="payNoticeInfo">
+		<id property="id" column="id" />
+		<result property="sid" column="sid" />
+		<result property="amount" column="amount" />
+		<result property="rmbRate" column="rmbRate" />
+		<result property="uid" column="uid" />
+		<result property="version" column="version" />
+		<result property="currency" column="currency" />
+		<result property="gameName" column="gameName" />
+		<result property="productName" column="productName" />
+		<result property="os" column="os" />
+		<result property="sdkChannel" column="sdkChannel" />
+		<result property="orderNo" column="orderNo" />
+		<result property="payNoticeUrl" column="payNoticeUrl" />
+		<result property="statusCode" column="statusCode" />
+		<result property="payTime" column="payTime" />
+		<result property="pltformPayTime" column="pltformPayTime" />
+		<result property="getProductTime" column="getProductTime" />
+		<result property="orderType" column="orderType" />
+	</resultMap>
+	<insert id="insert" useGeneratedKeys="true" keyProperty="id"
+	parameterType="com.server.paynotice.pojo.PayNoticeInfo">
+	insert  into t_payinfo
+	(sid,amount,rmbRate,uid,version,currency,gameName,productName,os,sdkChannel,orderNo,payNoticeUrl,statusCode,payTime,pltformPayTime,orderType)
+	values
+	(#{sid},#{amount},#{rmbRate},#{uid},#{version},#{currency},#{gameName},#{productName},#{os},#{sdkChannel},#{orderNo},#{payNoticeUrl},#{statusCode},#{payTime},#{pltformPayTime},#{orderType})
+	</insert>
+	<update id="updateStatus">
+		update t_payinfo set statusCode = #{0} where id =
+		#{1}
+	</update>
+
+	<update id="updateStatusAndPTime">
+		update t_payinfo set statusCode = #{0},getProductTime
+		= #{1} where id = #{2}
+	</update>
+	<select id="getPayNoticeInfo"
+		resultType="com.server.paynotice.pojo.PayNoticeInfo">
+		select * from t_payinfo where orderNo = #{0} and
+		sdkChannel=#{1}
+	</select>
+</mapper>

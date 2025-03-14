@@ -1,0 +1,53 @@
+option java_package = "com.guaji.game.protocol";
+
+message SkillInfo
+{
+	required int32  roleId = 1;
+	required int32  id = 2;
+	required int32  itemId = 3;
+	optional int32  skillLevel = 4;
+	optional int32  status = 5;	
+	optional int32 exp = 6;
+}
+
+message HPSkillInfoSync
+{
+	repeated SkillInfo skillInfos = 1;
+}
+
+//更换技能
+message HPSkillChangeOrder
+{
+	required int32  roleId = 1;
+	required int32  skillId = 2;
+	// 技能顺序号, 0开始
+	required int32  srcOrder = 3;
+	required int32  dstOrder = 4;
+	required int32  skillBagId = 5;
+}
+
+message HPSkillChangeOrderRet
+{
+	optional int32  version = 1[default = 1];
+}
+
+//更换技能顺序
+message HPSkillCarry
+{
+	required int32  roleId = 1;
+	repeated int32  skillId = 2;
+	required int32  skillBagId = 3;
+}
+
+message HPSkillCarryRet
+{
+	required int32  roleId = 1;
+}
+
+message HPSkillInfo
+{
+	required int32 roleId = 1;
+	repeated int32 skillId1 = 2;
+	repeated int32 skillId2 = 3;
+	repeated int32 skillId3 = 4;
+}

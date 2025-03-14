@@ -1,0 +1,26 @@
+option java_package = "com.guaji.game.protocol";
+
+message HonorShopItem
+{
+	required string id = 1;
+	required int32 itemType  = 2;
+	required int32 itemId = 3;
+	required int32 costHonor = 4;
+}
+
+message HPHonorShopListRet 
+{
+	repeated HonorShopItem shopItems = 1;
+	required int32 refreshCostHonor = 2;
+}
+
+message HPHonorBuy
+{
+	required string id = 1;
+}
+
+message HPHonorBuyRet
+{
+	required string id = 1;
+}
+

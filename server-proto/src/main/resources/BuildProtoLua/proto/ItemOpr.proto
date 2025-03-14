@@ -1,0 +1,51 @@
+option java_package = "com.guaji.game.protocol";
+
+// 道具使用 检测物品，
+// 如果是碎片就是合成装备
+// 如果是宝箱就是开宝箱
+// 如果是礼包就是使用礼包
+// 如果是宝石就是升级宝石
+message HPItemUse
+{
+	required int32 itemId = 1;	
+	required int32 itemCount = 2;
+	optional int32 profId = 3;
+	optional int32 msgType = 4;//暂时只有英雄令用到这个字段，具体枚举见const.HeroTokenMsgType
+}
+
+message HPItemUseRet
+{
+	// 如果为0 没有升级 ，> 0升级成功
+	required int32 targetItemId = 1;
+	// 消息类型 没有消息类型区分的话默认为0
+	required int32 msgType = 2;
+}
+//道具出售
+message HPItemSell
+{
+	required int32 itemId = 1;
+	required int32 count = 2;
+}
+
+// 全民挂机公测字兑换
+message HPGongceWordCycle {
+	required int32 itemId = 1;
+}
+
+message ExchangeItem
+{
+	required int32 itemId = 1;
+	required int32 count = 2;
+}
+
+//道具兑换
+message HPItemExchange
+{
+	repeated ExchangeItem exchangeItem = 1;
+}
+
+//道具兑换
+message HPItemExchangeRet
+{
+	required bool isSuccess = 1;
+}

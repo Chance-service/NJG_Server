@@ -1,0 +1,42 @@
+option java_package = "com.guaji.game.protocol";
+
+
+message BulletTitleItem
+{   
+    //公告序號
+    required int32 id = 1;
+    //0.一般公告 1.活動公告
+    required int32 kind = 2;
+    // 標題 or 連結圖片
+    required string titleStr = 3;
+    // 更新時間
+    required int64 updateTime =4 ;
+    // 排序值sort數字越小越上面		
+    required int32 sort = 5;
+    // 是否要顯示
+    required bool show = 6;   
+}
+
+
+message BulletinTitleInfo
+{
+   repeated BulletTitleItem allInfo = 1;
+}
+
+// 要求公告內文
+message BulletinContentRet
+{
+    // 索引id
+    required int32 id = 1;
+}
+
+// 回應公告內文
+message BulletinContentRsp
+{
+    //回應索引id
+    optional int32 id = 1;
+    //下載內文路徑
+    optional string txturl = 2;
+    //錯誤碼 -1.找不到資料 0.無錯誤
+    required int32 errorCode = 3;
+}

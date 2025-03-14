@@ -1,0 +1,18 @@
+option java_package = "com.guaji.game.protocol";
+
+import "Const.proto";
+
+message NoticeItem 
+{
+	//提醒类型
+	required NoticeType noticeType = 1;
+	//提醒数量
+	optional int32 count = 2;
+	//提示参数，比如：‘xxx在商店中购买到xxx物品，简直惨绝人寰’
+	repeated string params = 3;
+}
+
+// 系统通知
+message HPNotice {
+	repeated NoticeItem notices = 1;
+}

@@ -1,0 +1,23 @@
+option java_package = "com.guaji.game.protocol";
+
+
+// 引导信息
+message GuideInfoBean {
+	required int32 guideId = 1;//引导id
+	required int32 step =2;//步骤
+}
+
+// 重置新手引导信息
+message HPResetGuideInfo {
+	required GuideInfoBean guideInfoBean=1;
+}
+// 返回新手引导信息
+message HPGuideInfoSync {
+	repeated GuideInfoBean guideInfoBean=1;
+}
+
+// 返回新手影片是否觀看
+message HPPlayStorySync {
+	required int32 isDone = 1; // 否播過
+}
+

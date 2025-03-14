@@ -1,0 +1,31 @@
+option java_package = "com.guaji.game.protocol";
+
+// 技能专精的开启状态
+message HPSkillEnhanceOpenState {
+	// 是否已经开启
+	required bool isOpen = 1;
+}
+
+// 请求开启技能专精
+message HPSkillEnhanceOpen {
+	
+}
+
+// 请求升级技能
+message HPSkillLevelup {
+	// 技能id
+	required int32 skillId = 1;
+	// 消耗的物品id
+	required int32 itemId = 2;
+	// 消耗的物品数量
+	required int32 itemCount = 3;
+}
+
+// 升级技能响应
+message HPSkillLevelupRet {
+	// 是否升级了
+	required bool isLevelup = 1;
+	// 对应的技能id
+	required int32 skillId = 2;
+}
+

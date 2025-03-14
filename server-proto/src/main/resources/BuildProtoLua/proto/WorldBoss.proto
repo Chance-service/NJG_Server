@@ -1,0 +1,204 @@
+option java_package = "com.guaji.game.protocol";
+import "Const.proto";
+
+enum BossState {
+	// 上期排行展示时间(关闭红点)
+	LAST_RESULT_SHOW = 1;
+	// boss开启前30分钟内，不显示的时间时间段
+	NO_SHOW = 2;
+	// boss正在开战(开启红点)
+	SHOWING = 3;
+}
+
+// boss弱点信息
+message HPBossFailingInfoRes
+{
+	// 弱点属性
+	required string attrInfo = 1;
+	// 结束时间
+	required int64 endTime = 2;
+	// 部位类型
+	required WorldBossFailingType worldBossFailingType = 3;
+}
+
+//世界boss基础信息
+message WorldBossInfo
+{
+	// 配置Id(活动世界boss，不是克隆的竞技场排名里面的人物)
+	optional int32 npcId = 1;
+	// 克隆人物的角色配置Id
+	optional int32 roleItemId = 2;
+	// 竞技场假人配置
+	optional int32 monsterId = 3;
+	// 名字
+	optional string name = 4;
+	// 等级
+	optional int32 level = 5;
+	// 血量
+	required int64 hp = 6;
+	// 最大血量
+	required int64 maxHp = 7;
+
+}
+
+// 结算页面结构体
+message BossRankItem {
+	required string playerName = 1;
+	required int64 harm = 2;
+	required string rewardInfo = 3;
+	required int32 rankIndex = 4;
+	// 1 表示排行  2 表示最终击杀的玩家信息 
+	required int32 type = 5;
+	//伤害次数
+	optional int32 attacksTimes = 6;
+	// 公会名称
+	optional string allianceName = 7;
+}
+
+// 同盟玩家伤害信息
+message HPAllianceHarmInfo
+{
+	optional string playerName = 1;
+	optional int64 harm = 2;
+	optional int32 mainRoleItemId = 3;
+	optional int64 lastAttackTime = 4;
+	optional int32 version = 5[default = 0];
+}
+
+// 每5s刷新一次 伤害排行榜
+message HPBossHarmRank {
+	// 个人及时排行
+	repeated BossRankItem bossRankItem = 1;
+	// 当前血量
+	required int64 currBossHp = 2;
+	// 自己的总伤害
+	required int64 selfHarm = 3;
+	// 自己的伤害次数
+	required int32 selfAttacksTimes = 4;
+	// 同盟人员伤害信息
+	repeated HPAllianceHarmInfo HPAllianceHarmInfo = 5;
+	// 联盟伤害排行
+	repeated BossRankItem bossRankAllianceItem = 6;
+	// 自己伤害排名
+	optional int32 selfHarmRank = 7;
+	// 自己联盟伤害排名
+	optional int32 selfAllianceRank = 8;
+	// 自己联盟伤害
+	optional int64 selfAllianceHarm = 9;
+}
+
+
+// 获取boss活动预览信息
+message HPWorldBossBannerInfo {
+	// 开始时间 list 有两个值 单位是s
+	repeated int64 startTime = 1;
+	// 是否自动加入
+	required BossAutoBattleType autoJoinState = 2;
+	// 如果上期boss没有打死
+	optional bool lastBossDead = 3;
+	// boss状态
+	optional BossState bossState = 4;
+}
+
+//世界boss战斗信息
+message HPWorldBossInfo {
+	// BOSS活动状态 
+	required BossState bossState = 1;
+	// 基础信息
+	optional WorldBossInfo bossInfo = 2;
+	// 活动剩余时间
+	optional int32 leftTime = 3;
+	// 浴火重生所需消耗钻石
+	optional int32 needRebirthCost = 4;
+	// 复活剩余时间（单位s）
+	optional int32 rebirthLeftTime = 5;
+	// 攻击倒计时（单位s）
+	optional int32 actionLeftTime = 6;
+	// 上期boss信息
+	optional HPBossHarmRank lastBossInfo = 7;
+	// 当前boss击杀伤害排行
+	optional HPBossHarmRank curRankItemInfo = 8;
+	// 弱点信息
+	optional HPBossFailingInfoRes bossFailingInfo = 9;
+	// 当前世界bossBuff
+	optional int32 curBossBuffCfgId = 10;
+	// 自己全服排名
+	optional BossRankItem curRank = 11;
+	// 自己在公会排名
+	optional BossRankItem curAllianceRank = 12;
+	// 可挑戰Boss次數
+	optional int32 challengTime = 13;
+}
+
+// 请求boss重生
+message HPRebirth {
+	// 1 免费  2 收费
+	required WorldBossIsFree worldBossIsFree = 1;
+	// 弱点部位信息
+	required WorldBossFailingType worldBossFailingType = 2;
+}
+
+// 重生返回
+message HPRebirthRet {
+	// 1 免费  2 收费
+	required WorldBossIsFree worldBossIsFree = 1;
+	// 浴火重生所需消耗钻石
+	required int32 needRebirthCost = 2;
+	// 付费倒计时
+	required int32 goldActionTime = 3;
+	// 免费倒计时
+	required int32 freeActionTime = 4;
+}
+
+// 战斗信息协议体
+message WorldBoosFightInfo
+{
+	// 佣兵ID
+	required int32 itemId = 1;
+	// 伤害值
+	required int64 harm = 2;
+	// 最大攻击力
+	required int32 maxDmg = 3;
+	// 主角avatar
+	optional int32 avatarId = 4;
+}
+
+// 玩家出手打boss推送
+message HPAttackPush {
+	repeated WorldBoosFightInfo fightInfo = 1;
+	required int64 currBossHp = 2;
+	// 自己的总伤害
+	required int64 selfHarm = 3;
+	// 自己的伤害次数
+	required int32 selfAttacksTimes = 4;
+	// 是否在弱点时间内
+	required bool isFailing = 5;
+}
+
+message HPBossStatePush {
+	// 1表示开启 2表示关闭
+	required int32 state = 1;
+	// 开始时间
+	optional int64 startTime = 2;
+	// 活动bossid
+	optional int32 activityBossId = 3;
+}
+
+// 世界boss设置自动战斗
+message HPBossAutoBattleReq
+{
+	// 自动战斗类型
+	required BossAutoBattleType bossAutoBattleType = 1;
+}
+
+// 返回随机buff的信息
+message HPBossRandomBuffRes
+{
+	required int32 buffCfgId = 1;
+	// 已随机次数
+	required int32 buffRanTimes = 2;
+	// buff剩余免费次数
+	required int32 buffFreeTimes = 3;
+	// buff下次价格
+	required int32 nextPrice = 4;
+}

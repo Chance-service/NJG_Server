@@ -1,0 +1,63 @@
+option java_package = "com.guaji.game.protocol";
+
+import "Battle.proto";
+
+message ElementTalentInfo{
+	// 元素属性类型
+	required int32 attrId = 1;
+	// 属性值
+	required int32 attrValue = 2;
+	// 元素属性阶
+	required int32 attrStage = 3;
+	// 元素属性等级
+	required int32 attrLevel = 4;
+}
+
+message HPPlayerTalentInfoRet {
+	// 所有元素属性信息
+	repeated ElementTalentInfo elementTalent = 1;
+}
+
+// 元素属性升级
+message HPUpgradeTalent {
+	// 元素类型
+	required int32 attrId = 1;
+	// 当前等级
+	required int32 curLevel = 2;
+	// 目标等级
+	required int32 targetLevel = 3;
+}
+
+// 元素属性升级反馈
+message HPUpgradeTalentRet {	
+
+	required ElementTalentInfo upgradeTalent = 1;
+}
+
+// 清空属性
+message HPClearTalent {
+	// 元素类型
+	required int32 attrId = 1;
+}
+
+// 清空属性反馈
+message HPClearTalentRet {
+
+	required ElementTalentInfo upgradeTalent = 1;
+}
+
+// 挑战转生BOSS
+message HPChallengeBoss {
+
+}
+
+// 挑战转生BOSS反馈
+message HPChallengeBossRet {
+	required bool isSuccess = 1;
+	required BattleInfo battleResult = 2;
+}
+
+// 转生请求反馈
+message HPRebirthRet{
+	required bool isSucccess = 1;
+}

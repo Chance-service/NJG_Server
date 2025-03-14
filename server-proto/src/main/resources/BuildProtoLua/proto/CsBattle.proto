@@ -1,0 +1,194 @@
+option java_package = "com.guaji.game.protocol";
+import "Snapshot.proto";
+import "Battle.proto";
+enum EnterState {
+	NORMAL = 1; // 正常运行状态
+	DATA_MAINTAIN = 2; //维护结算中
+	NOT_ENOUGH_CONDITION = 3; // 条件不足
+}
+
+// 注册游戏服务器
+message ServerRegister {
+	required int32 version = 1 [default = 1];
+	required string serverIdentify = 2;
+}
+
+// 单个用户数据
+message PlayerSignup {
+	required string identify = 1;
+	required string serverName = 2; //玩家区服信息
+	required PlayerSnapshotInfo snapshot = 3;
+}
+
+// 推送用户数据
+message CrossBattleData {
+	repeated PlayerSignup playerData = 1;
+}
+
+// 玩家唯一标识
+message PlayerIdentify {
+	required string identify = 1;
+}
+
+// 跨服状态
+message StateChange{
+	required EnterState state = 1;
+}
+
+// 账号信息
+message PlayerBean {
+	required string identify = 1;
+	required string name = 2; // 角色名
+	required string serverName = 3; // 服务器
+	required int32 score = 4; // 积分
+	required int32 rank = 5; // 排名
+	optional int32 level = 6; // 角色等级
+	optional int32 rebirthStage = 7; // 转生状态
+	optional int32 roleItemId = 8; //佣兵职业
+	optional int32 fightValue = 9; // 战斗力
+	optional int32 continueWin = 10; // 连胜
+	optional int32 avatarId = 11; //主角avatar ID
+}
+
+// 同步随机排行数据
+message SyncRankData {
+	required string identify = 1;
+	required int32 rank = 2; // 排名
+	optional int32 score = 3; //当前积分
+}
+
+// 打开界面协议
+message OSMainInfoResponse {
+	optional EnterState enterState = 1;
+	optional PlayerBean selfInfo = 2; //本人跨服信息
+	repeated PlayerBean vsPlayers = 3; //对手信息
+	optional int32 leftTimes = 4; // 剩余挑战次数
+	optional int32 leftBuyTimes = 5; // 剩余购买次数
+}
+
+// 手动同步玩家信息返回
+message PlayerInfoSyncResponse {
+	optional EnterState enterState = 1;
+	optional string identify = 2;
+	optional bool isSuccess = 3;
+}
+
+// 刷新对战数据
+message RefreshVsResponse {
+	optional EnterState enterState = 1;
+	optional string identify = 2;
+	repeated PlayerBean vsPlayers = 3; //对手信息
+}
+
+// 请求战斗
+message PlayerVsRequest {
+	required string identify = 2; // 被挑战者
+	optional string sourceId = 3; // 挑战者
+}
+
+// 战斗结束--返回挑战者数据
+message ChallengeResponse {
+	optional EnterState enterState = 1;
+	optional string identify = 2;
+	optional bool isWin = 3; //对战结果
+	repeated PlayerBean vsPlayers = 4; //新的对手信息
+	optional int32 score = 5; //当前积分
+	optional int32 rank = 6; //当前排名
+	optional BattleInfo battle = 7; //战报
+	optional int32 continueWin = 8; // 连胜
+	optional int32 leftTimes = 9; // 剩余挑战次数
+	optional int32 leftBuyTimes = 10; // 剩余购买次数
+}
+
+// 战斗结束--返回被挑战者数据
+message DefenderResponse {
+	required string identify = 1;
+	required int32 score = 2; //当前积分
+	required int32 rank = 3; //当前排名
+	required int32 continueWin = 4; // 连胜
+	repeated SyncRankData rankDatas = 5; // 同步排行数据
+}
+
+// 战报信息
+message BattleRecord {
+	required PlayerBean vsInfo = 1; //对手信息
+	required bool isWin = 2; //对战结果
+	required int32 scoreChange = 3; //积分变化
+	required int32 battleId = 4; //战报Id
+}
+
+// 战报列表返回
+message BattleRecordResponse {
+	required string identify = 1;
+	repeated BattleRecord battles = 2; //战报列表
+}
+
+// 请求单场战报
+message BattleRequest {
+	optional string identify = 1;
+	required int32 battleId = 2; //战报Id
+}
+
+// 单场战报返回
+message BattleResponse {
+	optional string identify = 1;
+	optional BattleInfo battle = 2; //战报
+}
+
+// 查看排行榜数据
+message RankResponse {
+	required string identify = 1;
+	repeated PlayerBean players = 2; //排名信息
+}
+
+// 玩家快照查询
+message PlayerSnapshotRequest {
+	optional string identify = 1;
+	required string seeIdentify = 2; //被查询玩家的标识
+}
+
+// 玩家快照查询返回
+message PlayerSnapshotResponse {
+	optional string identify = 1;
+	optional PlayerSnapshotInfo snapshot = 2;
+}
+
+// 购买挑战次数请求
+message BuyBattleTimesRequest {
+	required int32 battleTimes = 1; // 购买几次
+}
+
+// 购买挑战次数返回数据包
+message BuyBattleTimesResponse {
+	optional EnterState enterState = 1;
+	optional int32 leftTimes = 2; // 剩余挑战次数
+	optional int32 leftBuyTimes = 3; // 剩余购买次数
+}
+
+// 购买跨服商店物品请求
+message ShopBuyItemRequest {
+	required int32 itemId = 1; //购买的物品
+}
+
+// 购买跨服商店物品返回
+message ShopBuyItemResponse {
+	required int32 isSuccess = 1;
+}
+
+//本服玩家积分情况
+message PlayerRank {
+//本服玩家Id
+	required int32 playerId = 1;
+	optional int32 rank = 2; //跨服排名
+	optional int32 score = 3; //跨服积分
+}
+
+//查询本服玩家跨服积分情况请求
+message PlayerRankRequest {
+	repeated int32 playerIds = 1; //要查询的玩家Id数组
+}
+
+//查询本服玩家跨服积分情况返回
+message PlayerRankResponse {
+	repeated PlayerRank playerRanks = 1; //查询结果
+}

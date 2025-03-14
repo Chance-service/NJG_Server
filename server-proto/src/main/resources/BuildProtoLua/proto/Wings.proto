@@ -1,0 +1,60 @@
+option java_package = "com.guaji.game.protocol";
+
+// 玩家排行信息
+message WingQualityInfo {
+	// 玩家名
+	required string playerName = 1;
+	// 玩家等级
+	required int32 level = 2;
+	// 公会名
+	optional string allianceName = 3;
+	// 消耗时间
+	required int64 useTime = 4;
+	// 排名
+	required int32 rankNum = 5;
+	// 职业
+	required int32 prof = 6;
+	// 玩家Id
+	required int32 playerId = 7;
+	// 玩家转生阶段
+	optional int32 rebirthStage = 8;
+}
+
+// 获得引导翅膀
+message HPWingGetLead {
+
+}
+
+// 获得引导翅膀
+message HPWingGetLeadRet {
+	required int32 version = 1;
+}
+
+// 升级翅膀
+message HPWingLevelup {
+
+}
+
+message HPWingLevelupRet {
+	// 是否升级
+	required bool isLevelup = 1;
+	// 升级后等级
+	required int32 level = 2;
+	// 幸运值
+	optional int32 luckyNum = 3;
+}
+
+// 获取排行
+message HPWingQualityRank {
+
+}
+
+message HPWingQualityRankRet {
+	repeated WingQualityInfo whiteWing = 1;
+	repeated WingQualityInfo greenWing = 2;
+	repeated WingQualityInfo blueWing =3;
+	repeated WingQualityInfo purpleWing = 4;
+	repeated WingQualityInfo originWing = 5;
+	optional int32 version = 6;
+}
+

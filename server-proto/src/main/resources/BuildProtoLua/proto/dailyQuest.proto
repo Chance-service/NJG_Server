@@ -1,0 +1,72 @@
+option java_package = "com.guaji.game.protocol";
+
+//日常任务对象信息
+message QuestItem 
+{
+	required int32 questId = 1;//任务Id
+	required int32 takeStatus = 2;//领取状态   0:未领取的任务 1:已经领取 
+	required int32 questStatus = 3;//任务状态   0:未完成 1:已经完成
+	required string taskRewards = 4;//任务奖励
+	required int32 questCompleteCount = 5;//完成目标数量
+
+}
+
+// C -> S 请求远征任务信息 暂为空
+message HPDailyQuestInfo
+{
+}
+
+//C->S 请求领取任务奖励  ID
+message HPTakeDailyQuestAward
+{
+	required int32 questId = 1;//任务Id
+}
+
+//活跃点数对应奖励
+message DailyPointCore
+{
+	required int32 dailyPointNumber = 1;//活跃点数目标值（对应活跃点奖励配置文件的索引key）
+	required int32 state = 2;//领取状态
+}
+
+// S -> C 所有任务信息反馈
+message HPDailyQuestInfoRet
+{
+	repeated QuestItem allDailyQuest = 1; //所有的任务信息
+	optional int32	dailyPoint = 2;//已经获取的活跃点数
+	repeated DailyPointCore dailyPointCore = 3;//日常任务对应奖励详情
+}
+
+//C->S 请求某个活跃点数的对应的奖励
+message HPTakeDailyPointAward
+{
+	required int32 pointCount = 1;//活跃点数
+}
+
+//S-C 领取活跃点数成功与否
+message HPTakeDailyPointAwardRet
+{
+	required int32 flag = 1;//成功返回1，失败返回0
+	required int32 pointCount = 2;//成就点数
+	required int32 state = 3;//该成就点数对应奖励领取状态
+}
+
+//基础数据请求
+//C -> S、MERCENERY_EXPEDITION_INFO_C、HPDailyQuestInfo
+//S ->C 、MERCENERY_EXPEDITION_INFO_S、HPDailyQuestInfoRet
+
+//领取任务奖励
+//C -> S、TAKE_DAILY_QUEST_AWARD_C、HPTakeDailyQuestAward
+//S -> C. TAKE_DAILY_QUEST_AWARD_S, QuestItem
+
+
+
+
+
+
+
+
+
+
+
+

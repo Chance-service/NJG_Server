@@ -1,0 +1,34 @@
+option java_package = "com.guaji.game.protocol";
+
+message CrystalShopItem
+{
+	//本商品id
+	required string id = 1;
+	//道具类型
+	required int32 itemType  = 2;
+	//道具id
+	required int32 itemId = 3;
+	//道具数量
+	required int32 itemCount = 4;
+	//需要消耗数量
+	required int32 costCount = 5;
+	//钻石1 水晶20
+	required int32 costType = 6;
+}
+
+message HPCrystalShopListRet 
+{
+	repeated CrystalShopItem shopItems = 1;
+	required int32 refreshCostCrystal = 2;
+}
+
+message HPCrystalBuy
+{
+	required string id = 1;
+}
+
+message HPCrystalBuyRet
+{
+	required string id = 1;
+}
+

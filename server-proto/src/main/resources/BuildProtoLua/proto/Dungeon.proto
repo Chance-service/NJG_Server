@@ -1,0 +1,73 @@
+option java_package = "com.guaji.game.protocol";
+
+// 地下城副本当前副本挑战信息
+message HPDungeonMapInfo
+{
+	// 副本ID
+	required int32 dungeonMapId = 1;
+	// 副本種類
+	required int32 dungeonType = 2;
+	// 剩餘挑戰次數
+	required int32 leftTimes = 3;
+	// 目前星數(關卡)
+	required int32 star = 4;
+    // 最大關卡
+    required int32 maxstar = 5;
+    // 一鍵闖關使用狀態 0.未使用 1.已使用
+    required int32 onekey = 6;
+}
+// 地下城副本列表
+message HPDungeonListInfoRet
+{
+	// 当天多人副本地图ID
+	repeated HPDungeonMapInfo dungeonInfo = 1;
+}
+
+//一鍵闖關要求
+message HPDungeonOneKeyRet
+{
+	// 闖關類型
+	required int32 type = 1;
+}
+
+//一鍵闖關回傳
+message HPDungeonOneKeyRes
+{
+	// 回應領取類型
+	required int32 type = 1;
+    // 一鍵闖關後的關卡
+    required int32 star = 2;
+	// 闖關的獎勵
+	optional string reward = 3;
+    // 一鍵闖關使用狀態 0.未使用 1.已使用
+    required int32 onekey = 4;
+}
+
+// 循環活動地下城
+message HPCycleStageInfo
+{
+    // 已闖關過關卡
+    required int32 passId = 1;
+    // 活動開啟時間
+    required int64 starTime = 2;
+    // 活動剩餘時間(秒)
+    required int32 leftTime = 3;
+    // 活動使用物品
+    required string item = 4;
+}
+
+//一鍵掃蕩要求
+message HPCycleStageOneKeyRet
+{
+    //掃蕩的地圖Id
+    required int32 mapId = 1;
+	// 掃盪次數
+	required int32 count = 2;
+}
+
+//一鍵掃蕩回傳
+message HPCycleStageOneKeyRes
+{
+    //掃蕩的獎勵
+    required string reward = 1;
+}

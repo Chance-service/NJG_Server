@@ -1,0 +1,164 @@
+option java_package = "com.guaji.game.protocol";
+
+import "Battle.proto";
+import "Snapshot.proto";
+
+
+// 服务器注册到全局服务器
+message HPGSRegister {
+	// 构造规则 “platform#serverId”
+	required string serverIdentify = 1;
+	optional string parameter = 2;
+}
+// 注册响应
+message HPGSRegisterRet {
+	// 申请注册状态
+	required int32 status = 1;
+}
+
+// 跨服玩家信息
+message GSMatchPlayerInfo
+{
+	// 玩家标识
+	required string playerIdentify = 1;
+	// 玩家名字
+	required string playerName = 2;
+	// 玩家模板id	
+	required int32 playerItemId = 3;
+	// 服务器
+	required string serverName = 4;
+	// 剩余血量
+	required int32 bloodNum = 5;
+	// 战斗力
+	required int32 fightValue = 6;
+	// buff等级
+	optional int32 debuffLevel = 7;
+}
+
+// 登陆更新玩家跨服匹配信息(Game to Global)
+message GSUpdatePlayerInfo {
+	// 请求人的playerId
+	required int32 playerId = 1;
+	required PlayerSnapshotInfo playerInfo = 2;
+	// 服务器
+	required string serverName = 3;
+	// 是否今天首登
+	required bool isTodayFirstLogin = 4;
+}
+
+// 请求匹配页面信息
+message GSMatchPageInfo {
+	// 请求人的playerId
+	required int32 playerId = 1;
+}
+
+// 进入页面信息
+message GSMatchPageInfoRet
+{
+	// 请求人的playerId
+	required int32 playerId = 1;
+	// 剩余失败次数
+	required int32 leftLoseTimes = 2;
+	// 当前连胜次数
+	required int32 winStreaks = 3;
+	// 玩家自己的信息
+	required GSMatchPlayerInfo playerInfo = 4;
+}
+
+// 请求匹配一个玩家
+message GSMatchAGuy {
+	// 请求人的playerId
+	required int32 playerId = 1;
+}
+// 返回匹配玩家信息
+message GSMatchAGuyRet
+{
+	// 请求人的playerId
+	required int32 playerId = 1;
+	required GSMatchPlayerInfo opponentInfo = 2;
+}
+
+// 开始匹配战
+message GCMatchBattle {
+	// 请求人的playerId
+	required int32 playerId = 1;
+}
+
+// 战斗结算返回信息
+message GSMatchBattleRet
+{
+	// 请求人的playerId
+	required int32 playerId = 1;
+	required BattleInfo battleInfo = 2;
+	// 战斗结束获得的奖励
+	optional string rewards = 3;
+	// 自己获得的连胜次数
+	optional int32 winStreaks = 4;
+	// 终结对方的连胜次数
+	optional int32 endOpponentwinStreaks = 5;
+	// 对方终结自己的连胜次数
+	optional int32 loseWinTreaks = 6;
+}
+
+// 连胜排行个人信息
+message GSMatchPlayerRankInfo
+{
+	// 玩家头像
+	required int32 roleId = 1;
+	// 玩家跨服ID，包含服务器和playerId，查看人物信息用
+	required string playerIdentify = 2;
+	// 玩家等级
+	required int32 playerLevel = 3;
+	// 玩家名字
+	required string playerName = 4;
+	// 服务器
+	required string serverName = 5;
+	// 玩家职业
+	required int32 prof = 6;
+	// 本日最高连胜次数
+	required int32 winStreaks = 7;
+	// 最高连胜时剩余的血量，在战斗信息中是当前血量
+	required float bloodPercent = 8;
+	// 玩家战力
+	optional int32 fightValue = 9;
+}
+// 连胜排行榜
+message GSMatchWinTreaksRankListRet
+{
+	// 连胜排行个人信息
+	repeated GSMatchPlayerRankInfo ranksInfo = 1;
+	// 当前排名
+	required int32 nowRankNum = 2;
+}
+
+// 单条战斗信息
+message GSMatchBattleResultInfo
+{
+	// 信息Id
+	required int32 mailId = 1;
+	// 信息类型，主动攻击胜利是1，主动攻击失败是2
+	required int32 mailType = 2;
+	// 信息参数，下划线分割
+	required string mailInfo = 3;
+}
+// 战斗信息列表
+message GSMatchBattleListRet
+{
+	repeated GSMatchBattleResultInfo battleResults = 1;
+}
+// 查看战斗
+message GSMatchViewBattle
+{
+	// 查看第几条战斗信息
+	required int32 mailId = 1;
+}
+// 复仇列表
+message GSMatchRevengeListRet
+{
+	repeated GSMatchPlayerInfo battleResults = 1;
+}
+// 复仇
+message GSMatchRevenge
+{
+	required string playerIdentify = 1;
+}

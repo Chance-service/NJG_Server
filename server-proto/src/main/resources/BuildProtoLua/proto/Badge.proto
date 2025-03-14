@@ -1,0 +1,89 @@
+option java_package = "com.guaji.game.protocol";
+
+
+enum DRESS_SYNC_TYPE
+{
+    UPDATE = 1;
+    All    = 2;
+}
+
+//私装结构体
+message MysticalDressInfo {
+	required int64 id = 1;
+	required int32 equipId = 2;
+	repeated int32 skillId = 3;
+    required string attr = 4;
+    repeated int32 refineId = 5;
+	optional int32 roleId = 6;
+    optional int32 fusionLock = 7;
+}
+
+//私装信息同步
+message HPMysticalDressInfoSync {
+
+	required DRESS_SYNC_TYPE type = 1;
+	repeated MysticalDressInfo dresses = 2;
+}
+
+
+//更换徽章
+message HPMysticalDressChange {
+	//副将
+	required int32 roleId = 1;
+	//装备位置
+	required int32 loc = 2;
+	//1穿上 2卸下 3更换
+	required int32 type = 3;
+	//脱下的装备
+	optional int64 offEquipId = 4;
+	//穿上的装备
+	optional int64 onEquipId = 5;
+}
+
+message HPMysticalDressChangeRet
+{
+	required bool success = 1;
+}
+
+//合成徽章(符文)
+message HPBadgeFusionReq {
+	// 合成銷毀物
+	repeated int64 fusionIds = 1;
+}
+
+message HPBadgeFusionRet {
+	required bool success = 1;
+	required string award = 2 ;
+}
+
+
+//删除徽章
+message HPMysticalDressRemoveInfoSync{
+	//删除的徽章
+	repeated int64 remIds = 1;
+}
+
+//精煉徽章(符文)
+message HPBadgeRefineReq{
+	// 動作 0.轉換精煉資料到技能 1.一般精煉 2.特殊精煉 3.鎖定孔位 4.解鎖孔位 5.取消此次精煉
+	required int32 action = 1;
+    // 只送符文Id(轉換精煉到技能)
+    required int32 badgeId = 2;
+    // action 2. 特殊精煉槽位(選擇精煉用) 符文Id + 此欄位
+    optional int32 slotId = 3;
+    // action 3.4  欲加解鎖洞孔位1,2,3,4 (符文Id + 此欄位) 加鎖後精煉ID會加上 10000000
+    repeated int32 lockSlot = 4;
+}
+
+// 精煉回傳
+message HPBadgeRefineRet{
+    required int32 action = 1;
+    required int64 badgeId = 2;
+    repeated int32 refineId = 3;
+}
+
+//徽章(符文)上開鎖
+message HPBadgeLockReq {
+    // 欲上or開鎖的符文索引
+	required int64 badgeId = 1;
+}

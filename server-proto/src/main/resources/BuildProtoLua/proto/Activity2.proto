@@ -1,0 +1,812 @@
+option java_package = "com.guaji.game.protocol";
+
+import "Reward.proto";
+
+// 万家灯火页面信息
+message HPFindTreasureInfoRet
+{
+	// 活动剩余时间
+	required int32 leftTime = 1;
+	// 页面信息
+	repeated int32 leftSearchTimes = 2;
+}
+// 万家灯火点灯
+message HPFindTreasureLight
+{
+	// 1.华灯初上,2.璀璨灯火,3.fuck
+	required int32 type = 1;
+	// 次数
+	required int32 times = 2;
+}
+message HPFindTreasureLightRet
+{
+	// 类型
+	required int32 type = 1;
+	// 物品编号
+	repeated int32 rewardId = 2;
+	// 剩余寻宝次数
+	required int32 leftSearchTimes = 3;
+}
+
+message HPGoldClubStatusRet
+{
+	required int32 stageStatus = 1;
+}
+// 财富俱乐部页面信息
+message HPGoldClubInfoRet
+{
+	// 充值人数
+	required int32 rechargePeople = 1;
+	// 今天充值钻石
+	required int32 recharge = 2;
+	// 当前返利比例
+	required int32 proportion = 3;
+	// 活动剩余时间
+	required int32 leftTimes = 4;
+	// 当前活动所处的阶段（0 正常 1结算）
+	required int32 stageStatus = 5;
+}
+
+// 红包活动页面信息
+message HPRedEnvelopeInfoRet
+{
+	// 我的红包数量
+	required int32 myRedEnvelope = 1;
+	// 今日系统红包状态 0未领,1已领
+	required int32 todaySysRedEnvelopeStatus = 2;
+	// 今天已抢红包个数
+	required int32 todayGrabRedEnvelope = 3;
+	// 服务器红包数量
+	required int32 serverRedEnvelope = 4;
+	// 个人累计充值
+	required int32 personalRechargeNum = 5;
+	// 活动剩余时间
+	required int32 leftTimes = 6;
+}
+
+// 发红包
+message HPGiveRedEnvelope
+{
+	// 祝福语
+	required string wishes = 1;
+}
+message HPGiveRedEnvelopeRet
+{
+	// 我的红包数量
+	required int32 myRedEnvelope = 1;
+	// 服务器红包数量
+	required int32 serverRedEnvelope = 2;
+	// 活动剩余时间
+	required int32 leftTimes = 3;
+}
+
+//领红包
+message HPGrabFreeRedEnvelopeRet
+{
+	// 免费红包奖励
+	required string itemCfg = 1;
+	// 今日系统红包状态 0未领,1已领
+	required int32 todaySysRedEnvelopeStatus = 2;
+}
+
+// 抢红包
+message HPGrabRedEnvelopeRet
+{
+	// 红包playerId
+	optional int32 playerId = 1;
+	// 红包playerName
+	optional string playerName = 2;
+	// 红包roleItemId
+	optional int32 roleItemId = 3;
+	// 角色等级
+	optional int32 roleLevel = 4;
+	// 祝福语
+	required string wishes = 5;
+	// 红包开出钻石
+	required int32 gold = 6;
+	// 今天已抢红包个数
+	required int32 todayGrabRedEnvelope = 7;
+	// 服务器红包数量
+	required int32 serverRedEnvelope = 8;
+	// 活动剩余时间
+	required int32 leftTimes = 9;
+}
+
+message HPPushChatLuck {
+	optional int32 version = 1[default = 1];
+}
+
+// 排名献礼
+// 请求数据
+message HPRankGift {
+	optional int32 version = 1[default = 1];
+}
+// 单个排名信息
+message HPRankGiftItem {
+	// id
+	required int32 playerId = 1;
+	// 排名
+	required int32 rank = 2;
+	// 名字
+	required string name = 3;
+	// 等级
+	optional int32 level = 4;
+	// 当前经验
+	optional int64 exp = 5;
+	// 是否是NPC (0表示NPC，1表示玩家)
+	optional int32 isNPC = 6;
+}
+// 排名信息
+message HPRankGiftInfo {
+	// 玩家自己排名(若玩家未进榜，则填写-1)
+	required int32 selfRank = 1;
+	// 排名列表
+	repeated HPRankGiftItem rankList = 2;
+}
+// 返回数据
+message HPRankGiftRet {
+	// 活动总时间
+	required int64 totalTime = 1;
+	// 活动剩余时间
+	required int64 leftTimes = 2;
+	// 竞技排名信息
+	required HPRankGiftInfo arenaRankInfo = 3;
+	// 等级排名信息
+	required HPRankGiftInfo expRankInfo = 4;
+}
+
+// 终身卡活动
+message HPForeverCardInfo {
+	optional int32 version = 1[default = 1];
+}
+message HPForeverCardGetAward {
+	optional int32 version = 1[default = 1];
+}
+message HPForeverCardRet {
+	// 玩家终身卡状态(1:未开启,无资格 2: 未开启,有资格 3:已开启,今日未领取 4:已开启,今日已领取)
+	required int32 cardStatus = 1;
+	// 玩家再充值xx钻才能拥有激活资格
+	optional int32 canActivateNeedGold = 2;
+	// 玩家激活终身卡消耗钻石
+	optional int32 activateGold = 3;
+	// 玩家当天还需累积消费X钻石,才可自动激活
+	optional int32  activateConsumGold= 4;
+}
+
+
+//七夕兑换信息
+message HPExchangeInfoRet
+{
+	//已兑换组id列表
+	repeated string exchangeIdList = 1;
+	//已兑换道具数量
+	repeated int32 exchangeTimes = 2;
+	//活动剩余时间
+	required int32 lastCount = 3;
+}
+
+//兑换七夕道具
+message HPDoExchangeRet
+{
+	//兑换组编号
+	required string exchangeId = 1;
+	//已经兑换的次数
+	required int32 exchangeTimes = 2;
+}
+
+//请求七夕兑换道具
+message DoExchange
+{
+	//兑换组编号
+	required string exchangeId = 1;
+	//要对换的次数
+	required int32 exchangeTimes = 2;
+}
+
+// 气枪打靶面板信息
+message HPPanelPriceInfo
+{
+	// 射击类型
+	required int32 shootType = 1;
+	// 一次价格
+	required int32 oneTimePrice = 2;
+	// 十次价格
+	required int32 tenTimePrice = 3;
+
+}
+
+// 射击活动面板请求
+message HPShootPanelInfoRes
+{
+	// 活动剩余时间
+	required int64 leftTime = 1;
+	// 免费次数时间
+	repeated int64 freeTime = 2;
+	// 消耗信息
+	repeated HPPanelPriceInfo shootPriceInfo = 3;
+	// 奖池ID
+	required int32 rewardStateId = 4;
+}
+
+// 射击活动开始请求
+message HPShootStartReq
+{
+	// 射击类型(1：初级,2:中级,3:高级)
+	required int32 shootType = 1;
+	// 免费类型
+	required int32 freeType = 2;
+	// 次数
+	required int32 shootCount = 3;
+}
+// 射击结束后返回物品
+message HPShootEndInfo
+{
+	// 返回物品
+	repeated string reward = 1;
+}
+
+// 开启宝藏
+message HPPrinceDevilsSearchReq
+{
+	required int32 devilsIndex = 1;
+}
+
+// 宝藏位置
+message PrinceDevilsIndexInfo
+{
+	// 宝藏坐标
+	required int32 index = 1;
+	// 奖励内容
+	required string award = 2;
+}
+
+// 宝藏活动信息
+message HPPrinceDevilsPanelInfoRes
+{
+	// 活动剩余时间
+	required int64 activityLeftTime = 1;
+	// 免费次数剩余时间
+	required int32 freeTime = 2;
+	// 积分
+	required int32 score = 3;
+	// 已领取信息
+	repeated PrinceDevilsIndexInfo devilsIndexInfo = 4;
+	// 是否有幸运奖励
+	required bool luck = 5;
+	// 幸运奖励信息
+	optional string luckAward = 6;
+	// 本次点击钻石消耗
+	required int32 consumeGold = 7;
+}
+
+// 积分兑换
+message HPPrinceDevilsScoreExchangeReq
+{
+	// 物品ID
+	required int32 id = 1;
+	// 兑换数量
+	required int32 count = 2;
+}
+
+// 剩余购买次数信息
+message PrinceDevilsGoodsInfo
+{
+	// 唯一ID
+	required int32 id = 1;
+	// 物品str
+	required string goodsId = 2;
+	// 总次数
+	required int32 sumCount = 3;
+	// 已兑换次数
+	required int32 exchangeCount = 4;
+	//需要积分
+	required int32 singleCostScore = 5;
+}
+
+// 面板信息
+message HPPrinceDevilsScoreExchangeRes
+{
+	// 剩余兑换次数详情
+	repeated PrinceDevilsGoodsInfo goodsInfos = 1;
+	// 剩余积分
+	required int32 surplusScore = 2;
+	// 面板关闭时间
+	optional int32 panelCloseTime = 3;
+}
+
+// ios专属礼包
+message HPIosGitInfo
+{
+	// 礼包状态
+	required int32 gitState = 1;
+}
+
+message HPExpeditionArmoryAllScoreInfoRet
+{
+	required int32 score = 1;
+}
+
+//vip礼包信息
+message HPVipPackageInfoRet
+{
+	//已购礼包id
+	repeated int32 vipPackageList = 1;
+	//购买礼包时间
+	repeated int64 getVipPackageTime = 2;
+	//缺省字段
+	required int32 default = 3;
+}
+
+//购买礼包反馈信息
+message HPGetVipPackageAward
+{
+	//购买成功的礼包id
+	required int32 vipPackageId = 1;
+	//购买成功的时间
+	required int64 getTime = 2;
+}
+
+//请求购买某个礼包
+message GetVipPackageAward
+{
+	//礼包id
+	required int32 vipPackageId = 1;
+}
+//请求领取某个周卡奖励
+message HPGetNewWeekCardReward
+{
+	required int32 newWeekCardId = 1;
+}
+//周卡信息
+message NewWeekCard
+{
+	//周卡id
+	required int32 weekCardId = 1;
+	//周卡是否购买（激活）
+	required bool activateFlag = 2;
+	//今天是否已经领取周卡奖励
+	required bool isTodayTakeAward = 3;
+	//周卡剩余天数
+	required int32 leftDays = 4;
+	//周卡剩余展示时间
+	required int64 showTime = 5;
+	
+}
+//请求周卡信息
+message HPGetNewWeekCardInfo
+{
+	required int32 newWeekCardCount = 1;
+	repeated NewWeekCard newWeekCardInfoList = 2;
+}
+
+message HPRedPointInfo
+{
+	repeated int32 pointActivityIdList = 1;
+}
+
+//获取成长基金信息返回
+message HPGetGrowthFundInfoRes
+{
+	required bool bought 	= 1;	//是否购买
+	repeated int32 rewardId = 2;	//已经领取的奖励ID
+}
+
+//领取成长基金奖励
+message HPGetGrowthFundRewardReq
+{
+	required int32 rewardId 	= 1;	//奖励ID
+}
+
+//购买成长基金成功返回
+message HPBuyGrowthFundSuccRes
+{
+	required int32 succ = 1;//成功：0，失败：1
+}
+// 幸运福将客户端请求
+message HPLuckyMercenaryInfo
+{
+}
+
+// 幸运福将服务端响应消息item
+message HPLuckyMercenary
+{
+	// 佣兵ID
+	required int32 mercenaryID = 1;
+	// buff数据
+	repeated int32 id = 2;
+}
+
+// 幸运福将服务端响应
+message HPLuckyMercenaryInfoRet
+{
+	// 剩余时间
+	required int32 leftTime = 1;
+	// 幸运福将item
+	repeated HPLuckyMercenary luckMercenaryItem = 2;
+	
+}
+
+//新夺宝奇兵页面基本信息返回
+message HPNewTreasureRaiderInfoSync
+{
+	//活动剩余时间
+	required int32 leftTime = 1;
+	//长度为0代表没有奇遇宝箱，有值代表有奇遇宝箱
+	optional string items = 2;
+	//今日免费寻宝次数
+	required int32 freeTreasureTimes = 3;
+	//剩余寻宝次数
+	required int32 leftTreasureTimes = 4;
+	//寻宝1次需要消耗的钻石
+	required int32 onceCostGold = 5;
+	//寻宝10次需要消耗的钻石
+	required int32 tenCostGold = 6;
+	//寻宝奖励
+	repeated string reward = 7;
+	//奖励对应的倍数  长度和reward对应
+	repeated int32 reward_multiple = 8;
+	//当前buf剩余时间
+	required int32 leftBuffTimes = 9;
+	//当前buf 倍数, 没有buf为1
+	required int32 buf_multiple = 10;
+	//免费CD
+	required int32 freeCD = 11;
+	//必定获得奖励剩余次数
+	required int32 leftAwardTimes=12;
+
+}
+
+//新夺宝奇兵复刻版页面基本信息返回
+message HPNewTreasureRaiderInfoSync2
+{
+	//活动剩余时间
+	required int32 leftTime = 1;
+	//长度为0代表没有奇遇宝箱，有值代表有奇遇宝箱
+	optional string items = 2;
+	//今日免费寻宝次数
+	required int32 freeTreasureTimes = 3;
+	//剩余寻宝次数
+	required int32 leftTreasureTimes = 4;
+	//寻宝1次需要消耗的钻石
+	required int32 onceCostGold = 5;
+	//寻宝10次需要消耗的钻石
+	required int32 tenCostGold = 6;
+	//寻宝奖励
+	repeated string reward = 7;
+	//免费CD
+	required int32 freeCD = 8;
+	//基础必定获得奖励剩余次数
+	required int32 basicLeftAwardTimes=9;
+	//皮肤必定获得奖励剩余次数
+	required int32 skinLeftAwardTimes=10;
+	//是否已经激活基础卡
+	required bool isActiveBasic=11;
+
+}
+
+//新夺宝奇兵复刻版页面基本信息返回
+message HPNewTreasureRaiderInfoSync4
+{
+	//活动剩余时间
+	required int32 leftTime = 1;
+	//长度为0代表没有奇遇宝箱，有值代表有奇遇宝箱
+	optional string items = 2;
+	//今日免费寻宝次数
+	required int32 freeTreasureTimes = 3;
+	//剩余寻宝次数
+	required int32 leftTreasureTimes = 4;
+	//寻宝1次需要消耗的钻石
+	required int32 onceCostGold = 5;
+	//寻宝10次需要消耗的钻石
+	required int32 tenCostGold = 6;
+	//寻宝奖励
+	repeated string reward = 7;
+	//免费CD
+	required int32 freeCD = 8;
+	//基础必定获得奖励剩余次数
+	required int32 basicLeftAwardTimes=9;
+	//皮肤必定获得奖励剩余次数
+	required int32 skinLeftAwardTimes=10;
+	//是否已经激活基础卡
+	required bool isActiveBasic=11;
+
+}
+
+//新夺宝奇兵页面点击寻宝
+message HPNewTreasureRaiderSearch
+{
+	//寻宝次数
+	required int32 searchTimes = 1;
+}
+
+//夺宝奇兵复刻版抽卡类型
+enum TreasureSearchType
+{
+	//基础抽卡
+	SEARCHTYPE_BASIC=1;
+	//皮肤抽卡
+	SEARCHTYPE_SKIN=2;
+}
+
+//新夺宝奇兵复刻版页面点击寻宝
+message HPNewTreasureRaiderSearch2
+{
+	//抽卡类型
+	required TreasureSearchType searchType = 1;
+	//寻宝次数
+	required int32 searchTimes = 2;
+}
+
+//新夺宝奇兵复刻版页面点击寻宝
+message HPNewTreasureRaiderSearch4
+{
+	//抽卡类型
+	required TreasureSearchType searchType = 1;
+	//寻宝次数
+	required int32 searchTimes = 2;
+}
+
+//新夺宝奇兵复刻版 info 信息请求
+message HPNewTreasureRaiderInfoReq
+{
+}
+
+
+
+//聊天框购买活动信息
+message HPChatSkinActivityInfo
+{
+	
+	//单条皮肤信息
+	message ChatSkinActInfo
+	{	
+		//皮肤Id
+		required int32 skinId = 1;
+		//是否已购买（0：未购买，1：购买）
+		optional int32 bought = 2;
+		//皮肤可用时间(天)
+		required int32 skinTime = 3;
+		//价格(充值购买则不传)
+		optional int32 price = 4;
+		//充值Id(钻石购买则不传)
+		optional int32 rechargeId = 5; 
+	}
+	//活动剩余时间（秒）
+	required int32 leftTime = 1;
+	//皮肤配置
+	repeated ChatSkinActInfo skins = 2;
+}
+
+//用户聊天框信息
+message HPChatSkinInfo
+{	
+	//单条皮肤信息
+	message ChatSkinInfo
+	{
+		//皮肤Id
+		required int32 skinId = 1;
+		//剩余可用时间（天）
+		required int32 remainTime = 2;
+	}
+	
+	//当前使用的皮肤ID
+	required int32 curSkinId = 1;
+	//已拥有皮肤信息
+	repeated ChatSkinInfo skins = 2;
+}
+
+//聊天框购买（购买与回传）
+message HPChatSkinBuy
+{	
+	//皮肤Id
+	required int32 skinId = 1;
+}
+
+//聊天框更换（更换与回传）
+message HPChatSkinChange
+{	
+	//皮肤Id
+	required int32 skinId = 1;
+}
+
+//请求同步王的后宫
+message HPSyncHarem
+{
+	repeated int32 haremType = 1;
+}
+
+//王的后宫活动信息结构体
+message HPHaremInfo
+{
+	//活动类型
+	required int32 haremType = 1;
+	//活动剩余时间（限定活动独有）
+	optional int64 leftTime = 2;
+	//免费剩余次数
+	required int32 freeChance = 3;
+	//CD倒计时
+	required int64 freeCd = 4;
+	//剩余多少次进特殊奖池
+	required int32 luckyTime = 5;
+	//单日剩余次数
+	required int32 dayLeftTimes = 6;
+}
+
+message HPSyncHaremRet
+{
+	repeated HPHaremInfo haremInfo = 1;
+	//活动积分
+	required int32 score = 2;
+}
+
+//王的后宫抽卡
+message HPHaremDraw
+{
+	//后宫类型
+	required int32 type = 1;
+	//抽几次
+	required int32 times = 2;
+}
+//抽卡返回
+message HPHaremDrawRet
+{
+	//返回奖励
+	repeated string reward = 1;
+}
+
+// 王的后宫面板信息
+message HPHaremScoreInfo
+{
+	// 兑换ID
+	required int32 id = 1;
+	// 已兑换次数
+	required int32 exchangeTimes = 2;
+	// 总次数
+	required int32 limitTimes = 3;
+	// 兑换的道具
+	required string exchangeItems = 4;
+	// 消耗积分
+	optional int32 costCredits = 5;
+	// 消耗道具
+	optional string costItems = 6;
+	
+}
+
+// 面板信息
+message HPHaremScorePanelRes
+{
+	repeated HPHaremScoreInfo haremScoreInfo = 1;
+	// 当前总积分
+	optional int32 score = 2;
+}
+
+// 王的后宫兑换请求
+message HPHaremExchangeReq
+{
+	// 兑换ID
+	required int32 id = 1;
+	// 兑换次数
+	required int32 times = 2;
+}
+
+// 打折禮包信息請求
+message DiscountInfoReq{
+	required int32 actId 	= 1; // 活動ID
+}
+
+//打折礼包信息
+message DiscountInfo{
+	required int32 goodsId 	= 1;	//礼包ID
+	required int32 buyTimes = 2;	//购买次数
+	required int32 status 	= 3;	//当前状态，0：不可购买，也不可领取（达到购买次数，并且已领取），1：可购买，2：可领取
+	required int32 countdownTime = 4;	//倒计时
+	optional int32 refreshTime =5;
+}
+message HPDiscountInfoRet{
+	repeated DiscountInfo info = 1;	//礼包信息
+}
+
+//打折礼包购买成功返回
+message HPDiscountBuySuccRet{
+	required int32 goodsId = 1;	//礼包ID
+}
+//领取礼包奖励
+message HPDiscountGetRewardReq{
+	required int32 goodsId = 1;	//礼包ID
+}
+message HPDiscountGetRewardRes{
+	required int32 goodsId = 1;	//礼包ID
+}
+
+//万能碎片活动信息同步请求
+message SyncFragmentExchangeReq
+{
+	
+}
+
+//万能碎片活动信息同步返回
+message SyncFragmentExchangeRes
+{
+	required int64 surplusTime = 1;	//活动剩余时间
+}
+
+//万能碎片兑换
+message FragmentExchangeReq
+{
+	required int32 id = 1;	//配表ID
+	required string fragment = 2;	//消耗碎片
+	required int32 multiple = 3;	//倍数
+}
+
+message FragmentExchangeRes
+{
+	optional RewardInfo rewardFragment = 1;//得到的奖励
+}
+
+
+//仙女的保佑活动信息结构体
+message FairyBlessInfo{
+	required int32 type 	= 1;	//类型
+	required int32 progress = 2;	//进度
+}
+
+//仙女的保佑累计充值活动信息同步请求
+message SyncFairyBlessReq
+{
+}
+
+//仙女的保佑累计充值活动信息同步返回
+message SyncFairyBlessRes
+{
+	required int32 flower = 1;//鲜花数量
+	required int32 leftTime = 2;//活动剩余时间
+	repeated FairyBlessInfo fairyBlessInfo = 3;	//活动信息
+}
+
+//仙女的保佑祈祷请求
+message FairyBlessReq
+{
+	required int32 type = 1;//类型
+}
+
+//少女的邂逅同步
+message SyncMaidenEncounterReq
+{
+	required int32 type = 1;//0：第一次请求 1：互动 2：刷新 3：加满
+}
+
+message SyncMaidenEncounterRes
+{
+	required int32 id = 1;//唯一ID
+	required int32 remainderTime = 2;//活动剩余时间
+	optional int32 freeInteractTimes = 3;//剩余免费互动次数
+	optional int32 freeRefreshTimes = 4;//剩余免费刷新次数
+	optional int32 progress = 5;//当前互动进度
+	optional int32 stage = 6;//当前互动阶段
+	optional int32 devilRefreshTime = 7;//恶魔刷新时间
+	optional bool isShow = 8;//是否进入展示阶段
+}
+
+//少女的邂逅exchange结构体
+message MaidenEncounterExchangeInfo{
+	required int32  id 	= 1; //配表ID
+	required int32  remainderTimes	= 2;//剩余兑换次数
+}
+
+//少女的邂逅兑换信息同步
+message SyncMaidenEncounterExchangeReq
+{
+	
+}
+
+message SyncMaidenEncounterExchangeRes
+{
+	repeated MaidenEncounterExchangeInfo info = 2;//唯一ID
+}
+
+//少女的邂逅兑换
+message MaidenEncounterExchangeReq
+{
+	required int32 id = 1;	//配表ID
+	required int32 multiple = 2; //倍数
+}

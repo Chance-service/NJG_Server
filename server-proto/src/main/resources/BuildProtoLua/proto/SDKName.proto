@@ -1,0 +1,9 @@
+option java_package = "com.guaji.game.protocol";
+enum PBSDKName{
+	//默认
+	default_channel = 1;
+	//幽谷ios
+	yougu_channel_ios = 2;
+	//幽谷Android
+	yougu_channel_android=3;
+}

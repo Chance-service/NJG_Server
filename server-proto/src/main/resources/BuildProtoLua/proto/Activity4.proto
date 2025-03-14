@@ -1,0 +1,678 @@
+option java_package = "com.guaji.game.protocol";
+
+//登录签到
+message LoginSignedInfoReq
+{
+}
+
+//登录签到
+message LoginSignedAwardReq
+{
+	//1  签到奖励  2 开启箱子奖励
+	required int32 type 	  = 1;
+	required int32 Level 	  = 2;
+}
+
+//登录签到返回
+message LoginSignedRep
+{
+	//当前月份
+	required int32 curMonth = 1;
+	//距离注册时间天数
+	required int32 monthOfDay = 2;
+	//正常签到天数
+	repeated int32 signedDays = 3;
+	//补签到天数
+	repeated int32 supplSignedDays = 4;
+	//已开启箱子奖励
+	repeated int32 gotAwardChest = 5;
+}
+
+//活跃度达标详细信息请求
+message ActiveComplianceInfoReq
+{
+}
+
+//活跃度达标领取奖励请求
+message ActiveComplianceAwardReq
+{
+	//领取第几天奖励
+	required int32 day 	 = 1;
+}
+
+message ActiveComplianceAwardRep
+{
+	//开启下一周期剩余时间
+	required int64 surplusTime=1;
+	//本日活跃度
+	required int32 curActive=2;
+	//活跃度已达标天数
+	required int32 days=3;
+	//已领取奖励记录
+	repeated int32 awardDays=4;
+}
+
+//武器屋活动信息请求
+message Activity125WeaponInfoReq
+{
+	
+}
+
+// 武器屋信息
+message Activity125Info
+{
+	// 类型(1：初级,2:中级,3:高级)
+	required int32 type = 1;
+	// 一次价格
+	required int32 oneTimePrice = 2;
+	// 多次价格
+	required int32 multiTimePrice = 3;
+	// 活动剩余次数
+	optional int32 leftCount = 4;
+	// 免费次数时间
+	optional int64 freeTime = 5;
+	// 奖池ID
+	required int32 rewardStateId = 6;
+
+}
+// 武器屋活动信息返回
+message Activity125WeaponInfoRes
+{
+	// 消耗信息
+	repeated Activity125Info info = 1;
+
+}
+
+// 武器屋活动抽取请求
+message Activity125WeaponStartReq
+{
+	// 类型(1：初级,2:中级,3:高级)
+	required int32 type = 1;
+	// 免费类型
+	required bool freeType = 2;
+	// 次数
+	required int32 count = 3;
+}
+
+// 武器屋活动抽取返回
+message Activity125WeaponStartRes
+{
+	// 返回物品
+	repeated string reward = 1;
+	required Activity125Info info = 2;
+}
+
+// 武器召唤师
+message Activity127Info
+{
+	//活动剩余时间
+	required int32 leftTime = 1;
+	//长度为0代表没有奇遇宝箱，有值代表有奇遇宝箱
+	optional string items = 2;
+	//今日免费寻宝次数
+	required int32 freeTreasureTimes = 3;
+	//剩余寻宝次数
+	required int32 leftTreasureTimes = 4;
+	//寻宝1次需要消耗的钻石
+	required int32 onceCostGold = 5;
+	//寻宝10次需要消耗的钻石
+	required int32 tenCostGold = 6;
+	//随机需要消耗的钻石
+	required int32 randCostGold = 7;
+	//寻宝奖励
+	repeated string reward = 8;
+	//免费CD
+	required int32 freeCD = 9;
+	//必定获得奖励剩余次数
+	required int32 leftAwardTimes=10;
+	//当前拥有可抽取奖励积分
+	required int32 lotterypoint	 =11;
+	//随机出来的格子索引
+	repeated int32 latticeIndex	 =12;
+	//寻宝10次需要消耗的钻石
+	required int32 lotteryCost = 13;
+}
+
+// 武器召唤师
+message Activity127Draw
+{
+	//抽奖次数
+	required int32 times = 1;
+}
+
+// 128抽卡积分排行活动Info
+message Activity128InfoReq
+{
+
+}
+
+
+message Activity128OwnInfo 
+{
+	required int32 freeLeftTime = 1;
+	required int32 currentScore = 2;
+	required int32 totalScore = 3;
+	required int32 rank = 4;
+	required int32 leftAwardTimes = 5;
+	repeated int32 boxId = 6;
+}
+
+
+// 128抽卡积分排行活动Info
+message Activity128InfoRes
+{
+	required int32 leftTime = 1;
+	required int32 oneTimeCost = 2;
+	required int32 tenTimesCost = 3;
+	required Activity128OwnInfo ownInfo = 4;
+}
+
+// 128抽卡积分排行活动抽奖
+message Activity128LotteryReq
+{
+	required bool freeLottery = 1;
+	required int32 count = 2;
+}
+// 128抽卡积分排行活动抽奖
+message Activity128LotteryRes
+{
+	repeated string reward = 1;
+	required Activity128OwnInfo ownInfo =2;
+
+}
+
+// 128抽卡积分排行活动排行
+message Activity128RankReq
+{
+	// 实时排行 1 昨天排行 2
+	required int32 type = 1;
+}
+
+
+message Activity128RankItem
+{
+	required int32 rank = 1;
+	required int32 score = 2;
+	required int32 playerId = 3;
+	required string name = 4;
+	required int32 prof = 5;
+	required int32 headerId = 6;
+}
+
+// 128抽卡积分排行活动排行
+message Activity128RankRes
+{
+	required int32 type = 1;
+	required Activity128RankItem ownItem = 2;
+	repeated Activity128RankItem item = 3;
+}
+
+message Activity128BoxReq
+{
+	required int32 boxId = 1;
+}
+
+message Activity128BoxRes
+{
+	required Activity128OwnInfo ownInfo = 1;
+}
+
+// 消费型周卡领取奖励
+message ConsumeWeekCardRewardReq 
+{
+}
+
+// 消费型周卡信息请求
+message ConsumeWeekCardInfoReq 
+{
+}
+
+// 消费型周卡信息返回(NG 大月卡)
+message ConsumeWeekCardInfoRet 
+{
+	// 当前激活的周卡Id
+	required int32 activeWeekCardId = 1;
+	// 剩余天数
+	required int32 leftDays = 2;
+	// 今日是不是已经领取
+	required int32 isTodayReward = 3;
+	// 活动剩余秒数
+	required int32 leftSenconds = 4;
+	// 是否已經領取購買禮
+	required bool isBuyRewardGot = 5;
+}
+
+// 消费型月卡信息请求
+message ConsumeMonthCardInfoReq 
+{
+}
+
+// 消费型月卡领取奖励
+message ConsumeMonthCardRewardReq 
+{
+}
+
+// 月卡信息(NG 小月卡)
+message ConsumeMonthCardInfoRet
+{
+	// 当前激活的月卡的配置Id
+	required int32 activeCfgId = 1;
+	// 今天是否已经领取月卡
+	required bool isTodayRewardGot = 2;
+	// 剩余天数
+	required int32 leftDays = 3;
+	// 是否已經領取購買禮
+	required bool isBuyRewardGot = 4;
+}
+
+// 月卡领取反馈
+message ConsumeMonthCardAwardGetRet
+{
+	//月卡id
+	required int32 monthCardId = 1;
+	//月卡领取时间
+	required int64 getAwardTime = 2;
+}
+
+// 非新手连续(天数)充值信息
+message HPContinueRecharge131Info
+{
+}
+message HPContinueRecharge131InfoRet
+{
+	// 活动期间累计充值数额
+	required int32 continueRechargedays = 1;
+	// 已领取的奖励配置Id
+	repeated int32 gotAwardCfgId = 2;
+	// 活动剩余时间（s）
+	required int32 surplusTime = 3;
+}
+
+// 非新手连续(天数)充值奖励
+message HPGetContinueRecharge131Award
+{
+	required int32 awardCfgId = 1;
+}
+message HPGetContinueRecharge131AwardRet
+{
+	// 已领取的奖励配置Id
+	required int32 gotAwardCfgId = 1;
+	// 活动剩余时间（s）
+	required int32 surplusTime = 2;
+}
+
+
+
+message LevelGiftInfo
+{
+	required int32 cfgId = 1;
+	//false未领取  true已领取
+	required bool isGot = 2;
+}
+
+// 等级礼包购买
+message Activity132LevelGiftBuyReq
+{
+	required int32 cfgId = 1;
+}
+message Activity132LevelGiftBuyRes
+{
+	repeated LevelGiftInfo info = 1;
+}
+
+// 等级礼包信息
+message Activity132LevelGiftInfoReq
+{
+
+}
+message Activity132LevelGiftInfoRes
+{
+	repeated LevelGiftInfo info = 1;
+	optional int32 limitDate = 2;
+}
+
+message OnLineGiftInfo
+{
+	required int32 cfgId = 1;
+	//false未领取  true已领取
+	required bool isGot = 2;
+	optional int32 leftTime = 3;
+}
+
+
+// 在线礼包信息
+message Activity133OnLineGiftInfoReq
+{
+
+}
+message Activity133OnLineGiftInfoRes
+{
+	repeated OnLineGiftInfo info = 1;
+}
+
+// 在线礼包领取
+message Activity133OnLineGiftGetReq
+{
+	required int32 cfgId = 1;
+}
+message Activity133OnLineGiftGetRes
+{
+	repeated OnLineGiftInfo info = 1;
+}
+
+message Activity134Item{
+	// 奖励配置ID
+	required int32 cfgId = 1;
+	// 当天奖励
+	required bool isToday = 2;
+	// 已抽奖次数
+	required int32 count = 3;
+	// 是否已经抽奖
+	required bool isLottery = 4;
+	// 是否已经领奖
+	required bool isGot = 5;
+	// 未领奖的倍数
+	required int32 multipleNum = 6;
+}
+
+
+// 周末礼包活动信息
+message Activity134WeekendGiftInfoReq
+{
+
+}
+
+// 周末礼包活动信息
+message Activity134WeekendGiftInfoRes
+{
+	// 预开启时间
+	required int32 preOpenTime = 1;
+	// 活动剩余时间
+	required int32 activityLefttime = 2;
+	// 当天活动剩余时间
+	required int32 todayLeftTime = 3;
+	// 奖励信息
+	repeated Activity134Item items = 4;
+
+}
+
+// 周末礼包活动抽奖
+message Activity134WeekendGiftLotteryReq
+{
+	required int32 cfgId = 1;
+}
+
+// 周末礼包活动抽奖
+message Activity134WeekendGiftLotteryRes
+{	
+	required int32 cfgId = 1;
+	required int32 multipleNum = 2;
+}
+
+// 周末礼包活动领奖
+message Activity134WeekendGiftGetReq
+{
+	required int32 cfgId = 1;
+}
+
+// 周末礼包活动领奖
+message Activity134WeekendGiftGetRes
+{
+	required int32 cfgId = 1;
+}
+
+// 老虎机充值返利抽奖活动信息
+message Activity137InfoReq
+{
+	
+}
+
+// 老虎机充值返利抽奖活动信息
+message Activity137InfoRep
+{	
+	// 第几次登录
+	required int32 loginCount = 1;
+	// 当前返利剩余时间
+	required int32 lefttime = 2;
+	// 已抽奖次数
+	required int32 count = 3;
+	// 老虎机第一列
+	required int32 firstLine = 4;
+	// 老虎机第二列
+	required int32 secondLine = 5;
+	// 老虎机第三列
+	required int32 thirdLine = 6;
+	// 是否已经使用
+	required bool isUsed = 7;
+	// 第几次登录获得的抽奖机会
+	required int32 loginTimes = 8;
+}
+// 老虎机充值返利抽奖活动抽奖
+message Activity137LotteryReq
+{
+	
+}
+// 老虎机充值返利抽奖活动抽奖
+message Activity137LotteryRep
+{	
+	// 已抽奖次数
+	required int32 count = 1;
+	// 老虎机第一列
+	required int32 firstLine = 2;
+	// 老虎机第二列
+	required int32 secondLine = 3;
+	// 老虎机第三列
+	required int32 thirdLine = 4;
+}
+
+//新夺宝奇兵复刻版页面点击寻宝
+message Activity138TreasureRaiderSearch
+{
+	//卡池
+	required int32 searchType  = 1;
+	//寻宝次数
+	required int32 searchTimes = 2;
+}
+
+//新夺宝奇兵页面基本信息返回
+message Activity138TreasureRaiderInfoSync
+{
+	//活动剩余时间
+	required int32 leftTime = 1;
+	//长度为0代表没有奇遇宝箱，有值代表有奇遇宝箱
+	optional string items = 2;
+	//今日免费寻宝次数
+	required int32 freeTreasureTimes = 3;
+	//剩余寻宝次数
+	required int32 leftTreasureTimes = 4;
+	//寻宝1次需要消耗的钻石
+	required string onceCostGold = 5;
+	//寻宝10次需要消耗的钻石
+	required string tenCostGold = 6;
+	//寻宝奖励
+	repeated string reward = 7;
+	//奖励对应的倍数  长度和reward对应
+	repeated int32 reward_multiple = 8;
+	//当前buf剩余时间
+	required int32 leftBuffTimes = 9;
+	//当前buf 倍数, 没有buf为1
+	required int32 buf_multiple = 10;
+	//免费CD
+	required int32 freeCD = 11;
+	//必定获得奖励剩余次数
+	required int32 leftAwardTimes=12;
+	//必掉副将
+	repeated int32 luckyMercenary=13;
+}
+
+// 召喚資訊
+message ActivityCallInfo
+{
+	//活动剩余时间
+	required int32 leftTime = 1;
+	//今日免费寻宝次数
+	required int32 freeTimes = 2;
+	//召喚1次需要消耗的钻石
+	required int32 onceCostGold = 3;
+	//召喚10次需要消耗的钻石
+	required int32 tenCostGold = 4;
+	//必定獲得高級獎勵剩余次数
+	required int32 leftAwardTimes=5;
+	//抽中或領去的獎勵
+	repeated string reward = 6;
+}
+
+// 召喚內容
+message ActivityCallDraw
+{
+	//召喚次数
+	required int32 times = 1;
+}
+
+// 許願轉輪大獎資訊
+message WishingItemInfo
+{
+	required string itemStr = 1;
+	required bool given = 2;
+}
+
+// 許願輪請求資訊
+message WishingRequestInfo
+{
+	required int32 kind = 1; // 1.日 2.月 3.星
+}
+
+// 許願轉盤
+message WishingWellInfo
+{
+	//轉輪種類
+	required int32 kind = 1; // 1.日 2.月 3.星
+	//動作
+	required int32 action = 2; // 0.資訊 1.單抽 2.十抽 3.領幸運獎 4.免費刷新 5.收費刷新 6.免費抽
+	//上次免費刷新時間
+	required int32 lastFreeTime = 3;
+	//目前幸運值
+	required int32 lucky = 4;
+	//幸運物領取次數
+	required int32 take = 5; // ex: 1代表已領取第一個物品
+	// 獎項資訊
+	repeated WishingItemInfo displayItem = 6;
+	// 當次獲得的獎勵
+	optional string reward = 7;
+	// 星輪可免費次數
+	optional int32 freeDraw =8;
+    // 最多獎項數
+    required int32 maxReward = 9;
+    // 目前獎項數
+    required int32 nowReward = 10;
+    
+}
+
+// 許願轉盤抽獎
+message WishingWellDraw
+{
+	//轉輪種類
+	required int32 kind = 1; // 1.日 2.月 3.星
+	//動作
+	required int32 action = 2; // 1.單抽 2.十抽 3.領幸運獎 4.免費刷新 5.付費刷新 6.星輪免費抽
+}
+
+// 新手小瑪莉
+message MarrayRequest
+{
+	//動作
+	required int32 action = 1; // 0.同步資訊 1.抽獎
+}
+
+message MarrayResponse
+{
+	//回應clietn動作
+	required int32 action = 1; // 0.同步資訊 1.抽獎
+	// 全部獎項 1.2.3.4....
+	repeated string rewards = 2;
+	// 活動剩餘時間
+	required int32 leftTime = 3;
+	// 抽獎消耗物品
+	required string costItem = 4;
+	// 已抽過獎像 PS:從1開始 參考全部獎項
+	repeated int32 gotIndex = 5;
+	// 當次獲得的獎勵
+	optional string reward = 6;
+}
+
+message HeroDramaReq
+{
+	//要求動作
+	required int32 action = 1; // 0.同步資訊 1.領獎
+	// 欲領取英雄itemId獎勵
+	optional int32 heroId = 2; 
+}
+
+message HeroDramaRes
+{
+	//回應動作
+	required int32 action = 1; // 0.同步資訊 1.領獎
+	//回應資訊,已領獎Hero ItemId
+	repeated int32 gotHero = 2;
+	// 回應領獎,當次獲得的獎勵
+	optional string reward = 3;
+}
+
+message RankGiftReq
+{
+	//要求動作
+	required int32 action = 1; // 0.同步資訊 1.領獎
+	// 欲領取獎勵索引ID
+	repeated int32 cfgId = 2;
+}
+
+// 完成伺服器成就資料
+message RankGiftCompleteInfo
+{
+	//完成成就序號
+	required int32 cfgId = 1;
+	// 完成玩家姓名
+	required string playerName =2;
+	// 玩家頭圖
+	required int32 HeadIcon = 3;
+}
+
+message RankGiftRes
+{
+	//回應動作
+	required int32 action = 1; // 0.同步資訊 1.領獎
+	//回應資訊,已領獎ItemId
+	repeated int32 gotId = 2;
+	//回應資訊,可以領取ItemId
+	repeated RankGiftCompleteInfo completeInfo = 3;
+	// 回應領獎,當次獲得的獎勵
+	optional string reward = 4;
+}
+
+// 精靈召喚要求動作
+message CallOfSpriteRequest
+{
+	//動作
+	required int32 action = 1; // 0.同步資訊 1.單抽 2.十抽 3.免費抽 4.領取哩程獎勵
+}
+
+//回傳
+message CallOfSpriteResponse
+{
+	//回應動作
+	required int32 action = 1; // 0.同步資訊 1.單抽 2.十抽 3.免費抽 4.領取哩程獎勵
+	// 單抽消耗物品
+	required string singleItem = 2;
+	// 十抽消耗物品
+	required string tenItem = 3;
+	//目前累積抽數
+	required int32 lucky = 4;
+	//哩程獎勵領取次數
+	required int32 take = 5; // ex: 1代表已領取第一個物品
+	//是否免費
+	required int32 free = 6; // ex: 0.沒有 1.有
+	// 回應領獎,當次獲得的獎勵
+	optional string reward = 7;
+}
+
+// 已經爆了不要加了

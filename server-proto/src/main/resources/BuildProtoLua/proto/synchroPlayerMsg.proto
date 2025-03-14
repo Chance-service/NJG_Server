@@ -1,0 +1,11 @@
+option java_package = "com.guaji.game.protocol";
+
+message SynchroPlayerMessage {
+	optional int32 wingLevel = 1;
+	optional int32 wingLuckyNum = 2;
+}
+
+message appleIdSubGoodsResumeReq{
+	optional string transactionId = 1;
+	optional string productId = 2;
+}

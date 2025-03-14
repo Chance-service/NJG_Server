@@ -1,0 +1,45 @@
+		public PayRechargeMessage(int productType,String name, String serial, String productId,
+				String productName, float price, float orignalPrice, int count,
+				String description,int serverTime,String extras) {
+			this._productType = productType;
+			this._name = name;
+			this.serial = serial;
+			this.productId = productId;
+			this.productName = productName;
+			this.price = price;
+			this.orignalPrice = orignalPrice;
+			this.count = count;
+			this.description = description;
+			this.serverTime = serverTime;
+			this.extras = extras;
+		}
+        
+        BUYINFO()
+		:productType(1), name(""), cooOrderSerial(""), productId(""), productName("")
+		, productPrice(1), productOrignalPrice(1), productCount(1), description(""), serverTime(0), extras(""){}
+	unsigned int productType;
+	std::string name;
+	std::string cooOrderSerial;
+	std::string productId;
+	std::string productName;//display on dev.91.com
+	float productPrice;
+	float productOrignalPrice;
+	unsigned int productCount;
+	std::string description;
+	unsigned int serverTime;
+	std::string extras;
+	void clear()
+	{
+		productType = 1;
+		name = "";
+		cooOrderSerial = "";
+		productId = "";
+		productName = "";
+		productPrice = 1; 
+		productOrignalPrice = 1;
+		productCount = 1; 
+		description = "";
+		serverTime = 0;
+		extras = "";
+	}
+};

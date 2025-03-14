@@ -1,0 +1,28 @@
+option java_package = "com.guaji.game.protocol";
+
+// 返回兑换金豆页面信息
+message HPExchangeGoldBeanPageRet {
+	// 今天充值的钻石数
+	required int32 todayRechargeGold = 1;
+	// 今天兑换消耗的钻石数
+	required int32 todayExchangeCostGold = 2;
+	//金豆数量
+	required int32 goldBean=3;
+}
+
+// 请求兑换金豆
+message HPExchangeGoldBean {
+	// 兑换数量
+	required int32 count = 1;
+}
+
+// 返回兑换金豆信息
+message HPExchangeGoldBeanRet {
+	// 今天兑换消耗的钻石数
+	required int32 todayExchangeCostGold = 1;
+	//金豆数量
+	required int32 goldBean=2;
+	//消息发送类型(参考Const.YaYaMsgType)
+	required int32 msgType=3;
+}
+

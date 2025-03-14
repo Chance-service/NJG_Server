@@ -1,0 +1,15 @@
+option java_package = "com.guaji.game.protocol";
+
+//ad S -> C    PLAY_AD_INFO_S
+message HPPlayAdRet 
+{
+	// ad 显示状态
+	required int32 adstatu = 1;// 0:close    1:open
+}
+
+//ad C -> S  result   PLAY_AD_INFO_C
+message HPPlayAdMsg
+{
+	// ad 的播放状态
+	required int32 playstatu = 1;//0:cancel    1:cancel
+}

@@ -1,0 +1,150 @@
+option java_package = "com.guaji.game.protocol";
+
+import "Battle.proto";
+/*** 竞技场模块协议 （xpf） ***/
+
+message ArenaRoleInfo
+{
+    required int32 itemId = 1;
+    optional int32 starLevel = 2;
+    optional int32 skinId = 3;
+    optional int32 fightValue = 4;
+    optional int32 level = 5;
+}
+
+message ArenaItemInfo
+{
+	// 身份类型（1 robot 2 player）
+	required int32 identityType = 1;
+	// 身份Id （robotItemId / roleItemId）
+	required int32 cfgItemId = 2;
+	// 玩家Id 
+	optional int32 playerId = 3;
+	// 角色等级
+	required int32 level = 4; 
+	// 角色名
+	required string name = 5;
+	// 职业
+	required int32 prof = 6;
+	// 竞技场排名
+	required int32 rank = 7;
+	// 角色战斗力
+	required int32 fightValue = 8; 
+	// 奖励物品
+	required string rankAwardsStr = 9;
+	// 今日剩余挑战次数（自身竞技场信息填充）
+	optional int32 surplusChallengeTimes = 10;
+	// 下次购买次数价价格（自身竞技场信息填充）
+	optional int32 nextBuyPrice = 11;
+	// 已经购买次数
+	optional int32 alreadyBuyTimes = 12;
+	//公会
+	optional string allianceName = 13;
+	//公会id
+	optional int32 allianceId = 14;
+    //主角頭圖
+	optional int32 headIcon = 15;
+	//佣兵資訊
+	repeated ArenaRoleInfo roleItemInfo = 16;
+}
+
+// 请求竞技场
+message HPArenaDefenderList
+{
+	// 自身PlayerId
+	required int32 playerId = 1;
+}
+// 同步竞技场信息
+message HPArenaDefenderListSyncS
+{
+	// 主角竞技场信息
+	required ArenaItemInfo self = 1;
+	// 对手信息列表
+	repeated ArenaItemInfo defender = 2;
+    // 競技場季結算倒數時間(秒)
+    required int32 leftTime = 3;
+}
+
+// 换一批对手
+message HPReplaceDefenderList
+{
+	// 自身PlayerId
+	required int32 playerId = 1;
+}
+message HPReplaceDefenderListRet
+{
+	// 对手信息列表
+	repeated ArenaItemInfo defender = 2;
+}
+
+// 购买挑战次数
+message HPBuyChallengeTimes 
+{
+	required int32 times = 1;
+}
+message HPBuyChallengeTimesRet
+{
+	// 今日剩余挑战次数
+	required int32 surplusChallengeTimes = 1;
+	// 已经购买次数
+	required int32 alreadyBuyTimes = 3;
+	// 下次购买次数价价格
+	required int32 nextBuyPrice = 2;
+}
+
+// 排行榜信息
+message HPArenaRankingList
+{
+	
+}
+message HPArenaRankingListRet
+{
+	// 主角竞技场信息
+	required ArenaItemInfo self = 1;
+	// 排行数据
+	repeated ArenaItemInfo rankInfo = 2;
+}
+
+// 挑战守护者
+message HPChallengeDefender
+{
+	// 挑战rank
+	required int32 defendeRank = 1;
+	// 是Robot则填充monsterId，否则填0
+	// 以便战斗打的时候是同一个monster
+	required int32 monsterId = 2;
+	// 挑战目标PlayerID
+	optional int32 playerId = 3;
+}
+message HPChallengeDefenderRet
+{
+	// 挑战结果（1 lose 2 win）
+	required int32 challengeResult = 1;
+	// 挑战前名次
+	required int32 preOfChallengeRank=2;
+	// 挑战后名次
+	required int32 afterOfChallengeRank=3;
+}
+
+message HPRecordMaxArenaMailId {
+	required int32 maxMailId = 1;
+}
+
+// 竞技场战报协议包
+message HPArenaChallengeReportRes
+{
+	optional BattleInfo battleInfo = 1;
+	optional int32 version = 2[default = 1];
+}
+
+// 查看竞技场战报
+message HPArenaReportReq
+{
+	required int32 reportId = 1;
+}
+
+
+
+
+
+

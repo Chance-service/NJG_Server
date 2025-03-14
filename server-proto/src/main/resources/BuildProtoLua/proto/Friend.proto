@@ -1,0 +1,257 @@
+option java_package = "com.guaji.game.protocol";
+
+import "Const.proto";
+import "Reward.proto";
+
+//好友基础信息
+message FriendItem 
+{
+	required int32 playerId 	= 1;
+	required int32 level 		= 2;
+	required string name 		= 3;
+	required int32 roleId 		= 4;
+	required int32 fightValue 	= 5;
+	required int32 rebirthStage = 6;
+	optional string signature  	= 7;
+	optional int32 offlineTime  = 8;
+	//主角avatar ID
+	optional int32 avatarId = 9;
+	//头像
+	optional int32 headIcon = 10;
+	//是否有未領友誼點
+	optional bool haveGift = 11;
+	//是否可贈與友誼點
+	optional bool canGift = 12;
+}
+
+//facebook好友基础信息
+message FBFriendItem
+{
+	required string lastserver = 1;
+	required int32 level = 2;
+	required int32 fightValue = 3;
+	required int32 arenaRank = 4;
+	required int32 vip = 5;
+	required string uid = 6;
+}
+//facebook好友服务器处理反馈
+message HPFriendListFaceBookRet
+{
+	repeated FBFriendItem friendItem = 1;
+	repeated  string askTicketList	=2;
+}
+
+//待服务器处理facebook好友
+message HPFriendListFaceBook
+{
+	repeated string idinfo = 1;
+}
+//服务器反馈 facebook好友索取次数
+message HPFriendAskTicketRet
+{
+	required int32 count = 1;
+}
+//facebook好友索取 
+message HPFriendAskTicket
+{
+	required string uid = 1;
+}
+//好友基础信息
+message FBFriendMapBean 
+{
+	required string fbid = 1;
+	required int32 mapid = 2;
+	required int32 fightValue = 3;
+}
+//facebook
+message HPFBFriendBindMsg
+{
+	required int32 msgtype = 1;  //0:init    1:绑定成功
+}
+//facebook
+message HPFBFriendBindMsgRet
+{
+	required int32 status = 1; //0：未绑定  1：已绑定
+	repeated RewardItem item = 2;
+}
+//请求facebook好友地图信息
+message HPFBFriendMapInfoMsg
+{
+	optional int32 count = 1;
+}
+//反馈facebook好友地图信息
+message HPFBFriendMapInfoMsgRet
+{
+	repeated FBFriendMapBean mapinfo = 1;
+}
+
+message HPFriendSearch
+{
+	required int32 targetId = 1;	
+}
+
+message HPFriendSearchRet
+{
+	//如果没有这个就是没有这个Id
+	optional FriendItem friendItem = 1;
+}
+
+message HPFriendListRet
+{
+	required int32 flag	= 1 [default = 0];//没有实际意义，为了避免返回数据为空时，前端解析错误。
+	repeated FriendItem friendItem = 2;
+}
+
+message HPFriendListKakao
+{
+	repeated string userId = 1;
+}
+
+message HPFriendListKakaoRet
+{
+	repeated FriendItem friendItem = 1;
+}
+
+message HPFriendAdd
+{
+	required int32 targetId = 1;
+}
+
+message HPFriendAddRet
+{
+	required int32 targetId = 1;
+}
+
+message HPFriendDel
+{
+	repeated int32 targetId = 1;
+}
+
+message HPFriendDelRet
+{
+	repeated int32 targetId = 1;
+}
+
+//消息基本结构
+message FriendMsg 
+{
+	required int32 senderId = 1;
+	required int32 receiveId = 2;
+	required string senderName = 3;
+	required string receiveName = 4;
+	required FriendChatMsgType msgType = 5;
+	required string message = 6;
+	optional string area = 7;
+	optional int32 titleId = 8;
+	optional int32 jsonType = 9;
+	optional int64 msTime = 10;
+	//聊天框皮肤Id
+	optional int32 skinId = 11;
+	//头像
+	optional int32 headIcon = 12;
+	//标识
+	optional string senderIdentify=13;
+}
+
+//发送消息
+message HPSendMessage
+{
+	required int32 targetId = 1;
+	required string message = 2;
+}
+
+message MsgBoxUnit
+{
+	required int32  playerId = 1;
+	required string name = 2;
+	required int32  level = 3;
+	required int32  roleItemId = 4;
+	optional int32 rebirthStage = 5;
+	//主角avatar ID
+	optional int32 avatarId = 6;
+	required string senderIdentify=7;
+	optional int32 headIcon = 8;
+	
+}
+
+message HPMsgBoxInfo
+{
+	repeated MsgBoxUnit msgBoxUnits = 1;
+}
+
+message HPMsgList
+{
+	required int32 playerId = 1;
+	optional string senderIdentify = 2;
+}
+
+
+message HPMsgListInfo
+{
+	repeated FriendMsg friendMsgs = 1;
+}
+
+// 聊天对话推送
+message HPMsgPush
+{
+	required FriendMsg friendMsg = 1;
+	required MsgBoxUnit msgBoxUnit = 2;
+}
+
+// 屏蔽该玩家发消息
+message HPMsgShield
+{
+	required int32 playerId = 1;
+	// 1 屏蔽 2 取消屏蔽
+	required int32 type = 2;
+}
+
+message HPShieldList
+{
+	repeated int32 shieldPlayerId = 1;
+}
+
+//查找好友
+message HPFindFriendReq
+{
+	required int32 playerId  = 1;	//玩家ID
+	optional string playerName = 2;	//玩家名字
+}
+//申请加好友
+message HPApplyFriend
+{
+	required int32 playerId = 1;	//玩家ID
+}
+//同意好友申请
+message HPAgreeApplyFriend
+{
+	required int32 playerId = 1;	//玩家ID
+}
+//拒绝好友申请
+message HPRefuseApplyFriend
+{
+	required int32 playerId = 1;	//玩家ID
+}
+
+//領取好友友誼點請求
+message HPGetFriendshipReq
+{
+	required int32 friendId = 1;
+}
+//領取好友友誼點回傳
+message HPGetFriendshipRes
+{
+	required int32 friendId = 1;
+	required int32 point = 2;
+}
+
+//贈送好友友誼點請求
+message HPGiftFriendshipReq
+{
+	required int32 friendId = 1;
+}
+//領取好友友誼點回傳
+message HPGiftFriendshipRes
+{
+	required int32 friendId = 1;
+}

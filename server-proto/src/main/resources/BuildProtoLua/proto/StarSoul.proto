@@ -1,0 +1,23 @@
+option java_package = "com.guaji.game.protocol";
+
+//请求激活星魂
+message ActiveStarSoul
+{
+        required int32 id = 1;//需要激活星魂的ID
+}
+
+message ActiveStarSoulRet
+{
+        required int32 id = 1;//返回已经激活的星魂ID
+}
+
+//请求同步星魂，只同步当前某一个group的星魂信息
+message SyncStarSoul
+{
+         required int32 group = 1;//当前星脉页group
+}
+
+message SyncStarSoulRet
+{
+         required int32 id = 1;//返回激活后星魂ID
+}

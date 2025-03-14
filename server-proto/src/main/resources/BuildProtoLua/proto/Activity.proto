@@ -1,0 +1,883 @@
+option java_package = "com.guaji.game.protocol";
+
+// 获取活动列表
+message HPGetActivityList
+{
+}
+
+message OpenActivity
+{
+	// 活动Id
+	required int32 activityId = 1;
+	// 活动期号
+	required int32 stageId = 2;
+}
+
+// 同步当前开放的活动
+message HPOpenActivitySyncS
+{
+	required int32 version = 1;
+	repeated OpenActivity activity = 2;
+}
+
+// 月卡信息
+message HPMonthCardInfoRet
+{
+	// 当前激活的月卡的配置Id
+	required int32 activeCfgId = 1;
+	// 今天是否已经领取月卡
+	required bool isTodayRewardGot = 2;
+	// 剩余天数
+	required int32 leftDays = 3;
+}
+
+// 月卡领取反馈
+message HPMonthCardAwardGetRet
+{
+	//月卡id
+	required int32 monthCardId = 1;
+	//月卡领取时间
+	required int64 getAwardTime = 2;
+}
+
+message HPSalePacketItem
+{
+	//已购物品id
+	required int32 goodid = 1;
+	//状态
+	required int32 state = 2;
+	//已购买多少次
+	required int32 buytime = 3;
+}
+//打折礼包信息
+message HPSalePacketInfoRet
+{
+	//剩余时间
+	required int32 leftTime = 1;
+	//已购礼包id列表
+	repeated HPSalePacketItem salePacketLst = 2;
+	
+}
+
+//领取礼包反馈信息
+message HPGetSalePacketAward
+{
+	//领取成功的id
+	required int32 packetId = 1;
+	//领取成功的时间
+	required int32 buyTime = 2;
+	//状态
+	required int32 state = 3;
+}
+
+//请求领取某个打折礼包
+message GetSalePacketAward
+{
+	//礼包id
+	required int32 packetId = 1;
+}
+
+// 累计(金额)充值信息
+message HPAccRechargeInfo
+{
+}
+message HPAccRechargeInfoRet
+{
+	// 活动期间累计充值数额
+	required int32 accRechargeGold = 1;
+	// 已领取的奖励配置Id
+	repeated int32 gotAwardCfgId = 2;
+	// 活动剩余时间（s）
+	required int32 surplusTime = 3;
+}
+
+// 累计(金额)充值奖励
+message HPGetAccRechargeAward
+{
+	required int32 awardCfgId = 1;
+}
+message HPGetAccRechargeAwardRet
+{
+	// 已领取的奖励配置Id
+	required int32 gotAwardCfgId = 1;
+	// 活动剩余时间（s）
+	required int32 surplusTime = 2;
+}
+
+// 连续(天数)充值信息
+message HPContinueRechargeInfo
+{
+}
+message HPContinueRechargeInfoRet
+{
+	// 活动期间累计充值数额
+	required int32 continueRechargedays = 1;
+	// 已领取的奖励配置Id
+	repeated int32 gotAwardCfgId = 2;
+	// 活动剩余时间（s）
+	required int32 surplusTime = 3;
+}
+
+// 连续(天数)充值奖励
+message HPGetContinueRechargeAward
+{
+	required int32 awardCfgId = 1;
+}
+message HPGetContinueRechargeAwardRet
+{
+	// 已领取的奖励配置Id
+	required int32 gotAwardCfgId = 1;
+	// 活动剩余时间（s）
+	required int32 surplusTime = 2;
+}
+
+// 连续累计充值金额(日元)
+message HPContinueRechargeMoneyInfo
+{
+}
+message HPContinueRechargeMoneyInfoRet
+{
+	// 活动期间累计充值数额
+	required int32 continueRechargeTotal = 1;
+	// 已领取的奖励配置Id
+	repeated int32 gotAwardCfgId = 2;
+	// 活动剩余时间（s）
+	required int32 surplusTime = 3;
+}
+
+// 连续(天数)充值奖励
+message HPGetContinueRechargeMoneyAward
+{
+	required int32 awardCfgId = 1;
+}
+message HPGetContinueRechargeMoneyAwardRet
+{
+	// 已领取的奖励配置Id
+	required int32 gotAwardCfgId = 1;
+	// 活动剩余时间（s）
+	required int32 surplusTime = 2;
+}
+
+// 累计消费信息
+message HPAccConsumeInfo
+{
+}
+message HPAccConsumeInfoRet
+{
+	// 活动期间累计消费数额
+	required int32 accConsumeGold = 1;
+	// 已领取的奖励配置Id
+	repeated int32 gotAwardCfgId = 2;
+	// 活动剩余时间（s）
+	required int32 surplusTime = 3;
+}
+
+// 累计消费奖励
+message HPGetAccConsumeAward
+{
+	required int32 awardCfgId = 1;
+}
+message HPGetAccConsumeAwardRet
+{
+	// 已领取的奖励配置Id
+	required int32 gotAwardCfgId = 1;
+	// 活动剩余时间（s）
+	required int32 surplusTime = 2;
+}
+
+// 累计消费信息请求
+message HPAccConsumeItemInfo
+{
+}
+
+message AccConsumeItem
+{
+	//购买物品编号
+	required int32 goodId  = 1;
+	//购买多少次
+	required int32 buyTime = 2;
+	//已领奖到多少次
+	required int32 prizeTime = 3;
+}
+
+// 累计消费信息返回
+message HPAccConsumeItemInfoRet
+{
+	// 活动剩余时间（s）
+	required int32 surplusTime = 1;
+	// 周期性编号
+	required int32 cfgId 	   = 2;
+	// 活动期间累计消费数额
+	repeated AccConsumeItem item=3;
+}
+
+// 累计消费领奖请求
+message HPGetAccConsumeItemAward{
+	//消耗钻石购买道具编号
+	required int32 goodid  		  = 1;
+
+}
+// 累计消费领奖响应
+message HPGetAccConsumeItemAwardRet
+{
+    //领取奖励状态 1 成功 0失败
+    required int32 state  		  = 1;
+	//领取奖励的对应信息
+	optional AccConsumeItem item= 2;
+}
+
+// 中秋兑换字的活动
+message HPWordsExchangeInfo
+{
+	// 今日剩余兑换次数数组对应 1 2 3 4
+	repeated int32 leftExchangeTimes = 1;
+	// 活动剩余时间 单位s
+	required int32 activityLeftTime = 2;
+}
+
+message HPWordsExchange 
+{
+	required int32 type = 1;
+	optional int32 itemId = 2;
+}
+
+message ActivityRechargeItem
+{
+	required int32 goodsId  = 1;
+	// 1 代表原来的首次充值项3倍 2代表活动充值双倍 3代表活动的已经触发了
+	required int32 type  	= 2;
+	required int32 ratio    = 3;
+}
+
+// 双倍充值活动
+message HPDoubleRecharge
+{
+	optional int32 version = 1[default = 1];
+}
+
+message HPDoubleRechargeRet 
+{
+	repeated ActivityRechargeItem items = 1;
+	required int32 leftTimes = 2;
+	//1 代表充值单项购买后其他所有项都不触发倍数 2 每一项都会触发
+	required int32 activityType = 3;
+}
+
+// 假日密保活动
+message HPHolidayTreasure
+{
+	optional int32 version = 1[default = 1];
+}
+
+message HPHolidayTreasureRet 
+{
+	required int32 leftTimes = 1;
+}
+
+// 单笔充值信息
+message HPSingleRechargeInfo
+{
+}
+
+// 单笔充值次数信息结构体(add by melvin)
+message SingleRechargeInfo
+{
+	// 充值档位ID
+	required int32 id = 1;
+	// 已经领取次数
+	required int32 getTimes = 2;
+	// 充值次数
+	required int32 rechargeTimes = 3;
+	// 每日最大可充值次数
+	required int32 maxRechargeTimes = 4;
+}
+message HPSingleRechargeInfoRet
+{
+	// 活动剩余时间（s）
+	required int32 surplusTime = 1;
+	// 今日已领取的奖励配置Id
+	repeated SingleRechargeInfo info = 2;
+}
+
+// 领取单笔充值活动奖励
+message HPSingleRechargeAwards
+{
+	required int32 awardCfgId = 1;
+}
+message HPSingleRechargeAwardsRet
+{
+	// 已领取的奖励配置Id
+	required int32 gotAwardCfgId = 1;
+	// 活动剩余时间（s）
+	required int32 surplusTime = 2;
+}
+
+// 开服登录天数活动
+message HPRegisterCycleRet 
+{
+	required int32 registerSpaceDays = 1;
+	//开服第七天钻石消耗0.5，如果有值，就是0.5
+	optional int32 ratio = 2;
+}
+
+// 充值返利活动
+message HPRebateInfo
+{
+	// 22注册时间开放 28周期开放
+	required int32 activityId = 1;
+}
+message HPRebateInfoRet
+{
+	// 活动剩余时间（s），返回0表示活动结束
+	required int32 surplusTime = 1;
+	// 累计充值钻石
+	required int32 accRechargeDiamond = 2;
+	// 可领取钻石
+	required int32 canReceiveDiamond = 3;
+	// 剩余天数
+	optional int32 leftDays = 4;
+	// 领取状态，1领取，0没有领取
+	optional int32 receiveAward = 5;
+}
+
+// 充值返利活动奖励
+message HPRebateAward
+{
+	// 22注册时间开放 28周期开放
+	required int32 activityId = 1;
+}
+message HPRebateAwardRet
+{
+	// 领取状态，1领取，0没有领取
+	required int32 receiveAward = 1; 
+}
+
+// 获取周卡信息
+message HPWeekCardInfo 
+{
+	optional int32 version = 1[default = 1];
+}
+message HPWeekCardInfoRet 
+{
+	// 当前激活的周卡Id
+	required int32 activeWeekCardId = 1;
+	// 升级周卡时对应的shopItem.productId, -1表示不能升级 
+	required int32 levelUpProductId = 2;
+	// 剩余天数
+	required int32 leftDays = 3;
+	// 是否需要补领前一天的奖励
+	optional int32 isNeedYestReward = 4;
+	// 今日是不是已经领取
+	required int32 isTodayReward = 5;
+	// 活动剩余秒数
+	required int32 leftSenconds = 6;
+	// 充值productId列表(1-10 5-100 )
+	repeated int32 productId = 7;
+}
+
+// 领取周卡奖励
+message HPWeekCardReward 
+{
+	optional int32 isYest = 1;
+}
+
+// 周卡升级
+message HPWeekCardLevelUp
+{
+	// 当前激活的周卡Id
+	required int32 activeWeekCardId = 1;
+}
+
+//vip福利活动
+message HPVipWelfareInfoRet
+{
+
+	required int32 awardStatus = 1;
+}
+message HPVipWelfareRewardRet
+{
+	required int32 awardStatus = 1;
+}
+
+// 远征活动单个阶段信息
+message ExpeditionArmoryStage 
+{
+	// 活动阶段
+	required int32 stage = 1;
+	// 阶段所需经验
+	required int32 needExp = 2;
+	// 阶段当前经验
+	required int32 curExp = 3;
+	// 阶段个人经验
+	required int32 personalStageExp = 4;
+}
+
+//  远征物资-信息查询
+message HPExpeditionArmoryInfo 
+{
+	optional int32 version = 1[default = 1];
+}
+message HPExpeditionArmoryInfoRet 
+{
+	// 当前阶段
+	required int32 curStage = 1;
+	// 各个阶段信息
+	repeated ExpeditionArmoryStage expeditionArmoryStage = 2;
+	// 活动剩余时间
+	required int32 leftTime = 3;
+}
+
+// 远征物资-道具捐献
+message HPExpeditionArmoryItemUse 
+{
+	// 所捐物品配置
+	required int32 id = 1;
+	// 物品数量
+	required int32 count = 2;
+}
+
+// 远征物资-排行项
+message ExpeditionArmoryRankItem
+{
+	required int32 playerId = 1;
+	required int32 exp = 2;
+	required int32 rank = 3;
+	required string name = 4;
+}
+// 远征物资-获取排行榜数据
+message HPExpeditionArmoryRanking
+{
+}
+message HPExpeditionArmoryRankingRet
+{
+	// 自身排名
+	required int32 selfRank = 1;
+	// 自身活动总贡献
+	required int32 selfTotalExp = 2;
+	// 排行项
+	repeated ExpeditionArmoryRankItem rankItem = 3;
+}
+
+//限时限购
+message TimeLimitItem
+{
+	required int32 id  = 1;
+	// 单个玩家已购买次数
+	required int32 buyTimes = 2;
+	// 全服剩余数量
+	required int32 leftBuyTimes = 3;
+}
+
+message TimeLimitPurchase
+{
+	// 活动倒计时
+	required int32 leftTime = 1;
+	// 每一个购买项
+	repeated TimeLimitItem timeLimitItems = 2;	
+}
+
+message HPTimeLimitBuy
+{
+	required int32 cfgId = 1;
+	required int32 count = 2;//购买个数
+}
+
+// 累计登录活动信息
+message HPAccLoginInfo
+{
+}
+message HPAccLoginInfoRet
+{
+	// 活动期间登录天数
+	required int32 loginDays = 1;
+	// 活动剩余时间(s)
+	required int32 leftTime  = 2;
+	// 已领取奖励Id
+	repeated int32 gotAwardCfgId = 3;
+}
+// 领取累计登录活动奖励
+message HPAccLoginAwards
+{
+	required int32 rewwardDay = 1;
+}
+message HPAccLoginAwardsRet
+{
+	// 活动剩余时间(s)
+	required int32 leftTime  = 1;
+	// 已领取奖励Id
+	repeated int32 gotAwardCfgId = 2;
+}
+
+// 宝石工坊活动信息
+message HPGemCompoundInfo
+{
+}
+message HPGemCompoundInfoRet
+{
+	required int32 leftTime = 1;
+}
+
+// 宝石升级
+message HPGemCompound
+{
+	// 将要升级的宝石
+	required int32 levelUpGemItemId = 1;
+	// 将要消耗宝石
+	required int32 costGemItemId = 2;
+	
+}
+message HPGemCompoundRet
+{
+	required int32 leftTime = 1;
+}
+
+// 轮盘赌活动
+message HPRouletteInfo
+{
+}
+message HPRouletteInfoRet
+{
+	// 活动剩余时间
+	required int32 leftTime =1;
+	// 活动期间转盘剩余次数
+	required int32 rouletteLeftTimes = 2;
+	// 当前积分
+	required int32 curCredits = 3;
+	// 今日充值数目
+	required int32 todayAccRechargeNum = 4;
+}
+
+// 转动转轮
+message HPRouletteRotate
+{
+	// 转盘次数（1 / 10次）
+	required int32 times = 1;
+}
+message HPRouletteRotateRet
+{	
+	// 奖励物品
+	repeated int32 awardsCfgId = 1;
+	// 活动期间转盘剩余次数
+	required int32 rouletteLeftTimes = 2;
+	// 当前积分
+	required int32 curCredits = 3;
+}
+
+// 转盘积分兑换
+message HPRouletteCreditsExchange
+{
+	// 兑换商品配置
+	required int32 cfgId = 1;
+}
+message HPRouletteCreditsExchangeRet
+{	
+	// 活动剩余时间
+	required int32 leftTime = 1;
+	// 当前积分
+	required int32 curCredits = 2;
+}
+message HPFirstRechargeGiftInfo
+{
+	//首充礼包领取状态
+	required int32 giftStatus = 1;
+	//是否有过首充记录
+	required int32 isFirstPay = 2;
+}
+message HPFirstRechargeGiftAwardRet
+{
+	//首充礼包领取状态
+	required int32 giftStatus = 1;
+}
+message HPLuckyBoxRet
+{
+	// 活动剩余时间
+	required int32 leftTime = 1;
+	// 可领取物品cfgId，如果没有可领取为0（已经领取）
+	required int32 cfgId = 2;
+	// 页面展示物品Id
+	repeated int32 itemCfgId = 3;
+}
+message HPLuckBoxExchange
+{
+	//兑换物品的cfgId
+	required int32 cfgId = 1;
+}
+message HPLuckBoxExchangeRet
+{
+	//活动剩余时间
+	required int32 leftTime = 1;
+}
+
+//获取5星评价的状态
+message HPStarEvaluation
+{
+	optional int32 version = 1 [default = 1];
+}
+
+//点击评5星按钮发送该消息
+message HPStarEvaluationClick
+{
+	optional int32 version = 1 [default = 1];
+}
+
+message HPStarEvaluationRet
+{
+	// 1代表没有评价 2.已经评价还没有领取奖励 3.已经领取奖励
+	required int32 status = 1;
+}
+
+// 5星评价领取奖励
+message HPStarEvaluationReward
+{
+	optional int32 version = 1 [default = 1];
+}
+
+// 邀请好友
+message HPInviteFriendInfo
+{
+}
+message HPInviteFriendInfoRet
+{	
+	// 我的邀请码
+	required string myInviteCode = 1;
+	// 邀请好友数量
+	required int32 inviteAmount = 2;
+	// 是否已经兑换过
+	required bool isExchanged = 3;
+	// 领取过的奖励配置Id
+	repeated int32 gotAwardCfgId = 4;
+}
+
+// 兑换邀请码
+message HPExchangeInviteCode
+{
+	// 好友的邀请码
+	required string inviteCode = 1;
+}
+message HPExchangeInviteCodeRet
+{
+	// 邀请好友数量
+	required int32 inviteAmount = 1;
+}
+// 领取奖励
+message HPInviteFriendGetRewardInfo
+{
+	// 领取奖励cfgId
+	required int32 cfgId = 1;
+}
+message HPInviteFriendGetRewardInfoRet
+{
+	// 领取过的奖励配置Id
+	repeated int32 gotAwardCfgId = 1;
+}
+
+// 大车队活动
+message HPTaxiCodeInfo
+{
+}
+message HPTaxiCodeInfoRet
+{
+	// 是否已经兑换过抵价券 0-未兑换 1-已兑换 
+	required int32 isExchanged = 1;
+	// 出租车抵价券
+	optional string taxiCode = 2;
+}
+
+// 兑换出租车抵价券
+message HPExchangeTaxiCode
+{
+	// 游戏固定的KEY
+	required string gameKey = 1;
+}
+message HPExchangeTaxiCodeRet
+{
+	// 是否已经兑换过抵价券 0-未兑换 1-已兑换 
+	required int32 isExchanged = 1;
+	// 出租车抵价券
+	optional string taxiCode = 2;
+}
+
+// 雪地基本单位
+message SnowfieldCell
+{
+	// 雪地索引
+	required int32 index = 1;
+	// 雪地状态 (0 初始状态 1奖励已领取)
+	required int32 status = 2;
+	// 奖励内容
+	optional string award = 3;
+}
+
+// 雪地寻宝活动基本信息
+message HPSnowfieldTreasureInfo
+{
+}
+message HPSnowfieldTreasureInfoRet
+{
+	// 活动剩余时间
+	required int32 activityLeftTime = 1;
+	// 当前体力
+	required int32 curPhyc = 2;
+	// 体力最大回复上限
+	required int32 maxPhyc = 3;
+	// 下次寻宝所需体力
+	required int32 nextSearchPhyc = 4;
+	// 下次体力恢复时间
+	required int32 nextPhycRecoverTime = 5;
+	// 雪地单元格
+	repeated SnowfieldCell snowfieldCell = 6;
+	// 寻宝模式 (1 单翻模式 2 连翻模式)
+	required int32 mode = 7;
+	// 连翻倒计时
+	optional int32 continueSearchLeftTime = 8;
+	// 当前探宝进度
+	required int32 curStage = 9;
+	// 探宝总进度
+	required int32 totalStage = 10;
+                   
+	// 今日已购买体力次数
+	required int32 todayBuyPhycTimes = 12;
+	// 下次购买体力价格
+	required int32 nextBuyPhycGold = 13;
+	// 是否已经兑换过最终奖励
+	required bool isExchangedFinal = 14;
+}
+
+// 雪地寻宝购买体力
+message HPSnowfieldBuyPhyc
+{
+}
+// 雪地体力同步
+message HPSnowfieldPhycSyncS
+{
+	// 当前体力
+	required int32 curPhyc = 1;
+	// 下次体力恢复剩余时间
+	required int32 nextPhycRecoverTime = 2;
+	// 今日已购买体力次数
+	required int32 todayBuyPhycTimes = 3;
+	// 下次购买体力价格
+	required int32 nextBuyPhycGold = 4;
+}
+
+// 雪地宝物兑换
+message HPSnowfieldExchange
+{	
+}
+message HPSnowfieldExchangeRet
+{
+	// 是否已经兑换过最终奖励
+	required bool isExchangedFinal = 1;
+}
+
+// 雪地寻宝
+message HPSnowfieldSearch
+{
+	required int32 snowfieldCellIndex = 1;
+}
+message HPSnowfieldSearchRet
+{	
+	// 雪地单元格状态同步
+	required SnowfieldCell snowfieldCell = 1;
+	// 下次寻宝体力消耗
+	required int32 nextSearchCostPhyc = 2;
+	// 连翻倒计时
+	optional int32 continueSearchLeftTime = 3;
+	// 当前探宝进度
+	optional int32 curStage = 4;
+	// 寻宝模式 (1 单翻模式 2 连翻模式)
+	optional int32 mode = 5;
+}
+
+// 连翻模式
+message HPSetContinueSearchMode
+{
+	// 功能区分 (1关闭 2开启)
+	required int32 type = 1;
+}
+message HPSetContinueSearchModeRet
+{
+	// 当前模式 (1 单翻模式 2 连翻模式)
+	required int32 mode = 1;
+	// 雪地同步
+	repeated SnowfieldCell snowfieldCell = 2;
+	// 下次寻宝体力消耗
+	required int32 nextSearchCostPhyc = 3;
+	// 连翻倒计时
+	optional int32 continueSearchLeftTime = 4;
+}
+//夺宝奇兵页面基本信息返回
+message HPTreasureRaiderInfoSync
+{
+	//活动剩余时间
+	required int32 leftTime = 1;
+	//长度为0代表没有奇遇宝箱，有值代表有奇遇宝箱
+	optional string items = 2;
+	//今日免费寻宝次数
+	required int32 freeTreasureTimes = 3;
+	//剩余寻宝次数
+	required int32 leftTreasureTimes = 4;
+	//寻宝1次需要消耗的钻石
+	required int32 onceCostGold = 5;
+	//寻宝10次需要消耗的钻石
+	required int32 tenCostGold = 6;
+	//寻宝奖励
+	repeated string reward = 7;
+	//当天寻宝总次数
+	required int32 totalTimes = 8;
+}
+
+//夺宝奇兵页面点击寻宝
+message HPTreasureRaiderSearch
+{
+	//寻宝次数
+	required int32 searchTimes = 1;
+}
+//夺宝奇兵奇遇宝箱确定返回页面
+message HPTreasureBoxConfirmRet
+{
+	//没用
+	required int32 version = 1;
+}
+
+// 部族的嘉奖信息
+message HPCommendationTribe 
+{
+	// 当前阶段
+	required int32 curStage = 1;
+	// 剩余次数
+	required int32 leftCount = 2;
+	// 累计消耗的钻石数目
+	required int32 costGold = 3;
+	// 当前运气值
+	required int32 curLuckyValue = 4;
+	// 剩余时间单位s
+	required int32 leftTime = 5;
+}
+
+// 获得东西了
+message HPCommendationTribeLuck 
+{
+	// 奖励物品
+	required string rewards = 1;
+}
+
+// 财神献礼
+message HPFortuneInfo 
+{
+	// 已经充值额度
+	required int32 rechargeValue = 1;
+	// 当前点击礼包的额度是 （比如100 就是点击抽100的礼包），当这个值为0的时候表示额度都已经抽完了
+	required int32 curGiftValue = 2;
+	// 剩余多少就可以抽取当前额度的礼包
+	required int32 leftRechargeValue = 3;
+	// 剩余时间
+	required int32 leftTime = 4;
+}
+
+// 财神抽奖
+message HPFortuneDraw 
+{
+	// 抽奖得到的钻石
+	required int32 getGold = 1;
+}

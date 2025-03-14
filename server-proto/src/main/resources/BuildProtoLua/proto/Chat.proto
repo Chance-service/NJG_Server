@@ -1,0 +1,59 @@
+option java_package = "com.guaji.game.protocol";
+
+message HPSendChat
+{
+	required string chatMsg = 1;
+	//0:普通聊天,1:公会聊天
+	required int32 chatType = 2;
+	//聊天语种标记
+	optional int32 i18nTag = 3;
+}
+
+message HPChatMsg
+{
+	message Params {
+		required string name = 1;
+		required string value = 2;
+	}
+
+	//0:普通聊天,1:公会聊天,2:聊天公告,3:广播
+	required int32  type = 1;
+	required int32  playerId = 2;
+	required string name = 3;
+	required int32  level = 4;
+	required int32  roleItemId = 5;
+	required string chatMsg = 6;
+	optional string area = 7;
+	//称号
+	optional int32 titleId = 8;
+	// 玩家类型
+	optional int32 playerType = 9;
+	//内容类型 0字符串，1是json
+	optional int32 msgType = 10;
+	//聊天语种标记
+	optional int32 i18nTag = 11;
+	// 功能Id 1 是组队副本邀请
+	optional int32 modelId = 12;
+	// 携带参数
+	repeated Params params = 13;
+	optional int32  rebirthStage = 14;
+	optional int64 msTime = 15;
+	//聊天框皮肤ID
+	optional int32 skinId = 16;
+	//主角avatar ID
+	optional int32 avatarId = 17;
+	//主角头像
+	required string headIcon = 18;
+}
+
+message HPPushChat
+{
+	repeated HPChatMsg chatMsg = 1;
+}
+
+message HPAllianceSwitch
+{
+	//true可以公会聊天,false不可以
+	required bool tag = 1;
+	optional int32 allianceId = 2;
+}

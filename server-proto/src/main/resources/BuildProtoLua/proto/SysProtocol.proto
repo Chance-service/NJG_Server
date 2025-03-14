@@ -1,0 +1,42 @@
+option java_package = "com.guaji.game.protocol";
+
+message HPDataWarpper
+{
+	optional bytes data = 1;
+}
+ 
+message HPKeyExchange
+{
+	optional bytes keys = 1;
+}
+
+message HPHeartBeat
+{
+	optional int32 timeStamp = 1;
+	optional bytes data = 2;
+}
+
+message HPErrorCode
+{
+	required int32  hpCode = 1;	
+	required int32  errCode = 2;
+	optional string errMsg = 3;	
+	//0是错误码 1 是系统框  2是文字提示
+	optional int32  errFlag = 4 [default = 0];
+}
+
+message HPTimeZone
+{
+	optional int32 id = 1;
+}
+
+
+message HPTimeZoneRet
+{
+	optional int32 timezone = 1;  //当前时区的偏移值
+}
+
+message HPMarkSync
+{
+	optional int32 SyncType = 1;  //同步type
+}

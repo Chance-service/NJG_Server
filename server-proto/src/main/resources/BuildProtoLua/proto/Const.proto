@@ -1,0 +1,1876 @@
+option java_package = "com.guaji.game.protocol";
+
+// 数据类型定义
+enum itemType
+{
+	// 玩家属性
+	PLAYER_ATTR = 1;
+	// 角色皮膚
+	SKIN = 2;
+	// 道具
+	TOOL = 3;
+	// 装备
+	EQUIP = 4;
+	// 技能
+	SKILL = 5;
+	// 元素
+	ELEMENT = 6;
+	// 魂魄(佣兵)
+	SOUL = 7;
+	// 主角Avatar
+	AVATAR = 8;
+	// 徽章
+	BADGE = 9;
+}
+
+// 玩家属性类型定义
+enum playerAttr
+{
+	// 钻石
+	GOLD = 1001;
+	// 金币
+	COIN = 1002;
+	// 等级
+	LEVEL = 1003;
+	// 经验
+	EXP = 1004;
+	// vip等级
+	VIPLEVEL = 1005;
+	// 熔炼值
+	SMELT_VALUE = 1006;
+	//贡献值
+	CONTRIBUTION = 1007;
+	//公会经验
+	ALLIANCE_EXP = 1008;
+	// boss挑战次数
+	BOSS_TIMES = 1009;
+	// 荣誉值
+	HONOR_VALUE = 1010;
+	// 声望值
+	REPUTATION_VALUE = 1011;
+	// 精英副本调整次数
+	ELITE_MAP_TIMES = 1012;
+
+	// 多人副本积分(改了)
+	MULTI_ELITE_SCORE = 1013;
+	//YAYA金豆
+	GOLD_BEAN =1014;
+
+	// 跨服获取的货币
+	CROSS_COIN = 1015;
+    //多人副本挑戰次數
+    MULTI_ELITE_TIMES = 1016;
+
+	//水晶
+	CRYSTAL_VALUE = 1020;
+
+	// 公会元气
+	ALLIANCE_VITALITY = 2001;
+	// 快速战斗次数
+	FASTFIGHT_TIMES = 9999;
+	// 佣兵魂魄
+	ROLE_SOUL = 1021;
+	// 18路诸侯药箱
+	BIG_MEDICALKIT= 1022;
+	MIDLE_MEDICALKIT= 1023;
+	SMALL_MEDICALKIT= 1024;
+	// 友情值
+	FRIENDSHIP_VALUE = 1025;
+	// VIP點數
+	VIPPOINT_VALUE = 1026;
+}
+
+// 角色类型
+enum roleType
+{
+	// 主角
+	MAIN_ROLE = 1;
+	// 佣兵
+	MERCENARY = 2;
+	// 怪物
+	MONSTER = 3;
+	// 隨從(免費英雄)
+	RETINUE = 4;
+	// WorldBoss()
+	WORLDBOSS = 5;
+}
+
+// 聊天类型
+enum chatType
+{
+	// 世界个人聊天
+	CHAT_WORLD = 0;
+	// 公会个人聊天
+	CHAT_ALLIANCE = 1;
+	// 世界系统广播
+	CHAT_BROADCAST = 2;
+	// 主页（跑马灯）系统广播
+	WORLD_BROADCAST = 3;
+	// 个人聊天
+	CHAT_PERSONAL = 4;
+	// 公会系统广播
+	CHAT_ALLIANCE_SYSTEM = 5;
+	//私聊系统提示
+	CHAT_PERSONAL_SYSTEM = 6;
+	//跨服聊天
+	CHAT_CROSS_PVP = 7;
+
+}
+
+// 物品类型定义
+enum toolType
+{
+	// 普通类型
+	NORMAL = 0;
+	// 碎片
+	FRAGMENT = 1;
+	// 宝石
+	GEM = 2;
+	// 锤子
+	HAMMER = 3;
+	// 宝箱
+	TREASURE = 4;
+	// 钥匙
+	KEY = 5;
+	// 精华
+	ELITE = 6;
+	// 礼包
+	GIFT = 7;
+	// 宝石袋
+	GEM_PACKAGE = 8;
+	// 文字兑换
+	WORDS_EXCHANGE_NORMAL = 9;
+	// 公测文字兑换
+	WORDS_EXCHANGE_SPECIAL = 10;
+	// boss挑战次数
+	BOSS_CHALLENGE_TIMES = 11;
+	// 幸运宝箱
+	LUCK_TREASURE = 12;
+	// 魂石
+	SOUL_STONE = 13;
+	// 精英副本调整次数
+	ELITE_MAP_BOOK = 14;
+	// 魔兽元气丹
+	ALLOANCE_VITALITY_PILL = 15;
+	//专精符文合成
+    GOODS_COMPOUND = 16;
+	// 普通神器经验石
+	COMMON_GODLY_EXP = 17;
+	// 声望神器经验石
+	REPUTATION_GODLY_EXP = 18;
+	// 套装碎片合成
+	SUIT_FRAGMENT = 19;
+	// 装备兑换道具
+	EQUIP_EXCHANGE = 20;
+	// 元素兑换道具
+	ELEMENT_EXCHANGE = 21;
+	// 英雄令
+	HERO_TOKEN = 22;
+	// 羽毛
+	FEATHER = 23;
+	// 元素印记碎片
+	ELEMENT_FRAGMENT = 24;
+	// 远征物资
+	EXPEDITION_ARMORY_ITEM = 25;
+	// 小时卡
+	HOUR_PLACENENT_CARD = 26;
+	// 经验卷轴
+	EXP_REEL = 27;
+	// 开宝箱随机选取
+	TREASURE_SELITEM = 28;
+	// 宝石卷
+	GEM_VOLUME = 35;
+	//装备图纸
+	SUIT_DRAWING = 36;
+	//主角Avatar
+	AVATAR_GIFT = 37;
+	// 多人副本挑战次数
+	MULTIELITE_CHALLENGE_TIMES = 38;
+	// 快速金幣收益
+	QUICK_GOLD = 39;
+	// 快速經驗收益
+	QUICK_EXP = 40;
+    // 快速突破石收益
+    QUICK_STONE = 41;
+    // 假道具(client 顯示用)
+    FAKE_ITEMS = 99;
+	//回收道具七夕
+	RECYCLE_SEVEN_ITEM = 100;
+	// 快速战斗次数
+	FASTFIGHT_TIMES_BOOK = 101;
+
+
+}
+
+// 装备部位定义
+enum equipPart
+{
+	// 头盔
+	HELMET = 1;
+	// 戒子
+	RING = 2;
+	// 腰带
+	BELT = 3;
+	// 胸甲
+	CUIRASS = 4;
+	// 主手武器
+	WEAPON1 = 5;
+	// 副手武器
+	WEAPON2 = 6;
+	// 护腿
+	LEGGUARD = 7;
+	// 鞋子
+	SHOES = 8;
+	// 手套
+	GLOVE = 9;
+	// 项链
+	NECKLACE = 10;
+}
+
+// 装备品质
+enum equipQuality
+{
+	// 白
+	WHITE = 1;
+	// 绿
+	GREEN = 2;
+	// 蓝
+	BLUE = 3;
+	// 紫
+	PURPLE = 4;
+	// 橙
+	ORANGE = 5;
+	// 紅
+	RED = 6;
+}
+
+// 装备自动售出
+enum equipAutoSell
+{
+	// 白装自动售出
+	AUTO_SELL_WHITE = 1;
+	// 绿装自动售出
+	AUTO_SELL_GREEN = 2;
+	// 蓝装自动售出
+	AUTO_SELL_BLUE = 4;
+	// 紫装自动售出
+	AUTO_SELL_PURPLE = 8;
+	// 非本职业
+	AUTO_SELL_DIFF_PROF = 16;
+}
+
+// 装备品质
+enum elementQuality
+{
+	// 白
+	ELEMENT_WHITE = 1;
+	// 绿
+	ELEMENT_GREEN = 2;
+	// 蓝
+	ELEMENT_BLUE = 3;
+	// 紫
+	ELEMENT_PURPLE = 4;
+	// 橙
+	ELEMENT_ORANGE = 5;
+	// 紅
+	ELEMENT_RED = 6;
+}
+
+// 装备自动售出
+enum elementAutoSell
+{
+	// 白装自动售出
+	AUTO_SELL_ELEMENT_WHITE = 1;
+	// 绿装自动售出
+	AUTO_SELL_ELEMENT_GREEN = 2;
+	// 蓝装自动售出
+	AUTO_SELL_ELEMENT_BLUE = 4;
+	// 紫装自动售出
+	AUTO_SELL_ELEMENT_PURPLE = 8;
+	// 非本职业
+	AUTO_SELL_ELEMENT_DIFF_PROF = 16;
+}
+
+// 职业类型定义
+enum prof
+{
+	// 戰士
+	WARRIOR = 10;
+	// 法師
+	MAGICIAN = 20;
+	// 恃從
+	ACOLYTE = 30;
+	// 小偷
+	THIEF = 40;
+	// 弓手
+	ARCHER = 50;
+
+	// 佣兵战士
+	MERCENARY_WARRIOR = 1;
+	// 佣兵猎人
+	MERCENARY_HUNTER = 2;
+	// 佣兵法师
+	MERCENARY_MAGIC = 3;
+
+	// 怪物战士
+	MONSTER_WARRIOR = 2001;
+	// 怪物猎人
+	MONSTER_HUNTER = 2002;
+	// 怪物法师
+	MONSTER_MAGIC = 2003;
+}
+
+// 神器开启条件类型定义
+enum attrCond
+{
+	// 全身装备强化+1
+	ALL_EQUIP_INTENSIFY_1 = 1;
+	// 全身装备强化+2
+	ALL_EQUIP_INTENSIFY_2 = 2;
+	// 全身装备强化+3
+	ALL_EQUIP_INTENSIFY_3 = 3;
+}
+
+// 装备属性类型
+enum equipAttrGrade
+{
+	// 主属性
+	PRIMARY_ATTR = 1;
+	// 副属性
+	SECONDARY_ATTR = 2;
+	// 神器属性
+	GODLY_ATTR = 3;
+}
+
+// 属性类型定义
+enum attr
+{
+	// 力量
+	STRENGHT = 1;
+	// 敏捷
+	AGILITY = 2;
+	// 智力
+	INTELLECT = 3;
+	// 耐力
+	STAMINA = 4;
+
+	// 生命值
+	HP = 101;
+	// 魔法值
+	MP = 102;
+	// 最小伤害
+	MINDMG = 103;
+	// 最大伤害
+	MAXDMG = 104;
+	// 护甲
+	ARMOR = 105;
+	// 物抗
+	PHYDEF = 106;
+	// 魔抗
+	MAGDEF = 107;
+	// 暴击
+	CRITICAL = 108;
+	// 命中
+	HIT = 109;
+	// 闪避
+	DODGE = 110;
+	// 韧性
+	RESILIENCE = 111;
+	// 回魔
+	RECOVERMP = 112;
+	// 物攻
+	ATTACK_attr = 113;
+	// 魔攻
+	MAGIC_attr = 114;
+
+	// 金币掉落
+	BUFF_COIN_DROP = 1001;
+	// 经验掉落
+	BUFF_EXP_DROP = 1002;
+	// 装备掉落
+	BUFF_EQUIP_DROP = 1003;
+	// 最高生命值
+	BUFF_MAX_HP = 1004;
+	// 免控
+	BUFF_AVOID_CONTROL = 1005;
+	// 反伤
+	BUFF_REVERSE_DAMAGE = 1006;
+	// 破甲
+	// 20140917修改 护甲穿透等级
+	BUFF_AVOID_ARMOR = 1007;
+	// 吸血
+	BUFF_SUCK_BLOOD = 1008;
+	// 回血
+	BUFF_RETURN_BLOOD = 1009;
+	// 暴击伤害
+	BUFF_CRITICAL_DAMAGE = 1010;
+
+	// 物抗值加成(1)
+	BUFF_PHYDEF_ADD = 2001;
+	// 魔法抗性值(10)
+	BUFF_MAGDEF_ADD = 2002;
+	// 物抗穿透等级(7)
+	BUFF_PHYDEF_PENETRATE = 2103;
+	// 魔抗穿透等级(2)
+	BUFF_MAGDEF_PENETRATE = 2104;
+	// 暴击值加成(9)
+	BUFF_CRITICAL_ADD = 2005;
+	// 韧性值加成(3)
+	BUFF_RESILIENCE_ADD = 2006;
+	// 闪避值加成(8)
+	BUFF_DODGE_ADD = 2007;
+	// 护甲值加成(4)
+	BUFF_ARMOR_ADD = 2008;
+	// 技能伤害(5)
+	BUFF_SKILL_DAMAGE_ADD = 2009;
+	// 命中值加成(6)
+	BUFF_HIT_ADD = 2010;
+
+	// 战士战斗被动属性
+	BUFF_WARRIOR = 3001;
+	// 猎人战斗被动属性
+	BUFF_HUNTER = 3002;
+	// 法师战斗被动属性
+	BUFF_MAGE = 3003;
+
+	// 冰攻击
+	ICE_ATTACK = 4001;
+	// 冰防御
+	ICE_DEFENCE = 4002;
+	// 火攻击
+	FIRE_ATTACK = 4003;
+	// 火防御
+	FIRE_DEFENCE = 4004;
+	// 雷攻击
+	THUNDER_ATTACK = 4005;
+	// 雷防御
+	THUNDER_DENFENCE = 4006;
+	// 冰攻击（百分比）
+	ICE_ATTACK_RATIO = 4007;
+	// 冰防御（百分比）
+	ICE_DEFENCE_RATIO = 4008;
+	// 火攻击（百分比）
+	FIRE_ATTACK_RATIO = 4009;
+	// 火防御（百分比）
+	FIRE_DEFENCE_RATIO = 4010;
+	// 雷攻击（百分比）
+	THUNDER_ATTACK_RATIO = 4011;
+	// 雷防御（百分比）
+	THUNDER_DENFENCE_RATIO = 4012;
+}
+
+// buff类型
+enum Buff
+{
+	// 眩晕
+	DIZZINESS = 1;
+	// 冻结
+	FROST = 2;
+	// 沉默
+	SILENCE = 3;
+	// 致盲
+	BLIND = 4;
+	// 捍卫
+	GUARD = 5;
+	// 鼓舞
+	INSPIRE = 6;
+	// 虚弱
+	WEAKNESS = 7;
+	// 狂暴
+	RAGE = 8;
+	// 中毒
+	POISON = 9;
+	// 破甲
+	ARMOUR = 10;
+	// 燃烧
+	BURN = 11;
+	// 冰甲
+	BEEN_FROZEN = 12;
+	// 流血
+	BLEED = 13;
+	// 魔箭
+	MAGIC_ATTACK = 14;
+	// 加攻
+	ADDITION_DMG = 15;
+	// 隐身
+	CLOAKING = 16;
+	// 魔法盾
+	MAGIC_SHIELD = 17;
+	// 充能
+	SUPPLY_ENERGY = 18;
+	// 嘲讽
+	SNEER = 19;
+	// 鲁莽
+	RECKLESS = 20;
+	// 标记
+	MARK = 21;
+	// 护咒
+	SPELL_WARD = 22;
+	// 屏障
+	BARRIER = 23;
+	// 闪避
+	MISS = 24;
+	// 失血
+	HEMORRHAGE =25;
+	// 削弱攻击
+	DIS_ATTACK =26;
+	// 削弱防御
+	DIS_DEFENCE =27;
+	// 霸体
+	SUPER_ARMOR =28;
+	// 铁甲
+	IRON_ARMOUR = 29;
+	// 狂乱
+	FRENZY = 30;
+	// 风破
+	WINDBREAK = 31;
+	// 影甲
+	SHADOWARMOR=32;
+	// 击碎
+	SHREDDING=33;
+	// 援护
+	INTERVENE=34;
+	// 影甲2
+	SHADOWARMOR2=35;
+	// 免死
+	FREEFROMDEATH=36;
+	// 勇猛
+	POWERFUL=38;
+	// 恐懼
+	SCARE=39;
+	// 前端不可见buff
+	RAGE_DAMAGE = 100;
+
+	// 战士特有buff
+	WARRIOR_BUFF = 101;
+	// 猎人特有buff
+	HUNTER_BUFF = 102;
+	// 法师特有buff
+	MAGIC_BUFF = 103;
+}
+
+// 变换的数值类型
+enum changeType
+{
+	CHANGE_NONE = 0;
+	// 钻石
+	CHANGE_GOLD = 1;
+	// 金币
+	CHANGE_COIN = 2;
+	// 经验
+	CHANGE_EXP = 3;
+	// 等级
+	CHANGE_LEVEL = 4;
+	// 充值总额
+	CHANGE_RECHARGE = 5;
+	// vip等级
+	CHANGE_VIPLEVEL = 6;
+	// 角色
+	CHANGE_ROLE = 7;
+	// 道具    
+	CHANGE_TOOLS = 8;
+	// 装备
+	CHANGE_EQUIP = 9;
+	// 熔炼值
+	CHANGE_SMELT_VALUE = 10;
+	// 贡献值
+	CHANGE_CONTRIBUTION = 11;
+	// 荣誉值
+	CHANGE_HONOR_VALUE = 12;
+	// 声望值
+	CHANGE_REPUTATION_VALUE = 13;
+	// 元素
+	CHANGE_ELEMENT= 14;
+	// 跨服获取的货币
+	CHANGE_CROSS_COIN = 15;
+	//
+	CHANGE_FRIENDSHIP = 16;
+	//水晶
+	CHANGE_CRYSTAL = 20;
+
+}
+
+// 购买价格类型
+enum buyMoneyType
+{
+	// 钻石
+	MONEY_GOLD = 1;
+	// 金币
+	MONEY_COIN = 2;
+}
+
+// 射击类型
+enum shootType
+{
+	// 初级
+	PRIMARY = 1;
+	// 中级
+	INTERMEDIATE = 2;
+	// 高级
+	ADVANCED = 3;
+
+}
+
+// 射击类型
+enum shootFreeType
+{
+	// 免费
+	SHOOT_FREE = 1;
+	// 钻石
+	SHOOT_GOLD = 2;
+
+}
+
+// 射击奖池ID
+enum shootRewardState
+{
+
+  SHOOT_A = 1;
+  SHOOT_B = 2;
+
+}
+
+// 装备状态
+enum equipStatus
+{
+	//空闲中
+	EQUIP_FREE = 0;
+	// 主角身上
+	EQUIP_MAIN_ROLE = 1;
+	// 佣兵
+	EQUIP_MERCENARY = 2;
+}
+
+// 怪物类型
+enum monsterType
+{
+	// 小怪
+	DOGFACE = 1;
+	// 关卡Boss
+	BOSS = 2;
+	// 机器人
+	ROBOT = 3;
+}
+
+//佣兵状态
+enum RoleStatus
+{
+	// 休息中,無狀態
+	RESTTING = 0;
+	// 單獨出战中
+	FIGHTING = 1;
+	// 單獨远征中
+	EXPEDITION = 2;
+	// 出戰+遠征(混合任務)
+	MIXTASK = 3;
+}
+
+//通知类型
+enum NoticeType
+{
+	//新邮件
+	NEW_MAIL = 1;
+	//新留言
+	NEW_MSG = 2;
+	// 未领取礼包
+	GIFT_NEW_MSG = 3;
+	// 公会boss开启
+	ALLIANCE_BOSS_OPEN = 4;
+	// 团战报名提醒
+	TEAM_BATTLE_SIGNUP = 5;
+	// 新竞技记录提醒
+	ARENA_ALL_SIGNUP = 6;
+	// 多人副本可以打提醒
+	MULTI_ELITE_AVALIABLE = 7;
+	// 成就系统红点
+	ACHIEVEMENT_POINT = 8;
+}
+
+enum OpenLevelType
+{
+	ALLIANCE_OPEN_LEVEL = 12;
+}
+
+// 被踢下线原因
+enum kickReason
+{
+	DUPLICATE_LOGIN = 1;
+	SERVER_SHUTDOWN = 2;
+	LOGIN_FORBIDEN = 3;
+	KICKED_OUT = 4;
+	SERVER_RESTART = 5;
+}
+
+// 活动类型
+enum ActivityId
+{
+    option allow_alias = true;
+	// 月卡
+	MONTH_CARD = 83;
+	// 累计充值（按充值数额累计）
+	ACCUMULATIVE_RECHARGE = 2;
+	// 连续充值（按充值天数累计）
+	CONTINUE_RECHARGE = 3;
+	// 充值单项倍数
+	RECHARGE_RATIO = 4;
+	// 关注微信
+	WECHAT = 5;
+	// 累计消费（按消费数额累计）
+	ACCUMULATIVE_CONSUME = 6;
+	// 中秋换字活动
+	WORDS_EXCHANGE = 7;
+	// 地图掉落N倍活动
+	MAP_DROP_REWARD = 8;
+	// 充值双倍
+	DOUBLE_RECHARGE = 9;
+	// 假日宝藏
+	HOLIDAY_TREASURE = 10;
+	// 公测字活动
+	BETA_TEST_WORDS = 11;
+	// 金币掉落N倍
+	COINS_MAP_DROP_RATIO = 12;
+	// 经验掉落N倍
+	EXP_MAP_DROP_RATIO = 13;
+	// 竞技场奖励N倍
+	ARENA_REWARD_RATIO = 14;
+	// 装备掉落双倍
+	EQUIP_MAP_DROP_RATIO = 15;
+	// 快速战斗收益双倍
+	QUICK_REWARD_RATIO = 16;
+	// 熔炼值双倍
+	SMELT_VALUE_RATIO = 17;
+	// 装备出售价格双倍
+	EQUIP_SELL_RATIO = 18;
+	// 快速战斗消耗减半
+	QUICK_COST_RATIO = 19;
+	// 玩家注册天数活动
+	REGISTER_CYCLE = 20;
+	// 每日单笔充值返利
+	SINGLE_RECHARGE = 21;
+	// 充值返利活动
+	RECHARGE_REBATE = 22;
+	// vip福利
+	VIP_WELFARE = 23;
+	// 周卡
+	WEEK_CARD = 24;
+	// 远征物资
+	EXPEDITION_ARMORY = 25;
+	// 限时限购
+	TIME_LIMIT_PURCHASE = 26;
+	// 累计登陆
+	ACCUMULATIVE_LOGIN = 27;
+	// 充值返利活动2，周期开放
+	RECHARGE_REBATE2 = 28;
+	// 宝石工坊
+	GEM_COMPOUND = 29;
+	// 疯狂转轮
+	CRAZY_ROULETTE = 30;
+	// 幸运宝箱
+	LUCK_BOX = 31;
+	// 5 星好评
+	STAR_EVALUATION = 32;
+	// 好友邀请
+	FRIEND_INVITE = 33;
+	// 出租车抵价
+	TAXI_CODE = 34;
+	// 雪地寻宝
+	SNOWFIELD_TREASURE = 35;
+	// 奇遇宝箱
+	TREASURE_RAIDER = 36;
+	// 部族的嘉奖
+	COMMENDATION_TRIBE = 37;
+	// 财神献礼
+	FORTUNE = 38;
+	// 商店刷新价格减半
+	SHOP_REFRESH_PRICE_RATIO = 39;
+	// 万家灯火
+	FIND_TREASURE = 40;
+	// 财富俱乐部
+	GOLD_CLUB = 41;
+	// 抢红包
+	GRAB_RED_ENVELOPE = 42;
+	// 聊天彩蛋
+	CHAT_LUCK = 43;
+	// 排行献礼
+	RANK_GIFT = 44;
+	// 终身卡
+	FOREVER_CARD = 45;
+	// 打折礼包
+	SALE_PACKET = 82;
+	//小时卡
+	HOUR_CARD = 51;
+	//首充礼包 (防止和国内活动冲突)
+	FIRST_GIFTPACK = 84;
+	//黑市
+	MYSTERY_SHOP = 81;
+	//英雄令商店打折
+	HERO_TOKEN_SHOP = 82;
+	//限时限购for77
+	LIMIT_RECHARGE = 85;
+	//兑换for77
+	EXCHANGE_DOUBLE_SEVEN = 86;
+	//签到日常
+	DAILY_QUEST	= 87;
+	// 捞金鱼活动
+	GOLD_FISH = 88;
+	// 神装锻造
+	GODEQUIP_FORGING = 89;
+	// 制服壳场
+	SHOOT_ACTIVITY = 90;
+	// 魔王的宝藏
+	PRINCE_DEVILS = 91;
+	// 等级折扣礼包
+	DISCOUNT_GIFT = 94;
+	// vip礼包
+	VIP_PACKAGE = 95;
+	// 新周卡
+	NEW_WEEK_CARD = 96;
+	// 成长基金
+	GROWTH_FUND = 97;
+	// 幸运副将活动
+	Lucky_MERCENARY = 98;
+	// 新夺宝奇兵活动
+	NEW_TREASURE_RAIDER = 99;
+	// 购买皮肤活动
+	CHAT_SKIN = 100;
+	// 王的后宫
+	HAREM = 101;
+	// 碎片限时兑换活动
+	FRAGMENT_EXCHANGE = 102;
+	// 仙女的保佑
+	FAIRY_BLESS = 103;
+	// 少女的邂逅
+	MAIDEN_ENCOUNTER = 104;
+	// 鬼节活动
+	OBON = 105;
+	// 天降元宝活动
+	WELFARE_REWARD = 106;
+	// 新手UR活动
+	NEW_UR = 107;
+	// 大转盘活动
+	TURNTABLE = 108;
+	// 万圣节活动
+	HALLOWEEN = 109;
+	// 高速战斗券使用上限翻倍活动
+	QUICK_BATTLE_DOUBLE = 110;
+	// 神将投放复刻版
+	RELEASE_UR = 111;
+	//开服七天乐活动
+	FUN_ACTIVITY = 112;
+	
+	//30天累计签到活动
+	ACCUMULATIVE_LOGIN_SIGNED = 113;
+	//新手九級限定7天登录活动
+	ACCUMULATIVE_LOGIN_SEVEN= 114;
+	//新手扭蛋限定活动
+	NEW_ND = 115;
+	// 神将投放复刻版
+	RELEASE_UR2 = 116;
+	// 新夺宝奇兵活动 复刻版
+	NEW_TREASURE_RAIDER2 = 117;
+	// 累计充值活动
+	CONTINUE_RECHARGE_MONEY=118;
+	// 累计消费 购买道具次数
+	ACCUMULATIVE_CONSUMEITEM = 119;
+	// 新夺宝奇兵活动3 复刻版
+	NEW_TREASURE_RAIDER3 = 120;
+	// 神将投放复刻版
+	RELEASE_UR3 = 121;
+	// 活跃度达标活动
+	ACTIVECOMPLIANCE = 122;
+	// 束缚彼女活动
+	ACTIVITY123_UR = 123;
+	// 新充值返利抽奖活动
+	ACTIVITY124_RECHARGE_RETURN = 124;
+	// 武器屋
+	ACTIVITY125_WEAPON = 125;
+	// 天降元宝根据玩家注册时间
+	WELFAREBYREGDATE_REWARD = 126;
+	// 武器召唤师
+	ACTIVITY127_UR= 127;
+	// 抽卡积分排行活动
+	ACTIVITY128_UR = 128;
+	// 消費型進階月卡
+	CONSUME_WEEK_CARD = 129;
+	// 消费型基礎月卡
+	CONSUME_MONTH_CARD = 130;
+	// 累积连续充值
+	CONTINUE_RECHARGE131 = 131;
+	// 等级礼包活动
+	ACTIVITY132_LEVEL_GIFT = 132;
+	// 在线礼包活动
+	ACTIVITY133_ONLINE_GIFT = 133;
+	// 在线礼包活动
+	ACTIVITY134_WEEKEND_GIFT = 134;
+	// 新夺宝奇兵活动4 复刻版
+	NEW_TREASURE_RAIDER4 = 135;
+	// 兑换所
+	EXCHANGE_SHOP = 136;
+	// 老虎机返利活动
+	ACTIVITY137_RECHARGE_RETURN = 137;
+	//新夺宝奇兵活动 多副将版
+	NEW_TREASURE_RAIDER139 = 139;
+	//俄罗斯轮盘
+	RUSSIADISHWHEEL = 140;
+    //大富翁
+	ACTIVITY141_RICHMAN = 141;
+    // 兑换所2
+	ACTIVITY142_EXCHANGE_SHOP = 142;
+	// 海盜寶箱
+	ACTIVITY143_PIRATE = 143;
+	// 性奴小學堂
+	ACTIVITY144_LITTLE_TEST = 144;
+	// 10日挑戰
+	ACTIVITY145_TENDAY_CHALLENGE = 145;
+	// 英靈召喚
+	ACTIVITY146_CHOSEN_ONE = 146;
+	// 許願輪
+	ACTIVITY147_WISHING_WELL = 147;
+	// 新手九級限定小瑪莉
+	ACTIVITY148_MARRY_GAME = 148;
+	// 新手九級限定三天任務 
+	ACTIVITY149_THREE_DAY = 149;
+	// 新手九級限定禮包
+	ACTIVITY150_LIMIT_GIFT = 150;
+	// 關卡限定禮包
+	ACTIVITY151_STAGE_GIFT = 151;
+	// 英雄劇情禮物
+	ACTIVITY152_DRAMA_GIFT = 152;
+	// 排行榜禮物
+	ACTIVITY153_RANK_GIFT = 153;
+	// 精靈召喚
+	ACTIVITY154_CALL_OF_SPRITE = 154;
+	// 活動等級成就
+	ACTIVITY155_ACHIEVE_LEVEL = 155;
+	// 活動戰力成就
+	ACTIVITY156_ACHIEVE_FIGHTVALUE = 156;
+	// 累積登入送十抽
+	ACTIVITY157_LOGIN_TEN_DRAW = 157;
+	// 種族召喚
+	ACTIVITY158_CALL_OF_RACE = 158;
+	// 每日累積VIP點數活動
+	ACTIVITY159_VIP_POINT = 159;
+	// 累積儲值活動
+	ACTIVITY160_NP_CONTINUE_RECHARGE = 160;
+	// 收費打卡獎勵活動
+	ACTIVITY161_SUPPORT_CALENDER = 161;
+	// 成長禮物LV
+	ACTIVITY162_GROWTH_LV = 162;
+	// 成長禮物CH
+	ACTIVITY163_GROWTH_CH = 163;
+	// 成長禮物TW
+	ACTIVITY164_GROWTH_TW = 164;
+	// 挖礦活動165
+	ACTIVITY165_MINING = 165;
+	// 友情召喚
+	ACTIVITY166_CALL_OF_FRIENDSHIP = 166;
+	// 首儲1500抽
+	ACTIVITY167_Consume_Summom = 167;
+	// 特權購買
+	ACTIVITY168_SubScription = 168;
+	// 彈跳活動禮包
+	ACTIVITY169_JumpGift = 169;
+	// 彈跳活動禮包
+	ACTIVITY170_JumpGift = 170;
+	// PICKUP
+	ACTIVITY172_PICKUP = 172;
+	// 新角池活動
+	ACTIVITY173_NEWROLE = 173;
+    // 壁尻活動
+	ACTIVITY175_Glory_Hole = 175;
+    //活動兌換所
+	ACTIVITY176_Activity_Exchange = 176;
+    // 失敗者禮包
+	ACTIVITY177_Failed_Gift = 177;
+    // 專武召喚
+	ACTIVITY178_CALL_OF_EQUIP = 178;
+    // 階段禮包
+	ACTIVITY179_Step_Gift = 179;
+	// 免費1500抽
+	ACTIVITY180_Free_Summom = 180;
+	// 彈跳活動禮包
+	ACTIVITY181_JumpGift = 181;
+	// 彈跳活動禮包
+	ACTIVITY182_JumpGift = 182;
+	// 彈跳活動禮包
+	ACTIVITY183_JumpGift = 183;
+	// 彈跳活動禮包
+	ACTIVITY184_JumpGift = 184;
+	// 彈跳活動禮包
+	ACTIVITY185_JumpGift = 185;
+	// 彈跳活動禮包
+	ACTIVITY186_JumpGift = 186;
+    // 強力彈跳活動禮包
+	ACTIVITY187_MaxJump = 187;
+    // 累積返利900抽
+	ACTIVITY190_StepSummom = 190;
+    // 循環地城活動
+	ACTIVITY191_CycleStage = 191;
+    //累儲累消累充
+	ACTIVITY192_RechargeBounce = 192;
+    //單人強敵活動
+	ACTIVITY193_SingleBoss = 193;
+    //季爬塔活動
+	ACTIVITY194_SeasonTower = 194;
+    // 九宮格活動
+    ACTIVITY195_PuzzleBattle = 195;
+    // 循環地城活動復刻
+    ACTIVITY196_CycleStage_Part2 = 196;
+	// 超級PICKUP
+    ACTIVITY197_SUPER_PICKUP = 197;
+}
+
+enum FriendChatMsgType
+{
+	// 留言
+	LEAVE_MSG = 0;
+	// 系统提示
+	SYSTEM_MSG = 2;
+	// 玩家发送的消息
+	PLAYER_MSG = 3;
+}
+
+// 通知类型
+enum notifyType
+{
+	NOTIFY_RECHARGE = 1;
+}
+
+enum dailyRefreshType {
+	//商店中的商品
+	SHOP_ITEM_REFRESH = 1;
+	//公会签到
+	ALLIANCE_SIGN = 2;
+	//装备打造刷新
+	EQUIP_CREATE_REFRESH = 3;
+	//竞技场挑战
+	ARENA_CHALLENGE = 4;
+	//快速战斗
+	FAST_FIGHT = 5;
+	//BOSS战斗
+	BOSS_FIGHT = 6;
+	//精英副本
+	ELITE_MAP = 7;
+	//魂石使用
+	STAR_STONE = 8;
+	//光环升级次数
+	ROLE_RING_LVLUP = 9;
+	//FaceBook好友索取
+	FB_FRIEND_ASKTICK = 10;
+	//黑市商品
+	MYSTERY_SHOP_ITEM_REFRESH = 11;
+	// VIP特典每日领奖
+	VIP_WELFARE_AWARD = 12;
+	//商店中的商品2
+	SHOP_ITEM_REFRESH_2 =102;
+	//商店中的商品3
+	SHOP_ITEM_REFRESH_3 = 103;
+	//商店中的商品4
+	SHOP_ITEM_REFRESH_4 = 104;
+	//水晶商店
+	CRYSTAL_SHOP_ITEM_REFRESH = 111;
+	CRYSTAL_SHOP_ITEM_REFRESH_2 = 112;
+	CRYSTAL_SHOP_ITEM_REFRESH_3 = 113;
+	CRYSTAL_SHOP_ITEM_REFRESH_4 = 114;
+	//佣兵远征
+	MERCENARY_EXPEDTION_ITEM_REFRESH_1 = 115;
+	MERCENARY_EXPEDTION_ITEM_REFRESH_2 = 116;
+	MERCENARY_EXPEDTION_ITEM_REFRESH_3 = 117;
+	MERCENARY_EXPEDTION_ITEM_REFRESH_4 = 118;
+	MERCENARY_EXPEDTION_ITEM_REFRESH_5 = 119;
+	MERCENARY_EXPEDTION_ITEM_REFRESH_6 = 120;
+	MERCENARY_EXPEDTION_ITEM_REFRESH_7 = 121;
+	MERCENARY_EXPEDTION_ITEM_REFRESH_8 = 122;
+	MERCENARY_EXPEDTION_ITEM_REFRESH_9 = 123;
+	MERCENARY_EXPEDTION_ITEM_REFRESH_10 = 124;
+	MERCENARY_EXPEDTION_ITEM_REFRESH_11 = 125;
+	MERCENARY_EXPEDTION_ITEM_REFRESH_12 = 126;
+	// 多人副本
+	// 副本列表重置
+	MULTIELITE_INIT_BATTLE_COUNT_1 = 130;
+	MULTIELITE_INIT_BATTLE_COUNT_2 = 131;
+    MULTIELITE_INIT_BATTLE_COUNT_3 = 132;
+	MULTIELITE_INIT_BATTLE_COUNT_4 = 133;
+	// 世界boss重置
+	WORLD_BOSS_BUFF_FREE_TIMES_1 = 140;
+	WORLD_BOSS_BUFF_FREE_TIMES_2 = 141;
+    // 地下城重置
+    DUNGEON_REERESH_TIME = 142;
+    // 壁尻重置
+    GLORYHOLE_REERESH_TIME = 143;
+	}
+// 任务状态
+enum QuestState {
+	// 未激活
+	UNACTIVE = 0;
+	// 进行中
+	ING = 1;
+	// 已完成未领奖
+	FINISHED = 2;
+	// 完成且已领奖
+	REWARD =3;
+}
+
+// 任务阶段类型
+enum QuestStep {
+	FIRST = 1;
+	SECOND = 2;
+	THIRD = 3;
+	FOURTH = 4;
+	FIFTH = 5;
+	SIXTH = 6;
+	SEVENTH = 7;
+	EIGHTH = 8;
+	NINTH = 9;
+	TENTH = 10;
+	ELEVENTH = 11;
+}
+
+// 任务事件类型
+enum QuestEventType {
+	// 战胜BOSS
+	KILL_BOSS = 1;
+	// 添加好友
+	ADD_FRIEND = 2;
+	// 加入公会
+	JOIN_ALLIANCE = 3;
+	// 签名修改
+	MODIFY_SIN = 4;
+	// 打造装备
+	MAKE_EQUIP = 5;
+	// 快速战斗
+	QUICK_BATTLE = 6;
+	// 熔炼装备
+	SMELT_EQUIP = 7;
+	// 世界发言
+	WORLD_SPEAK = 8;
+	// 竞技胜利
+	ARENA_BATTLE = 9;
+	// 佣兵培养
+	HERO_FOSTER = 10;
+	// 精英副本
+	ELITE_STATE = 11;
+	// 古宝山
+	GU_BAO_SHAN = 12;
+	// 激流谷
+	JI_LIU_GU = 13;
+	// 魔化入侵
+	MO_HUA_RU_QIN = 14;
+	// 多人副本
+	DUO_REN_FU_BEN = 15;
+	// 公会争霸
+	GONG_HUI_ZHENG_BA = 16;
+	// 公会BOSS
+	GONG_HUI_BOSS = 17;
+	// 佣兵升星
+	HERO_LEVEL = 18;
+	// 宝石升级
+	GEM_LEVEL = 19;
+	// 强化装备
+	EQUIP_ENHANCE_LEVEL = 20;
+	// 普通神器等级
+	COMMON_GOD_EQUIP_LEVEL = 21;
+	// 声望神器等级
+	HOUNOR_GOD_EQUIP_LEVEL = 22;
+	// 技能专精等级
+	SKILL_ENHANCE_LEVEL = 23;
+	//主角等级
+	MAIN_ROLE_LEVEL = 24;
+	//累计登陆
+	TOTAL_LOGIN_TIMES = 25;
+	//强化装备
+	EQUIP_ENHANCE_TIMES = 26;
+	//通关指定关卡
+	CROSS_MISSION_NUMBER = 27;
+	//战力提升到指定数
+	FIGHT_POINT_UP = 28;
+	//全身强化到指定数
+	EQUIP_ENHANCE_ALL_LEVEL = 29;
+	//佣兵远征次数
+	HERO_EXPEND_TIMES = 30;
+	//声望打造次数
+	HOUNOR_MAKE_TIMES = 31;
+	//装备洗炼次数
+	BAPTIZE_EQUIP_TIMES = 32;
+	//装备熔炼数量
+	SMELT_EQUIP_COUNT = 33;
+	//普通神器吸收次数
+	COMMON_GOD_EQUIP_SWALLOW_TIMES = 34;
+	//声望神器吸收次数
+	HOUNOR_GOD_EQUIP_WALLOW_TIMES = 35;
+	//神器融合
+	GOD_EQUIP_COMPOUND_TIMES = 36;
+	//神器传承
+	GOD_EQUIP_EXTEND_TIMES = 37;
+	//宝石镶嵌
+	GEM_DRESS_TIMES = 38;
+	//普通商店购买
+	COMMON_SHOP_BUY_TIMES = 39;
+	//套装合成
+	SUIT_FRAGMENT_TIMES = 40;
+	//套装分解
+	SUIT_DECOMPOSE_TIMES = 41;
+	//交换水晶
+	EXCHANGE_CRYSTAL_TIMES = 42;
+	//竞技场挑战
+	JING_JI_CHANG_TIMES = 43;
+	//vip等级
+	VIP_LEVEL_UP = 44;
+	//竞技场排名
+	JING_JI_CHANG_RANK = 45;
+	//恶魔入侵排名
+	E_MO_RU_QIN_RANK = 46;
+	//普通关卡通过次数
+	CROSS_MISSION_TIMES = 47;
+	//累计获得金币数量
+	TOTAL_GAIN_COIN_COUNT = 48;
+	//佣兵拥有数量
+	HERO_COUNT = 49;
+	//全身普通神器星级
+	DRESS_COMMON_GOD_EQUIP_STAR_LEVEL = 50;
+	//全省声望神器星级
+	DRESS_HOUNOR_GOD_EQUIP_STAR_LEVEL = 51;
+	//装备R套装
+	DRESS_R_SUIT_COUNT = 52;
+	//装备SR套装
+	DRESS_SR_SUIT_COUNT = 53;
+	//装备SSR套装
+	DRESS_SSR_SUIT_COUNT = 54;
+	//装备UR套装
+	DRESS_UR_SUIT_COUNT = 55;
+	//获取紫色品质佣兵
+	PURPLE_HERO_COUNT = 56;
+	//获取金色品质佣兵
+	GOLD_HERO_COUNT = 57;
+	//恶魔入侵最后一击
+	E_MO_RU_QIN_LAST_ATTACK_COUNT = 58;
+	//佣兵训练升星
+	ROLE_UPGRADE_QUEST = 59;
+	//首次参与18路诸侯
+	EIGHTEENPRINCES_FIRST=60;
+	//18路诸侯通关
+	EIGHTEENPRINCES_PASS=61;
+	//新手九級限定完成次數
+	NEWBIE_QUEST_FINISHI = 62;
+	//獲得光暗屬性的英雄
+	GET_LIGHT_DARK_HERO = 63;
+}
+
+// 任务类型
+enum QuestType {
+	// 走操作次数的情况且比较大于等于(比如快速战斗多少次)
+	COUNT = 1;
+	// 走状态的情况且比较大约等于(比如装备强化到多少级)
+	STATEFUL = 2;
+	//减少次数且比较小于等于
+	LESS_THAN_COUNT = 3;
+	//直接赋值且小雨等于
+	LESS_THAN_STATEFUL= 4;
+}
+
+// 呀呀主播消息类型
+enum YaYaMsgType {
+	// 客户端主动获取消息
+	GET_TYPE = 1;
+	// 服务端推送
+	PUSH_TYPE= 2;
+}
+
+// 元素类型
+enum ElementType {
+	// 全部元素
+	ALL = 1;
+	// 冰
+	ICE = 2;
+	// 火
+	FIRE = 3;
+	// 雷
+	THUNDER = 4;
+}
+// 英雄令消息类型
+enum HeroTokenMsgType {
+	// 合成英雄令
+	CONSUME_ITEM = 1;
+	// 领取任务
+	GET_TASK= 2;
+	// 宝石一键合成
+	GEM_COMPOUND_ONCE = 3;
+}
+
+// 排行类型
+enum RankType {
+	// 白色翅膀10星耗时
+	WING_WHITE_TIME_RANK = 1;
+	// 绿色翅膀10星耗时
+	WING_GREEN_TIME_RANK = 2;
+	// 蓝色翅膀10星耗时
+	WING_BLUE_TIME_RANK = 3;
+	// 紫色翅膀10星耗时
+	WING_PURPLE_TIME_RANK = 4;
+	// 橙色翅膀10星耗时
+	WING_ORANGE_TIME_RANK = 5;
+	//综合等级排行榜
+	LEVEL_ALL_RANK=21;
+	//剑士等级排行榜
+	LEVEL_PROFJS_RANK=22;
+	//弓士等级排行榜
+	LEVEL_PROFGS_RANK=23;
+	//策士等级排行榜
+	LEVEL_PROFCS_RANK=24;
+	//世界Boss关卡排行榜
+	CUSTOMPASS_BOSS_RANK=31;
+	//训练所关卡排行榜
+	CUSTOMPASS_TRAINING_RANK=32;
+	//公会等级排行榜
+	ALLIANCE_LEVEL_RANK=41;
+	//公会活跃度排行榜
+	ALLIANCE_VITALITY_RANK=42;
+	//BOSS伤害排行榜
+	ALLIANCE_BOSSHARM_RANK=43;
+	//综合战力排行榜
+	SCORE_ALL_RANK=51;
+	//剑士战力排行榜
+	SCORE_PROFJS_RANK=52;
+	//弓士战力排行榜
+	SCORE_PROFGS_RANK=53;
+	//策士战力排行榜
+	SCORE_PROFCS_RANK=54;
+	
+	//火屬英雄戰力排行榜
+	HERO_FIRE_RANK=55;
+	//水屬英雄戰力排行榜
+	HERO_WATER_RANK=56;
+	//風屬英雄戰力排行榜
+	HERO_WIND_RANK=57;
+	//光屬英雄戰力排行榜
+	HERO_LIGHT_RANK=58;
+	//暗屬英雄戰力排行榜
+	HERO_DARK_RANK=59;
+	
+}
+
+enum WingsConstant {
+	MAX_LUCKY_NUM = 100;
+	WINGS_OPEN_LEVEL = 40;
+}
+
+enum BattleUseItemType {
+	NONE = 0;
+	USE_ITEM = 1;
+}
+
+// 宝石商店购买类型
+enum GemShopBuy
+{
+	//钻石购买
+	GOLDBUY = 1;
+	//宝石卷购买
+	GEMVOLUMEBUY = 2;
+}
+
+// 勾选状态.发送会长邮件同意
+enum AllianCheckButton
+{
+	//未勾选
+	CHECK_BUTTON_TYPE_1 = 0;
+	//已勾选
+	CHECK_BUTTON_TYPE_2 = 1;
+}
+
+// 加入公会审核状态
+enum ApplyState
+{
+	//待审核
+	APPLY_STATE_1 = 1;
+	//拒绝加入
+	APPLY_STATE_2 = 2;
+}
+
+// 公会操作状态 
+enum AllianOperState
+{
+	//拒绝
+	Refused_TYPE_2 = 0;
+	//同意
+	APPROVAL_TYPE_1 = 1;
+}
+
+// 申请加入公会邮件变更处理
+enum ApplyAddAllianceUpEmail
+{
+	//过期删除
+	UPEMAIL_TYPE_1 = 1;
+	//公会会长自动转让
+	UPEMAIL_TYPE_2 = 2;
+}
+
+//加入公会类型
+enum AddAllianceState
+{
+	//主动参加加入
+	INITIATIVE_ADD_TYPE_1 = 1;
+	//申请同意加入
+	MAIN_AGREE_TYPE_2 = 2;
+}
+
+//退出公会类型
+enum ExitAllianceState
+{
+	//主动退出
+	INITIATIVE_TYPE_1 = 1;
+	//管理员踢出
+	MAIN_KICK_TYPE_2 = 2;
+}
+
+//加入退出公会
+enum AddOrExitAlliance
+{
+	//加入公会类型
+	ADD_ALLIANCE_TYPE_1 = 1;
+	//退出公会类型
+	EXIT_ALLIANCE_TYPE_2 = 2;
+}
+
+// ios专属礼包
+enum IosGitState
+{
+	// 已领取
+	HAVE_GET = 1;
+	// 未领取
+	NOT_GET  = 0;
+}
+
+// 商店数据类型
+enum DataType {
+	COIN_TYPE = 1; // 金币
+	GOLD_TYPE = 2; // 钻石
+	VALOR_SCORE = 3; // 勇气积分
+	HISTORY_VALOR = 4; // 历史勇气积分
+	HONOR = 5; // 荣誉值
+	REPUTATION = 6; // 声望
+	CONTRIBUTION_VALUE = 7; // 公会贡献值
+	CROSS_COIN_TYPE = 8; // 跨服币
+	LUCK_SCORE = 9; // 幸运值
+	CAN_BUY_TIMES = 10; // 金币商店还可购买次数
+	CRYSTAL_CHANGE = 11; // 水晶
+	GEM_TYPE = 12; // 宝石商店
+	ITEM_LEFT = 13; // 商品剩餘
+	LEVEL_LIMIT = 14; // 等級限制
+}
+
+// 商店类型
+enum ShopType {
+	GOBLIN_MARKET = 1; // 地精商店
+	COINS_MARKET = 2; // 购买金币商店
+	ALLIANCE_MARKET = 3; //公会商店
+	ARENA_MARKET = 4; // 竞技场商店
+	VALOR_MARKET = 5; // 勇气商店
+	CROSS_MARKET = 6; // 跨服商店
+	BLACK_MARKET = 7; // 黑市商店
+	CRYSTAL_MARKET = 8; // 水晶商店
+	GEM_MARKET = 9; // 宝石商店
+	DAILY_MARKET = 10; // 每日商店
+	MYSTERY_MARKET = 11; //神秘商店
+	GUILD_MARKET = 12; //新公會商店
+	TEMPLE_MARKET = 13; //殿堂商店
+	RACE_MARKET = 14; 	//種族商店
+	GODSEA_MARKET = 15; //神海商店
+	SKIN_MARKET = 16; //皮膚商店
+    CYCLESTAGE_MARKET = 17; //神海商店2(循環活動複製用)
+}
+
+// 商店操作类型
+enum ShopOperationType{
+	INIT_TYPE = 1;  // 初始化
+	REFRESH_TYPE = 2;  // 刷新
+}
+
+// 英雄激活状态
+enum RoleActiviteState {
+	// 已激活
+	IS_ACTIVITE = 1;
+	// 未激活
+	NOT_ACTIVITE = 0;
+	// 可激活
+	CAN_ACTIVITE = 2;
+}
+
+enum RoleTrainType
+{
+	// 普通(金币)
+	COMMON_TYPE = 1;
+	// 高级
+	ADVANCED_TYPE = 2;
+	// 白金
+	PLATINA_TYPE = 3;
+	// 钻石(至尊)
+	DIAMOND_TYPE = 4;
+}
+
+// 多人副本准备状态
+enum MultiEliteState
+{
+	// 等待状态
+	IS_AWAIT = 1;
+	// 准备状态
+	IS_SETOUT = 2;
+	// 房主
+	IS_HOUSE_OWNER = 3;
+}
+
+enum AddRoleAttrType
+{
+	// 自己
+	ONESELF = 0;
+	// 主角 + 自己
+	MAIN_ROLE_AND_ONESELF = 1;
+	// 全体
+	ALL_ROLE = 2;
+}
+
+// 世界boss，buff作用类型
+enum WorldBossBuffType
+{
+	// 自己
+	ONESELF_TYPE = 1;
+	// 佣兵
+	MERCENARY_TYPE = 2;
+	// 全部
+	ALL_TYPE = 3;
+}
+
+// /“点击曝光”打点需求，行为类型
+enum ActionRecordType
+{
+	// 主界面红点进入
+	RED_POINT_INTO = 1;
+	// 主界面Banner按钮进入
+	MAIN_BANNER_INTO = 2;
+	// 玩家打开特典界面各分界面进入
+	SEL_PAGINATION_INTO = 3;
+	// 玩家打开限时活动界面各分界面进入
+	SEL_LIMIT_PAGINATION_INTO = 4;
+	// 多人副本进入
+	MULTIELITE_INTO = 5;
+	// 多人副本开始
+	MULTIELITE_START = 6;
+	// GVG进入
+	GVG_ENTER = 7;
+}
+//点击曝光” 模块id
+enum ActionModuleId
+{
+	//多人副本
+	MODULE_MULTIELITE = 10000;
+	//GVG模块
+	MODULE_GVG = 10001;
+}
+// 多人副本通知类型
+enum MutliNoticeType
+{
+	// 开始，通知队员
+	START_TYPE = 1;
+	// 准备，通知队长
+	SETOUT_TYPE = 2;
+	// 邀请通知
+	INVITE_TYPE = 3;
+}
+
+// 魔法召唤
+enum HaremType
+{
+	// 普通
+	HAREM_TYPE_COMMON = 1;
+	// 中级
+	HAREM_TYPE_MIDDLE= 2;
+	// 高级
+	HAREM_TYPE_ADVANCED = 3;
+	// 限定
+	HAREM_TYPE_STRICT = 4;
+	// 新手限定活动
+	HAREM_TYPE_NEW_STRICT = 5;
+	// 限购奖池活动
+	HAREM_TYPE_LIMIT = 6;
+	
+}
+
+// 世界boss自动战斗类型
+enum BossAutoBattleType
+{
+	// 不自动
+	BOSS_NO_AUTO_TYPE = 0;
+	// 普通自动
+	BOSS_COMMON_TYPE = 1;
+	// 高级自动
+	BOSS_ADVANCED_TYPE = 2;
+}
+
+// 世界boss排行类型
+enum WorldBossRankType
+{
+	// 个人排行
+	BOSS_PERSON_RANK_TYPE = 1;
+	// 最后击杀排行
+	BOSS_LAST_KILL_RANT_TYPE = 2;
+	// 联盟排行
+	BOSS_ALLIANCE_RANK_TYPE =3;
+}
+
+// 世界boss弱点部位类型
+enum WorldBossFailingType
+{
+	// 没有
+	NOT_PART = 0;
+	// 头部
+	HEAD_TYPE = 1;
+	// 胸部
+	CHEST_TYPE = 2;
+	// 臀部
+	HAUNCH_TYPE = 3;
+}
+
+// 是否免费
+enum WorldBossIsFree
+{
+	// 免费
+	WORLD_BOSS_FREE = 1;
+	// 收费
+	WORLD_BOSS_GOLD = 2;
+}
+
+// 装备强化类型
+enum EquipEnhanceType
+{
+	// 强化1次
+	EQUIP_ONCE = 1;
+	// 强化10次
+	EQUIP_TEN_TIMES = 2;
+}
+
+// 7 日之诗任务时间类型
+enum SevenDayEventType{
+	// 登录
+	LOGIN = 1;
+	// 充值
+	RECHARGE = 2;
+	// 角色升级
+	LEVELUP	= 3;
+	// 关卡挑战
+	CHALLENGE = 4;
+	// 优惠折扣
+	BUYDISCOUNT = 5;
+	// 快速战斗
+	FASTBATTLE = 6;
+	// 竞技场
+	ATHLETICS = 7;
+	// 装备铸造
+	EQUIPMENT = 8;
+	// 装备洗练
+	EQUIPSUCCINCT=9;
+	// 装备强化
+	EQUIPSTRAN=10;
+	// 自动打怪
+	AUTOPVE=11;
+	// 训练所突破
+	TRAINING=12;
+	// 英雄突破
+	DEPUTYTRAIN=13;
+	// 副将游历
+	DEPUTYTRAVEL=14;
+	// 英雄升級
+	DEPUTYDEVELOP=15;
+	// 副将人数
+	DEPUTYNUM	=17;
+	// 少女调教
+	MAIDENTRAIN=18;
+	// 竞技
+	PVPARENA=19;
+	// 主角战力
+	MAINROLE_SCORE=20;
+	// 裝備再造
+	EQUIP_FORGE=21;
+	// 掛機新增
+	TAKE_FIGHT_AWARD=22;
+	// 過關
+	PASS_MISSION=23;
+}
+
+// 10 日挑戰任务时间类型
+enum TenDayEventType{
+	// 登录
+	TEN_LOGIN = 1;
+	// 快速战斗
+	TEN_FASTBATTLE = 2;
+	// 自动打怪
+	TEN_AUTOPVE=3;
+	// 装备铸造
+	TEN_EQUIPMENT = 4;
+	//竞技场挑战
+	TEN_PVPARENA = 5;
+	// 遠足
+	TEN_DEPUTYTRAVEL=6;
+	// 訓練所
+	TEN_TRAINING=7;
+	// 消耗鑽石
+	TEN_ACCCONSUME =8;
+	// 副将训练
+	TEN_DEPUTYTRAIN=9;
+}
+
+// 30天签到活动领奖类型
+enum LoginSignAwdType{
+	// 签到领奖
+	SIGNAWARD=1;
+	// 开箱子领奖
+	SIGNOPENCHEST=2;
+}
+
+// 十八路诸侯层级状态
+enum EighteenPrincesLayerStatus{
+	NOT_OPEN=0;
+	CAN_CHANLLENGE=1;
+	ALL_PASS=2;
+}
+
+// 十八路诸侯药箱类型
+enum EighteenPrincesMedicalKitTYPE{
+	BIGMEDICALKIT  =1;
+	MIDLEMEDICALKIT=2;
+	SMALLMEDICALKIT=3;
+}
+
+// 徽章属性类型
+enum BadgeAttrGrade
+{
+	// 主属性
+	BADGE_PRIMARY_ATTR = 1;
+	// 副属性
+	BADGE_EXTRA_ATTR = 2;
+}
+
+// 徽章类型
+enum BadgeType
+{
+	// 强力
+	POWERFUL_BADGE = 1;
+	// 勇气
+	COURAGE_BADGE = 2;
+	// 精准
+	PRECISION_BADGE = 3;
+	// 强固
+	STRONG_BADGE = 4;
+	// 柔软
+	SOFT_BADGE = 5;
+	// 迅速
+	QUICK_BADGE = 6;
+}
+
+// 装备品质
+enum BadgeQuality
+{
+	// 绿
+	GREEN_BADGE = 2;
+	// 蓝
+	BLUE_BADGE = 3;
+	// 紫
+	PURPLE_BADGE = 4;
+	// 橙
+	ORANGE_BADGE = 5;
+	// 红
+	RED_BADGE = 6;
+}
+
+// 收費簽到動作
+enum SupportCalendarAction
+{
+	//同步
+	SYNC = 0;
+	//購買活動
+	BUY = 1;
+	// 签到领奖
+	SIGN=2;
+}
+
+// 收費簽到類別
+enum SupportCalendarType
+{
+	//普通
+	Normal = 1;
+	//優良
+	Premium = 2;
+}
+
+// 功能定義類別
+enum FunctionType
+{
+	//占星(WishingWell147)
+	Wish_Unlock = 1;
+	//秘密信條(SecretMessage)
+	SecretMessage_Unlock = 2;
+	//任務(quest)
+	quest_Unlock = 3;
+	//工坊(指裝備再造的入口按紐)
+	workshop_Unlock = 4;
+	//公會()
+	guild_Unlock = 5;
+	//精靈()
+	sprite_Unlock = 6;
+	//商店(指商店的入口按紐，同dailyShop)
+	shop_Unlock = 7;
+	//派遣(mercenaryExpedition)
+	mercenary_Unlock = 8;	
+	//聖所(LeaderSoul)
+	LeaderSoul_Unlock = 101;
+	//競技場(指競技場的入口按紐)
+	PVPARENA_Unlock = 102;
+	//地下城(multiMap)
+	multiMap_Unlock = 103;
+	//金礦()
+	Mile_Unlock = 104;
+	//屬性迴廊(dungeon)
+	dungeon_Unlock = 105;
+	//世界BOSS(worldBoss)
+	worldBoss_Unlock = 106;
+	//塔樓(pvepatabasic)
+	tower_Unlock = 107;
+	//免費1500抽(FreeSummon167)
+	free1500_Unlock = 201;
+	//皮膚商店(SkinShop)
+	skinshop_Unlock = 202;
+    //新手七日祭任務
+    Newbie_Unlock = 203;
+    //等級成就任務
+    levelquest_Unlock = 204;
+    //戰力任務
+    powerlevel_Unlock = 205;
+	//符文合成(badge)
+	badge_Unlock = 301;
+	//每日商店(dailyShop)
+	dailyShop_Unlock = 401;
+	//競技商店(arenaShop)
+	arenaShop_Unlock = 402;
+	//神秘商店(mysteryShop)
+	mysteryShop_Unlock = 403;
+    //種族商店(raceShop)
+    raceShop_Unlock = 404;
+    //神海商店(godseaShop)
+    godseaShop_Unlock = 405;
+	//屬性召喚(releaseURDrop158)
+	racegacha_Unlock = 501;
+	//召喚入口(activity_146)
+	gacha_Unlock = 601;
+	//聊天發話()
+	chat_Unlock = 701;
+	//裝備專武()
+	mainequip_Unlock = 801;
+	//裝備符文1()
+	rune01_Unlock = 802;
+	//裝備符文2()
+	rune02_Unlock = 803;
+	//裝備符文3()
+	rune03_Unlock = 804;
+	//裝備符文4()
+	rune04_Unlock = 805;
+	//快速戰鬥()
+	speedpve_Unlock = 901;
+}

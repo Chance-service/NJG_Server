@@ -1,0 +1,38 @@
+option java_package = "com.guaji.game.protocol";
+
+
+// 任务进度信息
+message TaskStatusBean {
+	required int32 taskId = 1;//任务id
+	required int32 status = 2;//任务进度
+}
+// 商品售卖信息
+message ShopStatusBean {
+	required int32  itemId = 1;//物品id
+	required int32	itemType = 2;//物品type
+	required int32	itemCount = 3;//物品个数
+	required int32  buyPrice = 4;//购买价格
+	required int32  buyTimes = 5;//剩余购买次数
+}
+// 将军令购买 c - s
+message HPShopBuyBean {
+	required int32 itemId = 1;//物品id
+	required int32 price = 2; // 物品价格
+}
+// 将军令购买结果  s - c
+message HPShopBuyBeanRet {
+	repeated ShopStatusBean ShopStatusBeanList=1;//商店物品
+	required bool isReset = 2; // 是否需要刷新
+}
+// 返回英雄令任务信息
+message HPHeroTokenTaskInfoRet {
+	required int32 version=1;//1是推送2是请求返回
+	required int32 taskFinishLefttimes=2;//当天 剩余完成次数
+	required int32 taskFinishAlltimes=3;//当天 总的任务次数
+	repeated TaskStatusBean taskStatusBeanList=4;//当前任务状态
+	repeated ShopStatusBean ShopStatusBeanList=5;//商店物品
+}
+// 英雄令任务完成
+message HPHeroTokenTaskCompleteRet {
+	required int32 taskId = 1; //完成任务id
+}

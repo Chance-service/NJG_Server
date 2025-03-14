@@ -1,0 +1,85 @@
+option java_package = "com.guaji.game.protocol";
+
+// 1.获取团战信息
+message HPTeamBattleInfo
+{
+
+}
+
+// 1.同步团战信息
+message HPTeamBattleSyncS
+{
+	// 团战期号（201408071）
+	required int32 stageId = 1;
+	// 团战状态（-1上一轮结束这一轮未准备，准备中0 第一轮1 第二轮2 以此类推）
+	required int32 battleState = 2;
+	// 倒计时（离开战还有多少秒）
+	required int32 period = 3;
+	
+	//以下是准备中0状态，才能控制按钮
+	// 是否已经加入团战（1未加入 2已加入）
+	required int32 isJoin = 4;
+	// 是否是对长（是队长才能管理团队）
+	required int32 isCaptain = 5;
+}
+
+// 加入队伍
+message HPJoinTeam
+{
+	
+}
+
+// 撤销报名
+message HPUndoSignUp
+{
+	
+}
+
+// 创建队伍
+message HPCreateTeam
+{
+	
+}
+
+// 成员项
+message MemberInfo
+{
+	// 角色配置Id，用于获取角色头像
+	required int32 roleCfgId = 1;
+	// 玩家Id
+	required int32 playerId = 2;
+	// 玩家名
+	required string playerName = 3;
+	// 战斗力
+	required int32 fightValue = 4;
+	// 玩家所装备的技能配置Id
+	repeated int32 skillCfgId = 5;
+	// 是否是对长
+	required int32 isCaptain = 6;
+	// 技能等级
+	repeated int32 skillLevel = 7;
+}
+
+// 管理成员
+message HPManageMember
+{
+}
+
+// 刷新成员
+message HPRefreshMember
+{
+}
+
+// 同步团队成员
+message HPTeamMemberSyncS
+{
+	// 团队成员列表
+	repeated MemberInfo memberInfo = 1;
+	required int32 kickCount = 2;//已经踢过几个人
+}
+
+// 剔除成员
+message HPKickMember
+{
+	required int32 kickPlayerId = 1;
+}

@@ -1,0 +1,85 @@
+option java_package = "com.guaji.game.protocol";
+
+/* MercenaryStatusItem暂不用。佣兵状态还是通过现有的协议通信
+message MercenaryStatusItem 
+{
+	required int32 mercenaryId = 1;//佣兵id
+	required int32 mercenaryStatus = 2;//佣兵状态  1出站中-3远征中-2休息中
+}*/
+//远征任务基础信息
+message TaskItem 
+{
+	required int32 taskId = 1;//任务Id
+	required int32 taskStatus = 2;//任务状态   0:未领取的任务 1:进行中的任务  
+	required string taskRewards = 3;//任务奖励
+	repeated int32 mercenaryId = 4;//进行中的佣兵Id
+	optional int32 lastTimes = 5;//完成任务剩余时间
+}
+
+// C -> S 请求远征任务信息 暂为空
+message HPMercenaryExpeditionInfo
+{
+	required int32 action = 1 ; // 1.完整訊息 2.簡略訊息
+}
+
+// S -> C 任务信息反馈
+message HPMercenaryExpeditionInfoRet
+{
+	repeated TaskItem allTask = 1; //所有的任务信息
+	//--- 以下為簡略訊息------------
+	required int32 curTimes = 2; //本日当前已领取的远征次数
+	required int32 allTimes = 3; //本日总的任务次数
+	required int32 refreshCost = 4;//任务刷新消费
+	required int32 nextRefreshTime = 5;//距离下次刷新时间
+}
+// C -> S 派遣
+message HPMercenaryDispatch
+{
+	required int32 taskId = 1; //任务id
+	repeated int32 mercenaryId = 2;//佣兵id
+}
+
+//C->S 刷新当前任务
+message HPRefreshExpedition
+{
+	
+}
+// C -> S 快速完成
+message HPMercenaryExpeditionFast
+{
+	required int32 taskId = 1; //快速完成任务id
+}
+// S -> C 任务完成
+message HPMercenaryExpeditionFinishRet
+{
+	required int32 taskId = 1; //完成任务id
+}
+// C -> S 放弃任务
+message HPMercenaryExpeditionGiveUp
+{
+	required int32 taskId = 1; //放弃任务id
+}
+//基础数据请求
+//C -> S、MERCENERY_EXPEDITION_INFO_C、HPMercenaryExpeditionInfo
+//S ->C 、MERCENERY_EXPEDITION_INFO_S、HPMercenaryExpeditionInfoRet
+
+//派遣协议 服务器也反馈HPMercenaryExpeditionInfoRet
+//C -> S、MERCENERY_DISPATCH_C、HPMercenaryDispatch
+//S ->C 、MERCENERY_EXPEDITION_INFO_S、HPMercenaryExpeditionInfoRet
+
+//快速完成
+//C -> S、MERCENERY_EXPEDITION_FAST_C、HPMercenaryExpeditionFast
+//S ->C 、MERCENERY_EXPEDITION_FAST_S、HPMercenaryExpeditionFinishRet
+
+//普通自然过渡完成 协议号使用  MERCENERY_EXPEDITION_FINISH_S
+//S ->C 、MERCENERY_EXPEDITION_FINISH_S、HPMercenaryExpeditionFinishRet
+
+
+
+
+
+
+
+
+
+

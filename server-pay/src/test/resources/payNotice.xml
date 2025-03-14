@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <server sdkChannel="huTuo" serverid="1" baseUrl="http://127.0.0.1:5132/payNotice" />
+</root>

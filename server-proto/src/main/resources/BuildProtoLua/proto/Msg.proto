@@ -1,0 +1,83 @@
+option java_package = "com.guaji.game.protocol";
+
+/** 留言模块协议(xpf) **/
+
+message MsgInfo
+{
+	// 留言编号用于排序显示
+	required int32 msgId = 1;
+	// 留言来源，如果=自身Id说明，是发给他人的
+	required int32 sourcePlayerId = 2;
+	// 留言内容
+	required string content = 3;
+	// 留言时间
+	required string msgTime = 4;
+	// 留言的角色Id
+	required int32 roleId = 5;
+}
+
+message MsgPlayerItemInfo
+{
+	// 玩家Id
+	required int32 playerId = 1;
+	// 玩家角色Id
+	required int32 roleId = 2;
+	// 玩家名
+	required string playerName = 3;
+	// 最新留言
+	required string lastMsg = 4;
+	// 最新留言时间
+	required int32 lastMsgTime = 5;
+	// 是否有新消息(0无 1有)
+	required int32 hasNewMsg = 6;
+}
+
+// 请求留言玩家列表
+message HPMsgPlayerList
+{
+	
+}
+message HPMsgPlayerListRet
+{
+	required int32 version = 1;// 防止空包
+	repeated MsgPlayerItemInfo itemInfo = 2;
+}
+
+// 查看与对应玩家的相互留言
+message HPSeePlayerMsg
+{
+	required int32 playerId = 1;
+}
+message HPSeePlayerMsgRet
+{
+	required int32 version = 1;// 防止空包
+	repeated MsgInfo msg = 2;
+}
+
+// 发送留言
+message HPSendMsgToOthers
+{
+    // target PlayerId
+	required int32 recvPlayerId = 1;
+	// 留言内容
+	required string content = 2;
+	// 留言来自于哪个功能模块
+	optional int32 moduleId = 3;
+}
+
+// 单条新消息同步
+message HPNewMsgSyncS
+{
+	required MsgInfo oneMsg = 1;
+}
+
+// 删除单个玩家的留言记录
+message HPDeleteOnePlayerMsg
+{
+	required int32 playerId = 1;
+}
+
+// 删除所有玩家的留言记录
+message HPDeleteAllMsg
+{
+}

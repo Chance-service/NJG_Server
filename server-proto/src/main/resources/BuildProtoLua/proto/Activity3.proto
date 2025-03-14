@@ -1,0 +1,641 @@
+option java_package = "com.guaji.game.protocol";
+
+//鬼节活动
+message ObonReq
+{
+	//0：同步 1：单次抽奖和免费 2：10次抽奖 3：领礼包
+	//抽奖次数(免费和单次都是发1，10次发10)
+	required int32 type = 1;
+	//领取哪个阶段的礼包
+	optional int32 stage = 2;
+}
+
+//鬼节页面基本信息返回
+message ObonRet
+{
+	//活动剩余时间
+	required int32 leftTime = 1;
+	//抽奖奖励(只有抽奖的时候才会有)
+	repeated string reward = 2;
+	//奖励对应的倍数  长度和reward对应
+	repeated int32 reward_multiple = 3;
+	//当前buf剩余时间
+	required int32 leftBuffTimes = 4;
+	//当前buf倍数, 没有buf为1
+	required int32 buf_multiple = 5;
+	//免费CD时间
+	required int32 freeCD = 6;
+	//必定获得奖励剩余次数
+	required int32 leftAwardTimes=7;
+	//进度
+	repeated int32 progress = 8;//10,20,1
+	//礼包状态
+	repeated bool canGetGift = 9;//true,true,false
+	//当前阶段
+	required int32 currentStage = 10;
+	//寻宝1次需要消耗的钻石
+	required int32 onceCostGold = 11;
+	//寻宝10次需要消耗的钻石
+	required int32 tenCostGold = 12;
+}
+
+//天降元宝活动
+message WelfareRewardReq
+{
+	//0:同步 1：抽奖
+	required int32 type = 1;
+}
+
+message WelfareRewardRes
+{
+	//活动剩余时间
+	required int32 leftTime = 1;
+	//需要消耗的钻石
+	required int32 cost = 2;
+	//是否可以抽奖(可以抽奖：true,否则false)
+	required bool canPlay = 3;
+	//获得的钻石
+	required int32 gold = 4;
+}
+
+
+//天降元宝活动
+message WelfareRewardByRegDateReq
+{
+	//0:同步 1：抽奖
+	required int32 type = 1;
+}
+
+message WelfareRewardByRegDateRes
+{
+	//活动剩余时间
+	required int32 leftTime = 1;
+	//需要消耗的钻石
+	required int32 cost = 2;
+	//是否可以抽奖(可以抽奖：true,否则false)
+	required bool canPlay = 3;
+	//获得的钻石
+	required int32 gold = 4;
+}
+
+//新手UR活动页面基本信息返回
+message SyncNewURInfo
+{
+	//活动剩余时间
+	required int32 leftTime = 1;
+	//长度为0代表没有奇遇宝箱，有值代表有奇遇宝箱
+	optional string items = 2;
+	//今日免费寻宝次数
+	required int32 freeTreasureTimes = 3;
+	//剩余寻宝次数
+	required int32 leftTreasureTimes = 4;
+	//寻宝1次需要消耗的钻石
+	required int32 onceCostGold = 5;
+	//寻宝10次需要消耗的钻石
+	required int32 tenCostGold = 6;
+	//寻宝奖励
+	repeated string reward = 7;
+	//奖励对应的倍数  长度和reward对应
+	repeated int32 reward_multiple = 8;
+	//当前buf剩余时间
+	required int32 leftBuffTimes = 9;
+	//当前buf 倍数, 没有buf为1
+	required int32 buf_multiple = 10;
+	//免费CD
+	required int32 freeCD = 11;
+	//必定获得奖励剩余次数
+	required int32 leftAwardTimes=12;
+
+}
+
+//新手UR活动页面点击抽奖
+message NewURSearch
+{
+	//寻宝次数
+	required int32 searchTimes = 1;
+}
+
+// 去掉特殊活动红点的协议
+message RemoveSpecialRedPoint
+{
+	//特殊活动ID
+	required int32 activityId = 1;
+}
+
+
+//大转盘活动
+message TurntableReq
+{
+	//0：同步 1：单次抽奖和免费 2：10次抽奖 3：领礼包
+	required int32 type = 1;
+	//领取哪个礼包
+	optional int32 boxId = 2;
+}
+
+//转盘页面基本信息返回
+message TurntableRet
+{
+	//活动剩余时间
+	required int32 leftTime = 1;
+	//抽奖奖励(只有抽奖的时候才会有)
+	repeated string reward = 2;
+	//奖励对应的倍数
+	repeated int32 multiple = 3;
+	//当前积分
+	required int32 credits = 4;
+	//免费剩余时间
+	required int32 freeCD = 5;
+	//必定获得奖励剩余次数
+	required int32 luckyValue = 6;
+	//宝箱开启条件
+	repeated int32 condition = 7;//10,20,1
+	//礼包状态
+	repeated bool canOpenBox = 8;//true,true,false
+	//寻宝1次需要消耗的钻石
+	required int32 oneCost = 9;
+	//寻宝10次需要消耗的钻石
+	required int32 tenCost = 10;
+	//抽奖总次数
+	required int32 totalTimes = 11;
+	//转盘指针ID
+	required int32 id = 12;
+}
+
+//大转盘活动exchange结构体
+message TurntableExchangeInfo
+{
+	required int32  id 	= 1; //配表ID
+	required int32  exchangeTimes = 2;//已经兑换次数
+}
+
+//大转盘活动兑换信息同步
+message SyncTurntableExchange
+{
+	
+}
+
+
+//大转盘活动兑换请求
+message TurntableExchangeReq
+{
+	required int32 id = 1;	//配表ID
+	required int32 times = 2; //次数
+}
+
+message TurntableExchangeRes
+{
+	optional int32 leftTime = 1;// 剩余时间
+	repeated TurntableExchangeInfo info = 2;//兑换信息
+	required int32 credits = 3; //当前积分
+}
+
+//万圣节活动请求
+message HalloweenReq
+{
+	//0：同步 1：单次抽奖和免费 2：10次抽奖 3：兑换
+	required int32 type = 1; //请求类型
+	optional int32 exchangeId = 2;	//兑换配表对应的ID
+	optional int32 multiple = 3; //倍数
+}
+
+//万圣节活动兑换结构体
+message HalloweenExchangeInfo
+{
+	required int32  id = 1; //配表ID
+	required int32  exchangeTimes = 2;//已经兑换次数
+}
+
+//万圣节活动页面信息返回
+message HalloweenRes
+{
+	//活动剩余时间
+	required int32 leftTime = 1;
+	//活动剩余展示时间
+	required int32 leftDisplayTime = 2;
+	//抽奖奖励(只有抽奖的时候才会有)
+	repeated string reward = 3;
+	//免费CD时间
+	required int32 freeCD = 4;
+	//抽奖1次需要消耗的钻石
+	required int32 onceCostGold = 5;
+	//抽奖10次需要消耗的钻石
+	required int32 tenCostGold = 6;
+	//兑换信息
+	repeated HalloweenExchangeInfo info = 7;
+}
+
+
+// 复刻版神将投放页面基本信息返回
+message ReleaseURInfo
+{
+	//活动剩余时间
+	required int32 leftTime = 1;
+	//长度为0代表没有奇遇宝箱，有值代表有奇遇宝箱
+	optional string items = 2;
+	//今日免费寻宝次数
+	required int32 freeTreasureTimes = 3;
+	//剩余寻宝次数
+	required int32 leftTreasureTimes = 4;
+	//寻宝1次需要消耗的钻石
+	required int32 onceCostGold = 5;
+	//寻宝10次需要消耗的钻石
+	required int32 tenCostGold = 6;
+	//随机需要消耗的钻石
+	required int32 randCostGold = 7;
+	//寻宝奖励
+	repeated string reward = 8;
+	//奖励对应的倍数  长度和reward对应
+	repeated int32 reward_multiple = 9;
+	//当前buf剩余时间
+	required int32 leftBuffTimes = 10;
+	//当前buf 倍数, 没有buf为1
+	required int32 buf_multiple = 11;
+	//免费CD
+	required int32 freeCD = 12;
+	//必定获得奖励剩余次数
+	required int32 leftAwardTimes=13;
+	//当前拥有可抽取奖励积分
+	required int32 lotterypoint	 =14;
+	//已抽取奖励的索引
+	repeated int32 lotteryindex	 =15;
+	//寻宝10次需要消耗的钻石
+	required int32 lotteryCost = 16;
+}
+
+// 复刻版神将投放抽奖
+message ReleaseURDraw
+{
+	//抽奖次数
+	required int32 times = 1;
+}
+
+// 复刻版神将重置
+message ReleaseURResetReq
+{
+	//抽奖次数
+	required int32 times = 1;
+}
+
+// 复刻版神将重置返回
+message ReleaseURResetRep
+{
+	//抽奖次数
+	required int32 status = 1;
+}
+
+// 复刻版神将抽取
+message ReleaseURLotteryReq
+{
+	
+}
+
+// 复刻版神将重置返回
+message ReleaseURLotteryRep
+{
+	//抽到奖品对应的格子
+	required int32 index = 1;
+	//多余碎片的兑换信息
+	required string excInfo = 2;
+	//消耗的经验值
+	required int32 comluckey = 3;
+}
+
+// 妄想彼女复刻版
+message ReleaseURInfo2
+{
+	//活动剩余时间
+	required int32 leftTime = 1;
+	//长度为0代表没有奇遇宝箱，有值代表有奇遇宝箱
+	optional string items = 2;
+	//今日免费寻宝次数
+	required int32 freeTreasureTimes = 3;
+	//剩余寻宝次数
+	required int32 leftTreasureTimes = 4;
+	//寻宝1次需要消耗的钻石
+	required int32 onceCostGold = 5;
+	//寻宝10次需要消耗的钻石
+	required int32 tenCostGold = 6;
+	//随机需要消耗的钻石
+	required int32 randCostGold = 7;
+	//寻宝奖励
+	repeated string reward = 8;
+	//免费CD
+	required int32 freeCD = 9;
+	//必定获得奖励剩余次数
+	required int32 leftAwardTimes=10;
+	//当前拥有可抽取奖励积分
+	required int32 lotterypoint	 =11;
+	//随机出来的格子索引
+	repeated int32 latticeIndex	 =12;
+	//寻宝10次需要消耗的钻石
+	required int32 lotteryCost = 13;
+}
+
+// 妄想彼女复刻版抽奖
+message ReleaseURDraw2
+{
+	//抽奖次数
+	required int32 times = 1;
+}
+
+// 妄想彼女复刻版重置
+message ReleaseURResetReq2
+{
+	//抽奖次数
+	required int32 times = 1;
+}
+
+// 妄想彼女复刻版重置返回
+message ReleaseURResetRep2
+{
+	//抽奖次数
+	required int32 status = 1;
+}
+
+// 复刻版神将抽取
+message ReleaseURLotteryReq2
+{
+	
+}
+
+// 复刻版神将重置返回
+message ReleaseURLotteryRep2
+{
+	//抽奖状态
+	required int32  status = 1;
+	//多余碎片的兑换信息
+	required string excInfo = 2;
+	//随机到格子索引
+	repeated int32 latticeIndex = 3;
+}
+
+// 束缚彼女
+message Activity123Info
+{
+	//活动剩余时间
+	required int32 leftTime = 1;
+	//长度为0代表没有奇遇宝箱，有值代表有奇遇宝箱
+	optional string items = 2;
+	//今日免费寻宝次数
+	required int32 freeTreasureTimes = 3;
+	//剩余寻宝次数
+	required int32 leftTreasureTimes = 4;
+	//寻宝1次需要消耗的钻石
+	required int32 onceCostGold = 5;
+	//寻宝10次需要消耗的钻石
+	required int32 tenCostGold = 6;
+	//随机需要消耗的钻石
+	required int32 randCostGold = 7;
+	//寻宝奖励
+	repeated string reward = 8;
+	//免费CD
+	required int32 freeCD = 9;
+	//必定获得奖励剩余次数
+	required int32 leftAwardTimes=10;
+	//当前拥有可抽取奖励积分
+	required int32 lotterypoint	 =11;
+	//随机出来的格子索引
+	repeated int32 latticeIndex	 =12;
+	//寻宝10次需要消耗的钻石
+	required int32 lotteryCost = 13;
+}
+
+// 束缚彼女抽奖
+message Activity123Draw
+{
+	//抽奖次数
+	required int32 times = 1;
+}
+
+// 束缚彼女重置
+message Activity123ResetReq
+{
+	//抽奖次数
+	required int32 times = 1;
+}
+
+// 束缚彼女重置返回
+message Activity123ResetRep
+{
+	//抽奖次数
+	required int32 status = 1;
+}
+
+// 束缚彼女抽取
+message Activity123LotteryReq
+{
+	
+}
+
+// 束缚彼女重置返回
+message Activity123LotteryRep
+{
+	//抽奖状态
+	required int32  status = 1;
+	//多余碎片的兑换信息
+	required string excInfo = 2;
+	//随机到格子索引
+	repeated int32 latticeIndex = 3;
+}
+
+// 新充值返利抽奖活动信息
+message Activity124InfoReq
+{
+	
+}
+
+// 新充值返利抽奖活动信息
+message Activity124InfoRep
+{
+	required int32 lefttime = 1;
+	required int32 count = 2;
+	optional int32 type = 3;
+	optional bool isUsed = 4;
+	
+}
+// 新充值返利抽奖活动抽奖
+message Activity124LotteryReq
+{
+	
+}
+// 新充值返利抽奖活动抽奖
+message Activity124LotteryRep
+{
+	required int32 count = 1;
+	required int32 type = 2;
+}
+
+
+// 俄罗斯轮盘抽奖
+message Activity140InfoReq
+{
+	
+}
+
+// 新充值返利抽奖活动信息
+message Activity140InfoRep
+{
+	//当天登录次数
+	required int32 todayLoginCount = 1;
+	//当天登录次数
+	required int32 loginTimes = 2;
+	//当天活动剩余时间
+	required int32 leftTime = 3;
+	//抽奖内部轮盘索引
+	required int32 inIndex  = 4;
+	//抽奖外部轮盘索引
+	required int32 outIndex = 5;
+	//抽奖次数
+	required int32 lotteryTimes = 6;
+	//该返利机会是否被使用
+	optional bool  isUsed = 7;
+	
+	
+	
+}
+// 俄罗斯轮盘抽奖
+message Activity140LotteryReq
+{
+	
+}
+// 俄罗斯轮盘抽奖返回
+message Activity140LotteryRep
+{
+	//抽奖内部轮盘索引
+	required int32 inIndex  = 1;
+	//抽奖外部轮盘索引
+	required int32 outIndex = 2;
+}
+
+// 大富翁
+message Activity141RichManReq
+{
+    //0：同步 1：擲骰子
+	required int32 type = 1;
+}
+// 大富翁返回
+message Activity141RichManRep
+{
+    //0：同步 1：擲骰子
+    required int32 type = 1;
+	//現在所在位置1-24
+	required int32 Index  = 2;
+	//完成遊戲圈數
+	required int32 finish = 3;
+    //免費次數
+    required int32 free = 4;
+    //骰子步數
+    required int32 step = 5;
+    //獎勵
+    repeated string reward = 6;
+    //加倍狀態
+    required bool double =7;
+    //完成獎勵
+    repeated string finishreward = 8;
+}
+
+// 海盜寶箱
+
+message Activity143PirateReq
+{
+    //0：同步 1：開寶箱 2.領獎 3.放棄
+	required int32 type = 1;
+	// 0.純開箱 1.續開箱使用金幣贖回獎勵 2.續開箱使用寶石贖回獎勵
+	required int32 ransom = 2;
+}
+
+// 海盜寶箱返回
+message Activity143PirateRep
+{
+	//0:同步 1.開寶箱 2.領獎 3.放棄
+	required int32 type = 1;
+	//現在所在關卡 1-20
+	required int32 level  = 2;
+	//免費次數
+    required int32 free = 3;
+	//是否遇到海盜(闖關失敗) false.沒有 true.遇到
+	required bool isfail = 4;
+	//是否為繼續() false.不是 true.是
+	required bool renew = 5;
+	//目前完成獎勵
+    repeated string ownreward = 6;
+	// 當次獲得的獎勵
+	repeated string reward = 7;
+}
+
+// 性奴小學堂
+
+message Activity144Little_testReq
+{
+    //0：同步 回答1 2.結算 3.領獎 4.開局初始化
+    required int32 type = 1;
+    optional int32 Answers = 2; //1..4
+    repeated int32 Roleid = 3;  // 開局送出 
+}
+
+message Act144BuffInfo
+{
+    //當下使用者id
+    required int32 userid = 1;
+    //技能id
+    required int32 buffid = 2;
+    //技能影響數值
+    required int32 value = 3;
+    //持續回合
+    required int32 times = 4;
+}
+
+message Act144TeamInfo
+{
+    //參戰的後輩Roleid
+    repeated int32 Roleid = 1;
+    //戰隊目前血量
+    required int32 NowHp = 2;
+    //戰隊最大血量
+    required int32 MaxHp = 3;
+    //戰隊速度
+    required int32 TeamSpeed = 4;
+    //戰隊Buffid
+    repeated Act144BuffInfo Buff =5;
+    //戰隊當局使用skillid
+    repeated Act144BuffInfo NowBuff =6;
+}
+
+message Act144BossInfo
+{
+    //參戰Bossid
+    required int32 Bossid = 1;
+    //Boss目前血量
+    required int32 BossNowHp = 2;
+    //Boss最大血量
+    required int32 BossMaxHp = 3;
+    //Boss速度
+    required int32 BossSpeed = 4;
+    //Boss Buffid
+    repeated Act144BuffInfo Buff =5;
+    //戰隊當局使用skillid
+    repeated Act144BuffInfo NowBuff =6;
+}
+
+// 性奴小學堂返回
+message Activity144Little_testRep
+{
+    //0:同步 1.答題 2.結算 3.領獎 4.開局初始化
+    required int32 type = 1;    //同步
+    //現在第幾題
+    required int32 level  = 2;  //同步
+    //題目ID
+    required int32 queid  = 3;  //同步
+    //下一題ID
+    required int32 nextid  = 4; //同步
+    //答對題數
+    optional int32 binbom = 5;  //同步
+    //獲得分數
+    optional int32 score = 6;   //同步
+    //獲得獎品
+    repeated string reward =7;  //同步
+    //戰隊資訊
+    optional Act144TeamInfo TeamInfo = 8 ;
+    //Boss資訊
+    optional Act144BossInfo BossInfo = 9 ;
+}

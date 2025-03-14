@@ -1,0 +1,55 @@
+option java_package = "com.guaji.game.protocol";
+
+// 请求活动基础信息
+message FishingInfoRequest {
+}
+
+// 基础信息反馈
+message FishingInfoResponse {
+	required int32 freeTimes = 1; //免费次数
+	required int32 singleCost = 2; //单次消费
+	required int32 continuousCost = 3; //连续消费
+	required int32 score = 4; //积分
+	required int32 closetimes = 5; //活动剩余时间 < 0 说明是展示期
+}
+
+// 请求排名信息
+message FishingRankRequest {
+}
+// 排行信息
+message RankMessage {
+	required int32 rank = 1; // 排名
+	required string name = 2; // 名字
+	required int32 score = 3; // 积分
+	required int32 playerId = 4; // 账号ID
+}
+// 排名信息反馈
+message FishingRankResponse {
+	repeated RankMessage rankMessage = 1; // 排名信息
+	required bool isSend = 2; // 是否有返回数据
+}
+
+// 捕鱼一次or十次
+message CatchFishRequest {
+	required bool isSingle = 1; // true： 捕鱼一次     false：连续捕鱼
+}
+// 捕鱼获得的奖励
+message FishingRewards {
+	required int32 score = 1; // 获得的积分
+	optional string reward = 2; // 获得的鱼奖励
+	optional int32 fishId =3; // 鱼ID
+}
+// 捕鱼反馈
+message CatchFishResponse {
+	required bool isSingle = 1; // true： 捕鱼一次  false：连续捕鱼
+	repeated FishingRewards rewards = 2; // 奖励
+}
+
+// 请求鱼预览
+message FishPreviewRequest {
+}
+// 鱼预览返回
+message FishPreviewResponse {
+	repeated int32 fishId = 1; // 已获得鱼ID
+	required bool isSend = 2; // 是否有返回数据
+}

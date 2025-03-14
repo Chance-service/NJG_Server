@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.server.paynotice.mapper.AutoSubPayMapper">
+	<resultMap type="com.server.paynotice.pojo.AutoSubPayOrder"
+		id="autoSubPayOrder">
+		<id property="id" column="id" />
+		<result property="orderId" column="orderId" />
+		<result property="orderNum" column="orderNum" />
+		<result property="checkData" column="checkData" />
+		<result property="uid" column="uid" />
+		<result property="expirDate" column="expirDate" />
+		<result property="sdkChannel" column="sdkChannel" />
+		<result property="status" column="status" />
+	</resultMap>
+	<insert id="insert" useGeneratedKeys="true" keyProperty="id"
+		parameterType="com.server.paynotice.pojo.AutoSubPayOrder">
+		insert into t_autosubspayorder
+		(orderId,orderNum,checkData,expirDate,sdkChannel,status)
+		values
+		(#{orderId},#{orderNum},#{checkData},#{expirDate},#{sdkChannel},#{status})
+	</insert>
+	<update id="updateStatus">
+		update t_autosubspayorder set status = #{0} where id
+		=
+		#{1}
+	</update>
+
+	<update id="updateExprieDate">
+		update t_autosubspayorder set expirDate = #{0} where
+		id = #{1}
+	</update>
+	<select id="getAutoSubOrderInfo"
+		resultType="com.server.paynotice.pojo.AutoSubPayOrder">
+		select * from t_autosubspayorder where id%{1}=#{0}
+	</select>
+	<select id="getAllAutoSubOrderInfo"
+		resultType="com.server.paynotice.pojo.AutoSubPayOrder">
+		select * from t_autosubspayorder
+	</select>
+</mapper>

@@ -1,0 +1,513 @@
+option java_package = "com.guaji.game.protocol";
+
+import "Attribute.proto";
+import "Equip.proto";
+import "Reward.proto";
+
+message PlayerInfo
+{
+	required int32  playerId = 1;
+	required int32  gold = 2;
+	required int64  coin = 3;
+	required int32  recharge = 4;
+	required int32  vipLevel = 5;
+	required int32  smeltValue = 6;
+	optional string signature = 7;
+	// 荣誉
+	optional int32  honorValue = 8;
+	// 声望
+	optional int32  reputationValue = 9;
+	//月卡剩余天数
+	optional int32  monthCardLeftDay = 10;
+	// 角色真气点数
+	optional int32 talentNum = 11;
+	//facebook当日分享次数
+	optional int32 facebookCount = 12;
+	//水晶
+	optional int32 crystal = 13;
+	//充钱总数
+	optional int32 payMoney = 14;
+	//头像
+	optional int32 headIcon = 15;
+}
+
+message RoleEquip
+{
+	required int32 part = 1;
+	required int64 equipId = 2;
+	required int32 equipItemId = 3;
+	required int32 strength = 4;
+	repeated GemInfo gemInfo = 5;
+}
+
+message RoleSkill
+{
+	required int32 skillId = 1;
+	optional int32 itemId = 2;
+	optional int32 level = 3[default = 1];
+}
+
+message CheckSkill
+{
+	// 作用時間
+	required int32 workTime = 1;
+	// 技能流水
+	optional int32 number = 2;
+	// 作用次數
+	optional int32 count = 3[default = 0];
+}
+
+message RoleElement
+{
+	// 序号
+	required int32 index = 1;
+	required int64 elementId = 2;
+	required int32 elementItemId = 3;
+	required int32 level = 4;
+	required int32 quality = 5;
+	// 1 表示普通 2 表示职业限定
+	required int32 type = 6;
+}
+
+message RoleDress{
+	//id
+	required int64 id = 1;
+	//位置
+	required int32 loc = 2;
+	//装备id
+	required int32 itemId = 3;
+	//技能id
+	repeated int32 skillId = 4;
+}
+
+message RoleInfo
+{
+	required int32  roleId = 1;
+	required int32  type = 2;
+	required int32  itemId = 3;
+	required int32  prof = 4;
+	required string name = 5;
+	required int32  level = 6;
+	required int64  exp = 7;
+	required int32  fight = 8;
+	required int32  status = 9;
+	repeated RoleEquip equips = 10;
+	repeated RoleSkill skills = 11;
+	required AttrInfo attribute = 12;
+	//当有洗炼属性可以替换的时候会发送给客户端
+	optional AttrInfo baptizeAttr = 13;
+	optional AttrInfo baseAttr = 14;
+	// 第二套技能的Id列表
+	repeated RoleSkill skills2 = 15;
+	// 第三套技能的Id列表bug
+	repeated RoleSkill skills3 = 16;
+	optional int32 starLevel = 17;
+	optional int32 starExp = 18;
+	// 转生阶段(未转生是0)
+	optional int32 rebirthStage = 19;
+	// 佣兵阶
+	optional int32 stageLevel = 20;
+	// 光环信息
+	repeated int32 ringId = 21;
+	// 是否可以进阶
+	required bool isStage = 22;
+	// 总战力
+	optional int32 marsterFight = 23;
+	// 佣兵激活状态
+	optional int32 activiteState = 24;
+	// 技能专精等级
+	optional int32 skillSpecializeLevel = 25;
+	//主角Avatar（主角专用）
+	optional int32 avatarId = 26;
+	// 徽章信息
+	repeated RoleDress dress = 27;
+	// 佣兵阶2
+	optional int32 stageLevel2 = 28;
+	// 元素屬性
+	optional int32 elements = 29;
+	// 攻速(CD)
+	optional int32 ATKSpeed = 30;
+	// 普攻連擊次數
+	optional int32 NATK = 31;
+	// 攻擊回魔
+	optional int32 ATKMP = 32;
+	// 受擊擊回魔
+	optional int32 DEFMP = 33;
+	// 攻擊回魔補正
+	optional float ClassCorrection = 34;
+	// 是否為魔攻
+	optional int32 IsMagic = 35;
+	// 外觀皮膚
+	optional int32 skinId = 36;
+	// 擁有皮膚列表
+	repeated int32 ownSkin = 37;
+	// 技能回魔
+	optional string skillMp = 38;
+    // 裝備戰力
+	optional int32 equipFight = 39;
+}
+
+message HPPlayerInfoSync
+{
+	repeated PlayerInfo playerInfos = 1;
+}
+
+message HPRoleInfoSync
+{
+	repeated RoleInfo roleInfos = 1;
+	// 已激活佣兵ID
+	repeated int32 activiteRoleId = 2;
+}
+
+message HPSysSetting
+{
+	optional int32 autoSellEquip = 1;
+	optional int32 chatClose = 2;
+	optional int32 wipeBoss = 3;
+	optional int32 musicOn = 4;
+	optional int32 soundOn = 5;
+	optional int32 showArea = 6;
+	optional int32 onlyText = 7;
+	optional int32 autoDecoElement = 8;
+	//设置字体大小
+	optional int32 fontSize = 9;
+
+}
+
+message HPPlayerStateSync
+{
+	// 购买金币次数
+	optional int32 buyCoinTimes = 1;
+	// 装备背包大小
+	optional int32 currentEquipBagSize = 2;
+	// 剩余背包扩充购买次数
+	optional int32 leftEquipBagExtendTimes = 3;
+	// 自动售出装备
+	optional int32 autoSellEquip = 4;
+	// 是否关闭聊天
+	optional int32 chatClose = 5;
+	// 剩余快速战斗次数
+	optional int32 fastFightTimes = 6;
+	// 快速战斗已购买次数
+	optional int32 fastFightBuyTimes = 7;
+	// 剩余boss战斗次数
+	optional int32 bossFightTimes = 8;
+	// boss战已购买次数
+	optional int32 bossFightBuyTimes = 9;
+	// 下次战斗开启时间
+	optional int32 nextBattleTime = 10;
+	// 当前挂机地图
+	optional int32 curBattleMap = 11;
+	// 最高通关记录
+	optional int32 passMapId = 12;
+	// 礼物领取状态
+	optional int32 giftStatus = 13;
+	// boss扫荡标记
+	optional int32 bossWipe = 14;
+	// 装备打造免费刷新次数
+	optional int32 equipSmeltRefesh = 15;
+	// 公测字集齐的日期到现在几天
+	optional int32 gongceCompleteDays = 16;
+	// 音乐开关，1是开，0是关闭
+	optional int32 musicOn = 17;
+	// 音效开关，1是开，0是关闭
+	optional int32 soundOn = 18;
+	// 聊天显示地区
+	optional int32 showArea = 19;
+	// 精英副本最高通关记录
+	optional int32 passEliteMapId = 20;
+	// 魂石使用次数
+	optional int32 starStoneTimes = 21;
+	// 今日精英副本剩余挑战次数
+	optional int32 eliteFightTimes = 22;
+	// 今日精英副本购买挑战次数
+	optional int32 eliteFightBuyTimes = 23;
+	// 新手引导当前步骤
+	optional int32 newGuideState = 24;
+	//语音聊天仅发文字设置0 false 1true
+	optional int32 onlyText = 25;
+	// 服务器是否参加跨服战
+	optional bool isCSOPen = 26;
+	// 多人副本剩余次数
+	optional int32 multiEliteTimes = 27;
+
+        // 元素背包大小
+	optional int32 elementBagSize = 28;
+	// 是否首次登录
+	optional bool isFirstLogin = 29;
+	// 转生后新地图
+	optional int32 newBattleMap = 30;
+	// 设置元素自动分解
+	optional int32 autoDecoElement = 31;
+	//设置字体大小
+	optional int32 fontSize = 32;
+	//今日使用小时卡次数
+	optional int32 hourCardUseCountOneDay = 33;
+	//月卡提供免费战斗次数
+	optional int32 leftFreeFastFightTimes = 34;
+	//月卡提供剩余免费商店刷新次数
+	optional int32 leftFreeRefreshShopTimes = 35;
+	//月卡提供剩余免费打造装备刷新次数
+	optional int32 leftFreeRefreshMakeEquipTimes = 36;
+	//宝石商店每日购买次数
+	optional int32 gemShopBuyCount = 37;
+	// 多人副本战斗胜利次数
+	optional int32 battleTimes = 38;
+	// 徽章背包大小
+	optional int32 currentBadgeBagSize = 39;
+	// 剩余徽章扩充购买次数
+	optional int32 leftBadgeBagExtendTimes = 40;
+    // 多人副本购买次数
+	optional int32 multiEliteBuyTimes = 41;
+	// 友情點數
+	optional int32 friendship = 43;
+	// VIP點數
+	optional int32 vipPoint = 44;
+	
+}
+
+message HPPlayerKickout
+{
+	required int32 reason = 1;
+}
+
+message HPPlayerRegisterDay
+{
+	required int32 registerDay = 1;
+}
+
+message HPRoleCreate
+{
+	required int32 roleItemId = 1;
+	required string roleName = 2;
+}
+
+message HPRoleCreateRet
+{
+	required int32 status = 1;
+	optional RoleInfo roleInfo = 2;
+}
+
+message HPAssembleFinish
+{
+	required int32  playerId = 1;
+}
+
+//修改角色签名
+message HPChangeSignature
+{
+	required string  signature = 1;
+}
+
+//回执修改角色签名
+message HPChangeSignatureRet
+{
+	required int32  version = 1;
+}
+
+message HPUserKickOut
+{
+	required int32 playerId = 1;
+}
+
+message HPDataNotify
+{
+	required int32 type = 1;
+	required int32 value = 2;
+	optional int32 goodsId = 3;
+}
+
+
+message HPEquipSyncFinish
+{
+	required int32  playerId = 1;
+}
+
+// 英雄升等
+message HPRoleUPLevel
+{
+	required int32 roleId = 1;
+}
+
+// 英雄星等突破
+message HPRoleUpStar
+{
+	required int32 roleId = 1;
+}
+
+// 英雄覺醒
+message HPRoleAwake
+{
+	required int32 roleId = 1;
+}
+
+message HPRoleRingIncExp
+{
+	required int32 roleId = 1;
+	required int32 ringItemId = 2;
+	repeated int32 itemId = 3;
+}
+
+message RoleRingInfo
+{
+	required int32 ringId = 1;
+	required int32 roleId = 2;
+	required int32 itemId = 3;
+	required int32 level = 4;
+	required int32 exp = 5;
+	optional int32 lvlUpTimes = 6;
+}
+
+message HPRoleRingInfoSync
+{
+	repeated RoleRingInfo  ringInfos = 1;
+}
+
+message HPRoleRingActive
+{
+	required int32 roleId = 1;
+	required int32 itemId = 2;
+}
+
+message EliteMapInfo
+{
+	required int32 level = 1;
+	required int32 mapId = 2;
+}
+
+message HPEliteMapInfoSync
+{
+	repeated EliteMapInfo eliteMapInfos = 1;
+}
+
+//评价奖励
+message HPEvaluateRewards
+{
+}
+
+message Params
+{
+	required string key = 1;
+	required string value = 2;
+}
+
+message HPClientSetting {
+	repeated Params params = 1;
+}
+
+message HPPlayerAreaSync{
+	optional string area = 1;
+}
+
+message HPChangeRoleName {
+	//名字
+	required string name = 1;
+	//消耗类型 1表示消耗元宝，2表示消耗道具
+	optional int32 costType=2;
+}
+
+message HPChangeRoleNameRet {
+	required string name = 1;
+}
+//评价协议C_S
+message HPCommentMsg
+{
+	required int32 type = 1; // 0:cancel 1:OK  2:later
+}
+//评价协议S_C
+message HPCommentMsgRet
+{
+	required int32 number = 1; //0;评论 1:不评论
+}
+
+//谷歌成就C_S
+message HPGoogleAchieveMsg
+{
+	required int32 type = 1; // 1:init  2:add  3.del
+	repeated string achieveinfo = 2;
+
+}
+////谷歌成就S_C
+message HPGoogleAchieveMsgRet
+{
+	repeated string achieveinfo = 1;
+}
+
+////facebook分享事件C_S
+//message HPFacebookShareEvent
+//{
+//}
+//
+////facebook分享事件S-C
+//message HPFacebookShareEventRet
+//{
+//	required int32 number = 1;//当日分享的次数
+//}
+//
+////facebook当日分享次数 C-S
+//message HPFacebookShareCount
+//{
+//}
+//
+////facebook当日分享次数 S-C
+//message HPFacebookShareCountRet
+//{
+//	required int32 number = 1;//当日分享的次数
+//}
+
+
+//玩家绑定奖励 C_S
+message HPPlayerBindPrice
+{
+}
+
+//玩家绑定奖励 S-C
+message HPPlayerBindPriceRet
+{
+	required int32  status = 1;
+}
+
+// 开服奖励领取返回
+message OpenGitStatus
+{
+	required int32 status = 1;
+	repeated RewardItem award = 2;
+}
+
+// 供client檢查角色資訊
+message CLIcheckInfo
+{
+	//站位
+	required int32  posId = 1;
+	//表格索引
+	required int32  itemId = 2;
+	//Leader,Hero: roleIndex, Monster: monster id
+	required int32  roleId = 3;
+	//1: Leader, 2: Hero, 3: Monster //Const的roleType
+	required int32  type = 4;
+	//職業
+	required int32  prof = 5;
+	// 主動+被動技能id
+	repeated int32 skills = 6;
+	required AttrInfo attribute = 7;
+	//改成角色屬性元素
+	required int32 elements = 8;
+	// 是否為物攻 1.是 0.否
+	required int32 isPhy = 9;
+	//普攻攻速
+	required int32 atkSpeed = 10;
+	// 攻擊回魔
+	required int32 atkMp = 11;
+	// 受擊回魔
+	required int32 defMp = 12;
+	// 回魔職業補正
+	required float ClassCorrection = 13;
+	// 外觀資訊
+	optional int32 skinId = 14;
+	// 初始血量
+	optional int32 initHp = 15;
+	// 等級
+	optional int32 lv = 16;
+	// 技能回魔
+	optional string skillMp = 17;
+}

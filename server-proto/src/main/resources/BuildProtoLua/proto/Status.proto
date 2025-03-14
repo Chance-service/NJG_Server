@@ -1,0 +1,1002 @@
+option java_package = "com.guaji.game.protocol";
+
+enum error
+{
+	// 配置文件错误
+	CONFIG_ERROR = 1;
+	// 在线人数达到上限
+	ONLINE_MAX_LIMIT = 2;
+	// 注册人数达到上限
+	REGISTER_MAX_LIMIT = 3;
+	// 创建玩家失败
+	PLAYER_CREATE_FAILED = 4;
+	// 玩家被踢下线
+	PLAYER_KICKOUT = 5;
+	// 主角已存在
+	MAIN_ROLE_EXIST = 6;
+	// 角色名已被使用
+	ROLE_NAME_EXIST = 7;
+	// 角色创建失败
+	CREATE_ROLE_FAILED = 8;
+	// 服务器灰度状态中
+	SERVER_GRAY_STATE = 9;
+	// 参数错误
+	PARAMS_INVALID = 10;
+	// 配置没有找到
+	CONFIG_NOT_FOUND = 11;
+	// 基础数据没有找到
+	DATA_NOT_FOUND = 12;
+	// 金币不足
+	COINS_NOT_ENOUGH = 13;
+	// 钻石不足
+	GOLD_NOT_ENOUGH = 14;
+	// 玩家被封号
+	PLAYER_FORBIDDEN = 15;
+	// vip等级不足
+	VIP_NOT_ENOUGH = 16;
+	// ID不存在，请重新输入
+	PLAYER_NOT_FOUND = 17;
+	// 荣誉不足
+	HORNOR_NOT_ENOUGH = 18;
+	// 等级不满足要求
+	LEVEL_NOT_LIMIT = 19;
+	// 声望不足
+	REPUTATION_NOT_ENOUGH = 20;
+	// 佣兵不存在
+	MERCENARY_NOT_FOUND = 21;
+	// 游戏已经大版本更新,请更新游戏体验更多玩法
+	CLIENT_VERSION_NOT_FIT = 22;
+	// 元素不足
+	ELEMENT_NOI_ENOUGH = 23;
+	// 充值cdk只能在appstore平台上使用
+	RECHARGE_CDK_ONLY_APP = 24;
+	//水晶不足
+	CRYSTAL_NOT_ENOUGH = 25;
+	// 翎羽不足
+	FEATHER_NOI_ENOUGH = 26;
+	//羽之尘不足
+	SMALL_FEATHER_NOT_ENOUGH = 27;
+	// 已达最大等级
+	ROLE_MAX_LEVEL = 28;
+	// 出战数量已上限
+	ROLE_MAX_FIGHT = 29;
+	// 佣兵培养属性错误
+	ROLE_BAPTIZE_ATTR_ERROR = 30;
+	// 佣兵达到最大星
+	ROLE_MAX_STAR = 31;
+	// 佣兵达到最大阶
+	ROLE_MAX_RANK = 32;
+	// 没有公会
+	ROLE_NO_ALLIANCE=33;
+    // 帳號已存在
+    REGISTER_EXIST=34;
+    // 帳號不存在
+    REGISTER_NOT_EXIST=35;
+    // 密碼錯誤
+    PASSWORD_ERROR=36;
+    // 聊天資格錯誤
+    ChATLIMIT_ERROR=37;
+    // Market連線錯誤
+    MARKETPLACE_ERROR=38;
+    // 角色派遣中
+    ROLE_DISPATCHING_ERROR=39;
+    // 獎勵已領取
+    AWARD_ALREADY_GOT_ERROR=40;
+	// 領取已達上限
+    ALREADY_GOT_LIMIT_ERROR=41;
+	// 點數不足
+    POINT_NOI_ENOUGH=42;
+    // 標記未定義
+    SIGN_NOT_DEFINED = 43;
+    // 沒有標記權限
+    SIGN_INSUFFICIIENT_PERMISSIONS= 44;
+    // 上場活動還未結束
+    ACTIVITY_NOT_ENDING= 45;
+    // 開啟條件不足
+    CONDITION_NOT_ENOUGH= 46;
+    // 闖關關卡限制
+    PASS_MAP_LIMIT_ERROR= 47;
+    // 解鎖照片好感度不足
+    UNLOCK_ALBUM_LIMIT_ERROR= 48;
+	/**
+	 * 装备模块 5
+	 */
+	// 装备找不到 
+	EQUIP_NOT_FOUND = 5001;
+	// 装备已经达到最大强化等级
+	EQUIP_MAX_STRENGTH = 5002;
+	// 装备等级10级以上才能打孔
+	EQUIP_PUNCH_MIN_LEVEL_LIMIT = 5003;
+	// 开启这个孔之前上一个孔一定要开启
+	EQUIP_PUNCH_PRE_POS_LIMIT = 5004;
+	// 该位置已经打过孔了
+	EQUIP_PUNCH_POS_PUNCHED = 5005;
+	// 该位置还没有打过孔
+	EQUIP_PUNCH_POS_NOT_PUNCHED = 5006;
+	// 宝石已经镶嵌在装备上了
+	EQUIP_STONE_DRESSED = 5007;
+	// 装备10级以下不能洗炼
+	BAPTIZE_MIN_LEVEL_LIMIT = 5008;
+	// 神器吞噬的也必须是神器
+	EQUIP_SWALLOW_TARGET_MUST_BE_GODLY = 5009;
+	// 传承的装备没有神器属性
+	EQUIP_EXTEND_FROM_NO_GOLDY_ATTR = 5010;
+	// 神器传承的目标已经有神器属性
+	EQUIP_EXTEND_TO_GOT_GOLDY_ATTR = 5011;
+	// 神器不能熔炼,需要先传承
+	EQUIP_GODLY_SMELT_NOT_ALLOW = 5012;
+	// 装备打造熔炼值不足
+	EQUIP_CREATE_SMELT_VALUE_NOT_ENOUGH = 5013;
+	// 装备已经达到最大强化等级
+	EQUIP_STRENGTH_MAX_LEVEL = 5014;
+	// 角色身上该部位已经有装备了
+	ROLE_EQUIP_PART_DRESSED = 5015;
+	// 角色身上该部位没有装备
+	ROLE_EQUIP_PART_NOT_DRESSED = 5016;
+	// 装备背包扩展次数已满
+	EQUIP_BAG_EXTEND_TIMES_FULL = 5017;
+	// 装备在穿戴中
+	EQUIP_HAS_DRESSED = 5018;
+	// 装备没有二级属性
+	EQUIP_SECONDLY_ATTR_ZERO = 5019;
+	// 装备职业不匹配
+	EQUIP_PROFESSION_LIMIT = 5020;
+	// 装备等级高于角色等级15级不能穿戴
+	EQUIP_ROLE_LEVEL_LIMIT = 5021;
+	// 装备传承必须是相同部位
+	EQUIP_EXTEND_SAME_PART_LIMIT = 5022;
+	// 神器星级已满
+	GODLY_LEVEL_FULL = 5023;
+	// 神器无法出售
+	EQUIP_GODLY_SELL_LIMIT = 5024;
+	// 一件装备上相同类型的宝石只能镶嵌一个
+	EQUIP_GEM_QUALITY_SAME_EXIST = 5025;
+	// 装备背包扩展成功
+	EQUIP_BAG_EXTEND_SUC = 5026;
+	// 装备合成条件不足
+	EQUIP_COMPOUND_NOT_LIMIT = 5027;
+	// 道具类型不正确
+	ITEM_TYPE_NOT_FIT = 5028;
+	// 非套装装备不能分解
+	NO_SUIT_EQUIP_DEC = 5029;
+	// 神器不能分解
+	NO_GODLY_EQUIP_DEC = 530;
+	// 没有装备进化目标
+	NO_EQUIP_EVOLUTION_TARGET = 5031;
+	// 没有装备可以熔炼
+	NO_EQUIP_CAN_SMELT = 5033;
+	// 装备不能分解
+	EQUIP_CAN_NOT_DECOMPOSE = 5034;
+	// 锁定属性超出上限
+	EQUIP_LOCK_MAX = 5035;
+	// 未锁定属性不足
+	EQUIP_UNLOCK_MIN = 5036;
+	// 装备未附魔
+	EQUIP_NO_ENCHANT = 5037;
+	// 套装不能吞噬
+	NO_SUIT_EQUIP_SWALLOW = 5038;
+	// 套装不能融合
+	NO_SUIT_EQUIP_COMPOUND = 5039;
+	// 套装不可以再升级了
+	EQUIP_CANNOT_UPGRADE = 5040;
+	// 套装升级玩家等级不满足
+	NOT_ENOUGH_ROLE_LEVEL = 5041;
+	//装备上有宝石
+	EQUIP_HAS_GEM = 5042;
+	//装备升级无消耗
+	EQUIP_STRENGTH_ZERO_COST = 5043;
+	//装备升级材料不足
+	EQUIP_STRENGTH_NOT_ENOUGH_COST = 5044;
+	//装备传承的目标已经镶嵌有宝石
+	EQUIP_EXTEND_NOT_GEM = 5045;
+	// 装备传承的目标已经拥有强化等级
+	EQUIP_EXTEND_OSSESS_STRENGTH = 5046;
+	// 不满足传承条件
+	EQUIP_EXTEND_NO_MEET = 5047;
+
+	/**
+	 * 角色模块 6
+	 */
+	// 角色没有找到
+	ROLE_NOT_FOUND = 6001;
+	// 角色技能未找到
+	ROLE_SKILL_NOT_FOUND = 6002;
+	// 角色还没有洗炼
+	HAS_NOT_BAPTIZE = 6003;
+	// 请选择进阶之书进行升星
+	STAR_STONE_NOT_ENOUGH = 6004;
+	// 进阶之书剩余使用次数不足
+	STAR_STONE_TIMES_NOT_ENOUGH = 6005;
+	// 光环配置不存在
+	RING_CONFIG_NOT_FOUND = 6006;
+	// 本角色无此光环
+	ROLE_HAS_NOT_THIS_RING = 6007;
+	// 激活光环所需星级不足
+	RING_ACTIVE_NEED_STAR_LIMIT = 6008;
+	// 光环已激活
+	RING_HAS_ACTIVE = 6009;
+	// 光环激活成功
+	ROLE_RING_ACTIVE_SUCC = 6010;
+	// 光环升级所需星级不足
+	RING_STAR_LEVEL_NOT_ENOUGH = 6011;
+	// 光环未激活
+	RING_NOT_ACTIVE = 6012;
+	// 光环等级已达上限
+	RING_LEVEL_REACH_TOP = 6013;
+	// 可升级次数已达到上限
+	ROLE_RING_LVLUP_TIMES_LIMIT = 6014;
+	// 光环升级成功
+	ROLE_RING_LVLUP_SUCC = 6015;
+	// 技能专精等级不足
+	SKILL_NOT_ENHANCE_LEVEL = 6016;
+	
+	/**
+	 * 道具模块 3
+	 */
+	// 道具没找到
+	ITEM_NOT_FOUND = 3001;
+	// 道具数量不足
+	ITEM_NOT_ENOUGH = 3002;
+	// 等级已满
+	ITEM_LEVEL_UP_TARGET_EMPTY = 3003;
+	// 物品不能出售
+	ITEM_SELL_NOT_ALLOW = 3004;
+	
+	/**
+	 * 小时卡
+	 */
+	//小时卡每日使用次数
+	HOUR_CARD_USER_COUNT_ONE_DAY = 3005;
+	
+	/**
+	 * 竞技场模块 8
+	 */
+	// 战斗力不足
+	FIGHT_VALUE_NOT_ENOUGH = 8001;
+	// 挑战排名不在列表中
+	DEFENDER_NOT_IN_CHALLENGE_LIST = 8002;
+	// 查看玩家信息失败
+	SEE_PLAYER_INFO_FAIL = 8003;
+	// 当前挑战次数已为0
+	NO_CHALLENGE_TIMES = 8004;
+	// 拜托，排名比我还高，不要再蹂躏我了
+	PLEASE_DONT_FUCK_ME = 8005;
+	// 正在挑战目标玩家
+	ARENA_IS_FIGHTING_TARGET = 8006;
+	// 战报时间过早
+	ARENA_REPORT_NOT_TIME = 8007;
+	
+	/**
+	 * 公会模块 9
+	 */
+	// 名字不能为空或者有非法字符
+	ALLIANCE_NAME_NULL = 9001;
+	// 权限不足
+	ALLIANCE_NO_MAIN = 9002;
+	// 没有加入公会不能操作
+	ALLIANCE_NO_JOIN = 9003;
+	// 公会不存在
+	ALLIANCE_NONEXISTENT = 9004;
+	// 公会每只BOSS最多鼓舞10次
+	ALLIANCE_BOSS_ADDPROP = 9005;
+	// 今天已经签过到了
+	ALLIANCE_REPORT_ERROR = 9006;
+	// boss战已经被开启
+	ALLIANCE_BOSS_OPEN_ERROR = 9007;
+	// boss战未开启
+	ALLIANCE_BOSS_NO_OPEN_ERROR = 9008;
+	// 已经超出今天购买次数
+	ALLIANCE_SHOP_BUY_ERROR = 9009;
+	// 公会名字已存在
+	ALLIANCE_NAME_EXIST_ERROR = 9011;
+	// 贡献不足
+	ALLIANCE_NOT_CONTRIBUTION = 9012;
+	// 公会还有其他成员，请先转让会长权限
+	ALLIANCE_EXIT_ERROR = 9013;
+	// 退出公会24小时内不能加入公会
+	ALLIANCE_JOIN_ERROR = 9014;
+	// 已经加了公会不能操作
+	ALLIANCE_CREATE_ERROR = 9015;
+	// 公会名字必需要2至6个字符
+	ALLIANCE_CREATE_NAME_ERROR = 9016;
+	// 公会需要12级开启
+	ALLIANCE_FUN_LEVEL_ERROR = 9017;
+	// 公会人数已满
+	ALLIANCE_FULL_ERROR = 9018;
+	// 公会公告内容为200字内
+	ALLIANCE_NOTICE_ERROR = 9019;
+	// 鼓舞成功
+	ALLIANCE_BOSS_HARM_ADD_SUC = 9020;
+	// 魔兽元气不足
+	BOSS_VITALITY_LACK = 9021;
+	// Boss开启次数不足
+	BOSS_OPEN_TIMES = 9022;
+	
+	// 公会战场人数已满
+	ALLIANCE_TEAM_FULL = 9101;
+	// 已经在公会战场了
+	ALLIANCE_TEAM_EXIST = 9102;
+	// 已经投资了
+	ALREADY_INVESTED = 9103;
+	// 第一期公会争霸即将开启
+	NO_LAST_STAGE_INFO = 9104;
+	// 该轮轮空没有战报
+	FIGHT_REPORT_NOT_EXIST = 9105;
+	// 公会战参战公会数不足无法开启
+	ALLIANCE_FIGHT_COUNT_LIMIT = 9106;
+	// 公会没有参加公会战
+	ALLIANCE_NOT_IN_BATTLE = 9107;
+	// 公会争霸赛将于下周一开始
+	ALLIANCE_BATTLE_NEXT_OPEN = 9108;
+	// 当前公会争霸总站的状态不能鼓舞
+	BATTLE_STATE_NOT_ALLOW_INSPIRE = 9109;
+	// 当前阶段鼓舞次数已满
+	ALLIANCE_BATTLE_INSPIRE_FULL = 9110;
+	// 鼓舞成功
+	ALLIANCE_BATTLE_INSPIRE_SUC = 9111;
+	// 工会战抽签时间未到
+	ALLIANCE_BATTLE_DRAWTIME_FAIL = 9112;
+	// 工会战数据错误未分配公会对战数据
+	ALLIANCE_BATTLE_DATA_FAIL = 9113;
+	// 工会战32强数据不存在
+	ALLIANCE_BATTLE_32_DATA_FAIL = 9114;
+	
+	// 公会已勾选按钮,错误的请求操作
+	CHECK_BUTTON_ALLIANCE_FAIL = 9115;
+	// 公会未勾选按钮,错误的请求操作
+	CHECK_NO_BUTTON_ALLIANCE_FAIL = 9116;
+	// 公会申请已经达到上限
+	APPLY_ALLIANCE_EXCEED_MAX = 9117;
+	// 已经申请过该公会
+	REPEAT_APPLY_ALLIANCE_FAIL = 9118;
+	// 非会长不允许操作
+	NOPRESIDENT_NOTALLOW_OPERATE = 9119;
+	// 玩家已经加入到其它公会
+	PLAYER_INIO_OTHTER_ALLIANCE = 9120;
+	// 再次申请该公会CD中
+	AGAIN_APPLY_ALLIANCE_CD = 9121;
+	//玩家已经进入该公会
+	ALREADY_INTO_ALLIANCE = 9122;
+	//可申请加入公会数量已达到最大上限
+	APPLY_ADD_ALLIANCE_MAX_FAIL = 9123;
+	//今日已经捐献过了
+	ALLIANCE_HAD_DONATED = 9124;
+	//没有足够的声望
+	ALLIANCE_NO_ENOUGH_VITALITY		= 9125;
+	//该复活点已经被占领occupy
+	ALLIANCE_HAVE_OCCUPY_REVIVEPOINT= 9126;
+	//操作不在复活周期内
+	ALLIANCE_NO_TIME_BUYREVIVE  = 9127;
+	//无效请求参数
+	ALLIANCE_INVALID_PARAM  	= 9128;
+	
+
+	
+	/**
+	 * 角色商场模块 10
+	 */
+	// 全部购买成功
+	SHOP_ITEM_OK = 10000;
+	// 角色商城道具不存在
+	SHOP_ITEM_NOT_FOUND = 10001;
+	// 购买道具钻石不足
+	SHOP_BUY_GOLD_LESS	= 10002;
+	// 刷新钻石不足
+ 	SHOP_REFASH_GOLD_LESS	= 10003;
+ 	// 刷新金币不足
+ 	SHOP_REFASH_COID_LESS	= 10004;
+ 	// 全部购买金币成功
+ 	SHOP_BUY_COIN_OK=10010;
+ 	// 购买金币钻石不足
+ 	SHOP_BUY_COIN_GOLD_LESS=10011;
+ 	// 购买金币次数不足
+ 	SHOP_BUY_COIN_NUMS_LESS=10012;
+
+ 	/**
+	 * 战斗模块 11
+	 */
+	 // 挑战boss战斗次数不足
+	 BATTLE_BOSS_FIGHT_TIME_NOT_ENOUGH = 11001;
+	 // 快速战斗次数不足
+	 BATTLE_FAST_FIGHT_TIME_NOT_ENOUGH = 11002;
+	 // 快速战斗可购买次数不足
+	 FAST_FIGHT_BUY_TIMES_NOT_ENOUGH = 11003;
+	 // boss挑战可购买次数不足
+	 BOSS_FIGHT_BUY_TIMES_NOT_ENOUGH = 11004;
+	 // 地图不存在
+	 MAP_NOT_EXIST = 11005;
+	 // 本地图未通过
+	 MAP_HAS_NOT_PASS = 11006;
+	 // 精英副本剩余挑战次数不足
+	 BATTLE_ELITE_MAP_FIGHT_TIME_NOT_ENOUGH = 11007;
+	 // 不满足此精英副本的职业要求
+	 BATTLE_ELITE_MAP_LIMIT_PROF_ERROR = 11008;
+	 // 未达到此精英副本的等级要求
+	 BATTLE_ELITE_MAP_LIMIT_LEVEL_ERROR = 11009;
+	 // 此精英副本的前置副本尚未通过
+	 BATTLE_ELITE_MAP_DEPEND_MAP_ERROR = 11010;
+	 // 精英副本剩余可购买次数不足
+	 ELITE_MAP_BUY_TIMES_NOT_ENOUGH = 11011;
+	 // 快速战斗次数达到最大
+	 BATTLE_FAST_FIGHT_TIME_IS_MAX = 99001;
+	 // 当前不在竞技场战斗中
+	 NOT_IN_ARENA_BATTLE = 11012;
+	 // 当前不在boss战中
+	 NOT_IN_PVE_BOSS_BATTLE = 11013;
+	/**
+	 * 任务模块 12
+	 */
+	// 未完成任务不能领取奖励
+	MISSION_BONUS_ERROR = 12001;
+	// 开服礼包今日领取次数已满
+	DAILY_NEWSER_GIFT_REWARD_LIMIT = 12002;
+	// 帐号未绑定,不可领奖
+	CAN_NOT_ACCOUNT_BOUND_REWARD = 12003;
+	
+ 	/**
+	 * 邮件模块 13
+	 */
+	// 邮件不存在
+	MAIL_NOT_FOUND = 13001;
+	// 邮件功能暂时不开放
+	MAIL_CANNOT_READ = 13002;
+	//邮件内容50字以内
+	MAIL_CONTENT_COUNT = 13003;
+	//当天发邮件次数用完
+	MAIL_SEND_NUM_ERROR = 13004;
+	//邮件发送成功
+	MAIL_SEND_SUCCESS = 13005;
+
+	/**
+	*  留言模块 14
+	*/
+	// 没有该玩家的留言
+	NO_PLAYER_MSG = 14001;
+	// 竞技场挑战次数为0时不能留言
+	CAN_NOT_MSG = 14002;
+	// 请不要给自己留言
+	DONT_MSG_TO_SELF = 14003;
+    // 發言過快
+    CHAT_TO_FEST = 14004;
+    // 禁言中
+    CHAT_QUIET = 14005;
+    //長度限制
+    CHAT_MSG_MAX_LEN = 14006;
+	//伺服器忙錄
+    CHAT_SERVER_BUSY = 14007;
+    
+	/**
+	* 团战模块 15
+	*/
+	// 你还不是队长, 无权此操作
+	YOU_ARE_NOT_CAPTAIN = 15001;
+	// 你已经在队伍中
+	ALREADY_IN_TEAM = 15002;
+	// 准备时间以过，请等待下次团战
+	TEAM_BATTLE_NOT_IN_PREPARE = 15003;
+	// 本次团战已开始
+	TEAM_BATTLE_STARTED = 15004;
+	
+	/**
+	* 充值模块 16
+	*/
+	// 获取充值列表失败
+	FETCH_RECHARGE_LIST_FAILED = 16001;
+
+	/**
+	* 好友模块 17
+	*/
+	// 好友列表已满，无法继续添加好友
+	FRIEND_COUNT_FULL = 17001;
+	// 对方暂时屏蔽了你的消息，请稍后再试
+	TARGET_SHIELD = 17002;
+	// 发言人数超出今日限制
+	DAILY_SEND_PLAYER_COUNT_LIMIT = 17003;
+	// 已屏蔽10名玩家，暂时无法继续屏蔽
+	SHIELD_LIST_FULL = 17004;
+	//已经索取过
+	ALREADY_ASKTICKET = 17005;
+	//已经是好友
+	ALREADY_FRIEND = 17006;
+	//对方申请列表已满
+	FRIEND_APPLY_COUNT_FULL = 17007;
+	//已向对方发送过好友申请
+	ALREADY_APPLY_FRIEND = 17008;
+	//索取次数不足
+	ASKTICKET_COUNT_LIMIT = 107006;
+	// 好友已离线
+	FRIEND_IS_OFFLINE = 107007;
+	// 非好友
+	NOT_FRIEND = 107008;
+	//已经索取过
+	ALREADY_GIFT = 107009;
+	//友情值不足
+	FRIENDSHIP_NOT_ENOUGH = 107010;
+
+	/**
+	* 职业排行模块
+	*/
+	// 该职业不存在
+	NOT_EXISTS_PROF_TYPE = 18001;
+
+	/** 阵营战模块 21 */
+	// 阵营战未开启
+	CAMPWAR_NOT_OPEN = 21001;
+	// 您已经加入本期阵营战，无需重复加入
+	ALREADY_JOIN_CAMPWAR = 21002;
+	// 进入战场失败
+	ENTER_BATTLE_FIELD_FAIL = 21003;
+	// 您还未加入本次阵营战
+	NOT_JOIN_CAMPWAR = 21004;
+	// 已达最大鼓舞次数
+	MAX_CAMPWAR_INSPIRE = 21005;
+	// 由于钻石不足投资失败，请手动加入战斗
+	AUTO_CAMPWAR_GOLD_LACK = 21006;
+
+	/** 世界boss模块 23 */
+	// boss已死
+	BOSS_ALREADY_DEAD = 23001;
+	// boss没有开启
+	BOSS_NOT_OPEN = 23002;
+	// BOSS复活cd
+	BOSS_REBIRTH_CD = 23003;
+	// 自动战斗不能随机buff
+	BOSS_NOT_RANDOM_BUFF = 23004;
+	// BOSS已经开启不能设置自动
+	BOSS_IS_OPEN = 23005;
+
+	/** 多人副本模块 25 */
+	// 您已被房主请出房间
+	KICK_OUT_ROOM = 25001;
+	// 已超出每日最大购买次数
+	MAX_MULTIELITE_BUY_TIMES = 25002;
+	// 勇气值不足
+	MULTIELITE_SCORE_LACK = 25003;
+	// 副本不存在
+	MULTIELITE_CFG_NULL = 25004;
+	// 您已经在房间内，请先退出房间
+	ALREADY_IN_ROOM = 25005;
+	// 房间不存在
+	WAITROOM_NULL = 25006;
+	// 房间人已满
+	ROOM_FULL = 25007;
+	// 您不是房主，无权此请求
+	IS_NOT_LANDLORD = 25008;
+	// 您未加入房间
+	NOT_IN_ROOM = 25009;
+	// 请不要频繁发出邀请
+	ALREADY_POST_INVITE = 25010;
+	// 当前没有可加入的房间
+	NO_CAN_IN_ROOM = 25011;
+	// 历史勇气值不足
+	HISTORY_SCORE_LACK = 25012;
+	// 战斗已经开始
+	ALREADY_START_BATTLE = 25013;
+	// 房间数已达服务器上限, 请稍后再试
+	SERVER_ROOM_FULL = 25014;
+	// 多人副本次数不足
+	NO_MULTIELITE_TIMES = 25015;
+	// 战斗即将开始
+	BATTLE_COUNTDOWN = 25016;
+	// 未找到可供您雇佣的玩家
+	NOT_FOUND_CAN_HIRE_PLAYER_DATA = 25017;
+	// 不能雇佣列表以外的玩家
+	CAN_NOT_HIRE_THE_PLAYER = 25018;
+	// 该玩家已经被你雇佣过
+	THE_PLAYER_ALREADY_HIRE = 25019;
+	// 该玩家已经在您的房间内
+	MEMBER_ALREADY_IN_ROOM = 25020;
+	// 队伍中所有人都准备后才能开启副本
+	NOT_MULTI_ELITE_SETOUT = 25021;
+	// 多人副本未开启
+	MULTI_ELITE_IS_CLOSE = 25022;
+	// 该玩家已有队伍
+	MULTI_ELITE_HAVE_TEAM = 25023;
+	// 多人副本等级不足
+	MULTI_ELITE_LEVEL_NOT_LIMIT = 25024;
+	// 好友多人副本次数不足
+	MULTI_ELITE_FRIEND_NO_TIMES = 25025;
+	// 房间密码错误
+	MULTI_ELITE_WRONG_PASSWORD = 25026;
+
+	/** 跨服模块 26 */
+	// 跨服战服务器连接失败
+	CROSS_SERVER_CONNECT_FAIL = 26001;
+	// 跨服竞技挑战次数不足
+	NO_FIGHT_TIMES = 26002;
+	// 购买跨服挑战次数受限
+	BUY_BATTLE_TIMES_LIMIT = 26003;
+	// 跨服货币不足
+	CROSSCOINS_NOT_ENOUGH = 26004;
+	// 战报失效
+	BATTLE_DATA_INVALID = 26005;
+	// 手动同步数据
+	SYNC_TIME_LIMIT = 26006;
+
+	/** 元素模块 27 */
+	// 元素背包扩展成功
+	ELEMENT_BAG_EXTEND_SUC = 27001;
+	// 职业不匹配
+	PROF_NOT_FIT = 27002;
+	// 元素等级不得大于角色等级
+	ELEMENT_NOT_GREATE_THAN_PLAYER = 27003;
+	// 元素个数为0
+	ELEMENT_SIZE_NONE = 27004;
+	
+	/** 转生模块 28 */
+	// 没有挑战转生boss资格
+	NOT_ABLE_TO_CHALLENGE_BOSS = 28001;
+	// 未转生成功
+	NOT_REBIRTH_SUCCESS = 28002;
+	// 星魂点数不足
+	NOT_ENOUGH_FOR_LEVEL_UP = 28003;
+	// 等级不足
+	NOT_LEVEL_OVER_LIMIT = 28004;
+	// 等级已达到上限
+	TALENT_LEVEL_OVER_BOUND = 28005;
+	// 不能转生（没有通关）
+	NOT_ABLE_TO_REBIRTH_BOSS = 28006;
+	// 翎羽个数为0
+	FEATHER_SIZE_NONE = 28007;
+	// 翎羽背包扩展成功
+	FEATHER_BAG_EXTEND_SUC = 27008;
+	
+	/** 主播模块 30 */
+    // 没有足够的充值
+	NOT_ENOUGH_RECHARGE = 30001;
+	// 兑换数量错误
+	COUNT_ERROR = 30002;
+
+	/** 英雄令模块 31 */
+    // 玩家等级等级不足
+	TOKEN_LEVEL_LIMIT = 31001;
+	// 英雄令实体不存在
+	TOKEN_ENTITY_NOEXIST = 31002;
+	// 每日最多领取5个任务
+	TOKEN_TASK_COUNT_LIMIT = 31003;
+	
+	/* 翅膀模块 32 */
+	// 已领取过引导羽毛
+	WING_LEAD_HAD_GOT = 32001;
+	// 引导羽毛领取成功
+	WING_LEAD_GET_SUCCESS = 32002;
+	
+	/** GVG模块 33*/
+	// 功能未开启
+	GVG_FUNCTION_CLOSE = 33001;
+	// 当前城池已经被宣战
+	DECLARED_WAR = 33002;
+	// 非公会成员
+	NOT_ALLIANCE_MEMBERS = 33003;
+	// 宣战次数用完了
+	NOT_DECLARE_TIMES = 33004;
+	// 没有宣战权
+	NOT_DECLARE_PWOER = 33005;
+	// 不能对自己公会所占有的城池宣战
+	CANNOT_DECLARED_WAR = 33006;
+	// 城池不连通
+	NOT_CHAIN_CITY = 33007;
+	// 没有城池奖励数据
+	NOT_CITY_REWARD = 33008;
+	// 占领城池条件不足
+	NOT_ENOUGH_COUNT_CITY = 33009;
+	// 没有对城池进行宣战
+	NOT_DECLARED_WAR = 33010;
+	// 没有占领该城池
+	NOT_OCCUPY_CITY = 33011;
+	// 当前非宣战阶段
+	NOT_DECLARED_BATTEL_STATUS = 33012;
+	// 当前非战斗阶段
+	NOT_STATUS_FIGHTING = 33013;
+	// 不能对自己公会城池派遣佣兵
+	NOT_SEND_ROLDE = 33014;
+	// 佣兵使用中
+	ROLE_IN_USE = 33015;
+	// 体力值不足
+	NOT_ENOUGH_PWOER = 33016;
+	// 不属于己方城池
+	NOT_MY_CITY = 33017;
+	// 佣兵派遣个数超过最大上限
+	SEND_ROLDE_LIMIT = 33018;
+	// 奖励已经领取过
+	GIFT_REWARDED = 33019;
+	// 不能参加本期GVG战斗
+	NOT_CAN_JOIN = 33020;
+	// 主将不能上阵
+	MAIN_NOT_CAN_JOIN = 33021;
+	// 新获取的佣兵不能参加本期GVG战斗
+	NEW_ROLE_NOT_CAN_JOIN = 33022;
+	// 玩法不开放
+	GVG_PLAY_CLOSE = 33023;
+	// 反攻保护超时
+	FIGHTBACK_OVERTIME = 33024;
+	// 没有发起反攻
+	NOT_FIGHTBACK = 33025;
+	// 反攻保护时间段不能派兵
+	FIGHTBACK_PROTECT = 33026;
+	// GVG开始后加入公会不能参战
+	JOIN_ALLIANCE_AFTER_GVG = 33027;
+	// 少于三个玩家的队伍不能多于一个
+	NOT_CAN_EXCEED_ONETEAM_LESSTHANTHREE = 33028;
+	//付帮主不驻屯小于2个人的队伍
+	NOT_CAN_EXCEED_ONETEAM_LESSTHANTWO   = 33029;
+	//小于200威名无法复活
+	NOT_HAVE_ENOUGH_VITALITY   = 33031;
+	//小于200威名无法复活
+	NOT_STATION_SELF_CITY   = 33032;
+	
+	/* 勇者试炼模块 34 */
+	// 勇者试炼实体不存在
+	BRAVE_ENTITY_NOEXIST = 34001;
+	// 已经通过试炼
+	BRAVE_ENTITY_PASS = 34002;
+	// 勇者试炼重置次数不足
+	BRAVE_RESET_COUNT_NOT_ENOUGH = 34003;
+	// 勇者试炼鼓舞次数不足
+	BRAVE_INSPIRE_COUNT_NOT_ENOUGH = 34004;
+	// 勇者试炼挑战cd中
+	BRAVE_CD = 34005;
+	// 勇者试炼挑战封号中
+	BRAVE_BAN = 34006;
+	// 扫荡次数不足
+	BRAVE_COUNT_NOT_ENOUGH = 34007;
+
+	/*星魂模块 35*/
+	//没有当前星脉
+	STAR_SOUL_GROUP_ILLEGAL = 35001;
+	//不是相邻的星魂等级
+	STAR_SOUL_LEVEL_ILLEGAL = 35002;
+	
+	/* 活动模块 8开头 + 错误号（两位数） */
+	// 没有月卡状态，不能领取
+	NO_MONTH_CARD_EXIST = 80101;
+	// 月卡充值成功
+	MONTH_CARD_BUY_SUC = 80102;
+	// 月卡续费成功
+	MONTH_CARD_BUY_CONTINUE_SUC = 80103;
+	
+	// 活动已关闭
+	ACTIVITY_CLOSE = 80104;
+	// 活动已截止
+	ACTIVITY_END = 80105;
+	
+	// 累计充值额度未达到
+	RECHARGE_NUM_LACK = 80106;
+	// 活动奖励已领取
+	ACTIVITY_AWARDS_HAS_GOT = 80107;
+	// 累计消费数额未达到
+	ACC_CONSUME_NOT_REACH = 80108;
+	
+	// 今日兑换次数已满
+	DAYLI_TIMES_LIMIT = 80109;
+	
+	// 充值阶段还未结束, 暂不能领取
+	RECHARGE_STATUS_NOT_FINISH = 80110;
+	// 今日返利已领取
+	TODAY_REBATE_GOT = 80111;
+	
+	// 周卡充值成功
+	WEEK_CARD_SUC = 81301;
+	// 尚未购买周卡
+	NO_WEEK_CARD = 81302;
+	// 您已经是最大级别周卡，无需升级
+	WEEK_CARD_CANNOT_LEVELUP = 81303;
+	// 周卡升级成功
+	WEEK_CARD_LEVELUP_SUCC = 81304;
+	
+	// 今日购买次数用完了
+	TIME_LIMIT_TODAY_BUY_TIMES_LIMIT = 81501;
+	// 全服今日购买次数用完了
+	SERVER_TIME_LIMIT_TODAY_BUY_TIMES_LIMIT = 81502;
+	// 活动期间内购买次数用完了
+	TIME_LIMIT_ALL_BUY_TIMES_LIMIT = 81503;
+	// 活动期间内全服今日购买次数用完了
+	SERVER_TIME_LIMIT_ALL_BUY_TIMES_LIMIT = 81504;
+	
+	// 累计登录天数不足
+	ACC_LOGIN_DAYS_LACK = 81601;
+	
+	// 宝石配置不存在
+	GEM_CFG_NOT_EXIST = 81701;
+	// 宝石等级不相同，不能用于合成
+	GEM_LEVEL_NOT_EQUAL = 81702;
+	// 宝石等级超出，不能在工坊内合成
+	GEM_COMPOUND_CFG_NULL = 81703;
+	// 该宝石不能穿戴在该装备上
+	GEM_EMBED_NOT_EQUIP = 81704;
+	// 宝石合成所需资源不足
+	GEM_COMPOUND_RESOURCE_NOT_ENOUGH = 81705;
+	// 宝石合成玩家等级不足
+	GEM_COMPOUND_PLAYER_LEVEL_NOT_ENOUGH = 81706;
+	// 新宝石不允许进行兑换
+	GEM_EXCHANGE_EXCEPTION = 81707;
+	// 宝石商店购买次数不足
+	BUYCOUNT_NOT_ENOUGH = 81708;
+	// 宝石卷不足
+	GEM_VOLUME_NOT_ENOUGH = 81709;
+	// 该商品不可用宝石卷购买
+	GEM_VOLUME_NOT_SHOP_BUY = 81710;
+	
+	// 转盘次数不足
+	ROULETTE_TIMES_LACK = 81801;
+	// 活动积分不足
+	ROULETTE_CREDITS_LACK = 81802;
+	
+	// 邀请好友数量不足
+	INVITE_FRIEND_AMOUNT_LUCK = 81901;
+	// 不存在的邀请码
+	EXCHANGE_CODE_FAIL = 81902;
+	// 兑换码错误
+	TAXI_KEY_ERROR = 81903;
+	// 该设备已兑换过抵价券
+	ALREADY_EXCHANGE_CODE = 81904;
+
+	// 能量不足
+	SNOWFIELD_PHYC_NOT_ENOUTH = 82001;
+	// 雪地已经探索过
+	SNOWFIELD_CELL_SEARCHED = 82002;
+	// 已经兑换过奖励
+	SNOWFIELD_ALREADY_EXCHANGED = 82003;
+	
+	// 寻宝次数不足
+	SEARCH_TIME_NOT_ENOUTH = 82101;
+	// 积分不足
+	COMMENDATION_USE_COUNT_NOT_ENOUGH = 82201;
+
+	// 今日红包已拆完
+	FORTUNE_REWARD_TIME_FULL = 82301;
+	// 今日累计充值金额不足
+	FORTUNE_RECHARGE_NOT_ENOUGH = 82302;
+	
+	// 你已达今日最大抢红包次数
+	REACH_MAX_GRAB_TIMES = 82401;
+	// 红包已被抢光
+	SERVER_RED_ENVELOPE_EMPTY = 82402;
+	// 你已经没有红包了
+	NO_RED_ENVELOPE = 82403;
+	// 今日系统红包已领取
+	TODAY_FREE_RED_ENVELOPE_GOT = 82404;
+	// 下个整点时间你能再抢红包
+	CUR_HOUR_ALREADY_GRAB = 82405;
+	
+	// 请客次数不足
+	LIGHT_TIMES_NOT_ENOUGH = 82501;
+	
+	// 没有资格激活终身卡
+	CAN_NOT_ACTIVATE_FOREVER_CARD = 82601;
+	// 今日已领取终身卡钻石奖励
+	TODAY_ALREADY_GET_FOREVER_CARD_AWARD = 82602;
+	
+	//折扣礼包
+	SALE_PACKET_GET_AWARD = 83101;
+	//vip礼包
+	VIP_PACKET_GET_AWARD = 83102;
+
+	//钻石数量
+	AUCTION_GOLD_NOT_ENOUGH = 80112;
+	
+	//输入价格不正确
+	AUCTION_PRICE_ERROR = 80113;
+
+	//稍后再试
+	AUCTION_REFRESH_TIMEOUT = 80114;
+
+	//竞标价格低于最高价
+	AUCTION_NEED_MORE_COIN = 80115;
+	
+	/** 远征任务模块 */
+	//派遣次数达到上限
+	DISPATCH_COUNT = 80201;
+	//任务状态不对
+	TASK_STATUS_ERROR = 80202;
+	//佣兵状态不对
+	ROLE_STATUS_ERROR = 80203;
+	//任务星级不匹配
+	TASK_STAR_COUNT_ERROR = 80204;
+	//任务佣兵个数达到2个了
+	TASK_ROLE_COUNT_ERROR = 80205;
+	
+	NOT_ENOUGH_COST_BUY = 80301;
+	/**万能碎片兑换活动**/
+	//佣兵碎片不足
+	ROLE_SOUL_LACK = 80401;
+	/**仙女的保佑**/
+	FLOWER_NOT_ENOUGH = 80501;
+	FAIRY_BLESS_PROGRESS_COMPLETE = 80502;
+	
+	//羁绊已激活
+	FETTER_IS_ACTIVED = 80601;
+	//主角Avatar过期
+	AVATAR_IS_OVERDUE = 80602;
+	
+	//缺少基础副将
+	BASE_MERCENARY_NOT_FOUND = 80701;
+	//培养属性已达上限
+	BAPTIZE_MAX_ATTRIBUTE = 80702;
+	// 请先完成初心者教学，才可使用此道具
+	FIRST_FAST_BATTLE = 80703;
+
+	// 登录验证失败
+	LOGIN_VERIFY_FAILED = 90000;
+	
+	/** 远征任务模块 */
+	
+	//累计登录天数不足
+	ACC_LOGIN_SIGNED_DAYS_LACK   = 80801;
+	//没有足够的补签机会
+	ACC_LOGIN_SUPPLSIGNED_NOTIMES= 80802;
+	//没有足够的补签机会
+	ACC_LOGIN_SIGNED_NO_OPENCHEST= 80803;
+	//已经签到或补签过
+	ACC_LOGIN_SIGNED_HAVE_DAY_AWARD	 = 80804;
+	//已经开过该等级的箱子
+	ACC_LOGIN_SIGNED_HAVE_OPENCHEST	 = 80805;
+	/** 抽卡模块 */
+	//已经抽完奖励
+	ReleaseUR_CANNOT_LOTTERY	 = 80901;
+	//没有足够的幸运值
+	ReleaseUR_NOT_ENOUGH_LOTTERY	 = 80902;
+	//副将没激活
+	MERCENARY_NOT_ACTIVIT			=80903;
+	/** 充值返利活动抽奖 **/
+	// 充值返利活动已参加
+	RECHARGE_RETURN_TODAY_GOT = 83001;
+	
+	/** 头像 **/
+	// 头像已经购买过
+	HEAD_ICON_HASBUY = 84001;
+	
+	//单次购买不能超过最大值
+	SHOP_GEM_BUY_ONCE_MAX = 85001;
+	
+	// 编队中有远足的副将不能使用
+	FORMATION_CAN_NOT_USE_EXPEDITION = 86001;
+	// 爬塔模块
+	/** 当前关超过最大挑战次数 **/
+	CLIMBINGTOWER_EXCEED_MAXTIMES=87001;
+	
+	// 18路诸侯
+	/** 没有设置协战武将和副将 **/
+	EIGHTEENPRINCES_MERCENARY_NOTSET	=88001;
+	/** 没有足够的药箱数量 **/
+	EIGHTEENPRINCES_MEDICALKIT_NOTENOUGH=88002;
+	/** 协战武将奖品已被领取 **/
+	EIGHTEENPRINCES_HELPREWARD_HASGET	=88003;
+	/** 没有可用的协战武将和副将 **/
+	EIGHTEENPRINCES_MERCENARY_CANNOTUSE	=88004;
+	/** 玩法未开启 **/
+	EIGHTEENPRINCES_NOTOPEN				=88005;
+	/** 没有可领取的奖励 **/
+	EIGHTEENPRINCES_HELPREWARD_NOHAVE	=88006;
+	/** 不符合购买条件 **/
+	EIGHTEENPRINCES_HELPREWARD_CANNOTDOUBLEBUY	=88007;
+	
+
+	/**徽章**/
+	// 主角无法佩戴
+	BADGE_MAIN_ROLE_CANNOT_DRESS = 89001;
+
+	// 该部位已经穿戴徽章
+	BADGE_LOC_ALREADY_DRESS = 89002;
+
+	// 该部位没有戴徽章
+	BADGE_LOC_NOT_DRESS = 89003;
+
+	// 该类型的徽章已经穿戴
+	BADGE_TYPE_ALREADY_DRESS = 89004;
+
+	// 该徽章被其他角色穿戴
+	BADGE_OTHER_ROLE_DRESS = 89005;
+
+	// 徽章背包扩展次数已满
+	BADGE_BAG_EXTEND_TIMES_FULL = 89006;
+
+	// 徽章背包扩展成功
+	BADGE_BAG_EXTEND_SUC_VALUE = 89007;
+	
+	// 徽章已经达到最大等级
+	BADGE_MAX_LEVEL = 89008;
+	// 徽章背包剩余格子已满
+	BADGE_BAG_GRID_FULL = 89009;
+
+}

@@ -1,0 +1,36 @@
+option java_package = "com.guaji.game.protocol";
+
+message FriendRecommendItem
+{
+	required int32 playerId = 1;
+	required int32 level = 2;
+	required string name = 3;
+	required int32 roleId = 4;
+	required int32 fightValue = 5;
+	//称号
+	optional int32 titleId = 6;
+	// 转生状态
+	optional int32 rebirthStage = 7;
+    //头像
+	optional int32 headIcon = 8;
+}
+
+message HPFriendRecommend
+{
+}
+
+message HPFriendRecommendRet
+{
+	//没有就是附近没有好友
+	repeated FriendRecommendItem friendRecommendItem = 1;
+	optional int32 version = 2 [default = 1];
+}
+
+message HPRefreshFriend
+{
+}
+
+message HPAddFriend
+{
+	required int32 playerId = 1;
+}

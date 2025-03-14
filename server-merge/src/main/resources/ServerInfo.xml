@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+master:主数据库(一个)
+slave:从数据库(多个)
+所有的从数据库都将合并到主数据库
+
+ip:数据库ip
+port:数据库端口
+db:数据库名称
+username:用户名
+password:密码
+addServerId:是否需要添加服务器编号前缀  1:需要,0:不需要
+serverId:服务器编号
+-->
+<serverInfo>
+	<master ip="192.168.1.150" port="3306" db="wow" username="root" password="123456" addServerId="0" serverId="1003">
+		<slave  ip="192.168.1.150" port="3306" db="game_10002" username="root" password="123456" addServerId="0" serverId="10002"></slave>
+		<slave  ip="192.168.1.150" port="3306" db="game_10006" username="root" password="123456" addServerId="0" serverId="10006"></slave>
+	</master>
+</serverInfo>

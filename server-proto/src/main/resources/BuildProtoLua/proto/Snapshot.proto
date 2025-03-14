@@ -1,0 +1,62 @@
+option java_package = "com.guaji.game.protocol";
+
+import "Player.proto";
+import "Equip.proto";
+import "Skill.proto";
+import "Alliance.proto";
+import "PlayerTitle.proto";
+import "Element.proto";
+
+message PlayerSnapshotInfo
+{
+	// 版本号用于校验当前快照信息的有效性
+	required int32 version = 1;
+	required int32 playerId = 2;
+	required PlayerInfo playerInfo = 3;
+	required RoleInfo mainRoleInfo = 4;
+	repeated EquipInfo equipInfo = 5;
+	repeated SkillInfo skillInfo = 6;
+	optional AllianceInfo allianceInfo = 7;
+	optional TitleInfo titleInfo = 8;
+	repeated RoleInfo mercenaryInfo = 9;
+	repeated RoleRingInfo ringInfos = 10;
+	optional int32 lastLogoutTime = 11;
+	repeated ElementInfo elementInfo = 12;
+	// 出战佣兵ID
+	repeated int32 fightingRoleId = 13;
+}
+
+
+
+// 查看他人角色数据
+message HPSeeOtherPlayerInfo
+{
+	required int32 type = 1;
+	optional int32 playerId = 2;
+	optional string playerName = 3;
+}
+
+message HPSeeOtherPlayerInfoRet
+{
+	required PlayerSnapshotInfo playerInfo = 1; 
+	// 是否是好朋友
+	required bool isFriend = 2;
+	// 是否已屏蔽
+	required bool isShield = 3;
+	// 是否可以发送消息
+	required bool isSendAllow = 4;
+}
+
+// 查看他人佣兵数据
+message HPSeeMercenaryInfo
+{
+	required int32 playerId = 1;
+	required int32 mercenaryId = 2;
+}
+
+message HPSeeMercenaryInfoRet
+{
+	required RoleInfo mercenaryInfo = 1;
+	repeated RoleRingInfo ringInfos = 2;
+	repeated EquipInfo equipInfo = 3;
+}

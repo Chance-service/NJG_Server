@@ -1,0 +1,136 @@
+option java_package = "com.guaji.game.protocol";
+
+// 194.季爬塔活動 請求
+message SeasonTowerReq{
+	//動作
+	required int32 action = 1; // 0.同步活動資訊 1.同步排行榜 2.選取初始樓層
+    optional int32 choose = 2;
+}
+
+// 194.季爬塔關卡資訊
+message SeasonTowerData{
+	// 達成任務樓層
+	required int32 MaxFloor  = 1;
+	// 活動結束時間
+	required int64 endTime = 2;
+    // 已領取獎勵樓層
+    repeated int32 takeId = 3;
+}
+
+// 194.季爬塔排行信息
+message SeasonTowerRankInfo{
+	// 排名
+	required int32 rank = 1;
+	// 分數
+	required int32 MaxFloor = 2;
+	// 玩家名稱
+	required string name = 3;
+	// 頭像ID
+	required int32 headIcon = 4;
+	// 皮膚ID
+	optional int32 skin = 5;
+    // 完成時間
+    optional int64 doneTime = 6;
+}
+
+// 194.季爬塔排行榜資訊
+message SeasonTowerRanking{
+	// 自身排名資料
+	required SeasonTowerRankInfo selfRankItem = 1;
+	// 其他玩家排名資料
+	repeated SeasonTowerRankInfo otherRankItem = 2;	// 前100名
+}
+
+// 194.季爬塔回應
+message SeasonTowerResp{
+    required int32 action = 1; // 0.同步活動資訊 1.同步排行榜
+    optional SeasonTowerData baseInfo = 2 ; // 關卡資訊
+    optional SeasonTowerRanking rankingInfo = 3; // 排行榜資訊
+}
+
+// 195.九宮格活動 請求
+message PuzzleBattleReq{
+	//動作
+	required int32 action = 1; // 0.同步活動資訊 1.使用小關卡鑰匙
+    optional int32 subStageId = 2; // 鑰匙使用關卡
+}
+
+// 195.九宮格活動 回應
+message PuzzleBattleResp{
+	//動作
+	required int32 action = 1;  // 0.同步活動資訊
+    required int32 currId = 2;  // 目前大關卡ID
+    repeated int32 puzzleId =3; // 已通關小關卡ID(只給此大關卡下小關卡ID)
+    required int32 usePay = 4;  // 可付費挑戰次數
+    required int32 useFree = 5; // 免費挑戰次數
+    required int32 leftTime = 6;// 可進行活動剩餘時間(秒)
+}
+
+// 超級抽池抽獎請求
+message SuperPickUpDraw
+{
+	//召喚ID
+	required int32 id = 1;
+	//召喚次数
+	required int32 times = 2;
+}
+
+// 超級抽池同步資訊請求
+message SuperPickUpSync
+{
+	//欲同步抽池ID 0.全部同步
+	required int32 id = 1;
+}
+
+// 單筆抽池資訊
+message SuperPickUpItem
+{
+	//活動ID
+	required int32 id = 1;
+	//活動剩餘時間
+	required int32 leftTime = 2;
+	//免費抽次數
+	required int32 freeTimes = 3;
+	//單抽需要消耗的鑽石
+	required int32 onceCostGold = 4;
+	//十抽需要消耗的鑽石
+	required int32 tenCostGold = 5;
+	//保底剩餘次數
+	required int32 leftAwardTimes=6;
+	//抽池代券
+	required string ticket=7;
+	//抽中或領去的獎勵
+	repeated string reward = 8;
+}
+
+// 抽池列表
+message SuperPickUpList
+{
+	// 抽池資訊
+	repeated SuperPickUpItem allInfo = 1;
+	//同步抽池ID 0.全部同步
+	required int32 id = 2;
+}
+
+// 198.屬性限制爬塔活動 請求
+message LimitTowerReq{
+	//動作
+	required int32 action = 1; // 0.同步活動資訊
+	// 同步哪個類型的塔 or 0.全部同步
+    optional int32 type = 2;
+}
+
+// 198.屬性限制爬塔關卡資訊
+message LimitTowerData{
+	// 塔樓限制類型
+	required int32 type = 1;
+	// 已到達樓層
+	required int32 nowFloor  = 2;
+}
+
+// 198.屬性限制塔回應
+message LimitTowerResp{
+    required int32 action = 1; // 0.同步活動資訊
+    repeated LimitTowerData baseInfo = 2 ; // 關卡資訊
+}
+

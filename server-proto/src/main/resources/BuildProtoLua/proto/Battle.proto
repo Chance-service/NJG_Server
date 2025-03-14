@@ -1,0 +1,577 @@
+option java_package = "com.guaji.game.protocol";
+
+import "Attribute.proto";
+import "Player.proto";
+
+// 战斗类型定义
+enum battleType
+{
+	// 普通地图怪
+	BATTLE_PVE_MONSTER = 1;
+	// 地图boss战
+	BATTLE_PVE_BOSS = 2;					
+	// 竞技场战斗
+	BATTLE_PVP_ARENA = 3;
+	// 团战
+	BATTLE_PVP_TEAM = 4;
+	// 阵营战
+	BATTLE_PVP_CAMP = 5;
+	// 精英副本
+	BATTLE_PVE_ELITE_BOSS = 6;
+	// 工会战
+	BATTLE_ALLIANCE_BATTLE = 7;
+	// 跨服战
+	BATTLE_CROSS_SERVER = 8;
+	// 多人副本
+	BATTLE_PVE_MULTI_ELITE = 9;
+	// 角色转生
+	BATTLE_REBIRTH_BOSS = 10;
+	// 世界boss
+	BATTLE_WORLD_BOSS = 11;
+	// GVG战斗
+	BATTLE_GVG_CITY = 12;
+	// 爬塔pve 战斗
+	BATTLE_PVE_CLIMBINGTOWER= 13;
+	// 十八路诸侯
+	BATTLE_PVE_EIGHTEENPRINCES= 14;
+}
+
+// 行为类型
+//enum actionType
+//{
+//	// 回蓝
+//	ACTION_RECOVERMP = 1;
+//	// 回血
+//	ACTION_RECOVERHP = 2;
+//	// 攻击
+//	ACTION_SKILL = 3;
+//	// buff跳过
+//	ACTION_BUFF_SKIP = 4;
+//	// buff掉血
+//	ACTION_BUFF_REDUCE_HP = 5;
+//	// 反伤
+//	ACTION_REVERSE_DAMAGE = 6;
+//	// buff免疫
+//	ACTION_AVOID_BUFF = 7;
+//	// 开启狂暴模式
+//	ACTION_RAGE_DAMAGE = 8;
+//	// 驱散
+//	ACTION_DISPEL = 9;
+//	// 0秒行为
+//	ACTION_ZERO = 10;
+//	// 狂乱
+//	ACTION_FRENZY = 11;
+//	//援助
+//	REPLACT_ROLE = 12;
+//}
+
+// 角色状态
+//enum personState
+//{
+//	PERSON_FIGHT = 0;
+//	PERSON_ESCAPE = 1;
+//	PERSON_DEAD = 2;	
+//}
+
+// 宝箱状态
+enum treasureState
+{
+	TREASURE_OPEN = 1;
+	TREASURE_DISCARD = 2;	
+	TREASURE_LUCKY_OPEN = 3;
+}
+
+// 行为效果类型
+//enum effectType
+//{
+//	// 正常攻击，红色
+//	EFFECT_DAMAGE = 0;
+//	// 暴击，黄色
+//	EFFECT_CRITS = 1;
+//	// 闪避，白色
+//	EFFECT_MISS = 2;
+//	// 治疗，绿色
+//	EFFECT_HEAL = 3;
+//	// 回复魔法，蓝色
+//	EFFECT_RECOVERMP = 4;
+//	// 回复血量
+//	EFFECT_RECOVERHP = 5;	
+//	// 吸魔
+//	EFFECT_ABSORB_MP = 6;
+//}
+
+// 攻击类型
+//enum attackType
+//{
+//	ATTACK_PHY = 1;
+//	ATTACK_MAG = 2;	
+//}
+
+// 攻击结果
+//enum attackResult
+//{
+//	// 命中
+//	RESULT_HIT = 1;
+//	// 暴击
+//	RESULT_CRIT = 2;
+//	// 闪避
+//	RESULT_MISS = 3;	
+//}
+
+//enum buffAvoidReason
+//{
+//	AVOID_REASON_RAGE = 1;
+//	AVOID_REASON_EQUIP = 2;
+//}
+
+// 装备掉落
+message DropAward
+{
+	message Equip
+	{
+		required int32 quality = 1;
+		required int32 count = 2;
+		optional int32 sellCoin = 3;
+	}
+
+	message DetailEquip
+	{
+		required int32 itemId = 1;
+		required int32 count = 2;
+		optional int32 sellCoin = 3;
+	}
+	
+	message Element
+	{
+		required int32 quality = 1;
+		required int32 count = 2;
+		optional string decoInfo = 3;
+	}
+
+	message DetailElement
+	{
+		required int32 itemId = 1;
+		required int32 count = 2;
+		optional string decoInfo = 3;
+		//元素主要属性
+		optional AttrInfo basicAttrs = 4;
+	}
+
+
+	message Item
+	{
+		required int32 itemType = 1;
+		required int32 itemId = 2;
+		required int32 itemCount = 3;
+	}
+
+	message Treasure
+	{
+		required int32 itemId = 1;
+		required int32 state = 2;
+		repeated Item  item = 3;
+		required int32 count = 4;
+		// 幸运宝箱，额外掉落
+		repeated Item luckItem = 5;
+	}
+	
+	
+
+	repeated Equip equip= 1;
+	repeated DetailEquip detailEquip = 2;
+	repeated Treasure treasure = 3;
+	repeated Item item = 4;
+	repeated Element element= 5;
+	repeated DetailElement detailElement = 6;
+}
+
+
+// 战斗奖励
+message BattleAward
+{
+	required int32 coin = 1;
+	required int32 exp = 2;
+	optional DropAward drop = 3;
+}
+
+// 战斗结果包
+message BattleInfo
+{	
+	// 角色信息
+	message Character
+	{
+		// 类型(参考Const.roleType)
+		required int32  type = 1;
+		// 实例id
+		required int32  id = 2;
+		// 配置id
+		required int32  itemId = 3;
+		// 位置，取值空间未[0, +~), 主角：0，佣兵2，奇数为怪物，1位置一般为boss
+		required int32  pos = 4;
+		// 等级
+		required int32  level = 5;
+		// 名字
+		required string name = 6;
+		// 初始血量
+		required int32  hp = 7;
+		// 初始mp
+		required int32  mp = 8;
+		// 状态
+		required int32  state = 9;
+		//玩家的playerId
+		optional int32  playerId = 10;
+		//额外的flag
+		optional int32  flag = 11;
+		//当前血量
+		optional int32  curHp = 12;
+		//当前血量
+		optional int32  curMp = 13;
+		//转生状态
+		optional int32  rebirthStage = 14;
+		//主角avatar ID
+		optional int32 avatarId = 15;
+	}
+
+	// buff状态
+	message BuffInfo
+	{
+		// buff配置id
+		required int32 buffId = 1;
+		// 剩余回合数				
+		required int32 buffRound = 2;
+	}
+	
+	// 行为效果
+	message ActionEffect
+	{
+		// 效果类型
+		required int32  effectType = 1;
+		// 效果值(正负累加)
+		optional int32 effectValue = 2;
+		// 元素效果值
+		optional int32 elementEffectValue = 3;
+	}
+
+	message Person
+	{	
+		// 位置	
+		required int32  pos = 1;
+		// 当前血量
+		required int32  hp = 2;
+		// 当前mp
+		required int32  mp = 3;
+		//0: 普通, 1: 逃跑, 2: 死亡
+		required int32  status = 4;
+		// 行为效果	
+		optional ActionEffect effect = 5;
+		// buff效果
+		repeated BuffInfo buffInfo = 6;
+		// 
+		optional int32 roleId = 7;
+	}
+	
+	// 攻击动作
+	message Action
+	{
+		// 第几轮(行为内)
+		required int32 round = 1;
+		// 类型（行为内）
+		required int32 type = 2;
+		// 耗时（行为内）
+		required int32 costTime = 3;
+		// 技能id
+		optional int32 skillId = 4;
+		// buffId
+		optional int32 buffId = 5;
+		// 闪避类型
+		optional int32 avoidType = 6;
+		// 主动方（行为内）
+		optional Person active = 7;
+		// 被动方
+		repeated Person passive = 8;
+	}
+	
+	// 一场战斗
+	message Versus
+	{		
+		// 角色信息
+		repeated Character character = 1;
+		// 行为信息
+		repeated Action actions = 2;
+	}
+
+	// 战斗类型	
+	required int32  battleType = 1;
+	// 战斗回合数
+	required int32  battleRound = 2;
+	// 战斗耗时
+	required int32  battleTime = 3;
+	// 下次等待时间
+	required int32  waitTime = 4; 
+	// 战斗数据
+	required Versus battleData = 5;
+	// 战斗结果(0-失败，1-成功)
+	required int32  fightResult = 6;
+	// 战斗奖励
+	optional BattleAward award = 7;
+	// 地图id
+	optional int32 mapId = 8;
+	// 挑战boss第一次失败
+	optional bool firstFalse = 9;
+	//挑战boss第一次成功
+	optional bool firstSuccess = 10;
+	// 地图首次挑战成功
+	optional bool mapFirstSuccess = 11;
+	optional int64  currTime = 12;
+	optional int64  startTime = 13;
+	optional int32  fightId = 14;
+	// 该场战斗信息是否结束
+	optional int64  nextBattleTime = 15;
+	// 攻方应援数量
+	optional int32  attackHelperNum = 16;
+	// 守方应援数量
+	optional int64  defendersHelpNum = 17;
+
+
+
+}
+
+// 离线战斗结果
+//message OfflineResult
+//{
+//	required int32 mapId = 1;
+//	required int32 useTime = 2;
+//	required int32 winTimes = 3;
+//	required int32 loseTimes = 4;
+//	optional int32 fromLevel = 5;
+//	optional int32 upToLevel = 6;
+//	optional BattleAward award = 7;
+//	optional int32 rebirthStage = 8;
+//}
+
+// 战斗信息推送 
+message HPBattleInfoSync
+{
+	repeated BattleInfo battleInfo = 1;
+}
+
+// 请求特殊战斗
+//message HPBattleRequest
+//{
+//	required int32 battleType = 1;
+//	required int32 battleArgs = 2;
+//	optional int32 useItemType = 3;//0为正常战斗，1为使用道具（见BattleUseItemType，目前只有挑战boss使用）
+//}
+
+// 下一场战斗信息同步
+message HPBattleNextInfo
+{
+	required int32 battleType = 1;
+	required int32 battleArgs = 2;
+	optional string name = 3;
+	optional int32 waitTime = 4;
+}
+
+// 快速战斗
+//message HPFastBattle
+//{
+//	required int32 mapId = 1;
+//	// 是否是新手快速战斗
+//	required bool isNoob = 2;
+//}
+
+// 快速战斗回复
+//message HPFastBattleRet
+//{
+//	optional OfflineResult result = 1;
+//}
+
+// 离线结算
+//message HPOfflineAccount
+//{
+//	required int32 nextBattleTime = 1;
+//	optional OfflineResult result = 2;
+//}
+
+// 购买快速战斗次数
+message HPBuyFastFightTimes
+{
+	required int32 times = 1;
+}
+
+message HPBuyFastFightTimesRet
+{
+	// 剩余快速战斗次数
+	required int32 fastFightTimes = 1;
+	// 快速战斗已购买次数
+	required int32 fastFightBuyTimes = 2;
+}
+
+// 购买boss战斗次数
+//message HPBuyBossFightTimes
+//{
+//	required int32 times = 1;
+//}
+
+//message HPBuyBossFightTimesRet
+//{
+//	// 剩余boss战斗次数
+//	optional int32 bossFightTimes = 1;
+//	// boss战已购买次数
+//	optional int32 bossFightBuyTimes = 2;
+//}
+
+// 战斗统计信息同步
+message HPMapStatisticsSync
+{
+	required int32 mapId = 1;
+	required int32 fightTimes = 2;
+	required int32 averageTime = 3;
+	required int32 winRate = 4;
+	required int32 equipRate = 5;
+	required int32 expRate = 6;
+	required int32 coinRate = 7;
+
+	// 倍率
+	required int32 equipRatio = 8;
+	required int32 expRatio = 9;
+	required int32 coinRatio = 10;
+	optional float itemOneCount = 11;
+}
+
+// boss扫荡
+//message HPBossWipe
+//{
+//	required int32 mapId = 1;
+//	optional int32 useItemType = 3;//0为正常战斗，1为使用道具（见BattleUseItemType，目前只有挑战boss使用）
+//}
+
+// boss扫荡结果
+//message HPBossWipeRet
+//{
+//	required int32 mapId = 1;
+//	optional int32 fromLevel = 2;
+//	optional int32 upToLevel = 3;
+//	optional BattleAward award = 4;
+//}
+
+// 购买精英战斗次数
+message HPBuyEliteFightTimes
+{
+	required int32 times = 1;
+}
+
+message HPBuyEliteFightTimesRet
+{
+	// 今日精英副本剩余挑战次数
+	required int32 eliteFightTimes = 1;
+	// 今日精英副本购买挑战次数
+	required int32 eliteFightBuyTimes = 2;
+}
+
+message HPSkipArenaFight
+{
+	optional int32 version = 1[default = 1];
+}
+
+message HPSkipArenaFightRet
+{
+	required int32 waitTime = 1; 
+}
+
+message HPSkipPveBossRet
+{
+	required int32 waitTime = 1; 
+}
+
+//message HPFBShareTimes
+//{//FB分享次数
+//	required int32 times = 1;
+//}
+
+// 请求上次战斗信息
+message HPLastBattleRequest
+{
+}
+
+//--------------------------------------HOH NEW---------------------------------//
+
+// 領取掛機獎勵
+message NewBattleAward
+{
+	message Item
+	{
+		required int32 itemType = 1;
+		required int32 itemId = 2;
+		required int64 itemCount = 3;
+	}
+
+	required int32 exp = 1;
+	repeated Item drop = 2;
+}
+
+// 關卡資訊 
+message NewBattleLevelInfo
+{
+	required int32 IntoTime = 1;
+	required int32 TakeTime = 2;
+}
+
+// 編隊資訊 
+message NewBattleFormation
+{
+	//0.請求敵方編隊資訊, 1.傳送我方編隊資訊 2.
+	required int32 type = 1;
+	//角色資訊
+	repeated string rolePos = 2; // id_pos //pos 0..5
+	// server回傳角色詳細,供client使用 0.送對手 1.送己方
+	repeated CLIcheckInfo resultInfo = 3;
+	//挑戰當前時間為序號 //server ret tpye0
+	optional int32 battleId = 4;
+	//戰鬥類型 0.測試用 1.關卡 2.多人副本 3.PVP 4.世界BOSS
+	optional int32 battleType = 5;
+	//地圖ID 測試用:id_pos,id_pos...
+	optional string mapId = 6; 
+	//挑戰排名(PVP)
+	optional int32 defenderRank = 7;
+}
+
+//戰鬥紀錄
+message NewBattleLog
+{
+	message NewBattleRoleInfo
+	{
+		required int32 posId = 1;	//佔位id
+		optional int32 action = 2;	//動作(ex.1:普通攻擊作用,2:技能作用,3:Buff/Debuff,4.施放普攻 5.施放技能)
+		optional int32 skillGroupId = 3;	//普攻id or 技能組id(流水號), 同id表示同一次施放的技能
+		optional int32 skillId = 4;	//技能id
+		repeated int32 buff = 5;	//Buff,Debuff id
+		required int32 nowShield = 6;	//行動前護盾血量
+		required int32 newShield = 7;	//行動後護盾血量
+		required int32 newHp = 8;	//行動後血量
+		required int32 nowHp = 9;	//行動前血量
+		required int32 nowMp = 10;	//行動前魔量
+		required int32 newMp = 11;	//行動後魔量
+		optional int32 status = 12;	//受擊狀態 1.一般攻擊 2.暴擊 3.miss
+		repeated string passive = 13;	//類型_ID 類型1:skill 2:buff
+	}
+	
+	message NewBattleLogInfo
+	{
+		required int32 id = 1;	//流水號
+		required NewBattleRoleInfo roleInfo = 2;	//行動的角色資訊
+		repeated NewBattleRoleInfo targetRoleInfo = 3;  //影響的角色資訊
+		required int32 markTime = 4;    //動作時間戳記
+	}
+    
+	//戰鬥結果(0.成功, 1.失敗, 2.異常(server回傳用), 3.server請求下一筆資料)
+	required int32 resault = 1;
+	//
+	repeated NewBattleLogInfo log = 2;
+	optional int32 battleId = 3;
+	optional int32 errorCode = 4;
+	required int32 totleLogId = 5;
+	required int32 logId = 6;
+    optional string tapdbjstr= 7 ; // for tapdb result
+	optional int64 battleScore= 8 ; // for single boss
+}

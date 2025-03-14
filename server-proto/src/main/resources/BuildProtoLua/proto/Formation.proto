@@ -1,0 +1,68 @@
+option java_package = "com.guaji.game.protocol";
+
+//请求某个类型的阵容
+message HPFormationRequest{
+	//阵容类型 1为普通阵型，其他再说
+	required int32 type = 1;
+}
+
+//反馈某个阵容
+message HPFormationResponse{
+	//阵容类型 1为普通阵型
+	required int32 type = 1;
+	//阵型容量
+	required int32 posCount = 2;
+	//阵容队列(佣兵编号非对象id)
+	repeated int32 roleNumberList = 3;
+	
+}
+
+
+// 编队信息请求
+message HPFormationEditInfoReq{
+	required int32 index = 1;
+}
+
+message FormationInfo{
+	required int32 index = 1;
+	required string name = 2;
+	repeated int32 roleIds = 3;
+}
+
+// 编队信息请求返回
+message HPFormationEditInfoRes{
+	required FormationInfo formations = 1;
+}
+
+// 编辑阵型
+message HPFormationEditReq{
+	// 阵容编号
+	required int32 index = 1;
+	// 英雄隊伍
+	repeated int32 roleIds = 2;
+}
+
+// 编辑阵型返回
+message HPFormationEditRes{
+	required FormationInfo formations = 1;
+}
+
+// 使用阵型
+message HPFormationUseReq{
+	//使用第几组阵容
+	required int32 index = 1;
+}
+
+// 使用阵型返回
+message HPFormationUseRes{
+	//返回使用的阵容
+	required int32 index = 1;
+}
+
+// 修改阵型名称请求（无返回）
+message HPFormationChangeNameReq{
+	required int32 index = 1;
+	required string name = 2;
+}
+
+

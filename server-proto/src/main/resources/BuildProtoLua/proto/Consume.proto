@@ -1,0 +1,51 @@
+option java_package = "com.guaji.game.protocol";
+
+message SyncAttrInfo 
+{
+	// 钻石
+	optional int32 gold = 1;
+	// 金币
+	optional int64 coin = 2;
+	// 主卡等级
+	optional int32 level = 3;
+	// 主卡经验
+	optional int32 exp = 4;
+	// vip等级
+	optional int32 vipLevel = 5;
+	// 熔炼值
+	optional int32 smeltValue = 6;
+	// 公会贡献值
+	optional int32 contribution = 7; 
+	// 荣誉值
+	optional int32 honorValue = 8; 
+	// 声望值
+	optional int32 reputationValue = 9;
+	// 跨服获取的货币
+	optional int32 crossCoin = 10;
+	//水晶
+	optional int32 crystalValue = 20;
+	//友情值
+	optional int32 friendship = 21;
+}
+
+// 推送道具 装备 角色的需要移除的Id的列表
+message ConsumeItem
+{
+	// 类型  @see Const.changeType
+	required int32 type = 1;
+	// 唯一Id
+	required int64 id = 2;
+	// 物品编号
+	required int32 itemId = 3;
+	// 实体对象直接移除对象
+	optional int64 count = 4;
+}
+
+// 经常发生变动的值主动推送给前端
+message HPConsumeInfo
+{
+	// 玩家基本信息
+	optional SyncAttrInfo attrInfo = 1;
+	// 实体对象移除的推送 
+	repeated ConsumeItem  consumeItem = 2;
+}

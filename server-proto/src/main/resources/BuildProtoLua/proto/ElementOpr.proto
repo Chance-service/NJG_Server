@@ -1,0 +1,67 @@
+option java_package = "com.guaji.game.protocol";
+
+import "Attribute.proto";
+
+// 穿戴 脱下
+message HPElementDress {
+	required int64 elementId = 1;
+	required int32 index = 2;
+}
+
+message HPElementDressRet {
+	required int64 elementId = 1;
+	required int32 index = 2;
+}
+
+// 重铸
+message HPElementRecast {
+	required int64 elementId = 1;
+	required int32 attrId  = 2;
+	// 1 普通 2 高级
+	required int32 type = 3;
+}
+
+message HPElementRecastRet {
+	required int64 elementId = 1;
+	required int32 attrId  = 2;
+	repeated Attr attrs = 3;
+}
+
+message HPElementRecastConfirm {
+	required int64 elementId = 1;
+	required int32 index = 2;
+	// 1 普通 2 高级
+	required int32 type = 3;
+}
+
+message HPElementRecastConfirmRet {
+	required int64 elementId = 1;
+}
+
+// 分解
+message HPElementDecompose {
+	repeated int64 elementIds = 1;
+}
+
+message HPElementDecomposeRet {
+	repeated int64 elementIds = 1;
+}
+
+// 进阶
+message HPElementAdvanced {
+	required int64 elementId = 1;
+}
+
+message HPElementAdvancedRet {
+	required int64 elementId = 1;
+}
+
+// 升级
+message HPElementLevelUp {
+	required int64 elementId = 1;
+	repeated int64 swallowEleIds = 2;
+}
+
+message HPElementLevelUpRet {
+	required int64 elementId = 1;
+}

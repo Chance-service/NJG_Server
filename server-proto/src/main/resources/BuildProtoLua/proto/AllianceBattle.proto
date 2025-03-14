@@ -1,0 +1,293 @@
+option java_package = "com.guaji.game.protocol";
+
+import "Battle.proto";
+
+
+enum AllianceBattleState
+{
+	// 准备阶段
+	PREPARE   = 0;
+	//抽签阶段
+	Draw_Lots_WAIT = 100;  
+	//抽签后公示阶段
+	Publicity_WAIT = 101;
+	//32进16战斗
+	FS32_16_FIGHTING = 102;
+	FS16_8_WAIT = 103;
+	FS16_8_FIGHTING = 104;
+	FS8_4_WAIT = 105;
+	FS8_4_FIGHTING = 106;
+	FS4_2_WAIT = 107;
+	FS4_2_FIGHTING = 108;
+	FS2_1_WAIT = 109;
+	FS2_1_FIGHTING = 110;
+	// 展示阶段
+	SHOW_TIME = 201;
+}
+
+enum AFUnitState
+{
+	// 没开始打
+	AF_NONE = 1;
+	// 
+	AF_FIGHTING = 2;
+	// 
+	AF_END = 3;
+}
+
+
+enum FightGroup
+{
+	GROUP_32 = 1;
+	GROUP_16 = 2;
+	GROUP_8 = 3;
+	GROUP_4 = 4;
+	GROUP_2 = 5;
+}
+
+message AFUnit
+{
+	required int32 id = 1;		
+	required AFUnitState state = 2;
+	required int32 leftId = 3;
+	required int32 rightId = 4;
+	required string leftName = 5;
+	required string rightName = 6;
+	optional int32 winId = 7;
+	// 已经投资的公会Id
+	optional int32 investedId = 8;
+
+	optional int32 leftBuffId = 9;
+
+	optional int32 rightBuffId = 10;
+}
+
+message AllianceItemInfo
+{
+	// ID
+	required int32 id = 1;
+	// 名字
+	required string name = 2;
+	// 等级
+	required int32 level = 3;
+	// 团长名称
+	required string captainName= 4;
+	// 元气
+	required int32 vitality = 5;
+	// 人数
+	required int32 memSize = 6;
+	// 战斗结果 （冠军，亚军，4强，8强）
+	optional int32 result = 7;
+	// 上届战斗结果 （冠军，亚军，4强，8强）
+	optional int32 lastResult = 8;
+	// 天之傲BUFF 次数
+	optional int32 buffTimes = 9;
+
+}
+
+
+message AFFightList
+{
+	repeated AFUnit round32_16 = 1;
+	repeated AFUnit round16_8 = 2;
+	repeated AFUnit round8_4 = 3;
+	repeated AFUnit round4_2 = 4;
+	repeated AFUnit round2_1 = 5;
+	//第n轮战斗失败，如果还未战败，则为空
+	optional FightGroup  failureGroup = 6;
+	//failureGroup为空时表示下场对阵对手，failureGroup不为空时表示败于该公会，该项为空则表示公会未进入32强
+	optional AllianceItemInfo estimateAllianceItemInfo = 7;
+}
+
+message HPAllianceTeamEnter
+{	
+	optional int32 version = 1 [default = 1] ; 
+}
+
+
+message HPAllianceTeamEnterRet
+{	
+	//当前报名的人数
+	repeated int32 teamSize = 1 ;
+	required int32 selfTeamIndex = 2; 
+}
+
+//周一到周四，加入
+message HPAllianceTeamJoin
+{	
+	required int32 teamIndex = 1; 
+}
+
+message HPAllianceTeamDetail
+{	
+	//查看公会队伍详细信息
+	required int32 allianceId = 1 ; 
+}
+
+//每个人的基础信息
+message HPAllianceTeamUnit
+{
+	// ID
+	required int32 id = 1;
+	// 名字
+	optional string name = 2;
+	// 等级
+	optional int32 level = 3;
+	// 战斗力
+	optional int32 fightValue = 4;
+	// itemId
+	optional int32 itemId = 5;
+	// position
+	required int32 pos = 6;
+	//team index
+	required int32 index = 7;
+	//是否是会长、副会长的标志，1为会长，2为副会长，3或不传为普通成员
+	optional int32 flag = 8;
+
+	// 鼓舞次数
+	optional int32 inspireNum = 9;
+	// 总鼓舞次数
+	optional int32 totalInspireNum = 10;
+	// 转生阶段
+	optional int32 rebirthStage = 11;
+	
+}
+
+message HPAllianceTeamDetailRet
+{	
+	//包含所有三个队列的成员列表
+	repeated HPAllianceTeamUnit teamList = 1;
+	optional AllianceItemInfo allianceItemInfo = 2;
+}
+
+//保存之后，回复所有的列表HPAllianceTeamDetailRet
+message HPAllianceTeamSave
+{	
+	repeated int32 idList = 1;
+	repeated int32 posList = 2;
+	repeated int32 indexList = 3;
+}
+
+//两队战斗详细战斗场次信息
+message AFDetailUnit
+{
+	required int32 id = 1;
+	required int32 leftTeamIndex = 2;
+	required int32 rightTeamIndex = 3;
+	optional int32 leftTime = 4;
+	optional int32 winId = 5;
+}
+
+//查看战报
+message HPAllianceTeamFight
+{	
+	//查看战报时传unitId,如果是进入队伍页面，unitId=0
+	required int32 unitId = 1;  
+	//是否是查看上届战报，如果是则传入true，其他情况传入false（都会发）
+	optional bool  isLastSession = 2;
+}
+
+//查看战报以及查看战斗页面统一回包
+message HPAllianceTeamFightRet
+{	
+	repeated AFDetailUnit detailUnit = 1;
+	required FightGroup fightGroup = 2;
+	optional string leftName = 3;
+	optional string rightName = 4;
+	required bool isSelfCurBattle = 5;
+}
+
+
+message HPAllianceTeamFightReport
+{
+	required int32 battleId = 1;
+}
+
+message HPAllianceTeamFightReportRet
+{
+	required BattleInfo battleInfo = 1;
+}
+
+
+message HPAFMainEnter
+{	
+	optional int32 version = 1 [default = 1] ; 
+}
+
+
+
+message AFRankList
+{
+	repeated AllianceItemInfo rankItemInfos = 1;
+	// 自己的排名
+	optional int32 selfRank = 2;
+	// 自己帮会的元气总值
+	optional int32 selfTotalVitality = 3;
+	// 预估对阵军团信息
+	optional AllianceItemInfo estimateAllianceItemInfo = 4;
+	// 自己是否报名了
+	optional bool hasJoined = 5;
+}
+
+message HPAFMainEnterSync
+{
+	required AllianceBattleState battleState = 1;
+	// 准备阶段以及结束阶段的32个队伍的信息
+	optional AFRankList rankList = 3;
+	// 对阵表信息
+	optional AFFightList fightList = 4;
+	// 距离下一个阶段的时间
+	required int32 leftTime = 5;
+	//如果玩家正在打战斗，直接发过来HPAllianceTeamFightRet
+	optional HPAllianceTeamFightRet teamFight = 6;
+
+	// 鼓舞次数
+	optional int32 selfInspireNum = 7;
+	// 总鼓舞次数
+	optional int32 totalSelfInspireNum = 8;
+	
+	//是否进行过抽签
+	optional bool hasDraw = 9;
+}
+
+// 公会战投资
+message HPInvest{
+	required int32 versusId = 1;
+	// 公会Id
+	required int32 allianceId = 2;
+}
+
+message HPInvestRet{
+	required int32 versusId = 1;
+	// 公会Id
+	required int32 allianceId = 2;
+}
+
+message HPLastBattleFightInfo{
+	optional int32 version = 1[default = 1];
+}
+
+message HPLastBattleFightInfoRet{
+	optional AFFightList fightList = 1;
+}
+
+message HPInspireRet {
+	
+	required int32 inspireTimes = 1;
+
+	required int32 totalInspireTimes = 2;
+
+}
+
+// 公会战抽签
+message HPAllianceDraw{
+	
+}
+
+message HPAllianceDrawRet{
+	// 抽到的工会编号
+	required int32 index = 1;
+	//抽到的工会Id
+	required int32 allianceId = 2;
+}
+

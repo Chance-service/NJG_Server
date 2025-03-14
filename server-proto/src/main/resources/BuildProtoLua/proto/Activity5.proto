@@ -1,0 +1,587 @@
+option java_package = "com.guaji.game.protocol";
+
+import "dailyQuest.proto";
+
+// 累積登入領十抽要求
+message LoginTenDrawRequest
+{
+	//動作
+	required int32 action = 1; // 0.同步資訊 1.領十抽
+}
+
+// 累積登入領十抽回應
+message LoginTenDrawResponse
+{
+	//動作
+	required int32 action = 1; // 0.同步資訊 1.領十抽
+	//今日是否領取 false未领取  true已领取
+	required bool isGot = 2;
+	//累積領取次數
+	required int32 times = 3;
+	// 回應領獎,當次獲得的獎勵
+	optional string reward = 4;
+}
+
+// 種族召喚要求
+message CallOfRaceReq
+{
+	//動作
+	required int32 action = 1; // 0.同步資訊 1.單抽 2.五抽 3.抽隨機獎
+	optional int32 race = 2; // 1.火2.水3.風4.光5.暗
+}
+
+message CallOfRaceRes
+{
+	//回應動作
+	required int32 action = 1; // 0.同步資訊 1.單抽 2.五抽 3.抽隨機獎
+	//目前點數
+	required int32 point = 2;
+	//回應種族
+	optional int32 race = 3; // 1.火2.水3.風4.光5.暗
+	// 回應領獎,當次獲得的獎勵
+	optional string reward = 4;
+}
+
+message NPContinueRechargeReq
+{
+	//動作
+	required int32 action = 1; // 0.同步資訊 1.領獎
+	optional int32 awardCfgId = 2; //
+}
+
+message NPContinueRechargeRes
+{
+	//回應動作
+	required int32 action = 1; // 0.同步資訊 1.領獎
+	// 活動累計儲值總額
+	required int32 rechargeTotal = 2;
+	//已領取獎項CfgId
+	repeated int32 gotAwardCfgId = 3;
+	//回應領獎,當次獲得的獎勵
+	optional string reward = 4;
+}
+
+//收費簽到請求
+message SupportCalendarReq
+{	
+	// 0.同步 1.購買活動 2.簽到領獎
+	required int32 action 	  = 1;
+	// 1.Normal 2.permium
+	required int32 type 	  = 2;
+}
+
+//收費簽到回傳
+message SupportCalendarRep
+{	
+	// 0.同步 1.購買活動 2.簽到領獎
+	required int32 action 	  = 1;
+	// 是否已購買
+	required bool buy = 2;
+	// 1.Normal 2.permium
+	required int32 type 	  = 3;
+	//当前月份
+	required int32 curMonth = 4;
+	//签到天数
+	repeated int32 signedDays = 5;
+}
+
+//成長獎勵要求
+message GrowthPassReq
+{
+	// 0.同步 1.領獎
+	required int32 action 	  = 1;
+	// 領取獎項
+	optional int32 cfgId 	  = 2;
+}
+
+//關卡成長獎勵回傳
+message GrowthCHPassRes
+{
+	// 0.同步 1.領獎
+	required int32 action = 1;
+	// 是否已付費type
+	repeated int32 costFlag = 2;
+	// 免費已領取cfgId
+	repeated int32 freeCfgId = 3;
+	// 收費已領取cfgId
+	repeated int32 costCfgId = 4;
+}
+
+//塔樓成長獎勵回傳
+message GrowthPassRes
+{
+	// 0.同步 1.領獎
+	required int32 action = 1;
+	// 是否已付費type
+	required bool costFlag = 2;
+	// 免費已領取cfgId
+	repeated int32 freeCfgId = 3;
+	// 收費已領取cfgId
+	repeated int32 costCfgId = 4;
+}
+
+message Activity165MiningReq
+{
+	//0.同步礦區 1.開挖 2.排行榜資訊
+	required int32 action = 1;
+	// 開採Id 1..16
+	repeated int32 mineId = 2;
+}
+
+message Activity165RankItem
+{
+	required int32 rank = 1;
+	required int32 score = 2;
+	required int32 playerId = 3;
+	required string name = 4;
+}
+
+// 165挖礦活動回傳
+message Activity165MiningRes
+{
+	// 回應動作0.同步 1.開採 2.排行榜資訊
+	required int32 action = 1;
+	// 本週累積積分
+	required int32 score = 2;
+	// 自己的排名
+	optional Activity165RankItem ownItem = 3; //action 2.才送
+	// 排行資訊
+	repeated Activity165RankItem item = 4; //action 2.才送
+	// 已開採區塊 1..16
+	repeated int32 gotId = 5; //action 0.1.才送
+}
+
+// 友情召喚
+message Activity166Info
+{
+	//召喚1次需要消耗的友情點
+	required int32 onceCostPoint = 1;
+	//召喚10次需要消耗的友情點
+	required int32 tenCostPoint = 2;
+	//抽中或領去的獎勵
+	repeated string reward = 3;
+}
+
+// 友情召喚
+message Activity166Draw
+{
+	//召喚次数
+	required int32 times = 1;
+}
+
+// 每日VIP點數累積活動
+message VIPPointCollectReq
+{
+	//動作
+	required int32 action = 1; // 0.同步資訊 1.領獎
+	optional int32 awardCfgId = 2; //
+}
+
+message VIPPointCollectResp
+{
+	//回應動作
+	required int32 action = 1; // 0.同步資訊 1.領獎
+	// 活動累計VIP點數
+	required int32 vipPoint = 2;
+	//已領取獎項CfgId
+	repeated int32 gotAwardCfgId = 3;
+	//回應領獎,當次獲得的獎勵
+	optional string reward = 4;
+}
+
+// 免費召喚900抽請求
+message FreeSummonReq{
+	//動作
+	required int32 action = 1; // 0.同步資訊 1.領獎
+}
+
+// 免費召喚900抽回應
+message FreeSummonResp{
+	//動作
+	required int32 action = 1; // 0.同步資訊 1.領獎
+	//今天是活動第幾天
+	required int32 nowDay = 2;
+	//已領取的天數
+	required int32 takeDay = 3;
+	//回應領獎,當次獲得的獎勵
+	optional string reward = 4;
+    //活動期間已消費次數
+	optional int32 count = 5;
+}
+
+// 特權購買請求
+message SubScriptionReq{
+	//動作
+	required int32 action = 1; // 0.同步資訊
+}
+
+// 特權購買回應
+message SubScriptionResp{
+	//動作
+	required int32 action = 1; // 0.同步資訊
+	 //啟動特權Id
+	repeated int32 activateId = 2;
+	//已領取次數
+	repeated int32 times = 3;
+}
+
+message Activity175SelfItem
+{
+	required int32 rank = 1;
+	required int32 score = 2;
+    required int32 maxrank = 3;
+	required int32 maxscore = 4;
+	required int32 playerId = 5;
+	required string name = 6;
+	required int32 teamId = 7;
+	required int32 headerId = 8;
+}
+
+message Activity175RankItem
+{
+	required int32 rank = 1;
+	required int32 score = 2;
+	required int32 playerId = 3;
+	required string name = 4;
+	required int32 teamId = 5;
+	required int32 headerId = 6;
+}
+
+message Activity175TeamItem
+{
+    required int32 teamId = 1;
+    required int32 score = 2;
+}
+
+// 175壁尻积分排行活动排行
+message Activity175RankRes
+{
+	required Activity175SelfItem ownItem = 2;
+	repeated Activity175RankItem dailyitem = 3;
+    repeated Activity175RankItem maxitem = 4;
+    repeated Activity175TeamItem teamitem = 5;
+}
+
+message GloryHoleUseItemInfo
+{
+    optional bool addTime = 1 [default = false]; // 是否使用增加時間 action3 使用
+    optional bool addbar = 2 [default = false]; // 是否增加Feverbar action3 使用
+    optional bool offset = 3 [default = false]; // 是否使用抵銷 action3 使用
+    optional bool addGain = 4 [default = false]; // 是否使用增益 action3 使用
+}
+
+message GloryHoleGameStatus
+{
+    required int32 fanatic = 1; // 狂熱值
+    required int32 good = 2; // 良好次數
+}
+
+// 175壁尻活動請求
+message GloryHoleReq{
+	//動作    0.同步資訊 1.同步排行榜資訊 2.選擇隊伍 3.開始遊戲 4.更新遊戲分數
+    //      5.進入練習模式(增加參與人數) 6.活動任務資訊 7.領取活動任務獎勵
+    //      8.日常任務資訊 9.領取日常任務獎勵 10.領取任務積分獎勵
+	required int32 action = 1; //
+    optional int32 teamId = 2; // 選隊伍 1.前 2.後 ---- action2 使用 --action7 做欲領任務type使用 --action9 領日常任務ID使用 
+    optional int32 newScore = 3; // 更新分數 action4 使用 --action7 做欲領任務哪個計數使用 --action10 領日常任務積分獎勵count使用
+    optional bool costItem = 4; // 是否使用消費券 action3 使用
+    optional GloryHoleUseItemInfo useItem = 5; // 使用那些道具
+    optional GloryHoleGameStatus gameStatus = 6; // 遊戲現況 action4 使用
+}
+
+// 175壁尻個人活動資訊
+message GloryHoleActInfo{
+    required int32 teamId = 1; // 所選團隊ID
+    required int32 challengeTime = 2; //免費挑戰次數
+    required int32 actLeftTime = 3; // 賽季剩餘時間(秒)
+    required int32 dailyLeftTime  = 4; // 今日遊玩時間剩餘幾秒
+    required int32 participants  = 5; // 參與人數
+    required int32 maxScore = 6 ; // 目前最高分
+    required int32 usePay = 7;  // 可付費挑戰次數
+    required int32 nowPayNum = 8; // 目前需付費數量
+    repeated Activity175TeamItem teamitem = 9 ; // 現在團隊比分
+    
+}
+message GloryHoleGameInfo{
+    required int32 maxScore = 1; // 目前最高分
+    required GloryHoleUseItemInfo useItem = 2; // 使用那些道具
+}
+
+message GloryHoleMissionItem {
+    required int32 missionType = 1; // 任務類型
+    required int32 count = 2; //任務計數
+    repeated int32 took = 3; // 已領取的任務獎勵  
+}
+
+// 175壁尻活動任務資訊
+message GloryHoleMissionInfo{
+    repeated GloryHoleMissionItem missionItem = 1; 
+}
+
+// 175壁尻活動回應
+message GloryHoleResp{
+	//動作    0.同步資訊 1.同步排行榜資訊 2.選擇隊伍 3.開始遊戲 4.更新遊戲分數
+    //      5.進入練習模式(增加參與人數) 6.活動任務資訊 7.領取活動任務獎勵
+    //      8.日常任務資訊 9.領取日常任務獎勵 10.領取任務積分獎勵
+	required int32 action = 1;
+    optional GloryHoleActInfo actInfo = 2; // action 0,2回傳
+    optional Activity175RankRes rankInfo = 3; // action 1回傳
+    optional GloryHoleGameInfo gameInfo = 4; // action 3,4回傳
+    optional GloryHoleMissionInfo missionInfo = 5; //action 6,7回傳
+    optional HPDailyQuestInfoRet dailyInfo = 6; //action 8,9,10回傳
+}
+
+//176活動兌換所
+message ActivityExchangeInfo{
+    //兌換編號
+    required int32 exchangeId = 1;
+    //欲兌換物品
+    required string exchangeItem = 2;
+    //消耗物品
+    required string consumeItem = 3; 
+    //已兌換數量
+    required int32 gotCount = 4; 
+}
+
+//请求兑换道具
+message RequestExchange
+{
+	//兑换组编号
+	required int32 exchangeId = 1;
+	//要对换的次数
+	required int32 exchangeTimes = 2;
+}
+
+// 176活動兌換所請求
+message ActivityExchangeReq{
+    //動作 0.同步資訊 1.兌換物品
+    required int32 action = 1;
+    required int32 activityId = 2; // 活動ID ex:175
+    optional RequestExchange exchangeObj = 3; // action:1 使用
+}
+
+// 176活動兌換所回應
+message ActivityExchangeResp{
+    //動作 0.同步資訊 1.兌換物品
+    required int32 action = 1;
+    required int32 activityId = 2;
+    repeated ActivityExchangeInfo exchangeInfo = 3; // action:0,1
+}
+
+// 177.闖關失敗禮包請求
+message Activity177FailedGiftReq{
+    //動作 0.同步資訊 1.購買物品
+    required int32 action = 1;
+    optional int32 cfgId = 2;
+}
+
+// 177.失敗禮包資訊
+message FailedGiftInfo {
+    required int32 cfgId = 1;
+    // true已購買 ,false未購買
+    required bool isGot = 2;
+}
+
+// 177.闖關失敗禮包回應
+message Activity177FailedGiftResp{
+    //動作 0.同步資訊 1.購買物品
+    required int32 action = 1;
+    repeated FailedGiftInfo giftInfo = 2;
+    // 限制時間
+    optional int32 limitDate = 3;
+}
+
+// 禮包請求: 179
+message GiftReq{
+    //動作 0.同步資訊 1.購買物品
+    required int32 action = 1;
+    optional int32 cfgId = 2;
+}
+
+// 禮包回應
+message GiftResp{
+    //動作 0.同步資訊 1.購買物品
+    required int32 action = 1;
+    // 回應(已購買ID)
+    optional int32 takeId = 2;
+}
+
+message JumpGiftInfo {
+    required int32 goodsId = 1;
+    // 已購買次數 0.未購買 or 無購買限制
+    required int32 count = 2;
+    // 目前剩餘時間
+	optional int32 leftTime = 3;
+}
+
+// 加強彈跳禮包請求: 187
+message MaxJumpGiftReq{
+    //動作 0.同步禮包資訊 1.認證購買
+    required int32 action = 1;
+    optional int32 goodsId = 2;
+}
+
+// 加強彈跳禮包回傳: 187
+message MaxJumpGiftResp{
+    //動作 0.同步禮包資訊 1.認證否能購買
+    required int32 action = 1;
+    repeated JumpGiftInfo info = 2;
+}
+
+// 加強召喚900抽請求 :190
+message StepSummonReq{
+	//動作
+	required int32 action = 1; // 0.同步資訊 1.領獎
+    optional int32 type = 2;
+}
+
+// 加強召喚900抽回應
+message StepSummonResp{
+	//動作
+	required int32 action = 1; // 0.同步資訊 1.領獎
+	//今天是活動第幾天
+	required int32 nowDay = 2;
+	//已領取的天數 type 1~3
+	repeated int32 takeDay = 3;
+	//回應領獎,當次獲得的獎勵
+	optional string reward = 4;
+    //活動期間已消費次數
+	optional int32 count = 5;
+}
+
+// 191.循環活動地下城 請求
+message CycleStageReq{
+	//動作
+	required int32 action = 1; // 0.同步成就資訊 1.成就領獎 2.同步日常任務資訊 3.日常任務領獎 4.日常任務點數領獎
+    optional int32 choose = 2; // action1.領取成就ID action3.領取日常任務獎勵ID action4.領取日常點數任務獎勵積分數
+}
+
+message CycleStageQuest{
+    // 已過闖過關卡
+    required int32 passId = 1;
+    // 已領取任務ID
+    repeated int32 takeId = 2;
+}
+
+// 191.循環活動回應
+message CycleStageResp{
+	//動作
+	required int32 action = 1; // 0.同步成就資訊 1.成就領獎 2.同步日常任務資訊 3.日常任務領獎 4.日常任務點數領獎
+    // 成就任務
+    optional CycleStageQuest questInfo = 2;
+    // 日常任務
+    optional HPDailyQuestInfoRet dailyInfo = 6; //action 2,3,4回傳
+}
+
+// 192.累儲累消累充活動 請求
+message RechargeBounceReq{
+    //動作
+	required int32 action = 1; // 0.同步資訊 2.領獎
+    optional int32 cfgId = 2;
+}
+
+// 192.獎勵狀態,只發已達成
+message RechargeBounceItem{
+    required int32 cfgId = 1;
+    // 是否領取
+    required int32 isGot = 2; // 0.false 1.true
+}
+
+// 192.單筆消費可領獎次數(for type 2)
+message RechargeBounceSingle{
+    // Id
+    required int32 cfgId = 1;
+    // 領取數量
+    optional int32 left = 2;
+    
+}
+
+// 192.活動類型各自時間
+message RechargeBounceTime{
+    //種類
+    required int32 type = 1;
+	//time index
+    optional int32 timeIndex = 2;
+    //活動開始時間
+    optional int64 starTime = 3;
+    //活動結束時間
+    optional int64 endTime = 4;
+}
+
+// 192.累儲累消累充活動 回應
+message RechargeBounceResp{
+    //動作
+	required int32 action = 1; // 0.同步資訊 2.領獎
+    // 活動子類型時間
+    repeated RechargeBounceTime timeInfo = 2;
+    // 累儲
+    optional int32 deposit = 3;
+    // 累消鑽石
+    optional int32 consume = 4;
+    // 獎勵狀態
+    repeated RechargeBounceItem itemInfo = 5;
+    // 單筆消費領過獎勵次數
+    repeated RechargeBounceSingle singleInfo = 6;
+}
+
+// 193.單人強敵活動 請求
+message SingleBossReq{
+	//動作
+	required int32 action = 1; // 0.同步成就資訊 1.成就領獎 2.同步關卡資訊 3.同步排行榜資訊 
+    optional int32 choose = 2; // action1.領取成就ID
+}
+
+
+// 193.單人強敵成就任務結構
+message SingleBossQuest{
+	// 任務ID
+	required int32 id = 1;
+	// 任務計數
+	required int64 count = 2;
+	// 已領取
+	required int32 isGot = 3; // 0.false 1.true
+}
+// 193.單人強敵 關卡資訊
+message SingleBossData{
+	// 最大已通關難度
+	required int32 maxClearStage = 1;
+	// 最大分數
+	required int64 maxScore = 2;
+	// 活動結束時間
+	required int64 endTime = 3;
+	// 剩餘挑戰次數
+	required int32 count = 4;
+}
+// 193.單人強敵排行信息
+message SingleBossRankMessage{
+	// 排名
+	required int32 rank = 1;
+	// 分數
+	required int64 score = 2;
+	// 玩家名稱
+	required string name = 3;
+	// 頭像ID
+	required int32 headIcon = 4;
+	// 皮膚ID
+	optional int32 skin = 5;
+}
+// 193.單人強敵 排行榜資訊
+message SingleBossRanking{
+	// 自身排名資料
+	required SingleBossRankMessage selfRankItem = 1;
+	// 其他玩家排名資料
+	repeated SingleBossRankMessage otherRankItem = 2;	// 前100名
+}
+// 193.單人強敵回應
+message SingleBossResp{
+	//動作
+	required int32 action = 1; // 0.同步成就資訊 1.成就領獎 2.同步排行榜資訊
+	// 成就任務
+	repeated SingleBossQuest questInfo = 2;
+	// 關卡資訊
+	optional SingleBossData baseInfo = 3; // action2.同步關卡資訊
+	// 排行榜
+	optional SingleBossRanking rankingInfo = 4; // action3.同步排行榜資訊
+}
+
+// 已經爆了不要加了

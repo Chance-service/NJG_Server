@@ -1,0 +1,126 @@
+option java_package = "com.guaji.game.protocol";
+
+
+import "Battle.proto";
+import "Reward.proto";
+
+
+/*** 爬塔模块协议 （xpf） ***/
+
+message ClimbingTowerItemInfo
+{
+	//身份id
+	required int32 cfgItemId = 1;
+	// 玩家Id 
+	optional int32 playerId = 2;
+	// 角色等级
+	required int32 level = 3; 
+	// 角色名
+	required string name = 4;
+	// 职业
+	required int32 prof = 5;
+	// 排名
+	required int32 rank = 6;
+	// 角色战斗力
+	required int32 fightValue = 7;
+	// 历史最高星数
+	required int32 historicHighStar=8;
+	//主角avatar ID
+	optional int32 headIcon = 9;
+}
+
+message PassLayerItemInfo
+{
+   //所属关数
+   required int32 layerId 	 = 1;
+   //通关获取星数
+   required int32 star   	 = 2;
+   //挑战多少次数通关
+   required int32 challTimes = 3;
+}
+
+message ClimbingTowerPlayerInfo
+{
+	//当前挑战累计星数
+	required int32  totalStar =1;
+	//当前所在层数
+	required PassLayerItemInfo curLayer  =2;
+	//历史最高星数
+	required int32 historicHighStar    =3;
+	//当前天重置次数
+	required int32 todayResetTimes     =4;
+	//扫荡次数
+	required int32 sweepTimes	  =5;
+	//已通关的信息
+	repeated PassLayerItemInfo passLayers=6;
+	// 扫荡剩余时间
+	required int32 sweepTimeRemain=7;
+}
+
+
+// 爬塔信息排行榜返回
+message HPClimbingTowerListSyncS
+{
+	// 主角爬塔信息
+	required ClimbingTowerItemInfo self = 1;
+	// 爬塔信息列表
+	repeated ClimbingTowerItemInfo ranks = 2;
+}
+
+// 爬塔扫荡返回
+message HPClimbingTowerSweepSyncS
+{
+	// 扫荡关卡列表
+	repeated int32 sweepLayer=1;
+	// 扫荡至某关终止
+	required int32 stopLayer=2;
+	// 扫荡剩余时间
+	required int32 timeRemain=3;
+}
+
+
+message HPClimbingTowerChallengeRet
+{
+	// 挑战结果（1 lose 2 win）
+	required int32 challengeResult = 1;
+	// 战斗信息
+	required BattleInfo battleInfo=2;
+	// 当前层
+	required int32 curLayer=3;
+	//挑战奖励
+	optional RewardInfo reward=4;
+	// 挑战次数
+	required int32 challengeNum=5;
+}
+
+
+// 爬塔信息请求
+message HPClimbingTowerInfoReq
+{
+
+}
+
+// 爬塔排行榜请求
+message HPClimbingTowerListReq
+{
+
+}
+
+// 爬塔挑战请求
+message HPClimbingTowerChallengeReq
+{
+	// 挑战的层数
+	required int32 challengeLayer = 1;
+}
+
+// 爬塔扫荡请求
+message HPClimbingTowerSweepReq
+{
+
+}
+// 爬塔重置请求
+message HPClimbingTowerResetReq
+{
+
+}
+

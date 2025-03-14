@@ -1,0 +1,108 @@
+option java_package = "com.guaji.game.protocol";
+
+import "Const.proto";
+
+// 玩家排行信息
+message RankItemInfo {
+	// 玩家名
+	required string playerName = 1;
+	// 玩家等级
+	required int32 level = 2;
+	// 公会编号
+	required int32 allianceId = 3;
+	// 公会名
+	optional string allianceName = 4;
+	// 排名
+	required int32 rankNum = 5;
+	// 职业
+	required int32 prof = 6;
+	// 职业
+	required int32 headIcon = 7;
+	// 玩家Id
+	required int32 playerId = 8;
+	// 玩家转生阶段
+	optional int32 rebirthStage = 9;
+	// 个人签名
+	required string signature = 10;
+	// 排行数据
+	required int32 rankData = 11;
+	
+}
+
+
+// 公会排行榜信息
+message AllianceItemInfo {
+	// 公会编号
+	required int32 allianceId = 1;
+	// 公会名称
+	required string allianceName = 2;
+	// 公会数等级
+	required int32 level = 3;
+	// 排名
+	required int32 rankNum = 4;
+	// 人数
+	required int32 memberNum = 5;
+	// 加入公会所需战力
+	required int32 limitJoin = 6;
+	// 是否需要盟主许可 0.不需要 1.需要
+	required int32 checkLeaderMail = 7;
+	// 排行数据
+	required int64 rankData = 8;
+	// 最大人数
+	required int32 maxMember = 9;
+
+}
+
+
+// 获取排行请求
+message HPTopRankListGet {
+	// 排行榜类型
+	required int32 rankType= 1;
+}
+//获取排行榜返回
+message HPTopRankListRet {
+	// 主类型
+	required RankType rankType= 1;
+	// 玩家排行榜数据
+	repeated RankItemInfo playerItemInfo = 2;
+	// 帮会排行榜数据
+	repeated AllianceItemInfo allianceItemInfo = 3;
+	// 自己排名信息
+	optional RankItemInfo mySelf=4;
+	// 自己帮会信息
+	optional AllianceItemInfo mySelfAlliance=5;
+}
+
+
+
+// 英雄排行信息
+message HPHeroRankInfo {
+	// 玩家名
+	required string playerName = 1;
+	// 玩家Id
+	required int32 playerId = 2;
+	// 公会名
+	optional string allianceName = 3;
+	// 英雄ItemId
+	required int32 itemId = 4;
+    // 皮膚
+	required int32 skinId = 5;
+	// 英雄等級
+	required int32 level = 6;
+	// 英雄星等
+	required int32 starLevel = 7;
+	// 排名
+	required int32 rankNum = 8;
+	// 排行数据
+	required int32 rankData = 9;
+}
+
+message HeroTopRankListRet {
+	// 主类型
+	required RankType rankType= 1;
+	// 玩家排行榜数据
+	repeated HPHeroRankInfo HeroItemInfo = 2;
+	// 玩家英雄排名信息
+	optional HPHeroRankInfo mySelf=4;
+}
+

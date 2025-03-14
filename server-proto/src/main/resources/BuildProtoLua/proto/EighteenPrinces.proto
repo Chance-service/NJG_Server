@@ -1,0 +1,227 @@
+option java_package = "com.guaji.game.protocol";
+
+
+import "Battle.proto";
+import "Reward.proto";
+
+// 协战记录请求
+message HPEighteenPrincesHelpHistoryReq
+{
+
+}
+
+message HelpHistoryItemInfo
+{
+	required int64 historyId = 1;
+	required int32 helpTime = 2;
+	required string name = 3;
+	required int32 level = 4;
+	required int32 prof  = 5;
+	required int32 headIcon = 6;
+	// 第几次协战用于对应奖励
+	required int32 helpCount = 7;
+	// 1 已领取 0 未领取
+	required int32 isGet = 8;
+}
+
+// 协战记录返回
+message HPEighteenPrincesHelpHistoryRet
+{
+	required int32 todayCount = 1;
+	repeated HelpHistoryItemInfo historyInfos = 2;
+}
+
+// 协战奖励请求
+message HPEighteenPrincesHelpRewardReq
+{
+	required int64 historyId = 1;
+}
+
+// 协战一键领奖请求
+message HPEighteenPrincesOneKeyAwardReq
+{
+}
+
+// 协战奖励请求
+message HPEighteenPrincesHelpRewardRet
+{
+	//1成功 0 失败
+	required int64 result 	 = 1;
+	repeated int64 historyId = 2;
+}
+
+
+// 十八路诸侯关卡信息请求
+message HPEighteenPrincesLayerInfoReq
+{
+	
+}
+
+// 十八路诸侯关卡信息返回
+message HPEighteenPrincesLayerInfoRet
+{
+	required int32 layerId = 1;
+	// 三种状态 2 已通关  1 可挑战 0 未开放
+	required int32 layerStatus = 2;
+	required int32 isFirstBattle = 3;
+	// 各关卡对应的战力
+	repeated int32 fightvalue = 4;
+}
+
+message HelpItemInfo
+{
+	// 玩家id
+	required int32 playerId = 1;
+	// 玩家名称
+	required string name = 2;
+	// 战力
+	required int32 fightValue = 3;
+	// 角色等级
+	required int32 level = 4; 
+	// 角色ID
+	required int32 roleItemId = 5;
+	// 剩余次数
+	required int32 leftCount = 6;
+	// 是否可以使用 1 使用过且未死亡 0 使用过血量为0或从未使用过
+	optional int32 isCanUse = 7;
+}
+
+// 请求协战列表
+message HPEighteenPrincesHelpListReq
+{
+	
+}
+
+// 请求协战列表返回
+message HPEighteenPrincesHelpListRet
+{
+	repeated int32 		  playerId=1;
+	repeated HelpItemInfo infos   =2;
+}
+
+// 修改协战武将
+message HPEighteenPrincesChangeHelpReq
+{
+	required int32 friendId = 1;
+}
+
+// 修改协战武将返回
+message HPEighteenPrincesChangeHelpRet
+{
+	required int32 friendId = 1;
+	// 挑战结果（1 成功 0 失败）
+	required int32 result   = 2;
+}
+
+// 布阵请求
+message HPEighteenPrincesFormationReq
+{
+	repeated int32 roleItemId = 1;
+}
+
+// 布阵返回
+message HPEighteenPrincesFormationRet
+{
+	required bool result = 1;
+}
+
+// 使用物品请求
+message HPEighteenPrincesUseMedicalReq
+{
+	// 医疗箱类型
+	required int32 type = 1;
+	// 数量
+	required int32 count = 2;
+}
+
+// 使用物品返回
+message HPEighteenPrincesUseMedicalRet
+{
+	required bool result = 1;
+	
+}
+
+
+
+// 十八路诸侯挑战请求
+message EighteenPrincesChallengeReq
+{
+	// 挑战的层数
+	required int32 challengeLayer = 1;
+}
+
+// 十八路诸侯挑战返回
+message EighteenPrincesChallengeRet
+{
+	// 挑战结果（1 lose 2 win）
+	required int32 challengeResult = 1;
+	// 战斗信息
+	required BattleInfo battleInfo=2;
+	// 当前层
+	required int32 curLayer		=3;
+	// 协战玩家数据
+	optional HelpItemInfo helpItem=4;
+	//挑战必掉奖励
+	optional RewardInfo mustReward=5;
+	//挑战随机奖励
+	optional RewardInfo randReward=6;
+}
+
+// 请求协战列表返回
+message HPPlayerHelpMercenaryRet
+{
+	repeated HelpItemInfo helpMercenary = 1;
+}
+
+message MercenaryInfo
+{
+	//协战武将魔法剩余百分比
+	required double mp =1;
+	//协战武将血量剩余百分比
+	required double hp =2;
+	//玩家编号
+	required int32 playerId =3;
+	//玩家名称
+	required string playerName =4;
+	// 战斗信息
+	required int32 itemId=5;
+	// 当前层
+	required int32 level=6;
+}
+
+message HPEighteenPrincesFormationInfoReq
+{
+}
+
+message HPEighteenPrincesFormationInfoRet
+{
+	repeated MercenaryInfo helpItem = 1;
+	//玩家当前上阵武将数据
+	repeated MercenaryInfo roleItem = 2;
+	//玩家历史上阵武将数据
+	repeated MercenaryInfo historyItem = 3;
+	//玩家历史上阵武将数据
+	repeated MercenaryInfo historyHelpItem = 4;
+}
+
+message MedicalKitItem{
+	required int32 type =1;
+	required int32 count=2;
+}
+message HPSyncMedicalKitInfoRet
+{
+	repeated MedicalKitItem item=1;
+}
+message HPEighteenPrincesRewardNotice
+{
+	required int32 isShow=1;
+}
+
+message HPEighteenPrincesDoubleBuyReq
+{
+}
+message HPEighteenPrincesDoubleBuyRet
+{
+	//玩家历史上阵武将数据(1 成功  0 失败)
+	required int32 result =1;
+}

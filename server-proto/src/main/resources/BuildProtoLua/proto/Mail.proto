@@ -1,0 +1,115 @@
+option java_package = "com.guaji.game.protocol";
+
+import "Reward.proto";
+import "Battle.proto";
+
+enum MailType
+{
+	// 普通
+	Normal = 1;
+	// 奖励
+	Reward = 2;
+	// 战报
+	Battle = 3;
+	// 竞技记录(邮箱里的-只有自己排名下降的)
+	ARENA = 4;
+	// 竞技记录(竞技场里的-所有挑战与被挑战都会记录)
+	ARENA_ALL = 5;
+	// 多人副本
+	MULTI_ELITE = 6;
+	// GVG邮件
+	GVG_MAIL = 7;
+}
+
+message MailInfo
+{
+	required int32 id = 1;
+	required MailType type = 2;
+	required string title = 3;
+	// 取文字的模板Id
+	required int32 mailId = 4;
+	repeated RewardItem item = 5;
+	optional string content = 6;
+	//单位是S
+	optional int32 createTime = 7;
+	//参数列表
+	repeated string params = 8;
+	// 邮件大分类 1 是普通 2 是系统
+	optional int32 mailClassify = 9;
+	// 自定义邮件参数（json）
+	optional string passthroughParams = 10;
+}
+
+message OPMailInfo
+{
+	required int32 version = 1;
+}
+
+message OPMailInfoRet
+{
+	repeated MailInfo mails = 1;
+	required int32 version = 2;
+    // 系統刪除信件
+    repeated int32 delmail =3;
+}
+
+message OPMailGet
+{
+	required int32 id = 1;
+	// type 为 0 表示 没有类型 1 表示删除所有 2 表示领取所有奖励
+	optional int32 type = 2;
+	optional int32 mailClassify = 3;
+}
+
+message OPMailGetRet
+{
+	required int32 id = 1;
+	// type 为 0 表示 没有类型 1 表示删除所有 2 表示领取所有奖励
+	optional int32 type = 2;
+	optional int32 mailClassify = 3;
+}
+
+message TbPlayerInfo
+{
+	required int32 playId = 1;
+	required string name = 2;
+	required int32 killCount = 3;
+	required int32 record = 4;
+}
+
+message TbPlayerVSInfo
+{
+	optional TbPlayerInfo leftPlayer = 1;
+	optional TbPlayerInfo rightPlayer = 2;
+}
+
+message TeamRoundInfo
+{
+	required int32 roundId = 1;
+	required bool isWin = 2;
+	required string leftTeamName = 3;
+	required string rightTeamName = 4;
+	repeated TbPlayerVSInfo vsInfo = 5;
+}
+
+message OPMailViewTeam
+{
+	required string teamId = 1;
+}
+
+message OPMailViewTeamRet
+{
+	required int32 version = 1;
+	repeated TeamRoundInfo rounds = 2;
+}
+
+message MEMailViewBattle
+{
+	//params中的战斗Id
+	required int32 battleId = 1;
+}
+message MEMailViewBattleRet
+{
+	//多人副本战斗录像
+	required BattleInfo battleInfo = 1;
+}

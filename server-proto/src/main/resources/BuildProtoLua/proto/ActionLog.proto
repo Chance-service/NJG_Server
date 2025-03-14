@@ -1,0 +1,27 @@
+option java_package = "com.guaji.game.protocol";
+
+// S -> C 任务信息反馈
+message HPActionLog
+{
+	required int32 actionType = 1; //行为类型
+	required string androidKey = 2; //行为类型
+	required string iosKey = 3; //行为类型
+	optional int32 count = 4; //可选参数，根据不同行为定义
+	
+}
+
+// C -> S “点击曝光”打点需求
+message HPActionRecord
+{
+	required int32 activityId = 1; //活动id
+	required int32 actionType= 2; //行为类型
+	
+}
+
+
+
+
+
+
+
+

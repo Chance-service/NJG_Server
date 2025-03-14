@@ -1,0 +1,21 @@
+option java_package = "com.guaji.game.protocol";
+
+
+message TitleInfo{
+//全部获得的
+	repeated int32 titleIds = 1;
+	//当前称号已用称号Id，0是没有称号
+	required int32 titleId = 2;
+}
+//同步称号信息
+message HPTitleInfoSyncS
+{
+	required TitleInfo titleInfo = 1;
+	optional int32 titleChanged = 2;
+}
+
+//选择称号
+message ChooseTitleId
+{
+	required int32 titleId = 1;
+}

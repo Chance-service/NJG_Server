@@ -1,0 +1,70 @@
+option java_package = "com.guaji.game.protocol";
+
+message RewardItem
+{
+	required int32 itemId = 1;
+	required int32 itemType = 2;
+	required int64 itemCount = 3;
+	//预留位，目前1代表神器，不传代表正常装备
+	optional int32 itemStatus = 4; 
+}
+
+
+message RewardInfo
+{
+	// 数值型为同步数据
+	// 钻石
+	optional int32 gold = 1;
+	// 金币
+	optional int64 coin = 2;
+	// 等级
+	optional int32 level = 3;
+	// 经验
+	optional int64 exp = 4;
+	// vip等级
+	optional int32 vipLevel = 5;
+	// 熔炼值
+	optional int32 smeltValue = 6;
+	// 公会贡献值
+	optional int32 contribution = 7; 
+	// boss挑战次数
+	optional int32 bossFightTimes = 8; 
+	// 荣誉值
+	optional int32 honorValue = 9;
+	// 声望值
+	optional int32 reputationValue = 10;
+	// 显示奖励
+	repeated RewardItem showItems = 11;
+		// 水晶
+	optional int32 crystalValue = 12;
+    // 多人副本挑战次数
+	optional int32 multieliteTimes = 13; 
+}
+
+//奖励类型
+enum RewardType
+{
+	// 魔王宝藏
+	PRINCE_DEVILS_TYPE = 1;
+}
+
+message HPPlayerReward
+{
+	optional int32 flag = 1;
+	optional RewardInfo rewards = 2;
+	optional int32 rewardType = 3;
+}
+
+message HPFetchGift
+{
+	required int32 giftId = 1;
+}
+
+message HPJPActivityStatusRet
+{
+	required int32 jPActivityStatus = 1;  //1:活动开启,0:活动关闭
+}
+
+
+
+

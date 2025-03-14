@@ -1,0 +1,152 @@
+option java_package = "com.guaji.game.protocol";
+
+// 阵营战状态
+enum CampStateType
+{
+	// 未开放状态
+	CAMP_WAR_CLOSED = 1;
+	// 阵营战准备状态,7:50 - 8:00
+	CAMP_WAR_PREPARE = 2;					
+	// 战斗状态,8:00 - 8:30
+	CAMP_WAR_FIGHT= 3;
+	// 战斗结束，展示结果用 8：30-8:40
+	CAMP_WAR_SHOW_RESULT= 4;
+}
+
+// 阵营战主页面信息
+message CampMainInfo
+{
+	required int32 state = 1; // 参见CampStateType
+	required int32 leftTime = 2; // 未开始和已开始都用这个时间
+	required int32 isAuto = 3; // 当前是否自动挂机
+	required int32 isJoin = 4; // 当前是否已加入战场
+}
+
+// 阵营战状态同步
+message HPCampWarStateSyncS
+{
+	required CampMainInfo mainInfo = 1;
+}
+
+// 单个连杀排名信息
+message MultiKillRankInfo
+{	
+	// 连杀排名
+	required int32 rank = 1;
+	// 玩家id
+	required int32 playerId = 2;
+	// 角色配置id，用于获取头像，职业信息
+	required int32 roleItemId = 3;
+	// 玩家名
+	required string playerName = 4;
+	// 连杀数量
+	required int32 multiKillQty = 5;
+	// 所属阵营
+	required int32 campId = 6;
+	// 获得声望
+	optional int32 reputation = 7;
+}
+
+// 单个阵营信息 
+message CampInfo
+{
+	// 阵营Id
+	required int32 campId = 1;//1 表示左边的蓝色阵营（blue），2表示右边红色阵营（red）
+	// 总积分
+	required int32 totalScore = 2;
+}
+
+// 个人阵营战信息
+message PersonalCampWarInfo
+{
+	// 当前剩余血量
+	required int32 curRemainBlood = 1;
+	// 当前血量上限
+	required int32 curMaxBlood = 2;
+	// 已鼓舞次数
+	required int32 inspireTimes = 3;
+	// 当前鼓舞加成
+	required int32 bonuses = 4;
+	// 最大连胜
+	required int32 maxWinStreak = 5;
+	// 当前连胜
+	required int32 curWinStreak = 6;
+	// 总胜场
+	required int32 totalWin = 7;
+	// 总败场
+	required int32 totalLose = 8;
+	// 获得总声望
+	required int32 totalReputation = 9;
+	// 获得总金币
+	required int32 totalCoins = 10;
+	// 所属阵营
+	required int32 campId = 11;//1 表示左边的蓝色阵营，2表示右边红色阵营
+}
+
+// 战报类型定义
+enum reportType 
+{
+	CONTINUE_WIN_TYPE = 1;//连胜
+	END_WIN_TYPE = 2;//终结
+	PERSONAL_WIN_TYPE = 3;//个人胜利
+	PERSONAL_LOSE_TYPE = 4;//个人失败
+}
+
+// 战报参数实体
+message CampReportInfo
+{
+	// 阵营战战报类型
+	required int32 reportType = 1;
+	// 参数数量
+	required int32 argsNum = 2;
+	// 参数字符
+	repeated string argString = 3;
+	// 先手方阵营Id
+	optional int32 campId = 4;
+}
+
+// 请求阵营战二级页面
+message HPCampWarInfo
+{
+	
+}
+
+// 阵营战信息同步
+message HPCampWarInfoSyncS
+{
+	// 阵营战剩余时间
+	required int32 campRemainTime = 1;
+	// 阵营信息
+	repeated CampInfo campInfo = 2;
+	// 个人状态
+	required PersonalCampWarInfo personalState = 3;
+	// 连杀排行信息
+	repeated MultiKillRankInfo rankInfo = 4;
+	// 战报信息增量
+	repeated CampReportInfo campReportInfo = 5;
+}
+
+// 鼓舞
+message HPInspireCampWar
+{
+}
+
+// 上次阵营战排行数据同步
+message HPLastCampWarRankInfoSyncS
+{
+	// 获胜方阵营Id
+	required int32 winCampId = 1;
+	// 连杀排行信息
+	repeated MultiKillRankInfo rankInfo = 2;
+	// 昨日挂机声望
+	required int32 hangReputation = 3;
+	// 昨日挂机金币
+	required int32 hangGold = 4;
+}
+
+// 进入战场回复协议
+message HPEnterBattleFieldRet
+{
+	// 是否进入成功
+	required bool isEnterSucc = 1;
+}

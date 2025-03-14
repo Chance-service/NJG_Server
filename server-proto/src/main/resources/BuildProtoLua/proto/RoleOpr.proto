@@ -1,0 +1,208 @@
+option java_package = "com.guaji.game.protocol";
+
+import "Const.proto";
+
+//角色洗属性
+message HPRoleBaptize
+{
+	required int32 roleId = 1;
+	// 洗炼方式  1.英雄等级 * 500 2.20钻石 3.60钻石 4.200钻石
+	required int32 type = 2;
+	// 是否使用材料
+	required bool isUseGoods = 3;
+}
+
+message HPRoleBaptizeRet
+{
+	required int32 roleId = 1;
+
+	repeated int32 values = 2;
+	
+	optional int32 sucessTimes = 3;
+}
+message HPRoleMaxAttribute
+{
+	required int32 roleId = 1;
+}
+message HPRoleMaxAttributeRet
+{
+	repeated int32 values = 2;
+}
+message HPRoleAttrReplace
+{
+	required int32 roleId = 1;
+}
+
+message HPRoleAttrReplaceRet
+{
+	required int32 roleId = 1;
+}
+
+//出战
+message HPRoleFight
+{
+	required int32 roleId = 1;
+}
+
+//新手引导
+message HPNewGuideStep 
+{
+	required int32 stepId = 1;
+}
+
+// 佣兵状态信息
+message HPRoleInfo
+{
+	// DB索引
+	required int32 roleId = 1;
+	// roletype 2.英雄 4.精靈
+	required int32 type = 2;
+	// 0 未激活  1激活 2可激活
+	required RoleActiviteState roleStage = 3;
+	// 已拥有材料数量
+	required int32 soulCount = 4;
+	// 总共扣除材料数量
+	required int32 costSoulCount = 5;
+	// 表格索引
+	required int32 itemId = 6;
+	//出战状态
+	required int32 status = 7;
+	// 戰力
+	required int32 fight = 8;
+	//使用皮膚編號
+	required int32 skinId =9;
+}
+
+// 佣兵激活(雇佣)
+message HPRoleEmploy
+{
+	required int32 roleId = 1;
+}
+
+// 佣兵激活信息列表
+message HPRoleInfoRes
+{
+	repeated HPRoleInfo roleInfos = 1;
+	required int32 roleCount = 2;
+}
+
+// 大暴击，小暴击
+message HPRoleUpStarCritInfo
+{
+	// 暴击率
+	required int32 crit = 1;
+	// 经验
+	required int32 addExp = 2;
+}
+
+// 英雄升等回傳
+message HPRoleUPLevelRes{
+	required int32 roleId = 1;
+	required int32 newLv = 2;
+}
+
+message HPRoleUPStarRes{
+	required int32 roleId = 1;
+	required int32 newStar = 2;
+}
+
+//英雄覺醒回傳
+message HPRoleAwakeRes{
+	required int32 roleId = 1;
+	required int32 newLv = 2;
+}
+
+//单个佣兵收集信息
+message ArchiveItem
+{
+	required int32 roleId 		= 1;//佣兵ID
+	required bool activated		= 2;//是否激活
+	optional int32 soulCount 	= 3;//当前收集的碎片数目
+}
+// 佣兵收集信息返回
+message HPArchiveInfoRes
+{
+	required int32 playerId		= 1;//玩家ID
+	repeated ArchiveItem items 	= 2;//收集数据（所有已投放的佣兵）
+	repeated int32 openFetters 	= 3;//开启的羁绊（只有查看自己的数据时,该字段才有意义）
+    repeated int32 star = 4;//羈絆等級
+}
+//获取其它玩家佣兵收集信息
+message HPFetchOtherArchiveInfoReq
+{
+	required int32 playerId	= 1;//玩家ID
+}
+//开启羁绊
+message HPOpenFetterReq
+{
+	required int32 fetterId	= 1;//羁绊ID
+}
+
+//开启羁绊返回
+message HPOpenFetterRes
+{
+	required int32 fetterId	= 1;//羁绊ID
+}
+
+//切换佣兵皮肤
+message HPChangeMercenarySkinReq
+{
+	required int32 fromRoleId	= 1;//角色ID
+	required int32 toRoleId		= 2;//皮膚ID
+}
+
+//切换皮肤返回
+message HPChangeMercenarySkinRes
+{
+	required int32 fromRoleId	= 1;//角色ID
+	required int32 toRoleId		= 2;//皮膚ID
+}
+
+message AvatarInfo
+{
+	required int32 id 		= 1;//唯一ID
+	required int32 avatarId = 2;//配置ID
+	required bool checked 	= 3;//是否查看
+	required int64 endTime 	= 4;//失效时间
+}
+
+//获取当前拥有的主角Avatar信息返回
+message HPMainRoleAvatarInfoRes
+{
+	required int32	usedId			= 1;//当前使用的avatar ID
+	repeated AvatarInfo avatars		= 2;//当前拥有的avatar
+}
+
+//查看主角Avatar
+message HPCheckMainRoleAvatarReq
+{
+	required int32 id		= 1;//唯一ID，不是配置的ID
+}
+
+//查看主角Avatar返回
+message HPCheckMainRoleAvatarRes
+{
+	required int32 id		= 1;//唯一ID，不是配置的ID
+}
+
+//更换主角Avatar
+message HPChangeMainRoleAvatarReq
+{
+	required int32 id		= 1;//唯一ID，不是配置的ID
+}
+
+//更换主角Avatar返回
+message HPChangeMainRoleAvatarRes
+{
+	required int32 id		= 1;//唯一ID，不是配置的ID
+}
+// 重置英雄等級
+message HPHeroLevelResetReq
+{
+	required int32 id		= 1;//唯一ID，不是配置的ID
+}
+// 回傳
+message HPHeroLevelResetRes
+{
+	required int32 id		= 1;//唯一ID，不是配置的ID
+}

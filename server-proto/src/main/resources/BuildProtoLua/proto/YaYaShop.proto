@@ -1,0 +1,24 @@
+option java_package = "com.guaji.game.protocol";
+
+//商场消费
+message HPYaYaShop
+{
+	required string puid=1;// puid
+	required string transactionId=2;// 流水号
+	required string goodsId=3;// 商品id
+	required string goodsName=4;// 商品名称
+	required int32 goodsPrice=5;// 商品单价
+	required int32 goodsCount=6;// 商品数量
+	required int32 totalPrice=7;// 商品总价
+	required string currency= 8;// 货币类型
+	optional int32 serverId=9;// 服务器id
+}
+
+//商场消费回复
+message HPYaYaShopRet
+{
+	required int32  result = 1;//0表示成功，9表示余额不足
+	optional string msg = 2;//失败书返回错误消息
+	optional int64 balance = 3;//成功时返回扣费后余额
+}
+

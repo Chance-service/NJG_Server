@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.server.canceluser.mapper.QueryInfoMapper">
+	<!-- 订单数据 -->
+	<resultMap type="com.server.canceluser.pojo.QueryInfo" id="queryInfo">
+		<id property="id" column="id"/>
+		<result property="userid" column="userid"/>
+		<result property="inserttime" column="inserttime"/>
+	</resultMap>
+	<!-- 自动订阅订单数据 -->
+	<resultMap type="com.server.canceluser.pojo.AutoSubPayOrder" id="autoSubOrder">
+		<id property="id" column="id"/>
+		<result property="orderId" column="orderId"/>
+		<result property="orderNum" column="orderNum"/>
+		<result property="checkData" column="checkData"/>
+		<result property="expirDate" column="expirDate"/>
+		<result property="sdkChannel" column="sdkChannel"/>
+		<result property="status" column="status"/>
+	</resultMap>
+	<select id="queryByUserId" parameterType="java.lang.String" resultMap="queryInfo">
+		select * from t_cancel_user_queryinfo where userid = #{userid}
+	</select>
+	<insert id="insertQueryInfo" parameterType="java.lang.String">
+		insert ignore into t_cancel_user_queryinfo (userid,inserttime) values (#{userid},now()) on duplicate key update inserttime = now()
+	</insert>
+</mapper>

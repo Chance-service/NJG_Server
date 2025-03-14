@@ -1,0 +1,31 @@
+option java_package = "com.guaji.game.protocol";
+
+//公會魔典要求
+message GuildBuffReq 
+{
+	//0.同步資訊 1.升級小天賦 2.重置職業小天賦
+	required int32 action = 1;
+	//action 1.欲升級天賦id ,action 2.欲重置職業id
+	optional int32 id = 2;
+}
+
+//魔典天賦資訊
+message TalentBuffInfo
+{
+	// 天賦ID 10為例 1十位數為職業代號 0為大天賦 1-6為小天賦
+	required int32 id = 1;
+	// 等級
+	required int32 lv = 2;
+}
+
+//公會魔典回傳
+message GuildBuffRes
+{
+	//回應 0.同步資訊
+	required int32 action = 1;
+	// 是否已使用免費重置
+	required bool freeReset = 2;
+	// 天賦資訊 action 0.所有資訊 action 1 升級的小天及該職業大天賦更新資訊
+	repeated TalentBuffInfo TBInfo = 3; 
+}
+

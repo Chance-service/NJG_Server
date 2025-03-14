@@ -1,0 +1,376 @@
+option java_package = "com.guaji.game.protocol";
+
+import "Battle.proto";
+
+//GVG游戏进行阶段
+enum GVGStatus
+{
+	//宣战期
+	GVG_STATUS_PREPARE = 1;
+	//战斗期
+	GVG_STATUS_FIGHTING = 2;
+	//结算闲置期
+	GVG_STATUS_ENDING = 3;
+	//筹备期
+	GVG_STATUS_WAITING = 4;
+	//
+	GVG_STATUS_AWARD   = 5;
+}
+
+//GVG城市状态
+enum CityStatus
+{
+	//被宣战
+	CITY_STATUS_DECLARED = 1;
+	//可宣战
+	CITY_STATUS_NORMAL = 2;
+	//战斗中
+	CITY_STATUS_FIGHTING = 3;
+	//闲置不可操作
+	CITY_STATUS_FORBIDDEN = 4;
+	// 可被反攻
+	CITY_STATUS_REATTACK = 5;
+	CITY_STATUS_OCCUPY=6;
+}
+
+//复活点状态
+enum RevivePosStatus
+{
+	//被占领
+	REVIVEPOS_STATUS_OCCUPY=1;
+	//空闲
+	REVIVEPOS_STATUS_FREE  =0;
+}
+
+//佣兵状态
+enum RoleStatus
+{
+	//进攻队列等待中
+	ATTACKER_STATUS_DEF = 1;
+	//防守队列等待中
+	DEFENDER_STATUS_DEF = 2;
+	//闲置中
+	ROLE_STATUS_NORMAL = 3;
+}
+
+//地图公会信息
+message GuildInfo{
+	//公会Id
+	required int32 guildId = 1;
+	//工会名字
+	required string name = 2;
+}
+
+//城市数据
+message CityInfo{
+	//城市Id
+	required int32 cityId = 1;
+	//状态（是否被宣战等）
+	required CityStatus status = 2;
+	// 城池持有者
+	optional GuildInfo defGuild = 3;
+	// 城池被宣战者
+	optional GuildInfo atkGuild = 4;
+	// 防御者队伍数量
+	optional int32 defTeamNum = 5;
+	// 可反攻公会Id
+	optional int32 reAtkGuildId = 6;
+	// 反攻剩余时间
+	optional int64 fightbackTime = 7;
+	// 是否是反攻城市
+	required bool isReAtk = 8;
+}
+
+
+// 城池战况
+message CityBattleRecord{
+	//城池Id
+	required int32 cityId = 1;
+	//城池进攻者
+	required string atkName = 2;
+	//城池持有者
+	optional string defName = 3;
+	//是否进攻方获胜
+	required int32 isAtkWin = 4;
+	//是否是反攻
+	optional bool isReAtk = 5;
+}
+
+// 地图数据
+message MapInfoResponse {
+	//当前GVG状态（宣战期、战斗期等）
+	required GVGStatus status = 1;
+	//城市列表
+	repeated CityInfo citys = 2;
+	//城池战况(7天内最多50条)
+	repeated CityBattleRecord records = 3;
+	//服务器当前时间同步
+	optional int64 currentTime = 4;
+	//筹备器剩余时间
+	optional int64 waitSuplyTime = 5;
+}
+
+//报名队伍信息
+message TeamInfo{
+	//队伍动态Id
+	optional int32 teamId = 1;
+	//玩家Id
+	optional int32 playerId = 2;
+	//玩家名字
+	optional string playerName = 3;
+	//玩家等级
+	optional int32 playerLevel = 4;
+	//玩家转生数
+	optional int32 rebirthStage = 5;
+	//战斗力
+	optional int32 fightNum = 6;
+	//城市ID
+	optional int32 cityId = 7;
+	//报名副将模板ID
+	repeated int32 roleIds = 8;
+}
+
+// 城池队伍列表请求
+message CityTeamRequest{
+	//城市Id
+	required int32 cityId = 1;
+}
+
+// 城池队伍列表返回数据
+message CityTeamResponse{
+	//城市ID
+	required int32 cityId = 1;
+	//驻防列表
+	repeated TeamInfo teams = 2;
+}
+
+//玩家本人所有报名队伍列表
+message PlayerTeamListResponse{
+	//数量
+	required int32 number = 1;
+	//所有队伍列表
+	repeated TeamInfo teams = 2;
+}
+
+//调整城池防守列表顺序
+message ChangeDefenceOrderRequest{
+	//城市Id
+	required int32 cityId = 1;
+	//被调整的队伍Id
+	required int32 oldTeamId = 2;
+	required int32 newTeamId = 3;
+}
+
+//调整城池防守列表顺序
+message ChangeDefenceOrderResponse{
+	//调整顺序结果
+	required int32 result = 1;
+}
+
+// 佣兵GVG信息
+message GvgRoleInfo{
+	//佣兵实例Id
+	required int32 roleId = 1;
+	//佣兵状态
+	required RoleStatus status = 2;
+	//当前行动力
+	required int32 energy = 3;
+	//快照战力
+	optional int32 fightNum = 4;
+}
+
+// 玩家本人佣兵信息列表
+message PlayerRoleListResponse{
+	//佣兵列表
+	repeated GvgRoleInfo roles = 1;
+}
+
+// 单个元气排行
+message VitalityRank {
+	// 名次
+	required int32 rank = 1;
+	// 公会ID
+	required int32 id = 2;
+	// 公会等级
+	required int32 level = 3;
+	// 公会名称
+	required string name = 4;
+	// 公会元气值
+	required int32 value = 5;
+	// 会长名
+	required string masterName = 6;
+}
+
+// 元气排行数据
+message VitalityRanksResponse {
+	repeated VitalityRank ranks = 1;
+	required int32 rankCount = 2;
+}
+
+// 单个公会排名信息
+message AllianceRankItem{
+	// 名次
+	required int32 rank = 1;
+	// 公会ID
+	required int32 id = 2;
+	// 公会名称
+	required string name = 3;
+	// 帮会等级
+	required string level = 4;
+	// 帮主名称
+	required string masterName = 5;
+	// 积分
+	required int32 score = 6;
+	// 占领城池信息
+	required string holdCityInfo=7;
+}
+// 赛季排行
+message SeasonRankingsResponse {
+	repeated AllianceRankItem ranks = 1;
+	required int32 rankCount = 2;
+}
+ 
+// 宣战(反攻)请求
+message DeclareBattleRequest {
+	// 宣战的城池ID
+	required int32 cityId = 1;
+}
+
+// 宣战(反攻)请求回传
+message DeclareBattleResponse {
+	//城市列表
+	required CityInfo citys = 1;
+}
+
+// 购买复活权
+message BuyReviveRequest {
+	// 宣战的城池ID
+	required int32 cityId = 1;
+}
+
+// 购买复活权返回
+message BuyReviveResponse {
+	//
+	required CityInfo cityInfo = 1;
+	
+}
+
+// 派遣佣兵 --- 防守和攻击
+message SendRoleRequest {
+	// 城池ID
+	required int32 cityId = 1;
+	// 佣兵实例ID
+	repeated int32 roleIds = 2;
+}
+
+// 派遣佣兵返回数据
+message SendRoleResponse {
+	// 派遣佣兵结果
+	required int32 result = 1;
+}
+
+// 公会城池奖励信息
+message CityRewardResponse{
+	// 城池税收
+	optional string reward = 1;
+	// 未领城市Id
+	repeated int32 rewardingCityIds = 2;
+	// 已领过奖的城市
+	repeated int32 rewardedCityIds = 3;
+}
+
+// 领取城池奖励
+message RewardRequest {
+	// 城池ID
+	required int32 cityId = 1;
+}
+
+//GVG状态改变推送
+message GVGStatusChange{
+	required GVGStatus status = 1;
+}
+
+//战报信息推送
+message CityBattlePush
+{
+	//发生战斗的城池Id
+	required int32 cityId = 1;
+}
+
+//战斗情况
+message CityBattleInfo
+{
+	//进攻者名称
+	required string atkName = 1;
+	//防守者名称
+	optional string defName = 2;
+	//是否进攻方获胜
+	required int32 isAtkWin = 3;
+	//连胜次数
+	optional int32 continueWin = 4;
+}
+
+//城池战斗情况请求
+message CityBattleInfoRequest
+{
+	//城池Id
+	required int32 cityId = 1;
+}
+
+//城池战斗情况列表
+message CityBattleInfoResponse
+{
+	//城池Id
+	required int32 cityId = 1;
+	//战斗情况
+	repeated CityBattleInfo battleLogs = 2;
+	//战报
+	optional BattleInfo battle = 3;
+	//进攻者名称
+	optional string attackerName = 4;
+	//防守者名称
+	optional string defenderName = 5;
+	//战报算完的时间戳
+	optional int64 battleTime = 6;
+	// 服务器当前时间同步
+	optional int64 currentTime = 7;
+}
+
+//GVG配置
+message GvgConfig
+{
+	//宣战开始时间
+	required int64 declareStart = 1;
+	//宣战结束时间
+	required int64 declareEnd = 2;
+	//征伐开始时间
+	required int64 battleStart = 3;
+	//征伐结束时间
+	required int64 battleEnd = 4;
+	//距下次赛季开启时间
+	required int64 suplyTime = 5;
+	//GVG开没开启
+	required bool isGVGOpen = 6;
+	//复活开启时间
+	required int64 reviveStartTime = 7;
+}
+
+//城池攻防队伍数量推送
+message TeamNumberPush
+{
+	//城池Id
+	required int32 cityId = 1;
+	//城池进攻队伍数量
+	required int32 atkNumbers = 2;
+	//城池防御队伍数量
+	optional int32 defNumbers = 3;
+	//时间戳(用于推送产生延时时的数据有效性校验)
+	optional int64 currentTime = 4;
+}
+
+// 所有城池攻防队伍数量
+message TeamNumberResponse
+{
+	//城池中的队伍数量
+	repeated TeamNumberPush teams = 1;
+}

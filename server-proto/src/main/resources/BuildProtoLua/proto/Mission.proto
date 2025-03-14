@@ -1,0 +1,27 @@
+option java_package = "com.guaji.game.protocol";
+
+//任务列表
+message HPMissionListC
+{
+	required int32  type = 1;//任务类型
+}
+
+//返回的任务基础信息
+message HPMissionInfo
+{
+	required int32  id = 1;//任务ID
+	required bool  tag = 2;//true可以领奖,false进行中
+	required int32  day = 3;//天数 0:无效值,其他值为天数
+}
+
+//返回任务列表
+message HPMissionListS
+{
+	repeated HPMissionInfo infos = 1;
+}
+
+//任务列表
+message HPMissionBonusC
+{
+	required int32  id = 1;//任务ID
+}

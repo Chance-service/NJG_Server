@@ -1,0 +1,33 @@
+option java_package = "com.guaji.game.protocol";
+
+message PlayerHeadIconInfoReq
+{
+}
+
+message PlayerHeadIconInfoRet
+{
+	required string  headIcon = 1;
+	repeated int32  buyIconList = 2;
+}
+
+message PlayerHeadIconBuyReq
+{
+	required int32 headIconId=1;
+}
+
+message PlayerHeadIconBuyRet
+{
+	required int32 buyIconId=1;
+	required int32 status=2;
+}
+
+message PlayerHeadIconChangeReq
+{
+	required int32 headIconId=1;
+}
+
+message PlayerHeadIconChangeRep
+{
+	required int32 changeIcon=1;
+	required int32 status=2;
+}

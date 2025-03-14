@@ -1,0 +1,45 @@
+option java_package = "com.guaji.game.protocol";
+
+message RankItemInfo
+{
+	// 职业Id 
+	required int32 cfgItemId = 1;
+	// 角色等级
+	required int32 level = 2; 
+	// 角色名
+	required string name = 3;
+	// 排名
+	required int32 rank = 4;
+	// 角色战斗力
+	required int32 fightValue = 5; 
+	//签名
+	optional string signature = 6;
+	//玩家Id
+	required int32 playerId = 7;
+	//称号
+	required int32 title = 8;
+	//公会
+	optional string allianceName = 9;
+	//公会id
+	optional int32 allianceId = 10;
+	//佣兵
+	optional int32 roleItemId = 11;
+	//转生阶段
+	optional int32 rebirthStage = 12;
+	//主角avatar ID
+	optional int32 avatarId = 13;
+	//主角头像
+	optional int32 headIcon	= 14;
+}
+
+message HPProfRankingList
+{
+	required int32 profType = 1;
+}
+
+message HPProfRankingListRet
+{
+	optional int32 selfRank = 1;
+	repeated RankItemInfo rankInfo = 2;
+	required int32 version = 3;
+}

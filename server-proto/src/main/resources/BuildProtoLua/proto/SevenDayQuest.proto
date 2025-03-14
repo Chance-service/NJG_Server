@@ -1,0 +1,92 @@
+option java_package = "com.guaji.game.protocol";
+
+//日常任务对象信息
+message QuestItemInfo
+{
+	required int32 questId     = 1;//任务Id
+	required int32 state   	   = 2;//状态 1 进行中 2 目标达成 3 奖品已领取
+	required int32 finishCount = 3;//完成目标数量
+}
+
+// C -> S 请求远征任务信息 暂为空
+message SevenDayQuestReq
+{
+}
+
+//活跃点数对应奖励
+message SevenDayPointCore
+{
+	required int32 pointNumber = 1;//成就点数目标值（对应活跃点奖励配置文件的索引key）
+	required int32 state 	   = 2;//领取状态 0 未领取  1 已领取
+}
+
+// S -> C 所有任务信息反馈
+message SevenDayQuestRep
+{
+	required int32 registerDay = 1;//已创角天数
+	required int32 surplusTime = 2;//活动剩余时间 秒数
+	required int32 hasPoint    = 3;//已经获取的活跃点数
+	required int32 awardstate  = 4;//7日后登录奖励状态
+	repeated QuestItemInfo allQuest = 5; //所有的任务信息
+	repeated SevenDayPointCore pointCore = 6;//日常任务对应奖励详情
+}
+
+
+//C->S 请求领取任务奖励  ID
+message SevenDayQuestAwardReq
+{
+	required int32 questId = 1;//任务Id
+}
+
+
+//C->S 7日后登录领奖
+message SevenDayLoginAwardReq
+{
+}
+//S->C 请求领取任务奖励  ID
+message SevenDayLoginAwardRep
+{
+	required int32 flag      = 1;//成功返回1，失败返回0
+}
+
+//C->S 请求领取任务奖励  ID
+message SevenDayQuestAwardRep
+{
+	required int32 flag      = 1;//成功返回1，失败返回0
+	required int32 questId   = 2;//任务Id
+	required int32 state   	 = 3;//任务对应的状态
+	required int32 addPoint	 = 4;//赠送的成就点数
+}
+
+
+//C->S 请求某个活跃点数的对应的奖励
+message SevenDayPointAwardReq
+{
+	required int32 pointCount = 1;//活跃点数
+}
+
+//S-C 领取活跃点数成功与否
+message SevenDayPointAwardRep
+{
+	required int32 flag = 1;//成功返回1，失败返回0
+	required int32 pointCount = 2;//成就点数
+	required int32 state = 3;//该成就点数对应奖励领取状态
+}
+
+//同步服务所有状态更新的列表
+message SyncQuestItemInfo
+{
+	repeated QuestItemInfo items=1;//所有更新的问题列表
+}
+
+
+
+
+
+
+
+
+
+
+
+

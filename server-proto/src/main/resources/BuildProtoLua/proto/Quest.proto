@@ -1,0 +1,44 @@
+option java_package = "com.guaji.game.protocol";
+
+// 获取任务列表
+message HPGetQuestList {
+	optional int32 activityId = 1;
+}
+
+message QuestInfo {
+	required int32 id = 1;
+	required int32 questState = 2;
+	required int64 finishedCount = 3;
+	required string taskRewards=4;
+}
+
+// 返回任务或者成就列表
+message HPGetQuestListRet {
+	repeated QuestInfo questList = 1;
+	// 已完成的任务或者成就id列表
+	repeated int32 finishedQuestList = 2;
+	// 新手限時任務剩餘時間
+	optional int32 leftTime = 3;
+	// 活動ID
+	optional int32 activityId = 4;
+}
+
+// 任务状态更新p
+message HPQuestUpdate {
+	required QuestInfo quest = 1;
+}
+
+// 领取单个任务奖励
+message HPGetSingeQuestReward {
+	required int32 questId = 1;
+}
+//请求红点状态信息 
+message HPGetQuestRedPointStatus{
+}
+// 返回红点状态信息 
+message HPGetQuestRedPointStatusRet{
+	required int32 mainQuestStatus = 1;//主线任务 0：没红点	1：有红点 
+	required int32 dailyQuestStatus = 2;//每日任务 0：没红点	1：有红点
+	required int32 achievementQuestStatus = 3;//成就任务 0：没红点	1：有红点
+}
+

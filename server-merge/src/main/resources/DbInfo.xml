@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<dbInfo everyCount="100" deleteCount="100">
+	<table name="player" isMerge="1" isDelete="1" >
+		<field name="id" type="1" autoStartId="10000"/>
+		<field name="puid" type="0"/>
+		<field name="name" type="0"/>
+		<field name="rebirthStage" type="0"/>
+		<field name="level" type="0"/>
+		<field name="exp" type="0"/>
+		<field name="gold" type="0"/>
+		<field name="rmbGold" type="0"/>
+		<field name="coin" type="0"/>
+		<field name="goldBean" type="0"/>
+		<field name="exchangeGoldBeanCostrmbGold" type="0"/>
+		<field name="recharge" type="0"/>
+		<field name="webRecharge" type="0"/>
+		<field name="gameRecharge" type="0"/>
+		<field name="vipLevel" type="0"/>
+		<field name="smeltValue" type="0"/>
+		<field name="honorValue" type="0"/>
+		<field name="reputationValue" type="0"/>
+		<field name="skillEnhanceOpen" type="0"/>
+		<field name="questStep" type="0"/>
+		<field name="fightValue" type="0"/>
+		<field name="prof" type="0"/>
+		<field name="signature" type="0"/>
+		<field name="device" type="0"/>
+		<field name="platform" type="0"/>
+		<field name="phoneInfo" type="0"/>
+		<field name="forbidenTime" type="0"/>
+		<field name="silentTime" type="0"/>
+		<field name="loginTime" type="0"/>
+		<field name="logoutTime" type="0"/>
+		<field name="resetTime" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+		<field name="langArea" type="0"/>
+		<field name="serverId" type="0"/>
+		<field name="loginDay" type="0"/>
+		<field name="avatarId" type="0"/>
+		<field name="crystal" type="0"/>
+		<field name="googleAchieve" type="0"/>
+		<field name="isComment" type="0"/>
+		<field name="payMoney" type="0"/>
+		<field name="rechargeSoul" type="0"/>
+		<field name="todayRechargeNum" type="0"/>
+		<field name="activeValue" type="0"/>
+		<field name="poolRateStr" type="0"/>
+		<field name="cdkCode" type="0"/>
+		<field name="headIcon" type="0"/>
+		<field name="buyIconList" type="0"/>
+		<field name="mergeTime" type="0"/>
+	</table>
+	<table name="alliance" isMerge="1" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="playerName" type="0"/>
+		<field name="name" type="0"/>
+		<field name="level" type="0"/>
+		<field name="exp" type="0"/>
+		<field name="joinLimit" type="0"/>
+		<field name="notice" type="0"/>
+		<field name="createAllianceTime" type="0"/>
+		<field name="bossOpen" type="0"/>
+		<field name="bossOpenTime" type="0"/>
+		<field name="bossOpenSize" type="0"/>
+		<field name="bossId" type="0"/>
+		<field name="bossJoinStr" type="0"/>
+		<field name="bossHp" type="0"/>
+		<field name="bossMaxTime" type="0"/>
+		<field name="bossAttTime" type="0"/>
+		<field name="bossAddProp" type="0"/>
+		<field name="bossVitality" type="0"/>
+		<field name="curDayAddVitality" type="0"/>
+		<field name="beforeDayAddVitality" type="0"/>
+		<field name="luckyScore" type="0"/>
+		<field name="lastResetLuckyScoreTime" type="0"/>
+		<field name="isDelete" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+		<field name="teamMapStr" type="0"/>
+		<field name="sendEmailNum" type="0"/>
+		<field name="sendEmailTime" type="0"/>
+		<field name="canChangeName" type="0"/>
+		<field name="automaticOpen" type="0"/>
+		<field name="everydayBossOpenTimes" type="0"/>
+		<field name="hasCheckLeaderMail" type="0"/>
+		<field name="refreshTime" type="0"/>
+		<field name="activeValue" type="0"/>
+		<field name="totalFight" type="0"/>
+	</table>
+	<table name="alliance_battle_info" isMerge="0" isDelete="0">
+		<field name="stageId" type="0"/>
+		<field name="state" type="0"/>
+		<field name="allianceItemsStr" type="0"/>
+		<field name="battleResultStr" type="0"/>
+		<field name="championStr" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="alliance_battle_item" isMerge="0" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="allianceId" type="0"/>
+		<field name="stageId" type="0"/>
+		<field name="vitality" type="0"/>
+		<field name="battleResult" type="0"/>
+		<field name="teamMapStr" type="0"/>
+		<field name="allianceName" type="0"/>
+		<field name="allianceLevel" type="0"/>
+		<field name="captainName" type="0"/>
+		<field name="memberListStr" type="0"/>
+		<field name="buffId" type="0"/>
+		<field name="inspireInfoMapStr" type="0"/>
+		<field name="streakTimes" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+		<field name="hasDraw" type="0"/>
+	</table>
+	<table name="alliance_fight_unit" isMerge="0" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="stageId" type="0"/>
+		<field name="versusId" type="0"/>
+		<field name="leftIndex" type="0"/>
+		<field name="rightIndex" type="0"/>
+		<field name="winIndex" type="0"/>
+		<field name="state" type="0"/>
+		<field name="fightReport" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="alliance_fight_versus" isMerge="0" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="stageId" type="0"/>
+		<field name="fightGroup" type="0"/>
+		<field name="leftId" type="0"/>
+		<field name="rightId" type="0"/>
+		<field name="winId" type="0"/>
+		<field name="investLeftStr" type="0"/>
+		<field name="investRightStr" type="0"/>
+		<field name="isRewardInvest" type="0"/>
+		<field name="state" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="arena" isMerge="0" isDelete="0">
+		<field name="playerId" type="0"/>
+		<field name="rank" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="arena_report" isMerge="0" isDelete="0">
+		<field name="id" type="0"/>
+		<field name="battleResult" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="avatar" isMerge="0" isDelete="0">
+		<field name="id" type="0"/>
+		<field name="playerId" type="0"/>
+		<field name="avatarId" type="0"/>
+		<field name="checked" type="0"/>
+		<field name="endTime" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="camp" isMerge="0" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="campId" type="0"/>
+		<field name="stageId" type="0"/>
+		<field name="isWin" type="0"/>
+		<field name="totalBattleScore" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="campwar" isMerge="0" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="playerId" type="0"/>
+		<field name="playerName" type="0"/>
+		<field name="roleCfgId" type="0"/>
+		<field name="stageId" type="0"/>
+		<field name="fightValue" type="0"/>
+		<field name="campId" type="0"/>
+		<field name="baseMaxBlood" type="0"/>
+		<field name="curRemainBlood" type="0"/>
+		<field name="addRemainBlood" type="0"/>
+		<field name="curMaxBlood" type="0"/>
+		<field name="inspireTimes" type="0"/>
+		<field name="maxWinStreak" type="0"/>
+		<field name="curWinStreak" type="0"/>
+		<field name="totalWin" type="0"/>
+		<field name="totalLose" type="0"/>
+		<field name="totalReputation" type="0"/>
+		<field name="totalCoins" type="0"/>
+		<field name="allBattleResult" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="campwar_auto" isMerge="0" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="stageId" type="0"/>
+		<field name="autoJoinPlayerIdsStr" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="chat_msg" isMerge="0" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="typeId" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+		<field name="msg" type="0"/>
+		<field name="pos" type="0"/>
+	</table>
+	<table name="chat_record" isMerge="1" isDelete="1">
+		<field name="id" type="1"/>
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="chatMsg" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="chat_skin" isMerge="1" isDelete="1"
+		primaryKey="playerId">
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="curSkinId" type="0"/>
+		<field name="ownedSkinsStr" type="0"/>
+		<field name="redPoint" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="cross_battle" isMerge="0" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="playerIds" type="0"/>
+		<field name="refreshTime" type="0"/>
+		<field name="rewardTime" type="0"/>
+		<field name="pushState" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="cross_player" isMerge="0" isDelete="0">
+		<field name="playerId" type="0"/>
+		<field name="score" type="0"/>
+		<field name="rank" type="0"/>
+		<field name="crossCoin" type="0"/>
+		<field name="battleTimes" type="0"/>
+		<field name="buyTimes" type="0"/>
+		<field name="synchroTime" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="crystal_shop" isMerge="0" isDelete="0">
+		<field name="playerId" type="0"/>
+		<field name="shopItemMapStr" type="0"/>
+		<field name="lucky" type="0"/>
+		<field name="refreshCount" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="daily_statistics" isMerge="0" isDelete="0">
+		<field name="date" type="0"/>
+		<field name="totalUsers" type="0"/>
+		<field name="totalDevice" type="0"/>
+		<field name="totalPayUsers" type="0"/>
+		<field name="totalPayDevice" type="0"/>
+		<field name="totalPayMoney" type="0"/>
+		<field name="newUsers" type="0"/>
+		<field name="newDevice" type="0"/>
+		<field name="dailyActiveUsers" type="0"/>
+		<field name="userRetentionRate" type="0"/>
+		<field name="deviceRetentionRate" type="0"/>
+		<field name="payUsers" type="0"/>
+		<field name="payDevice" type="0"/>
+		<field name="payMoney" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="dailyquest" isMerge="0" isDelete="0">
+		<field name="playerId" type="0"/>
+		<field name="dailyQuestStr" type="0"/>
+		<field name="dailyPointStateStr" type="0"/>
+		<field name="dailyPoint" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="element" isMerge="1" isDelete="1">
+		<field name="id" type="1"/>
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="itemId" type="0"/>
+		<field name="level" type="0"/>
+		<field name="exp" type="0"/>
+		<field name="quality" type="0"/>
+		<field name="basicAttrStr" type="0"/>
+		<field name="recastAttrIdStr" type="0"/>
+		<field name="recastAttrValueStr" type="0"/>
+		<field name="extraAttrStr" type="0"/>
+		<field name="recastAttrId" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="email" isMerge="1" isDelete="1">
+		<field name="id" type="1"/>
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="type" type="0"/>
+		<field name="mailId" type="0"/>
+		<field name="title" type="0"/>
+		<field name="content" type="0"/>
+		<field name="params" type="0"/>
+		<field name="classification" type="0"/>
+		<field name="effectTime" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="equip" isMerge="1" isDelete="1">
+		<field name="id" type="1"/>
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="equipId" type="0"/>
+		<field name="strength" type="0"/>
+		<field name="strengthItemStr" type="0"/>
+		<field name="starLevel" type="0"/>
+		<field name="starExp" type="0"/>
+		<field name="godlyAttrId" type="0"/>
+		<field name="starLevel2" type="0"/>
+		<field name="starExp2" type="0"/>
+		<field name="godlyAttrId2" type="0"/>
+		<field name="primaryAttrType1" type="0"/>
+		<field name="primaryAttrValue1" type="0"/>
+		<field name="primaryAttrType2" type="0"/>
+		<field name="primaryAttrValue2" type="0"/>
+		<field name="secondaryAttrType1" type="0"/>
+		<field name="secondaryAttrValue1" type="0"/>
+		<field name="secondaryAttrType2" type="0"/>
+		<field name="secondaryAttrValue2" type="0"/>
+		<field name="secondaryAttrType3" type="0"/>
+		<field name="secondaryAttrValue3" type="0"/>
+		<field name="secondaryAttrType4" type="0"/>
+		<field name="secondaryAttrValue4" type="0"/>
+		<field name="gem1" type="0"/>
+		<field name="gem2" type="0"/>
+		<field name="gem3" type="0"/>
+		<field name="gem4" type="0"/>
+		<field name="status" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="expedition_armory" isMerge="0" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="stageId" type="0"/>
+		<field name="curDonateStage" type="0"/>
+		<field name="stageExp" type="0"/>
+		<field name="isGrantLastStage" type="0"/>
+		<field name="isGrantRank" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+		<field name="nextSysAutoAddStageExpTime" type="0"/>
+	</table>
+	<table name="forging_equip" isMerge="0" isDelete="0">
+		<field name="stageId" type="1"/>
+		<field name="totalTimes" type="0"/>
+		<field name="prizeLimit" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="formation" isMerge="1" isDelete="1">
+		<field name="id" type="1"/>
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="type" type="0"/>
+		<field name="fightingArray" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+		<field name="assistanceArray" type="0"/>
+		<field name="name" type="0"/>
+	</table>
+	<table name="friend" isMerge="1" isDelete="1"
+		primaryKey="playerId">
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="friendIds" type="3" tablename="player" column="id"
+			separator=","/>
+		<field name="applyFriendIds" type="0"/>
+		<field name="shieldMapStr" type="0"/>
+		<field name="dailyMsgPlayerStr" type="4" tablename="player" column="id" separator="," leftChar="[" rightChar="]"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+		<field name="bindingState" type="0"/>
+	</table>
+	<table name="gm_recharge" isMerge="1" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="puid" type="0"/>
+		<field name="serverId" type="0"/>
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="goodsId" type="0"/>
+		<field name="goodsCost" type="0"/>
+		<field name="addGold" type="0"/>
+		<field name="isFirstPay" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="goldfish_reward" isMerge="0" isDelete="0">
+		<field name="stageId" type="0"/>
+		<field name="isSendReward" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="gvg_alliance" isMerge="0" isDelete="0">
+		<field name="allianceId" type="0"/>
+		<field name="allianceLevel" type="0"/>
+		<field name="declareTimes" type="0"/>
+		<field name="addCount" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="gvg_city" isMerge="0" isDelete="0">
+		<field name="cityId" type="0"/>
+		<field name="holderId" type="0"/>
+		<field name="marauderId" type="0"/>
+		<field name="attackerIds" type="0"/>
+		<field name="defenderIds" type="0"/>
+		<field name="fightbackTime" type="0"/>
+		<field name="isFightback" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="gvg_city_reward" isMerge="0" isDelete="0">
+		<field name="allianceId" type="0"/>
+		<field name="cityIds" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="gvg_history_rank" isMerge="0" isDelete="0">
+		<field name="id" type="0"/>
+		<field name="rank" type="0"/>
+		<field name="allianceName" type="0"/>
+		<field name="masterName" type="0"/>
+		<field name="allianceId" type="0"/>
+		<field name="holdCityInfo" type="0"/>
+		<field name="level" type="0"/>
+		<field name="Score" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="gvg_log" isMerge="0" isDelete="0">
+		<field name="id" type="0"/>
+		<field name="attackerName" type="0"/>
+		<field name="defenderName" type="0"/>
+		<field name="result" type="0"/>
+		<field name="cityId" type="0"/>
+		<field name="isFightback" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="gvg_revive_log" isMerge="0" isDelete="0">
+		<field name="id" type="0"/>
+		<field name="allianceName" type="0"/>
+		<field name="playerId" type="0"/>
+		<field name="allianceId" type="0"/>
+		<field name="consume" type="0"/>
+		<field name="createtime" type="0"/>
+		<field name="pointId" type="0"/>
+	</table>
+	<table name="gvg_revive_point" isMerge="0" isDelete="0">
+		<field name="id" type="0"/>
+		<field name="allianceId" type="0"/>
+		<field name="point_X" type="0"/>
+		<field name="point_Y" type="0"/>
+		<field name="playerID" type="0"/>
+		<field name="actionTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="gvg_reward" isMerge="0" isDelete="0">
+		<field name="playerId" type="0"/>
+		<field name="received" type="0"/>
+		<field name="refreshTime" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="gvg_time" isMerge="0" isDelete="0">
+		<field name="gvgId" type="0"/>
+		<field name="isFirst" type="0"/>
+		<field name="refreshTime" type="0"/>
+		<field name="pushState" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+		<field name="resettime" type="0"/>
+	</table>
+	<table name="harem_activity" isMerge="1" isDelete="1">
+		<field name="id" type="1"/>
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="lastCommonFreeTime" type="0"/>
+		<field name="commonFreeChance" type="0"/>
+		<field name="commonTotalTimes" type="0"/>
+		<field name="commonDayTotalTimes" type="0"/>
+		<field name="lastMiddleFreeTime" type="0"/>
+		<field name="middleFreeChance" type="0"/>
+		<field name="middleTotalTimes" type="0"/>
+		<field name="lastAdvancedFreeTime" type="0"/>
+		<field name="advancedFreeChance" type="0"/>
+		<field name="advancedTotalTimes" type="0"/>
+		<field name="lastStrictFreeTime" type="0"/>
+		<field name="strictFreeChance" type="0"/>
+		<field name="strictTotalTimes" type="0"/>
+		<field name="newStrictEndTime" type="0"/>
+		<field name="lastNewStrictFreeTime" type="0"/>
+		<field name="newStrictFreeChance" type="0"/>
+		<field name="newStrictTotalTimes" type="0"/>
+		<field name="limitEndTime" type="0"/>
+		<field name="lastLimitFreeTime" type="0"/>
+		<field name="limitFreeChance" type="0"/>
+		<field name="limitTotalTimes" type="0"/>
+		<field name="score" type="0"/>
+		<field name="exchangeStr" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+		<field name="exchangeNextResetTime" type="0"/>
+	</table>
+	<table name="hero_token_task" isMerge="1" isDelete="1"
+		primaryKey="playerId">
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="tasks" type="0"/>
+		<field name="completeTasks" type="0"/>
+		<field name="shopData" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="honor_shop" isMerge="0" isDelete="0">
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="shopItemMapStr" type="0"/>
+		<field name="lucky" type="0"/>
+		<field name="refreshCount" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="ip_addr" isMerge="0" isDelete="0">
+		<field name="id" type="0"/>
+		<field name="beginIp" type="0"/>
+		<field name="beginIpInt" type="0"/>
+		<field name="endIp" type="0"/>
+		<field name="endIpInt" type="0"/>
+		<field name="position" type="0"/>
+		<field name="province" type="0"/>
+		<field name="city" type="0"/>
+	</table>
+	<table name="item" isMerge="1" isDelete="1">
+		<field name="id" type="1"/>
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="itemId" type="0"/>
+		<field name="itemCount" type="0"/>
+		<field name="levelUpTimes" type="0"/>
+		<field name="status" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="login" isMerge="0" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="playerName" type="0"/>
+		<field name="puid" type="0"/>
+		<field name="period" type="0"/>
+		<field name="date" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+		<field name="serverId" type="0"/>
+	</table>
+	<table name="maiden_encounter_activity" isMerge="0" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="stageId" type="0"/>
+		<field name="currentIndex" type="0"/>
+		<field name="surplusFreeInteractTimes" type="0"/>
+		<field name="surplusFreeRefreshTimes" type="0"/>
+		<field name="devilRefreshTime" type="0"/>
+		<field name="progress" type="0"/>
+		<field name="maidenStage" type="0"/>
+		<field name="exchange" type="0"/>
+		<field name="historyRandomTimes" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="map" isMerge="1" isDelete="1" primaryKey="playerId">
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="state" type="0"/>
+		<field name="eliteState" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+		<field name="hasGemPrice" type="0"/>
+		<field name="itemOneRate" type="0"/>
+	</table>
+	<table name="map_statistics" isMerge="1" isDelete="1"
+		primaryKey="playerId">
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="mapId" type="0"/>
+		<field name="fightTimes" type="0"/>
+		<field name="averageTime" type="0"/>
+		<field name="winRate" type="0"/>
+		<field name="equipRate" type="0"/>
+		<field name="expRate" type="0"/>
+		<field name="coinRate" type="0"/>
+		<field name="mapExpRatio" type="0"/>
+		<field name="mapCoinRatio" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+		<field name="itemOneRate" type="0"/>
+	</table>
+	<table name="mercenaryexpedition" isMerge="0" isDelete="0"
+		primaryKey="playerId">
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="refreshCount" type="0"/>
+		<field name="dispatchCount" type="0"/>
+		<field name="expeditionTaskStr" type="0"/>
+		<field name="lucky" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="mission" isMerge="1" isDelete="1">
+		<field name="id" type="1"/>
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="currentCount" type="0"/>
+		<field name="completeCount" type="0"/>
+		<field name="keepCount" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="msg" isMerge="0" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="moduleId" type="0"/>
+		<field name="senderId" type="0"/>
+		<field name="recverId" type="0"/>
+		<field name="content" type="0"/>
+		<field name="senderSkinId" type="0"/>
+		<field name="csSenderIdentify" type="0"/>
+		<field name="csSenderInfo" type="0"/>
+		<field name="msgType" type="0"/>
+		<field name="createSysTime" type="0"/>
+		<field name="lastReadTime" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+		<field name="jsonType" type="0"/>
+	</table>
+	<table name="multi_elite_info" isMerge="0" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="multiMapStr" type="0"/>
+		<field name="multiLuckRoleStr" type="0"/>
+		<field name="nextRefreshTime" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="multi_elite_report" isMerge="0" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="battleResult" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="player_activity" isMerge="1" isDelete="1">
+		<field name="id" type="1"/>
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="activityId" type="0"/>
+		<field name="stageId" type="0"/>
+		<field name="statusStr" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="player_alliance" isMerge="1" isDelete="1">
+		<field name="id" type="1"/>
+		<field name="allianceId" type="2" tablename="alliance"
+			column="id"/>
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="contribution" type="0"/>
+		<field name="postion" type="0"/>
+		<field name="autoFight" type="0"/>
+		<field name="reportTime" type="0"/>
+		<field name="shopStr" type="0"/>
+		<field name="shopTime" type="0"/>
+		<field name="luckyScore" type="0"/>
+		<field name="refreshShopCount" type="0"/>
+		<field name="shopItemsStr" type="0"/>
+		<field name="exitTime" type="0"/>
+		<field name="joinTime" type="0"/>
+		<field name="vitality" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+		<field name="addVitalityTime" type="0"/>
+		<field name="applyAllianceData" type="0"/>
+		<field name="everydayContribution" type="0"/>
+		<field name="refreshTime" type="0"/>
+		<field name="dailyDonateStr" type="0"/>
+	</table>
+	<table name="player_archive" isMerge="1" isDelete="1"
+		primaryKey="playerId">
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="fetterStr" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="player_facebook_share" isMerge="0" isDelete="0">
+		<field name="id" type="0"/>
+		<field name="puid" type="0"/>
+		<field name="serverId" type="0"/>
+		<field name="count" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="player_prince_devils" isMerge="1" isDelete="1"
+		primaryKey="playerId">
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="score" type="0"/>
+		<field name="scoreExchangeStr" type="0"/>
+		<field name="refreshTime" type="0"/>
+		<field name="stageId" type="0"/>
+		<field name="count" type="0"/>
+		<field name="freeTime" type="0"/>
+		<field name="luckCount" type="0"/>
+		<field name="rewardInfoStr" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+		<field name="poolRateStr" type="0"/>
+	</table>
+	<table name="player_snapshot" isMerge="0" isDelete="0">
+		<field name="playerId" type="0"/>
+		<field name="snapshot" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="player_star_soul" isMerge="1" isDelete="1">
+		<field name="id" type="1"/>
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="starSoul" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="player_talent" isMerge="1" isDelete="1"
+		primaryKey="playerId">
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="talentNum" type="0"/>
+		<field name="elementAttr" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="player_wing" isMerge="1" isDelete="1">
+		<field name="id" type="1"/>
+		<field name="playerId" type="2" tablename="player" column="id" />
+		<field name="level" type="0"/>
+		<field name="starTime" type="0"/>
+		<field name="whiteTime" type="0"/>
+		<field name="greenTime" type="0"/>
+		<field name="blueTime" type="0"/>
+		<field name="purpleTime" type="0"/>
+		<field name="orangeTime" type="0"/>
+		<field name="luckyNum" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="player_world_boss" isMerge="0" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="worldBossId" type="0"/>
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="allianceId" type="2" tablename="alliance" column="id"/>
+		<field name="rebirthTimes" type="0"/>
+		<field name="harm" type="0"/>
+		<field name="lastAttackTime" type="0"/>
+		<field name="lastRebirthAttackTime" type="0"/>
+		<field name="rebirthType" type="0"/>
+		<field name="attackPart" type="0"/>
+		<field name="autoState" type="0"/>
+		<field name="offlineActionTimes" type="0"/>
+		<field name="attackTimes" type="0"/>
+		<field name="buffCfgId" type="0"/>
+		<field name="cacheBuffCfgId" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="quest" isMerge="1" isDelete="1"
+		primaryKey="playerId">
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="questStr" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="recharge" isMerge="1" isDelete="0" primaryKey="orderSerial">
+		<field name="orderSerial" type="0"/>
+		<field name="puid" type="0"/>
+		<field name="serverId" type="0"/>
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="goodsId" type="0"/>
+		<field name="goodsCount" type="0"/>
+		<field name="goodsCost" type="0"/>
+		<field name="currency" type="0"/>
+		<field name="addGold" type="0"/>
+		<field name="isFirstPay" type="0"/>
+		<field name="level" type="0"/>
+		<field name="vipLevel" type="0"/>
+		<field name="device" type="0"/>
+		<field name="platform" type="0"/>
+		<field name="isTest" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="recharge_dailycollet" isMerge="0" isDelete="0">
+		<field name="orderSerial" type="0"/>
+		<field name="puid" type="0"/>
+		<field name="serverId" type="0"/>
+		<field name="playerId" type="0"/>
+		<field name="goodsCost" type="0"/>
+		<field name="currency" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="role" isMerge="1" isDelete="1">
+		<field name="id" type="1"/>
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="type" type="0"/>
+		<field name="itemId" type="0"/>
+		<field name="name" type="0"/>
+		<field name="rebirthStage" type="0"/>
+		<field name="level" type="0"/>
+		<field name="exp" type="0"/>
+		<field name="roleState" type="0"/>
+		<field name="soulCount" type="0"/>
+		<field name="equip1" type="2" tablename="equip" column="id"/>
+		<field name="equip2" type="2" tablename="equip" column="id"/>
+		<field name="equip3" type="2" tablename="equip" column="id"/>
+		<field name="equip4" type="2" tablename="equip" column="id"/>
+		<field name="equip5" type="2" tablename="equip" column="id"/>
+		<field name="equip6" type="2" tablename="equip" column="id"/>
+		<field name="equip7" type="2" tablename="equip" column="id"/>
+		<field name="equip8" type="2" tablename="equip" column="id"/>
+		<field name="equip9" type="2" tablename="equip" column="id"/>
+		<field name="equip10" type="2" tablename="equip" column="id"/>
+		<field name="skill1"  type="6" tablename="skill" column="id"/>
+		<field name="skill2"  type="6" tablename="skill" column="id"/>
+		<field name="skill3"  type="6" tablename="skill" column="id"/>
+		<field name="skill4"  type="6" tablename="skill" column="id"/>
+		<field name="skill5"  type="6" tablename="skill" column="id"/>
+		<field name="attrInfo" type="0"/>
+		<field name="skill2idListStr" type="7" tablename="skill"
+			column="id" separator="," leftChar="[" rightChar="]"/>
+		<field name="skill3idListStr" type="7" tablename="skill"
+			column="id" separator="," leftChar="[" rightChar="]"/>
+		<field name="starExp" type="0"/>
+		<field name="starLevel" type="0"/>
+		<field name="stageLevel" type="0"/>
+		<field name="ringStr" type="0"/>
+		<field name="status" type="0"/>
+		<field name="power" type="0"/>
+		<field name="refreshTime" type="0"/>
+		<field name="hide" type="0"/>
+		<field name="broadcasted" type="0"/>
+		<field name="roleBaptizeAttrStr" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+		<field name="elements" type="3" tablename="element" column="id"
+			separator=","/>
+	</table>
+	<table name="role_ring" isMerge="1" isDelete="1">
+		<field name="id" type="1"/>
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="roleId" type="2" tablename="role" column="id"/>
+		<field name="itemId" type="0" />
+		<field name="exp" type="0"/>
+		<field name="lvlUpTimes" type="0"/>
+		<field name="level" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="server_timelimit" isMerge="0" isDelete="0">
+		<field name="stageId" type="0"/>
+		<field name="buyMapStr" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="serverdata" isMerge="0" isDelete="0">
+		<field name="id" type="0"/>
+		<field name="statusStr" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="sevendayquest" isMerge="1" isDelete="1"
+		primaryKey="playerId">
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="questStr" type="0"/>
+		<field name="pointStateStr" type="0"/>
+		<field name="point" type="0"/>
+		<field name="awardstate" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="shoot_activity" isMerge="0" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="shootRefreshTime" type="0"/>
+		<field name="shootState" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="shop" isMerge="1" isDelete="1" primaryKey="playerId">
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="refreshDate" type="0"/>
+		<field name="refreshTimes" type="0"/>
+		<field name="shopItems" type="0"/>
+		<field name="shopLuckValue" type="0"/>
+		<field name="buyCoinCount" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="skill" isMerge="1" isDelete="1">
+		<field name="id" type="5"/>
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="roleId" type="2" tablename="role" column="id"/>
+		<field name="itemId" type="0"/>
+		<field name="skillLevel" type="0"/>
+		<field name="status" type="0"/>
+		<field name="exp" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="status" isMerge="1" isDelete="1"
+		primaryKey="playerId">
+		<field name="playerId" type="2" tablename="player" column="id"/>
+		<field name="platformData" type="0"/>
+		<field name="autoSellEquip" type="0"/>
+		<field name="autoDecoElement" type="0"/>
+		<field name="chatClose" type="0"/>
+		<field name="fastFightTimes" type="0"/>
+		<field name="fastFightBuyTimes" type="0"/>
+		<field name="bossFightTimes" type="0"/>
+		<field name="bossFightBuyTimes" type="0"/>
+		<field name="eliteMapTimes" type="0"/>
+		<field name="eliteMapBuyTimes" type="0"/>
+		<field name="nextBattleTime" type="0"/>
+		<field name="currMapId" type="0"/>
+		<field name="passMapId" type="0"/>
+		<field name="passEliteMapId" type="0"/>
+		<field name="equipSmeltCreate" type="0"/>
+		<field name="itemSmeltCreate" type="0"/>
+		<field name="equipSmeltRefesh" type="0"/>
+		<field name="roleBaptizeAttr" type="0"/>
+		<field name="roleBaptizeAttrTransferTime" type="0"/>
+		<field name="arenaBuyTimes" type="0"/>
+		<field name="arenaLastBuyTime" type="0"/>
+		<field name="surplusChallengeTimes" type="0"/>
+		<field name="equipBagSize" type="0"/>
+		<field name="equipBagExtendTimes" type="0"/>
+		<field name="cdkeyType" type="0"/>
+		<field name="giftStatus" type="0"/>
+		<field name="wipeBoss" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+		<field name="gongceWordDay" type="0"/>
+		<field name="musicOn" type="0"/>
+		<field name="soundOn" type="0"/>
+		<field name="showArea" type="0"/>
+		<field name="newSerGiftRewardCount" type="0"/>
+		<field name="itemLuck" type="0"/>
+		<field name="latestBattleType" type="0"/>
+		<field name="starStoneTimes" type="0"/>
+		<field name="newGuideState" type="0"/>
+		<field name="evaluateRewardsState" type="0"/>
+		<field name="newbieRewardMonthCard" type="0"/>
+		<field name="resetTimeMapStr" type="0"/>
+		<field name="onlyText" type="0"/>
+		<field name="worldBossAutoState" type="0"/>
+		<field name="worldBossBuffFreeTimes" type="0"/>
+		<field name="passMaxMultiEliteId" type="0"/>
+		<field name="multiEliteTimes" type="0"/>
+		<field name="multiFirstBattle" type="0"/>
+		<field name="multiBattleInfoStr" type="0"/>
+		<field name="todayBuyMultiEliteTimes" type="0"/>
+		<field name="lastRefreshMultiEliteTime" type="0"/>
+		<field name="multiEliteScore" type="0"/>
+		<field name="multiEliteHistoryScore" type="0"/>
+		<field name="lastShowMultiEliteResultId" type="0"/>
+		<field name="askTickIds" type="0"/>
+		<field name="todayRefreshHireListTimes" type="0"/>
+		<field name="elementBagSize" type="0"/>
+		<field name="accountBoundStatus" type="0"/>
+		<field name="maxArenaRecordId" type="0"/>
+		<field name="largessGoldTime" type="0"/>
+		<field name="lastlargessDay" type="0"/>
+		<field name="iosGetState" type="0"/>
+		<field name="firstFastBattle" type="0"/>
+		<field name="roleFirstFastBattle" type="0"/>
+		<field name="exchangeCount" type="0"/>
+		<field name="firstBattle" type="0"/>
+		<field name="firstFalse" type="0"/>
+		<field name="firstSuccess" type="0"/>
+		<field name="fontSize" type="0"/>
+		<field name="gemShopBuyCount" type="0"/>
+		<field name="guideStr" type="0"/>
+		<field name="hourCardUseCountOneDay" type="0"/>
+		<field name="lastExchangeBeanTime" type="0"/>
+		<field name="lastResetExchangeBeanTime" type="0"/>
+		<field name="totalFastFightCount" type="0"/>
+		<field name="lastSnapBattle" type="0"/>
+		<field name="exchangeStr" type="0"/>
+	</table>
+	<table name="team" isMerge="0" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="captainId" type="0"/>
+		<field name="teamMemberStr" type="0"/>
+		<field name="stageId" type="0"/>
+		<field name="totalFight" type="0"/>
+		<field name="round" type="0"/>
+		<field name="isWeedOut" type="0"/>
+		<field name="kickTimes" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="team_battle_cache" isMerge="0" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="battleState" type="0"/>
+		<field name="waitPlayerIdStr" type="0"/>
+		<field name="nextRoundTeamsAgainstPlanStr" type="0"/>
+		<field name="stageId" type="0"/>
+		<field name="lastSaveTime" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="team_battle_report" isMerge="0" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="stageId" type="0"/>
+		<field name="leftTeamId" type="0"/>
+		<field name="rightTeamId" type="0"/>
+		<field name="round" type="0"/>
+		<field name="teamRoundInfo" type="0"/>
+		<field name="result" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="title" isMerge="0" isDelete="0">
+		<field name="id" type="0"/>
+		<field name="playerid" type="0"/>
+		<field name="finishIds" type="0"/>
+		<field name="useId" type="0"/>
+		<field name="ischange" type="0"/>
+		<field name="teambattlechampiondate" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="ur_rank_activity" isMerge="0" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="refreshTime" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="ur_rank_history" isMerge="0" isDelete="0">
+		<field name="id" type="1"/>
+		<field name="awardlist" type="0"/>
+		<field name="ranklist" type="0"/>
+		<field name="stageId" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="vitality_rank" isMerge="0" isDelete="0">
+		<field name="id" type="0"/>
+		<field name="rank" type="0"/>
+		<field name="allianceId" type="0"/>
+		<field name="vitality" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="wealth_club" isMerge="0" isDelete="0">
+		<field name="stageId" type="0"/>
+		<field name="wealthData" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="world_boss" isMerge="0" isDelete="0">
+		<field name="id" type="0"/>
+		<field name="startDate" type="0"/>
+		<field name="bossNpcId" type="0"/>
+		<field name="name" type="0"/>
+		<field name="level" type="0"/>
+		<field name="clonePlayerId" type="0"/>
+		<field name="arenaNpcId" type="0"/>
+		<field name="currBossHp" type="0"/>
+		<field name="maxBossHp" type="0"/>
+		<field name="deadTime" type="0"/>
+		<field name="lastKillPlayerId" type="0"/>
+		<field name="hpMultiple" type="0"/>
+		<field name="failingInfo" type="0"/>
+		<field name="failingStartTime" type="0"/>
+		<field name="nextFailingTime" type="0"/>
+		<field name="isFailing" type="0"/>
+		<field name="curFailingBuffCfg" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+	<table name="worship" isMerge="0" isDelete="0">
+		<field name="id" type="0"/>
+		<field name="playerId" type="0"/>
+		<field name="worshipStamp" type="0"/>
+		<field name="createTime" type="0"/>
+		<field name="updateTime" type="0"/>
+		<field name="invalid" type="0"/>
+	</table>
+</dbInfo>

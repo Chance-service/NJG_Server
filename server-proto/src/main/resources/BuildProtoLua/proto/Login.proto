@@ -1,0 +1,28 @@
+option java_package = "com.guaji.game.protocol";
+
+message HPLogin
+{
+	required string puid = 1;
+	required string deviceId = 2 [default = "0"];
+	required string platform = 3 [default = "0"];
+	optional string version = 4 [default = "0.0.1"];
+	optional string token = 5;
+	optional string langArea = 6;
+	required int32 serverId = 7;
+	required bool isReLogin = 8;
+    optional string passwd = 9 [default = "888888"];
+    optional bool registed = 10;
+    optional int32 isGuest = 11;
+    optional string wallet = 12 [default = ""];
+}
+ 
+message HPLoginRet
+{
+	required int32 playerId = 1;
+	optional int32 roleItemId = 2;
+	required int32 timeStamp = 3;
+	optional int32 status = 4;
+	optional string area = 5;
+    optional int32 isGuest = 6;
+}
+

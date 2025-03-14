@@ -1,0 +1,52 @@
+option java_package = "com.guaji.game.protocol";
+
+// 开服七天乐活动tab
+enum FunActivityTab{
+		//开服七天乐登录豪礼
+	FUN_ACTIVITY_LOGIN = 1;
+	//开服七天乐冲级豪礼
+	FUN_ACTIVITY_LEVEL = 2;
+	//开服七天乐战力冲刺
+	FUN_ACTIVITY_COMBAT = 3;
+	//开服七天乐全服基金
+	FUN_ACTIVITY_GROWTH_FUND = 4;
+}
+
+// 开服七天乐活动tab
+enum FunActivityAwardStatus{
+	//可领取
+	CAN_FETCH = 1;
+	//以领取
+	FETCHED = 2;
+	//不可领取
+	CAN_NOT_FETCH = 3;
+}
+
+
+// 开服七天乐活动详细内容
+message FunActivityDetail{
+	required int32 id = 1;
+	required int32 awardStatus = 2;
+	required int32 condetion = 3;
+	required int32 curValue = 4;
+	required string awards = 5;
+}
+
+// C-->S 获取活动内容
+message HPFunActivityInfoReq
+{
+	required FunActivityTab tabId = 1;
+}
+//S-->C 返回活动内容
+message HPFunActivityInfoResp
+{
+	required FunActivityTab tabId = 1;
+	required int32 leftTime = 2;
+	repeated FunActivityDetail details = 3;
+}
+// C-->S 领取活动奖励
+message HPFunActivityFetchAwardReq
+{
+	required FunActivityTab tabId = 1;
+	required int32 id = 2;
+}

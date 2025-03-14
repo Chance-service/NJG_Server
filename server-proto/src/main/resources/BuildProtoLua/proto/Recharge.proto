@@ -1,0 +1,67 @@
+option java_package = "com.guaji.game.protocol";
+
+// 充值列表
+message ShopItem
+{
+	//0: 普通充值, 1: 月卡充值
+	required int32  productType = 1;
+	required string productId = 2;
+	required string name = 3;
+	required string productName = 4;
+	required float  productPrice = 5;
+	required int32  gold = 6;
+	optional int32  presentGold = 7;
+	optional int32  ratio = 8;
+	//韩国充值后面显示的加钻数量
+	optional int32  showAddGold = 9; 
+	//描述
+	optional string description = 10;
+}
+
+message HPFetchShopList
+{	
+	optional string platform = 1;
+    // 指定刷新哪個禮包 0 => all or 指定禮包
+    optional int32 goodsId = 2;
+}
+
+message HPShopListSync
+{	
+	repeated ShopItem shopItems = 1;
+	optional int64  countdown = 2;
+	
+}
+
+// 充值(暂时未使用)
+message RechargeParam
+{
+	required string orderSerial = 1;
+	required int32  payMoney = 2;
+	required string puid = 3;
+	required string goodsId = 4;
+	required int32  goodsCount = 5;	
+	required string platform = 6;
+	required string createTime = 7;
+}
+
+message HPRecharge
+{	
+	required bytes rechargeData = 1;
+}
+ 
+// 充值回复
+message HPRechargeRet
+{
+	required int32  status = 1;
+	required string puid = 2;
+	required string goodsId = 3;
+	required string orderSerial = 4;
+	required float  payMoney = 5;
+	required int32  addGold = 6;
+}
+
+// 最後充值禮包物品
+message LastGoodsItem{
+	required string Items = 1; // 禮包物品
+}
+

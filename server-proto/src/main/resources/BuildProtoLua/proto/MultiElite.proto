@@ -1,0 +1,372 @@
+option java_package = "com.guaji.game.protocol";
+import "Battle.proto";
+import "Const.proto";
+
+enum MultiEliteBattleState
+{
+	// 未战斗
+	UNSTART = 0;
+	// 读秒
+	COUNTDOWN = 1;
+	// 战斗中
+	FIGHTING_ING = 2;
+}
+
+// 多人副本福将信息
+message MultiEliteLuckRoleInfo
+{
+   // 佣兵itemId
+   required int32 roleItemId = 1;
+   // 属性类型字典
+   required string textInfo = 2;
+}
+
+// 房间列表简要信息
+message RoomMemberInfo
+{
+	required int32 playerId = 1;
+	// roleId
+	required int32 roleItemId = 2;
+	// 战力
+	required int32 fightValue = 3;
+	// 名字
+	required string name = 4;
+	// 等级
+	optional int32 level = 5;
+	//主角avatar ID
+	optional int32 avatarId = 6;
+	// 头像
+	required int32 headIcon = 7;
+}
+
+// 房间简要信息
+message RoomItem
+{
+	// 服务器房间编号
+	required int32 serverRoomId = 1;
+	// 队友
+	repeated  RoomMemberInfo roomMemberInfo = 2;
+	// 房间名
+	required string landlordName = 3;
+	// 战斗力要求
+	required int32 minFightValue = 4;
+	// 房间创建时间
+	optional int64 createTime = 5;
+	// 是否有密码
+	optional bool isPassWord = 6;
+}
+
+
+
+//  房间成员
+message RoomMember
+{
+	// 玩家Id 
+	required int32 playerId = 1;
+	// 角色配置Id
+	repeated int32 roleItemId = 2;
+	// 角色等级
+	required int32 level = 3; 
+	// 角色名
+	required string name = 4;
+	// 职业
+	required int32 prof = 5;
+
+	// 角色战斗力
+	required int32 fightValue = 6;
+	// 房间内成员状态
+	required MultiEliteState teamState = 7;
+	// 转生状态
+	optional int32 rebirthStage = 8;
+	// 玩家加入房间时间
+	optional int64 joinTime = 9;
+	//主角avatar ID
+	optional int32 avatarId = 10;
+	// 头像
+	required int32 headIcon = 11;
+}
+
+// 战斗奖励信息
+message MultiBattleAward
+{
+	required int32 coin = 1;
+	required int32 exp = 2;
+	required int32 playerId = 3;
+	optional DropAward drop = 4;
+}
+
+// 战斗结果展示
+message MultiEliteBattleResult
+{
+	optional BattleInfo battleInfo = 1;
+	required bool isWin = 2;
+	optional int32 battleRound = 3;
+	optional int32 leftBloodRate = 4;
+	repeated RoomMember roomMember = 5;
+	repeated MultiBattleAward battleAward = 6;
+	optional int32 awardSize = 7 [default = 0];
+	// 福将信息
+	repeated MultiEliteLuckRoleInfo multiEliteLuckRoleInfo = 8;
+}
+
+// 副本列表信息info
+message MultiEliteMapListInfo
+{
+	// 副本ID
+	required int32 mapId = 1;
+	// 当前副本房间数量
+	optional int32 curRoomCount = 2;
+}
+
+// 多人副本当前副本挑战信息
+message HPMultiElteMapInfo
+{
+	// 副本ID
+	required int32 multiEliteMapId = 1;
+	// 副本種類
+	required int32 multiEliteType = 2;
+	// 剩餘領獎次數
+	required int32 LeftTimes = 3;
+	// 目前星數
+	required int32 star = 4;
+}
+
+// 多人副本列表
+message HPMultiEliteListInfoRet
+{
+	// 当天多人副本地图ID
+	repeated HPMultiElteMapInfo multiEliteInfo = 1;
+}
+
+// 请求副本房间列表
+message HPEliteRoomListInfo
+{
+	// 多人副本id
+	required int32 eliteId = 1;
+}
+
+// 同步房间列表
+message HPEliteRoomListSync
+{
+	// 房间列表
+	repeated RoomItem item = 1;
+	// 标识
+	optional int32 packSize = 2;
+}
+
+// 创建房间，创建成功回复 HPMultiEliteRoomMemberSync
+message HPCreateEliteRoom
+{
+	// 关联副本Id
+	required int32 eliteId = 1;
+	// 最小战力要求
+	required int32 minFightValue = 2;
+	// 房间名字
+	required string roomName = 3;
+	// 房间密码
+	optional string passWord = 4;
+}
+
+// 加入房间
+message HPJoinMultiEliteRoom
+{
+	// 是否是快速加入
+	required bool isFastJoin = 1;
+	// 多人副本id
+	required int32 multiEliteId = 2;
+	// 服务器房间Id
+	optional int32 serverRoomId = 3;
+	// 加入密码
+	optional string passWord = 4;
+	// 是否邀请
+	optional bool isInvite = 5;
+}
+
+// 同步成员列表
+message HPMultiEliteRoomMemberSync
+{
+	// 成员列表
+	repeated RoomMember member = 1;
+	// 战斗状态 （ 0 未战斗 1 读秒 2 进入战斗 ）
+	required int32 state = 2;
+	// 倒计时读秒初始值
+	optional int32 countDown = 3;
+	// 房间名字
+	optional string roomName = 4;
+	// 战力
+	optional int32 fightValue = 5;
+	// 房间是否解散
+	optional bool isDissolve = 6;
+	// 房间密码
+	optional string passWord = 7;
+}
+
+// 踢出房间 (房间内广播 HPMultiEliteRoomMemberSync)
+message HPMultiEliteKickRoomMember
+{
+	required int32 memberPlayerId = 1;
+}
+
+// 告知客户端成功退出或被踢出
+message HPExitMultiEliteRoomRet
+{
+	// 防止客户端接收空包
+	required int32 version = 1;
+}
+
+// 邀请玩家加入房间
+message HPInviteInRoom
+{
+	required int32 playerId = 1;
+}
+
+message HPInviteInRoomRet
+{
+	// 防止客户端接收空包
+	required int32 version = 1;
+}
+
+
+// 战斗状态设置
+message HPMultiEliteBattleStateSync
+{	
+	// 战斗状态
+	required int32 state = 1;
+	// 倒计时读秒初始值
+	optional int32 countDown = 2;
+	// 战斗回包
+	optional MultiEliteBattleResult resultShow = 3;
+}
+
+// 邮箱查看多人副本战报
+message HPMultiEliteBattleReport
+{
+	required int32 reportId = 1;
+}
+
+message HPMultiEliteBattleReportRet
+{
+	required MultiEliteBattleResult resultShow = 1;
+}
+
+
+message HPMultiEliteHireRet
+{
+	// 玩家Id
+	required int32 playerId = 1;
+}
+
+// 房间队员状态
+message MulitEliteRoomInfo
+{
+	// 玩家ID
+	required int32 playerId = 1;
+	// 准备状态
+	required int32 setoutState = 2;
+}
+
+// 修改队伍名称
+message MuliteEliteChangeName
+{
+	required string roomName = 1;
+}
+
+// 修改战力
+message MuliteEliteChangeFightValue
+{
+	required int32 fightValue = 1;
+	optional string passWord = 2;
+}
+
+// 被邀请好友通知
+message MulitInviteMsg
+{
+	// 弹框
+	required MutliNoticeType  noticeType = 1;
+	// 邀请者
+	optional string playerName           = 2;
+	// 副本ID
+	optional int32 mapId       			 = 3;
+	// 房间ID
+	optional int32 roomId     			 = 4;
+}
+
+//好友基础信息
+message MulitiFriendItem
+{
+	required int32 playerId 	= 1;
+	required int32 level 		= 2;
+	required string name 		= 3;
+	required int32 roleId 		= 4;
+	required int32 fightValue 	= 5;
+	required int32 rebirthStage = 6;
+	optional string signature  	= 7;
+	// 多人副本，是否有房间
+	optional bool isTeam        = 8;
+	// 挑战剩余次数
+	optional int32 residueCount = 9;
+	// 总次数
+	optional int32 totalCount   = 10;
+	//主角avatar ID
+	optional int32 avatarId = 11;
+	required int32 headIcon 	= 12;
+}
+
+// 多人副本好友列表
+message HPMultiFriendInfoRet
+{
+	required int32 flag	= 1 [default = 0];//没有实际意义，为了避免返回数据为空时，前端解析错误。
+	repeated MulitiFriendItem multiFriendItem = 2;
+}
+
+// 活动开启，结束推送
+message HPMultiEliteStatePush
+{
+	// 红点状态
+	required int32 state = 1;
+}
+
+// 活动开始结束时间和剩余战斗次数
+message HPMultiEliteTimeOrBattleTimes
+{
+	// 开始时间
+	repeated int64 startTime = 1;
+	// 结束时间
+	repeated int64 endTime   = 2;
+	// 剩余次数
+	optional int32 residueTimes = 3;
+	// 战斗胜利次数
+	optional int32 battleTimes = 4;
+}
+
+// 购买多人副本战斗次数
+message HPBuyMultiEliteTimes
+{
+	required int32 times = 1;
+}
+
+message HPBuyMultiEliteTimeRet
+{
+	// 剩余多人副本战斗次数
+	optional int32 eliteTimes = 1;
+	// 多人副本战已购买次数
+	optional int32 alreadyBuyTimes = 2;
+	// 下一次購買價格
+	optional int32 nextBuyGold = 3;
+}
+
+// 領取副本獎勵要求
+message HPMultiEliteGetAwardReq
+{
+	// 領取類型
+	required int32 type = 1;
+}
+
+// 領取回應
+message HPMultiEliteGetAwardRes
+{
+	// 回應領取類型
+	required int32 type = 1;
+	// 領取的獎勵
+	optional string reward = 2;
+}

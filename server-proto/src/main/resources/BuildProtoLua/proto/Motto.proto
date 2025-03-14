@@ -1,0 +1,30 @@
+option java_package = "com.guaji.game.protocol";
+
+message MottoInfo 
+{
+	required int64 id = 1;
+	required int32 itemId = 2;
+	required int32 star = 3;
+}
+
+message MottoInfoSync
+{
+	// 1.update 2. all
+	required int32 syncType = 1;
+	repeated MottoInfo Mottos = 2;
+}
+
+message MottoRequest
+{
+	//動作 0.同步資訊 1.激活 2.升星
+	required int32  action = 1;
+	// 箴言索引Id
+	required int32  mottoId = 2;
+}
+
+message MottoRespones
+{
+	//回應動作 0.同步資訊 1.激活 2.升星
+	required int32  action = 1;
+	optional MottoInfoSync syncInfo = 2;
+}

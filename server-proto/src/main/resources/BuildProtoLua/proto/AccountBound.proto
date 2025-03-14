@@ -1,0 +1,21 @@
+option java_package = "com.guaji.game.protocol";
+
+// 进入帐号绑定信息界面
+message HPAccountBoundInfo {
+	
+} 
+message HPAccountBoundRet {
+	// 帐号状态(1: 未绑定帐号 2: 绑定帐号,未领取 3: 绑定帐号,已领取)
+	required int32 accountStatus = 1;
+	required int32 accountReward = 2;
+}
+// 领取帐号绑定奖励
+message HPAccountBoundConfirm {
+    required string userId = 1;
+    required string wallet = 2;
+}
+message HPAccountBoundConfirmRet {
+	// 帐号状态(1: 未绑定帐号 2: 绑定帐号,未领取 3: 绑定帐号,已领取)
+	required int32 accountStatus = 1;
+	required int32 accountReward = 2;
+}

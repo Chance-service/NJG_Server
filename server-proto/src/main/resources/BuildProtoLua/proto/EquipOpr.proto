@@ -1,0 +1,356 @@
+option java_package = "com.guaji.game.protocol";
+
+import "Reward.proto";
+import "Equip.proto";
+import "Const.proto";
+
+
+//角色穿装备
+message HPEquipDress {
+	//装备ID
+	required int64 equipId = 1;
+	//角色Id
+	required int32 roleId = 2;
+	//1 表示穿上 2 表示卸下 3.替換
+	required int32 type = 3;
+	//是否為賦魂,裝戴其他英雄專武,獲得25%屬性
+	optional bool isSoul = 4;
+	
+}
+
+message HPEquipDressRet {
+	//装备ID
+	optional int64 onEquipId = 1;
+	//角色Id
+	required int32 roleId = 2;
+
+	optional int64 offEquipId = 3;
+}
+
+//角色一鍵穿裝協定
+message HPEquipOneKeyDress{
+    repeated HPEquipDress Dress = 1;
+}
+
+message HPEquipOneKeyDressRet {
+    repeated HPEquipDressRet DressRet = 1;
+}
+
+//装备强化
+message HPEquipEnhance {
+	required int64 equipId = 1;
+	required EquipEnhanceType equipEnhanceType = 2;
+}
+
+message HPEquipEnhanceRet {
+	required int64 equipId = 1;
+}
+
+//装备強化重置
+message HPEquipEnhanceReset {
+	required int64 equipId = 1;
+}
+
+message HPEquipEnhanceResetRet {
+	required int64 equipId = 1;
+}
+
+//装备一键强化
+message HPEquipOneKeyEnhance {
+	//角色编号
+	required int32 roleId = 1;
+}
+
+message HPEquipOneKeyEnhanceRet {
+	repeated int64 equipId = 1;
+}
+
+//装备吞噬
+message HPEquipSwallow {
+	required int64 equipId = 1;
+	//被吞噬的装备
+	repeated int64 swallowedEquipId = 2;
+	//被吞噬的道具
+	repeated int32 swallowedItemId = 3;
+}
+
+message HPEquipSwallowRet {
+	required int64 equipId = 1;
+}
+
+//装备传承 
+message HPEquipExtend {
+	required int64 equipId = 1;
+	//被传承的装备
+	required int64 extendedEquipId = 2;
+}
+
+message HPEquipExtendRet {
+	required int64 equipId = 1;
+}
+
+//装备洗炼
+message HPEquipBaptize {
+	required int64 equipId = 1;
+}
+
+message HPEquipBaptizeRet {
+	required int64 equipId = 1;
+}
+
+// 装备高级洗练
+message HPEquipSuperBaptize {
+	required int64 equipId = 1;
+	repeated int32 lockAttributeTypes = 2;
+}
+
+//装备打孔
+message HPEquipPunch {
+	required int64 equipId = 1;
+	//打孔的位置
+	required int32 punchPos = 2;
+	// 消耗类型 1:道具 2:钻石
+	required int32 costType = 3;
+}
+
+message HPEquipPunchRet
+{
+	required int64 equipId = 1;
+	//打孔的位置
+	required int32 punchPos = 2;
+}
+
+//装备宝石镶嵌
+message HPEquipStoneDress
+{
+	required int64 equipId = 1;
+	//目标孔位
+	required int32 punchPos = 2;
+	//宝石Id
+	required int32 stoneId = 3;
+}
+
+message HPEquipStoneDressRet
+{
+	required int64 equipId = 1;
+	//宝石Id
+	required int32 stoneId = 3;
+}
+
+//装备卸下,一键全卸
+message HPEquipStoneUndress
+{
+	required int64 equipId = 1;
+	required int32 pos = 2;
+}
+
+message HPEquipStoneUndressRet
+{
+	//服务器会同步宝石（道具信息）
+	required int64 equipId = 1;
+}
+
+//旧宝石兑换
+message HPEquipStoneExchange
+{
+	//宝石Id
+	required int32 stoneId = 1;
+	//兑换数量
+	required int32 number = 2;
+}
+
+//旧宝石兑换
+message HPEquipStoneExchangeRet
+{
+	//卖出获得的东西
+	required RewardInfo rewards = 1;
+}
+
+//新宝石商店购买
+message HPNewGemBuy
+{
+	//商店商品id
+	required int32 shopId = 1;
+	//购买类型 1.钻石 2.宝石卷
+	required int32 type = 2;
+	//购买数量
+	required int32 number = 3;
+}
+
+//新宝石商店购买
+message HPNewGemBuyRet
+{
+	//买到的宝石奖励
+	required RewardInfo rewards = 1;
+}
+
+//装备熔炼请求信息
+message HPEquipSmeltInfo {
+	//避免空协议
+	optional int32 version = 1 [default = 1];
+}
+
+message HPEquipSmeltInfoRet {
+	//装备信息
+	optional EquipInfo equipInfo = 1;
+	//道具信息
+	optional RewardItem itemInfo = 2;
+	//今日免费刷新次数
+	required int32 freeRefreshTimes = 3;
+}
+
+//装备熔炼
+message HPEquipSmelt {
+	// 是否批量 (0 手动 1批量)
+	required int32 isMass = 1;
+	// 批量品质 (参见 Const中定义的装备品质)
+	repeated int32 massQuality = 2;
+	// 手动熔炼id集合
+	repeated int64 equipId = 3;
+	// 是否是新手引导熔炼
+	optional bool isGuideSmelt = 4;
+}
+
+message HPEquipSmeltRet {
+	//如果有宝石自动卸下 传1
+	required int32 gemUndress = 1;
+}
+
+//可打造装备刷新
+message HPEquipCreateAvailableRefresh {
+	//避免空协议
+	optional int32 version = 1 [default = 1];
+}
+
+//装备打造
+message HPEquipCreate {
+	//避免空协议
+	optional int32 version = 1 [default = 1];
+}
+
+message HPEquipCreateRet {
+	//打造出来的装备，使用rewards是为了复用客户端展示列表
+	required RewardInfo rewards = 1;
+}
+
+//装备出售
+message HPEquipSell {
+	//装备Id
+	optional int64 equipId = 1;
+	//装备品质
+	optional int32 quality = 2;
+}
+
+message HPEquipSellRet {
+	//卖出获得的东西
+	required RewardInfo rewards = 1;
+}
+
+//装备背包扩充
+message HPEquipBagExtend {
+	optional int32 version = 1 [default = 1];
+}
+
+message HPEquipBagExtendRet {
+	optional int32 version = 1 [default = 1];
+}
+
+//装备锁定
+message HPEquipLock {
+	required int64 equipId = 1;
+}
+
+message HPEquipLockRet {
+	required int64 equipId = 1;
+}
+
+//装备特殊打造
+message HPEquipSpecialCreate {
+	required int32 cfgId = 1;
+	required int32 num = 2;
+}
+
+message HPEquipSpecialCreateRet {
+	required int32 cfgId = 1;
+}
+
+//装备合成
+message HPEquipCompound {
+	required int64 fromEquipId = 1;
+	required int64 toEquipId = 2;
+}
+
+message HPEquipCompoundRet {
+	required int64 fromEquipId = 1;
+	required int64 toEquipId = 2;
+}
+
+//装备分解
+message HPEquipDecompose {
+	repeated int64 equipId = 1;
+}
+
+//装备分解回包
+message HPEquipDecomposeRet {
+	repeated int64 equipId = 1;
+}
+
+//装备进化
+message HPEquipEvolution{
+	required int64 equipId = 1;
+}
+
+//装备进化回包
+message HPEquipEvolutionRet{
+	required int64 equipId = 1;
+}
+//装备升级
+message HPEquipUpgrade{
+	required int64 equipId = 1;
+	optional int32 fixFlag = 2;
+}
+
+//装备升级回包
+message HPEquipUpgradeRet{
+	required int64 equipId = 1;
+}
+
+//裝備再造資訊
+message ForgeInfo
+{
+	required int32  equipId = 1;
+	required int32  count = 2;
+}
+
+//装备再造要求資訊
+message EquipForgeReq
+{
+	repeated ForgeInfo Infos = 1; //欲造裝備訊息
+}
+
+//装备再造回傳
+message EquipForgeRes
+{
+	required bool success = 1; //欲造裝備訊息
+}
+
+//裝備相生開啟要求
+message EquipOpenMutualReq
+{
+	required int32 mutualId	= 1;//相生ID
+}
+
+//裝備相生開啟回應
+message EquipOpenMutualResp
+{
+	required int32 mutualId	= 1;//相生ID
+}
+
+//裝備相生資訊回應
+message OpenMutuaInfolResp
+{
+	repeated int32 mutualId	= 1;//相生ID
+	repeated int32 minstar = 2; //最小星等
+}
+
+

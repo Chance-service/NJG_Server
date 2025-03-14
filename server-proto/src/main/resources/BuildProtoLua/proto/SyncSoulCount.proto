@@ -1,0 +1,7 @@
+option java_package = "com.guaji.game.protocol";
+
+message SyncSoulCountRet{
+	required int32 itemId = 1;
+	required int32 soulCount = 2;
+	required bool isActivated = 3;
+}

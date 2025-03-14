@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:web="http://java.sun.com/xml/ns/javaee"
+	id="WebApp_ID" version="4.0" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee;http://java.sun.com/xml/ns/javaee/web-app_4_0.xsd">
+	<display-name>RedisServer</display-name>
+	<welcome-file-list>
+		<welcome-file>/main.jsp</welcome-file>
+	</welcome-file-list>
+	<listener>
+		<listener-class>com.redisserver.ServiceContext</listener-class>
+	</listener>
+
+	<servlet>
+		<description></description>
+		<display-name>BindingRequest</display-name>
+		<servlet-name>BindingRequest</servlet-name>
+		<servlet-class>com.redisserver.servlet.FaceBookBindingServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BindingRequest</servlet-name>
+		<url-pattern>/bindingRequest</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>FriendRequest</display-name>
+		<servlet-name>FriendRequest</servlet-name>
+		<servlet-class>com.redisserver.servlet.FaceBookFriendServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FriendRequest</servlet-name>
+		<url-pattern>/friendRequest</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>BindingGameCenterRequest</display-name>
+		<servlet-name>BindingGameCenterRequest</servlet-name>
+		<servlet-class>com.redisserver.servlet.GameCenterBindingServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BindingGameCenterRequest</servlet-name>
+		<url-pattern>/bindingGameCenterRequest</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>BindingGooglePlayRequest</display-name>
+		<servlet-name>BindingGooglePlayRequest</servlet-name>
+		<servlet-class>com.redisserver.servlet.GooglePlayBindingServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BindingGooglePlayRequest</servlet-name>
+		<url-pattern>/bindingGooglePlayRequest</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>AccountEnterRequest</display-name>
+		<servlet-name>AccountEnterRequest</servlet-name>
+		<servlet-class>com.redisserver.servlet.AccountEnter</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AccountEnterRequest</servlet-name>
+		<url-pattern>/accountEnterRequest</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>cleanPuidInfoRequest</display-name>
+		<servlet-name>cleanPuidInfoRequest</servlet-name>
+		<servlet-class>com.redisserver.servlet.cleanPuiInfo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cleanPuidInfoRequest</servlet-name>
+		<url-pattern>/cleanPuidInfo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>changePuidAccodeRequest</display-name>
+		<servlet-name>changePuidAccodeRequest</servlet-name>
+		<servlet-class>com.redisserver.servlet.changePuidAccode</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>changePuidAccodeRequest</servlet-name>
+		<url-pattern>/changePuidAccode</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<description></description>
+		<display-name>UploadPic</display-name>
+		<servlet-name>UploadPic</servlet-name>
+		<servlet-class>ResourceManager.UploadPic</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UploadPic</servlet-name>
+		<url-pattern>/uploadPic</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>ServerScoreUp</display-name>
+		<servlet-name>ServerScoreUp</servlet-name>
+		<servlet-class>GameServerManager.ServerScoreUp</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServerScoreUp</servlet-name>
+		<url-pattern>/ServerScoreUp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>ServerScoreDown</display-name>
+		<servlet-name>ServerScoreDown</servlet-name>
+		<servlet-class>GameServerManager.ServerScoreDown</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServerScoreDown</servlet-name>
+		<url-pattern>/ServerScoreDown</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>ChangePassWord</display-name>
+		<servlet-name>ChangePassWordRequest</servlet-name>
+		<servlet-class>com.redisserver.servlet.ChangePassWord</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChangePassWordRequest</servlet-name>
+		<url-pattern>/changePassWord</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>MoveAccountEnter</display-name>
+		<servlet-name>MoveAccountEnterRequest</servlet-name>
+		<servlet-class>com.redisserver.servlet.MoveAccountEnter</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MoveAccountEnterRequest</servlet-name>
+		<url-pattern>/moveAccountEnter</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description></description>
+		<display-name>AdminMoveAccount</display-name>
+		<servlet-name>AdminMoveAccountRequest</servlet-name>
+		<servlet-class>com.redisserver.servlet.AdminMoveAccountEnter</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminMoveAccountRequest</servlet-name>
+		<url-pattern>/adminMoveAccount</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description></description>
+		<display-name>AccountDvidInfo</display-name>
+		<servlet-name>AccountDvidInfoRequest</servlet-name>
+		<servlet-class>com.redisserver.servlet.AdminAccountDvidInfo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AccountDvidInfoRequest</servlet-name>
+		<url-pattern>/accountDvidInfo</url-pattern>
+	</servlet-mapping>
+</web-app>

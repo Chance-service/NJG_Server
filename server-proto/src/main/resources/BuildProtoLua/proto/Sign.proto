@@ -1,0 +1,23 @@
+option java_package = "com.guaji.game.protocol";
+
+message SignRequest
+{
+	//動作 0.同步資訊 1.查詢某標記狀態 2.某標記狀態改變 3.修改某標記狀態
+	required int32  action = 1;
+    // 1.查詢某標記狀態(欲查標記ID) 2.某標記狀態改變(標記ID)3.修改某標記狀態(標記ID)
+    optional int32  signId = 2;
+    // 3.修改某標記狀態(欲修改狀態 true.開啟 false關閉)
+    optional bool  setVal = 3;
+}
+
+message SignRespones
+{
+	//回應動作 0.同步資訊 1.查詢某標記狀態 2.某標記狀態改變 3.修改某標記狀態
+	required int32  action = 1;
+    // 最大標記編號(暫時不用)
+    optional int32  maxSign = 2; 
+    // 回傳標記狀態 1.查詢某標記狀態 2.某標記狀態改變 3.修改某標記狀態
+    optional bool state = 3;
+    // 回傳標記ID
+	repeated int32  signId = 4;
+}

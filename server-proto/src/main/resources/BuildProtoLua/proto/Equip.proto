@@ -1,0 +1,56 @@
+option java_package = "com.guaji.game.protocol";
+
+import "Attribute.proto";
+
+message EquipAttr
+{
+	// 属性级别{参考Const.equipAttrGrade}
+	required int32 attrGrade = 1;
+	// 属性id(参考Const.attr)
+	required Attr attrData = 2;
+}
+
+message GemInfo
+{
+	// 宝石位置
+	required int32 pos = 1;
+	// 宝石id(-1未打孔, 0已打孔未镶嵌, >0表示宝石id)	
+	optional int32 gemItemId = 2;
+}
+
+message EquipInfo
+{
+	required int64  id = 1;
+	required int32  equipId = 2;
+	//装备强化等级
+	required int32  strength = 3;
+	//装备神器星级
+	required int32  starLevel = 4;
+	//装备神器经验
+	required int32  starExp = 5;
+	//装备神器属性Id
+	required int32  godlyAttrId = 6;
+	//宝石信息
+	repeated GemInfo gemInfos = 7;
+	repeated EquipAttr attrInfos = 8;	
+	required int32  status = 9;
+	//装备评分
+	required int32  score = 10;
+	//装备锁，熔炼的时候会自动跳过他
+	optional bool  lock = 11;
+	//装备神器星级2
+	optional int32  starLevel2 = 12;
+	//装备神器经验2
+	optional int32  starExp2 = 13;
+	//装备神器属性Id2
+	optional int32  godlyAttrId2 = 14;
+	//关联套装Id
+	optional int32 relateSuitId = 15;
+}
+
+//装备信息同步
+message HPEquipInfoSync
+{
+	repeated EquipInfo equipInfos = 1;
+	optional bool isReward = 2;
+}

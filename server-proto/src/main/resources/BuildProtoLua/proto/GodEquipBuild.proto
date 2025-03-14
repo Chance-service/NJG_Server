@@ -1,0 +1,28 @@
+option java_package = "com.guaji.game.protocol";
+
+// 奖池奖品信息
+message EquipInfoItem {
+	required string reward = 1; 
+	required int32 curCount = 2; //当前全服剩余数量
+	required int32 allCount = 3; //总数量
+}
+// 请求活动基础信息
+message GodEquipBuildInfo {
+}
+// 基础信息反馈
+message GodEquipBuildInfoRet {
+	required int32 singleCost = 1; // 单次消耗
+	required int32 tenCost = 2; // 十连抽消耗
+	required int32 closeTimes = 3; // 活动剩余时间
+	required int32 freeTimesCD = 4; // 免费cd
+	repeated EquipInfoItem allEquip = 5;//所有全服装备详细信息
+}
+// 锻造装备
+message EquipBuildReq {
+	required bool isSingle = 1; // true： 锻造一次     false：十连
+}
+
+// 锻造装备反馈
+message EquipBuildRet {
+	repeated string reward = 1; 
+}

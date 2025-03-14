@@ -1,0 +1,125 @@
+option java_package = "com.guaji.game.protocol";
+
+import "Const.proto";
+
+/**
+ * 新商店协议
+ */
+
+// 商店物品初始化
+message ShopItemInfoInit
+{
+	required int32 id = 1; // 商城唯一ID
+	required int32 itemId = 2; // 物品ID
+	required int32 itemType = 3; // 物品类型
+	required int32 count = 4; // 物品数量
+	required changeType dataType = 5; // 数据类型
+	required int32 price = 6; // 折扣后的购买的价格
+	required int32 discont = 7; // 购买折扣
+	optional int32 totalcount = 8; // 初始數量
+	optional string priceStr = 9; // 消耗物品數量或貨幣數量
+    optional int32 vip = 10; // 商品VIP限制
+}
+
+// 商店显示数据
+message DisplayData {
+	required DataType dataType = 1; // 数据类型
+	required int64 amount = 2; // 剩余数量
+}
+
+// 商店初始化
+message ShopItemInfoRequest {
+	required int32 type = 1; // 1.初始化 2.刷新
+	required ShopType shopType = 2;
+	optional int32 refreshType = 3; //0.免費 1.收費
+}
+
+// 商店初始化返回数据包
+message ShopItemInfoResponse {
+	required ShopType shopType = 1;
+	repeated DisplayData data = 2;
+	repeated ShopItemInfoInit itemInfo = 3;
+	optional int32 refreshPrice = 4; // 刷新价格
+	optional int32 freeRefresh = 5; // 可免費刷新次數
+	optional int32 costRefresh = 6; // 可收費刷新次數
+	optional int32 refreshTime = 7; // 免費刷新的時間
+}
+
+// 商店物品购买
+message BuyShopItemsRequest {
+	required int32 type = 1; // 1.单个购买 2.全部购买
+	required ShopType shopType = 2;
+	optional int32 id = 3; // 商城唯一ID
+	optional int32 amount = 4; // 购买数量
+	optional int32 buyType = 5; // 购买使用货币类型
+}
+
+// 商店物品购买返回
+message BuyShopItemsResponse {
+	required ShopType shopType = 1;
+	repeated ShopItemInfoInit itemInfo = 2;
+	repeated DisplayData data = 3;
+	repeated bool isDouble  = 4; // 是否為兩倍
+}
+
+// 推送商店红点
+message PushShopRedPoint {
+	required ShopType shopType = 1;// 商店类型
+	required bool showRedPoint = 2;// 是否显示红点
+}
+
+// 取得honeyp
+message HoneyPRequest {
+    required string token =1;
+}
+
+// 取得honeyp返回
+message HoneyPResponse {
+    required int32 coins = 1; // honeyP
+}
+
+// 取得honeyp
+message HoneyPBuyRequest {
+    required string token =1;
+    required int32 pid = 2; // 購買商品編號
+}
+
+// 取得honeyp返回
+message HoneyPBuyResponse {
+    required int32 result = 1; // 回傳結果 1成功0失敗
+    required string refno = 2; // 訂單號
+    optional int32 costmoney =3;// 花費
+}
+
+// 領取Jgg訂單上的商品
+message JggGetGoods {
+    required string orderid = 1; //訂單號
+}
+
+// 獲得Jgg訂單通知
+
+message JggOrderNotice {
+    required string orderid = 1; // 訂單號
+    required int32 status = 2; // 回傳結果 0.獲得訂單 1.成功 2.失敗
+}
+
+// 驗證禮包
+message GoodsNotice{
+	required int32 goodsId = 1; // 禮包ID
+}
+
+// 請求69COIN領取商品
+message SixNineCoinTakeRequest {
+    required string token =1;
+    required string orderid = 2; // 平台訂單編號
+    required string nonce = 3;   // 自訂訂單編號
+    required int32 goodsId = 4;  // 購買商品編號
+}
+
+// 返回69COIN領取商品
+message SixNineTakeResponse {
+    required int32 result = 1; // 回傳結果 1成功0失敗
+}
+
+
+

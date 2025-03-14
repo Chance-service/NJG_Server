@@ -1,0 +1,17 @@
+option java_package = "com.guaji.game.protocol";
+
+message ItemInfo
+{
+	required int32  id = 1;
+	required int32  itemId = 2;
+	required int64  count = 3;
+	required int32  status = 4;
+	//如果是宝石，给一个强化经验
+	optional int32  exp = 5;
+}
+
+message HPItemInfoSync
+{
+	repeated ItemInfo itemInfos = 1;
+}
+
