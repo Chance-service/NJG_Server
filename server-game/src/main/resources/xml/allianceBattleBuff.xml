@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- extraReward1为公会争霸奖励中，对应的第一个奖励的百分比加成 100为1% -->
+<!-- phyDefAdd magicDefAdd 为单次的血量、伤害加成 -1000为10%-->
+<root>
+      <data id="1"  phyDefAdd="-2000" magicDefAdd="-2000" extraReward1="2000" extraReward2="2" extraReward3="5"/>
+      <data id="2"  phyDefAdd="-4000" magicDefAdd="-4000" extraReward1="3000" extraReward2="3" extraReward3="8"/>
+      <data id="3"  phyDefAdd="-6000" magicDefAdd="-6000" extraReward1="4000" extraReward2="4" extraReward3="10"/>
+      <data id="4"  phyDefAdd="-8000" magicDefAdd="-8000" extraReward1="5000" extraReward2="5" extraReward3="15"/>
+      <data id="5"  phyDefAdd="-10000" magicDefAdd="-10000" extraReward1="6000" extraReward2="6" extraReward3="20"/>
+</root>

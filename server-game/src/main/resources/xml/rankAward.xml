@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" minRank="1" awardStr="30000_6009_700"/>
+	  <data id="2" minRank="2" awardStr="30000_6009_600"/>
+	  <data id="3" minRank="3" awardStr="30000_6009_500"/>
+	  <data id="4" minRank="10" awardStr="30000_6009_350"/>
+	  <data id="5" minRank="100" awardStr="30000_6009_300"/>
+	  <data id="6" minRank="1000" awardStr="30000_6009_250"/>
+	  <data id="7" minRank="5000" awardStr="30000_6009_200"/>
+	  <data id="8" minRank="10000" awardStr="30000_6009_150"/>
+	  <data id="9" minRank="30000" awardStr="30000_6009_100"/>
+</root>

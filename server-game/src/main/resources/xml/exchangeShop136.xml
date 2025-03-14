@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data exchangeId="1" maxExchangeTimes="1" awardInfo="70000_1_5" consumeInfo="10000_1001_3000" isReset="1"/>
+	  <data exchangeId="2" maxExchangeTimes="1" awardInfo="70000_2_5" consumeInfo="10000_1001_1000" isReset="1"/>
+	  <data exchangeId="3" maxExchangeTimes="1" awardInfo="30000_1_10" consumeInfo="10000_1001_1500" isReset="1"/>
+	  <data exchangeId="4" maxExchangeTimes="1" awardInfo="30000_2_10" consumeInfo="10000_1001_3000" isReset="1"/>
+	  <data exchangeId="5" maxExchangeTimes="5" awardInfo="30000_7001_1" consumeInfo="10000_1001_5000" isReset="1"/>
+	  <data exchangeId="6" maxExchangeTimes="5" awardInfo="30000_7002_1" consumeInfo="10000_1001_3000" isReset="1"/>
+	  <data exchangeId="7" maxExchangeTimes="25" awardInfo="30000_7003_1" consumeInfo="10000_1001_1500" isReset="1"/>
+	  <data exchangeId="8" maxExchangeTimes="200" awardInfo="30000_7004_1" consumeInfo="10000_1001_3000" isReset="1"/>
+	  <data exchangeId="9" maxExchangeTimes="100" awardInfo="10000_102_500" consumeInfo="10000_1001_5000" isReset="1"/>
+	  <data exchangeId="10" maxExchangeTimes="100" awardInfo="10000_102_5000" consumeInfo="10000_1001_1500" isReset="1"/>
+	  <data exchangeId="11" maxExchangeTimes="100" awardInfo="10000_102_50000" consumeInfo="10000_1001_3000" isReset="1"/>
+	  <data exchangeId="12" maxExchangeTimes="100" awardInfo="10000_102_500000" consumeInfo="10000_1001_5000" isReset="1"/>
+	  <data exchangeId="13" maxExchangeTimes="100" awardInfo="10000_102_5000000" consumeInfo="10000_1001_1500" isReset="1"/>
+	  <data exchangeId="14" maxExchangeTimes="30" awardInfo="10000_102_50000000" consumeInfo="10000_1001_3000" isReset="1"/>
+</root>

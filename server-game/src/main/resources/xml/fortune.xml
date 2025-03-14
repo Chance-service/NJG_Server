@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- 
+@Id
+	private final int id;
+	/**
+	 * 所需充值钻石数
+	 */
+	private final int needRechargeGold;
+	/**
+	 * 获得最小钻石数
+	 */
+	private final int rewardMin ;
+	/**
+	 * 获得最大钻石数
+	 */
+	private final int rewardMax ;
+ -->
+<root>
+	<data id="1" needRechargeGold="60" rewardMin="60" rewardMax="72"/>
+	<data id="2" needRechargeGold="480" rewardMin="480" rewardMax="576"/>
+	<data id="3" needRechargeGold="1100" rewardMin="1100" rewardMax="1320"/>
+	<data id="4" needRechargeGold="2050" rewardMin="2050" rewardMax="2460"/>
+	<data id="5" needRechargeGold="4900" rewardMin="4900" rewardMax="5880"/>
+</root>

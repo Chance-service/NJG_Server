@@ -1,0 +1,99 @@
+<script httpAddr="0.0.0.0:5132" whiteIptables="true" 
+    whiteips=""
+    isDebug="1"
+    valiableUser="admin:21232f297a57a5a743894a0e4a801fc3,shala:56527793f8106f86d28fcedbb36853f2,zhanglin:7ea6e51e4ef90b8aab8e53ec835f76c8"
+    baseSrcDir="${app}/script"
+	baseOutDir="${app}/script/bin">
+	<item id="changeplayer" className="com.guaji.game.gm.ChangePlayerInfoHandler"/>	<!-- 1修改角色货币信息 -->
+	<item id="playerreward" className="com.guaji.game.gm.PlayerRewardHandler" />	<!-- 2玩家发奖励 -->
+	<item id="emailCompensation" className="com.guaji.game.gm.EmailCompensationHandler" /><!-- 3邮件补偿 -->	
+	<item id="playerinfo" className="com.guaji.game.gm.PlayerInfoHandler" />		<!-- 4角色查詢 -->
+	<item id="genequip" className="com.guaji.game.gm.GenEquipHandler" />			<!-- 5生成装备 -->
+	<item id="clearItemInfo" className="com.guaji.game.gm.ClearItemInfoHandler" />	<!-- 6清理背包 -->
+	<item id="addGodEquip" className="com.guaji.game.gm.AddGodlyInfoHandler" />		<!-- 7给玩家发神器 -->
+    <item id="clearplayer" className="com.guaji.game.gm.ClearPlayerCacheHandler" />	<!-- 8清除角色快取 -->
+    <item id="recharge" className="com.guaji.game.gm.GMRechargeHandler" />			<!-- 9後台充值腳本 -->
+    <!--<item id="payNotice" className="com.guaji.game.paynotice.PayNoticeHandler"/> -->	<!--測試用支付移至下面 10.H36510儲值api -->
+    <item id="setPassedMap" className="com.guaji.game.gm.SetPassedMapId"/>			<!-- 11设置关卡 -->
+    
+    <item id="genRobot" className="com.guaji.game.gm.GeneratorRobotHandler" /><!-- 801创建机器人 -->
+	<item id="genRobotBH" className="com.guaji.game.gm.GMCreateAllianceHandler" /><!-- 802创建机器人 -->
+	
+	<item id="xmlcheck" className="com.guaji.game.gm.XmlReloadHandler" />			<!-- 901更新xml加載！ -->
+	<item id="broadcast" className="com.guaji.game.gm.GMBroadcastHandler" />		<!-- 903GM廣播 -->
+	<item id="synthesisinfo" className="com.guaji.game.gm.SynthesisInfoHandler" />	<!-- 904查詢單服統計信息 -->
+	<item id="clearrecharge" className="com.guaji.game.gm.ClearAllFirstRechargeInfoHandler" /><!-- 906清除所有人首充狀態 -->
+	<item id="forbiden" className="com.guaji.game.gm.ForbidenPlayerHandler" />		<!-- 907封號操作 -->
+	<item id="silent" className="com.guaji.game.gm.SilentPlayerHandler" />			<!-- 908禁言 -->
+	<item id="fixplayer" className="com.guaji.game.gm.FixPlayerPosHandler"/>		<!-- 909玩家封號(黑名單)處理 -->
+	<item id="kick" className="com.guaji.game.gm.KickPlayerHandler" />				<!-- 910踢除在線玩家 -->
+	<item id="changePuid" className="com.guaji.game.gm.ChangePuidHangler" />		<!-- 911更改玩家帳號 -->
+	<!-- scriptReLoad -->															<!-- 912伺服器高級命令 -->
+	<item id="njgGachaTest" className="com.guaji.game.gm.GachaTestHandler"/>		<!-- 913轉蛋機率測試 -->
+	<item id="sendMsgToObj" className="com.guaji.game.gm.SendMsgToObj"/>			<!-- 914發送module Msg -->
+	<item id="fixoverday" className="com.guaji.game.gm.PlayerDailyResetHandler" />  <!-- 915過每日清除點 -->
+	<item id="testFuntion" className="com.guaji.game.gm.LINTestFuntionHandler" />  	<!-- 999程式用測試函示 -->
+	
+	<item id="gscheck" className="com.guaji.game.gm.GsReloadHandler" />				<!-- gs.cfg配置加载 -->>
+	<item id="dbland" className="com.guaji.game.gm.DbLandHandler" />
+	<item id="clearchat" className="com.guaji.game.gm.ClearChatHandler" />
+
+	<item id="sysop" className="com.guaji.game.gm.SysOperationHandler" />
+	<item id="delarenarank" className="com.guaji.game.gm.DelArenaRankHandler" />
+	<item id="onshutdown" className="com.guaji.game.gm.ShutdownCallbackHandler" />
+	<item id="fixalliancesnap" className="com.guaji.game.gm.FixAllianceSnapShotHandler" />
+	<item id="campperoid" className="com.guaji.game.gm.CampWarPeroidHandler" />
+	<item id="delerrorrole" className="com.guaji.game.gm.DeleteErorrRoleHandler" />
+	<item id="changealliance" className="com.guaji.game.gm.ChangeAllianceHandler" />
+	<item id="fixalliance" className="com.guaji.game.gm.FixAlliancePosHandler" />
+	<item id="compensation" className="com.guaji.game.gm.CompensationHandler" />
+	<item id="fixalliancemem" className="com.guaji.game.gm.FixAllianceMemberHandler" />
+	<item id="monthcard" className="com.guaji.game.gm.MonthCardHandler" autoRun="true" />
+	<item id="fixtitle" className="com.guaji.game.gm.FixTitleHandler" />
+	<item id="entityland" className="com.guaji.game.gm.DBEntityLandHandler" />
+	<item id="teambattlecomp" className="com.guaji.game.gm.TeamBattleCompensateHandler" />
+
+	<item id="platformPushMessage" className="com.guaji.game.gm.PlatformPushMessageHandler" />
+	<item id="fixreport" className="com.guaji.game.gm.FixReportDataHandler" />
+	<item id="fixalliance" className="com.guaji.game.gm.FixAlliancePosHandler" />
+
+	<item id="fixtitle" className="com.guaji.game.gm.FixTitleHandler" />
+	<item id="grantarena" className="com.guaji.game.gm.GrantArenaAwardsHandler" />
+	<item id="fixserverdata" className="com.guaji.game.gm.FixServerDataRedEnvelope" />
+	<item id="deduckplayerequip" className="com.guaji.game.gm.DeductPlayerEquipHandler" />
+	<item id="playerinfoentermate" className="com.guaji.game.gm.PlayerInfoEntermateHandler" />
+	<item id="playerinfor2" className="com.guaji.game.gm.PlayerInfoR2Handler" />
+	<item id="exchangeAllianceL" className="com.guaji.game.gm.ExchangeAllianceLeaderHandler" />
+	<item id="sendRechargeAward" className="com.guaji.game.gm.SendRechargeAwardHandler" />
+	<item id="playerRebirth" className="com.guaji.game.gm.PlayerRebirthHandler" />
+	<item id="playerMapChange" className="com.guaji.game.gm.PlayerMapChangeHandler" />
+
+	<item id="changePostion" className="com.guaji.game.gm.ChangePostionHandler" />
+
+	<item id="itemdirect" className="com.guaji.game.gm.ItemdirectHandler" />
+
+	<item id="roleActivite" className="com.guaji.game.gm.RoleActiviteHandler" />
+
+	<item id="multiEliteInitMap" className="com.guaji.game.gm.MultiEliteInitMapHandler" />
+	<item id="finishQuest" className="com.guaji.game.gm.FinishQuestHandler" />
+	<item id="gvgControl" className="com.guaji.game.gm.GvgControlHandler" />
+	<item id="gvgResetControl" className="com.guaji.game.gm.GvgReStartControlHandler" />
+	<item id="clearMaidenEncounter" className="com.guaji.game.gm.ClearMaidenEncounterHandler" />
+	<item id="clearVipPackage" className="com.guaji.game.gm.ClearAllVipPackageHandler" />
+	<item id="changeAllianceNameNotice" className="com.guaji.game.gm.ChangeAllianceNameNoticeHandler" />
+	<item id="clearDiscountGift" className="com.guaji.game.gm.ClearDiscountGiftHandler" />
+	<item id="setAllianceLevel" className="com.guaji.game.gm.SetAllianceLevelHandler"/>
+
+
+
+	<item id="statistical" className="com.guaji.game.gm.StatisticalInfoHandler"/><!-- 遊戲統計資訊 -->
+	<item id="njgPlayerinfo" className="com.guaji.game.gm.NjgPlayerInfoHandler"/><!-- 玩家個別資訊 -->
+	<item id="njgLTVinfo" className="com.guaji.game.gm.NjgLTVInfoHandler"/><!-- LTV資訊 -->
+	
+	<item id="bulletinInfo" className="com.guaji.game.gm.BulletinInfoHandler"/><!-- 公告訊息處理 -->
+	<!-- 支付通知回调 -->
+	<item id="payNotice" className="com.guaji.game.paynotice.PayNoticeHandler"/>	<!--10.H36510儲值api -->
+	<item id="KusoPay" className="com.guaji.game.paynotice.KusoPayHandler"/>	<!--Kuso儲值api -->
+	
+</script>
+

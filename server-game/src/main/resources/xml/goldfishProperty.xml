@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+捞鱼活动中的鱼属性配置
+    id:       唯一标识
+	listId:   分组类型
+	itemType: 物品类型
+	itemId:   物品ID
+	itemCount:物品数量
+	limit:    进入该奖励池N次后比获得当前鱼
+	weight:   捞中概率
+	score:    捞中后获得积分
+-->
+<root>
+	<data id="1" listId="1" itemType="30000" itemId="203003" itemCount="1" limit="0" weight="30" score="10"/>
+	<data id="2" listId="1" itemType="30000" itemId="104004" itemCount="1" limit="0" weight="20" score="10"/>
+	<data id="3" listId="1" itemType="30000" itemId="106001" itemCount="20" limit="0" weight="15" score="10"/>
+	<data id="4" listId="1" itemType="30000" itemId="101001" itemCount="100" limit="0" weight="20" score="10"/>
+	<data id="5" listId="1" itemType="30000" itemId="103001" itemCount="2" limit="0" weight="8" score="10"/>
+	<data id="6" listId="1" itemType="30000" itemId="103002" itemCount="2" limit="0" weight="7" score="10"/>
+	
+	<data id="7" listId="2" itemType="70000" itemId="172" itemCount="2" limit="0" weight="27" score="30" />
+	<data id="8" listId="2" itemType="30000" itemId="299997" itemCount="1" limit="0" weight="65" score="30" />
+	<data id="9" listId="2" itemType="70000" itemId="172" itemCount="5" limit="0" weight="8" score="50" />
+	
+	<data id="10" listId="3" itemType="70000" itemId="172" itemCount="5" limit="0" weight="100" score="50" />
+</root>

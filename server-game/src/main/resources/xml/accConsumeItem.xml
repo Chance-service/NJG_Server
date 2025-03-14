@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="101" cfgId="1" conItemType="10001" needTimes="100" awards="30000_104211_30"/>
+	  <data id="102" cfgId="1" conItemType="10002" needTimes="50" awards="30000_104212_10"/>
+	  <data id="103" cfgId="1" conItemType="10003" needTimes="30" awards="30000_104213_10"/>
+	  <data id="104" cfgId="1" conItemType="104101" needTimes="100" awards="30000_104101_10"/>
+</root>

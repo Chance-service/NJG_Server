@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" nTotalMoney="100" awards="30000_250008_3"/>
+	  <data id="2" nTotalMoney="500" awards="10000_1001_500,30000_395051_20"/>
+	  <data id="3" nTotalMoney="1000" awards="10000_1001_1500,30000_395051_30"/>
+	  <data id="4" nTotalMoney="2500" awards="30000_103105_3,30000_211155_1"/>
+	  <data id="5" nTotalMoney="5000" awards="10000_1001_3000,30000_7008_50"/>
+	  <data id="6" nTotalMoney="7500" awards="30000_111311_1,30000_211159_1"/>
+	  <data id="7" nTotalMoney="10000" awards="30000_7003_5,30000_7004_5"/>
+	  <data id="8" nTotalMoney="12500" awards="30000_7005_5,30000_7006_5"/>
+	  <data id="9" nTotalMoney="15000" awards="30000_7008_100,30000_211159_5"/>
+</root>

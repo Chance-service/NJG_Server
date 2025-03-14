@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="41" salepacket="10000_1001_900,30000_106011_20,30000_103104_2" dayMaxBuyTime="5"/>
+	  <data id="42" salepacket="10000_1001_3000,30000_104213_70,30000_103105_1" dayMaxBuyTime="3"/>
+	  <data id="43" salepacket="10000_1001_1500,30000_104004_20,30000_104101_50,30000_104213_50" dayMaxBuyTime="3"/>
+	  <data id="44" salepacket="30000_104003_30,30000_104101_20,30000_103103_2" dayMaxBuyTime="0"/>
+	  <data id="45" salepacket="30000_104003_50,30000_101002_30,30000_103103_5" dayMaxBuyTime="0"/>
+</root>

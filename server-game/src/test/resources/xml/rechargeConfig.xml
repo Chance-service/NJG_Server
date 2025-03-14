@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root currency="RMB" moneyGoldRatio="10">
+	<Recharge id="1" name ="1.qmgj.jtsd" type = "0" amount="60" addNum="0" costMoney="0.99" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0"/>
+	<Recharge id="2" name ="2.qmgj.jtsd" type = "0" amount="600" addNum="0" costMoney="9.99" showAddNum = "100" valid = "true" roleId = "0" minLevel = "1" costAmount = "0"/>
+	<Recharge id="3" name ="3.qmgj.jtsd" type = "0" amount="1200" addNum="0" costMoney="19.99" showAddNum = "200" valid = "true" roleId = "0" minLevel = "1" costAmount = "0"/>
+	<Recharge id="4" name ="4.qmgj.jtsd" type = "0" amount="3000" addNum="0" costMoney="49.99" showAddNum = "300" valid = "true" roleId = "0" minLevel = "1" costAmount = "0"/>
+	<Recharge id="5" name ="5.qmgj.jtsd" type = "0" amount="6000" addNum="0" costMoney="99.99" showAddNum = "400" valid = "true" roleId = "0" minLevel = "1" costAmount = "0"/>
+	<Recharge id="30" name ="30.qmgj.jtsd" type = "1" amount="300" addNum="0" costMoney="4.99" showAddNum = "500" valid = "true" roleId = "0" minLevel = "1" costAmount = "0"/>
+</root>

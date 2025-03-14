@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" item="30000_7001_250000" weight="10"/>
+	  <data id="2" item="30000_6003_2" weight="10"/>
+	  <data id="3" item="30000_7126_1" weight="15"/>
+	  <data id="4" item="10000_1001_800" weight="15"/>
+	  <data id="5" item="30000_6004_5" weight="20"/>
+	  <data id="6" item="30000_6006_5" weight="10"/>
+	  <data id="7" item="10000_1001_400" weight="10"/>
+	  <data id="8" item="30000_6004_3" weight="5"/>
+	  <data id="9" item="10000_1002_500000" weight="5"/>
+	  <data id="10" item="30000_1_60" weight="0"/>
+</root>

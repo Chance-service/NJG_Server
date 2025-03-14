@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data Id="0" startRand="1" endRand="1111" awards="70000_196_5"/>
+	  <data Id="1" startRand="1112" endRand="2222" awards="70000_196_2"/>
+	  <data Id="2" startRand="2223" endRand="3333" awards="30000_202013_2"/>
+	  <data Id="3" startRand="3334" endRand="4444" awards="30000_103001_2"/>
+	  <data Id="4" startRand="4445" endRand="5555" awards="30000_103002_2"/>
+	  <data Id="5" startRand="5556" endRand="6666" awards="30000_104004_1"/>
+	  <data Id="6" startRand="6667" endRand="7777" awards="30000_104003_3"/>
+	  <data Id="7" startRand="7778" endRand="8888" awards="30000_101001_100"/>
+	  <data Id="8" startRand="8889" endRand="10000" awards="30000_106001_20"/>
+</root>

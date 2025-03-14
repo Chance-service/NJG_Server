@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<!-- region 1 代表上半区 2 代表下半区 
+	group ：
+		GROUP_32 = 1;
+		GROUP_16 = 2;
+		GROUP_8 = 3;
+		GROUP_4 = 4;
+		GROUP_2 = 5;
+-->
+	<data group="1" leftIndex="22" rightIndex="11" region="1" />
+	<data group="1" leftIndex="27" rightIndex="6" region="1" />
+	<data group="1" leftIndex="19" rightIndex="14" region="1" />
+	<data group="1" leftIndex="30" rightIndex="3" region="1" />
+	<data group="1" leftIndex="23" rightIndex="10" region="1" />
+	<data group="1" leftIndex="18" rightIndex="15" region="1" />
+	<data group="1" leftIndex="26" rightIndex="7" region="1" />
+	<data group="1" leftIndex="31" rightIndex="2" region="1" />
+	<data group="1" leftIndex="21" rightIndex="12" region="2" />
+	<data group="1" leftIndex="28" rightIndex="5" region="2" />
+	<data group="1" leftIndex="20" rightIndex="13" region="2" />
+	<data group="1" leftIndex="29" rightIndex="4" region="2" />
+	<data group="1" leftIndex="24" rightIndex="9" region="2" />
+	<data group="1" leftIndex="25" rightIndex="8" region="2" />
+	<data group="1" leftIndex="17" rightIndex="16" region="2" />
+	<data group="1" leftIndex="32" rightIndex="1" region="2" />
+</root>

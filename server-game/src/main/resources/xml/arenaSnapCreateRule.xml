@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- id：配置编号 minRank:适用该套规制的最大次数-->
+<root>
+      <data id="1" systype="1" maxRank="80"  time="21:00" holddays="3"/>
+</root>

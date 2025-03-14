@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" level="15" award="1001,1002" up_param="5" down_param="8" time="30" number="30" reset_cost="0,100" everyResetTimes="2" costPerSec="30" maxFailNum="3" canSweepStart="3"/>
+</root>

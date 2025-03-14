@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1"  levelLimit="10" awardStr="10000_1001_400"/>
+      <data id="2"  levelLimit="20" awardStr="10000_1001_500"/>
+      <data id="3"  levelLimit="30" awardStr="10000_1001_600"/>
+      <data id="4"  levelLimit="40" awardStr="10000_1001_700"/>
+      <data id="5"  levelLimit="50" awardStr="10000_1001_800"/>
+      <data id="6"  levelLimit="60" awardStr="10000_1001_1000"/>
+      <data id="7"  levelLimit="70" awardStr="10000_1001_1200"/>
+      <data id="8"  levelLimit="80" awardStr="10000_1001_1400"/>
+      <data id="9"  levelLimit="90" awardStr="10000_1001_1600"/>
+      <data id="10"  levelLimit="100" awardStr="10000_1001_1800"/>
+</root>

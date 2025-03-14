@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1"  addRoleType="3" buffPrice="150" buffWeight="25" buffAttrs="104_1000"/>
+      <data id="2"  addRoleType="3" buffPrice="120" buffWeight="20" buffAttrs="104_2000"/>
+      <data id="3"  addRoleType="3" buffPrice="100" buffWeight="16" buffAttrs="104_4000"/>
+      <data id="4"  addRoleType="3" buffPrice="80" buffWeight="15" buffAttrs="104_6000"/>
+      <data id="5"  addRoleType="3" buffPrice="60" buffWeight="12" buffAttrs="104_8000"/>
+      <data id="6"  addRoleType="3" buffPrice="0" buffWeight="12" buffAttrs="104_12000"/>
+</root>

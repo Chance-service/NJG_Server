@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1"  condition="10" rewards="30000_104101_2,30000_104212_10"/>
+      <data id="2"  condition="30" rewards="30000_104101_5,30000_104212_20"/>
+      <data id="3"  condition="60" rewards="30000_104101_10,30000_104212_50"/>
+</root>

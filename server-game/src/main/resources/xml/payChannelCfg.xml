@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- 支付渠道相关配置-->
+<root>
+	<data id="1"  name="苹果支付" orderCheckUrl="" sandboxOrderCheckUrl="" secretKey=""/>
+	<data id="2"  name="谷歌支付" orderCheckUrl="" sandboxOrderCheckUrl="" secretKey=""/>
+</root>

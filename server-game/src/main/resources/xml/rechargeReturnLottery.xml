@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data Id="1" ticketType="50" startRand="1" endRand="12" awards="50"/>
+	  <data Id="2" ticketType="55" startRand="13" endRand="25" awards="55"/>
+	  <data Id="3" ticketType="60" startRand="26" endRand="37" awards="60"/>
+	  <data Id="4" ticketType="65" startRand="38" endRand="50" awards="65"/>
+	  <data Id="5" ticketType="70" startRand="51" endRand="62" awards="70"/>
+	  <data Id="6" ticketType="75" startRand="63" endRand="75" awards="75"/>
+	  <data Id="7" ticketType="80" startRand="76" endRand="87" awards="80"/>
+	  <data Id="8" ticketType="90" startRand="88" endRand="100" awards="90"/>
+</root>

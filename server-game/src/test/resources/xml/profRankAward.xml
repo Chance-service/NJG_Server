@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- 职业排行奖励配置-->
+<root>
+	<data id="1" minRank="1" awardStr="10000_1001_500,30000_41001_20"/>
+	<data id="2" minRank="2" awardStr="10000_1001_400,30000_41001_15"/>
+	<data id="3" minRank="3" awardStr="10000_1001_350,30000_41001_12"/>
+	<data id="4" minRank="5" awardStr="10000_1001_300,30000_41001_10"/>
+	<data id="5" minRank="10" awardStr="10000_1001_250,30000_41001_8"/>
+	<data id="6" minRank="20" awardStr="10000_1001_200,30000_41001_7"/>
+</root>

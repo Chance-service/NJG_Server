@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1"  costItems="30000_299988_10" exchangeItems="30000_299993_1,30000_101002_3" limitTimes="10"/>
+      <data id="2"  costItems="30000_299988_20,30000_299989_6" exchangeItems="70000_229_1,30000_104004_1" limitTimes="15"/>
+      <data id="3"  costItems="30000_299988_24,30000_299989_10" exchangeItems="70000_229_3,30000_104101_1" limitTimes="15"/>
+</root>

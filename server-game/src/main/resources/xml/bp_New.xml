@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" values="3"/>
+	  <data id="2" values="3"/>
+	  <data id="3" values="3"/>
+	  <data id="4" values="3"/>
+	  <data id="101" values="0.45"/>
+	  <data id="113" values="2.05"/>
+	  <data id="114" values="2.05"/>
+	  <data id="2103" values="5"/>
+	  <data id="2104" values="5"/>
+	  <data id="106" values="0.8"/>
+	  <data id="107" values="0.8"/>
+	  <data id="1009" values="0"/>
+	  <data id="1010" values="200"/>
+	  <data id="111" values="30"/>
+	  <data id="108" values="70"/>
+	  <data id="109" values="70"/>
+	  <data id="110" values="70"/>
+	  <data id="1005" values="300"/>
+</root>

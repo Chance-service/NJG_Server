@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data type="1" freeRefreshTime="12" oneTimeCost="50" tenTimeCost="450"/>
+	  <data type="2" freeRefreshTime="24" oneTimeCost="100" tenTimeCost="900"/>
+	  <data type="3" freeRefreshTime="36" oneTimeCost="150" tenTimeCost="1350"/>
+</root>

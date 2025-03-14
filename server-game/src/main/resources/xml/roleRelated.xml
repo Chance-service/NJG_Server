@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" costType="3" costLevel="0" exchange="30000_1_1" limitCount="60"/>
+	  <data id="2" costType="3" costLevel="0" exchange="30000_2_1" limitCount="60"/>
+	  <data id="3" costType="3" costLevel="0" exchange="30000_3_1" limitCount="60"/>
+	  <data id="4" costType="3" costLevel="0" exchange="30000_4_1" limitCount="30"/>
+	  <data id="5" costType="3" costLevel="0" exchange="30000_5_1" limitCount="30"/>
+	  <data id="6" costType="3" costLevel="0" exchange="30000_6_1" limitCount="30"/>
+	  <data id="7" costType="3" costLevel="0" exchange="30000_7_1" limitCount="60"/>
+	  <data id="8" costType="3" costLevel="0" exchange="30000_8_1" limitCount="60"/>
+	  <data id="9" costType="3" costLevel="0" exchange="30000_9_1" limitCount="60"/>
+	  <data id="10" costType="3" costLevel="0" exchange="30000_10_1" limitCount="30"/>
+	  <data id="11" costType="3" costLevel="0" exchange="30000_11_1" limitCount="30"/>
+	  <data id="12" costType="3" costLevel="0" exchange="30000_12_1" limitCount="30"/>
+	  <data id="13" costType="3" costLevel="0" exchange="30000_13_1" limitCount="60"/>
+	  <data id="14" costType="3" costLevel="0" exchange="30000_14_1" limitCount="60"/>
+	  <data id="15" costType="3" costLevel="0" exchange="30000_15_1" limitCount="60"/>
+	  <data id="16" costType="3" costLevel="0" exchange="30000_16_1" limitCount="30"/>
+	  <data id="17" costType="3" costLevel="0" exchange="30000_17_1" limitCount="30"/>
+	  <data id="18" costType="3" costLevel="0" exchange="30000_18_1" limitCount="30"/>
+	  <data id="19" costType="3" costLevel="0" exchange="30000_19_1" limitCount="60"/>
+	  <data id="20" costType="3" costLevel="0" exchange="30000_20_1" limitCount="60"/>
+	  <data id="21" costType="3" costLevel="0" exchange="30000_21_1" limitCount="60"/>
+	  <data id="22" costType="3" costLevel="0" exchange="30000_22_1" limitCount="60"/>
+	  <data id="23" costType="3" costLevel="0" exchange="30000_23_1" limitCount="60"/>
+	  <data id="24" costType="3" costLevel="0" exchange="30000_24_1" limitCount="60"/>
+	  <data id="501" costType="3" costLevel="0" exchange="30000_501_1" limitCount="100"/>
+	  <data id="502" costType="3" costLevel="0" exchange="30000_502_1" limitCount="100"/>
+	  <data id="503" costType="3" costLevel="0" exchange="30000_503_1" limitCount="100"/>
+	  <data id="504" costType="3" costLevel="0" exchange="30000_504_1" limitCount="100"/>
+	  <data id="505" costType="3" costLevel="0" exchange="30000_505_1" limitCount="50"/>
+	  <data id="506" costType="3" costLevel="0" exchange="30000_506_1" limitCount="50"/>
+	  <data id="507" costType="3" costLevel="0" exchange="30000_507_1" limitCount="50"/>
+	  <data id="508" costType="3" costLevel="0" exchange="30000_508_1" limitCount="50"/>
+	  <data id="509" costType="3" costLevel="0" exchange="30000_509_1" limitCount="30"/>
+	  <data id="510" costType="3" costLevel="0" exchange="30000_510_1" limitCount="30"/>
+	  <data id="511" costType="3" costLevel="0" exchange="30000_511_1" limitCount="30"/>
+	  <data id="512" costType="3" costLevel="0" exchange="30000_512_1" limitCount="30"/>
+</root>

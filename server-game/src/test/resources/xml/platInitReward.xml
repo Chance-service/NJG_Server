@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<data platform="win32_91" rewardStartTime="0" rewardEndTime="0" rewardInfo="" rewardMsg=""/>
+	<data platform="ios_91" rewardStartTime="0" rewardEndTime="0" rewardInfo="" rewardMsg=""/>
+	<data platform="ios_pp" rewardStartTime="0" rewardEndTime="0" rewardInfo="" rewardMsg=""/>
+	<data platform="android_uc" rewardStartTime="0" rewardEndTime="0" rewardInfo="" rewardMsg=""/>
+	<data platform="android_91" rewardStartTime="0" rewardEndTime="0" rewardInfo="" rewardMsg=""/>
+	<data platform="android_dangle" rewardStartTime="0" rewardEndTime="0" rewardInfo="" rewardMsg=""/>
+	<data platform="android_baiduduoku" rewardStartTime="0" rewardEndTime="0" rewardInfo="" rewardMsg=""/>
+	<data platform="android_xiaomi" rewardStartTime="0" rewardEndTime="0" rewardInfo="" rewardMsg=""/>
+	<data platform="android_sina" rewardStartTime="0" rewardEndTime="0" rewardInfo="" rewardMsg=""/>
+	<data platform="android_wandoujia" rewardStartTime="0" rewardEndTime="0" rewardInfo='' rewardMsg=""/>
+	<data platform="android_360" rewardStartTime="0" rewardEndTime="0" rewardInfo="" rewardMsg=""/>
+	<data platform="android_jinshan" rewardStartTime="0" rewardEndTime="0" rewardInfo='' rewardMsg=""/>
+</root>

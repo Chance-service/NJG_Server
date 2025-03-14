@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" item="30000_19_60" price="30000_6010_60" count="1" discount="100"/>
+	  <data id="2" item="30000_21_60" price="30000_6010_60" count="1" discount="100"/>
+	  <data id="3" item="30000_22_60" price="30000_6010_60" count="1" discount="100"/>
+	  <data id="4" item="30000_24_60" price="30000_6010_60" count="1" discount="100"/>
+	  <data id="5" item="30000_1_60" price="30000_6010_40" count="1" discount="100"/>
+	  <data id="6" item="30000_2_60" price="30000_6010_40" count="1" discount="100"/>
+	  <data id="7" item="30000_3_60" price="30000_6010_40" count="1" discount="100"/>
+	  <data id="8" item="30000_7_60" price="30000_6010_40" count="1" discount="100"/>
+	  <data id="9" item="30000_8_60" price="30000_6010_40" count="1" discount="100"/>
+	  <data id="10" item="30000_9_60" price="30000_6010_40" count="1" discount="100"/>
+	  <data id="11" item="30000_13_60" price="30000_6010_40" count="1" discount="100"/>
+	  <data id="12" item="30000_14_60" price="30000_6010_40" count="1" discount="100"/>
+	  <data id="13" item="30000_15_60" price="30000_6010_40" count="1" discount="100"/>
+	  <data id="14" item="30000_4_30" price="30000_6010_25" count="1" discount="100"/>
+	  <data id="15" item="30000_5_30" price="30000_6010_25" count="1" discount="100"/>
+	  <data id="16" item="30000_6_30" price="30000_6010_25" count="1" discount="100"/>
+	  <data id="17" item="30000_9_30" price="30000_6010_25" count="1" discount="100"/>
+	  <data id="18" item="30000_10_30" price="30000_6010_25" count="1" discount="100"/>
+	  <data id="19" item="30000_11_30" price="30000_6010_25" count="1" discount="100"/>
+	  <data id="20" item="30000_16_30" price="30000_6010_25" count="1" discount="100"/>
+	  <data id="21" item="30000_17_30" price="30000_6010_25" count="1" discount="100"/>
+	  <data id="22" item="30000_18_30" price="30000_6010_25" count="1" discount="100"/>
+</root>

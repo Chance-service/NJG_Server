@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" LvNeed="1" FreeReward="10000_1001_200" CostReward="10000_1001_500"/>
+	  <data id="2" LvNeed="10" FreeReward="10000_1001_200" CostReward="10000_1001_500"/>
+	  <data id="3" LvNeed="20" FreeReward="10000_1001_200" CostReward="10000_1001_500"/>
+	  <data id="4" LvNeed="30" FreeReward="10000_1001_200" CostReward="10000_1001_1000"/>
+	  <data id="5" LvNeed="40" FreeReward="10000_1001_200" CostReward="10000_1001_1000"/>
+	  <data id="6" LvNeed="50" FreeReward="10000_1001_200" CostReward="10000_1001_1000"/>
+	  <data id="7" LvNeed="60" FreeReward="10000_1001_200" CostReward="10000_1001_1500"/>
+	  <data id="8" LvNeed="65" FreeReward="10000_1001_200" CostReward="10000_1001_1500"/>
+	  <data id="9" LvNeed="70" FreeReward="10000_1001_200" CostReward="10000_1001_1500"/>
+	  <data id="10" LvNeed="75" FreeReward="10000_1001_200" CostReward="10000_1001_2000"/>
+	  <data id="11" LvNeed="80" FreeReward="10000_1001_200" CostReward="10000_1001_2000"/>
+	  <data id="12" LvNeed="85" FreeReward="10000_1001_200" CostReward="10000_1001_2000"/>
+	  <data id="13" LvNeed="90" FreeReward="10000_1001_200" CostReward="10000_1001_2000"/>
+	  <data id="14" LvNeed="95" FreeReward="10000_1001_200" CostReward="10000_1001_2000"/>
+	  <data id="15" LvNeed="100" FreeReward="10000_1001_200" CostReward="10000_1001_2000"/>
+</root>

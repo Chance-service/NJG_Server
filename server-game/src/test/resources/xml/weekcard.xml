@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="51" days="7" everydayAwards="10000_1001_50,30000_103102_1,30000_106101_2" goodsId="1" levelUpGoodsId="5"/>
+      <data id="52" days="7" everydayAwards="10000_1001_100,30000_104003_10,30000_106102_1" goodsId="5" levelUpGoodsId="-1"/>
+	  <data id="53" days="7" everydayAwards="10000_1001_200,30000_106011_2,30000_106102_2" goodsId="5" levelUpGoodsId="-1"/>
+	  <data id="54" days="7" everydayAwards="10000_1001_500,30000_101002_20,30000_104212_50" goodsId="5" levelUpGoodsId="-1"/>
+	  <data id="55" days="7" everydayAwards="10000_1001_1200,30000_104101_100,30000_106011_5" goodsId="5" levelUpGoodsId="-1"/>
+</root>

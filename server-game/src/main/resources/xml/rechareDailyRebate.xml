@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- 
+	每日充值返利
+	最大值为2147483600
+	minRechargeSum 该档最小充值额限制（单位是 货币元，与recharge_config.xml中的costMoney单位等同 ）
+	maxRecharSum 该档最大充值额限制（单位是 货币元，与recharge_config.xml中的costMoney单位等同 ）
+	rebateRate 返利比率，万分比
+	mailSubject 邮件奖励标题
+	awards 道具奖励
+-->
+<root>
+      <data id="1" minRechargeSum ="10" maxRechargeSum="199" rebateRate="1000" mailSubject="充值返利" awards="10000_1001_100,30000_106101_3,30000_103102_1"/>
+      <data id="2" minRechargeSum ="200" maxRechargeSum="2147483600" rebateRate="2000" mailSubject="充值返利" awards="10000_1001_100,30000_106101_3,30000_103102_1"/>
+</root>

@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- stageId 为活动期号, ="-1"时该活动将不受startTime, endTime, closeTime的约束 -->
+<root>
+	  <!-- 月卡-->
+      <data id="1" activityId="1" stageId="-1" startTime="0" endTime="0" closeTime="0"/>
+	  
+      <!-- 连续充值（天数）（开服活动）-->
+	  <data id="2" activityId="3" stageId="-1" startTime="0" endTime="0" closeTime="0"/>
+	  
+      <!-- 每项首值3倍（仅第一次）-->
+	  <data id="3" activityId="4" stageId="-1" startTime="0" endTime="0" closeTime="0"/>
+	  
+      <!-- 微信关注-->
+	  <data id="4" activityId="5" stageId="-1" startTime="0" endTime="0" closeTime="0"/>
+	  
+      <!-- 累计消费（数额）-->
+	  <data id="60001" activityId="6" stageId="1" startTime="2014-09-04_11:00:00" endTime="2014-09-10_00:00:00" closeTime="2014-09-12_00:00:00"/>
+	  <data id="60002" activityId="6" stageId="2" startTime="2017-05-07_11:00:00" endTime="2017-05-11_10:00:00" closeTime="2017-05-11_10:00:00"/>
+	  <data id="60003" activityId="6" stageId="3" startTime="2017-05-15_11:00:00" endTime="2017-05-19_10:00:00" closeTime="2017-05-19_10:00:00"/>
+	  <data id="60004" activityId="6" stageId="4" startTime="2017-05-27_11:00:00" endTime="2017-05-31_23:59:59" closeTime="2017-05-31_23:59:59"/>
+	  <data id="60005" activityId="6" stageId="5" startTime="2017-06-04_11:00:00" endTime="2017-06-08_23:59:59" closeTime="2017-06-08_23:59:59"/>
+	  <data id="60006" activityId="6" stageId="6" startTime="2017-06-12_11:00:00" endTime="2017-06-16_10:00:00" closeTime="2017-06-16_10:00:00"/>
+	  <data id="60007" activityId="6" stageId="7" startTime="2017-06-16_11:00:00" endTime="2017-06-20_10:00:00" closeTime="2017-06-20_10:00:00"/>
+	  <data id="60008" activityId="6" stageId="8" startTime="2017-06-23_11:00:00" endTime="2017-06-27_10:00:00" closeTime="2017-06-27_10:00:00"/>
+	  <data id="60009" activityId="6" stageId="9" startTime="2017-07-04_11:00:00" endTime="2017-07-08_10:00:00" closeTime="2017-07-08_10:00:00"/>
+	  <data id="60010" activityId="6" stageId="10" startTime="2017-07-20_11:00:00" endTime="2017-07-24_10:00:00" closeTime="2017-07-24_10:00:00"/>
+	  <data id="60011" activityId="6" stageId="11" startTime="2017-07-28_11:00:00" endTime="2017-07-31_23:59:59" closeTime="2017-07-31_23:59:59"/>
+	  <data id="60012" activityId="6" stageId="12" startTime="2017-08-04_11:00:00" endTime="2017-08-08_10:00:00" closeTime="2017-08-08_10:00:00"/>
+	  <data id="60013" activityId="6" stageId="13" startTime="2017-08-12_11:00:00" endTime="2017-08-16_10:00:00" closeTime="2017-08-16_10:00:00"/>
+	  <data id="60014" activityId="6" stageId="14" startTime="2017-08-20_11:00:00" endTime="2017-08-24_10:00:00" closeTime="2017-08-24_10:00:00"/>
+	  <data id="60015" activityId="6" stageId="15" startTime="2017-08-28_11:00:00" endTime="2017-08-31_23:59:59" closeTime="2017-08-31_23:59:59"/>
+	  <data id="60016" activityId="6" stageId="16" startTime="2017-09-04_11:00:00" endTime="2017-09-08_10:00:00" closeTime="2017-09-08_10:00:00"/>
+	  <data id="60017" activityId="6" stageId="17" startTime="2017-09-12_11:00:00" endTime="2017-09-15_10:00:00" closeTime="2017-09-15_10:00:00"/>
+	  <data id="60018" activityId="6" stageId="18" startTime="2017-09-19_11:00:00" endTime="2017-09-23_10:00:00" closeTime="2017-09-23_10:00:00"/>
+	  <data id="60019" activityId="6" stageId="19" startTime="2017-09-27_11:00:00" endTime="2017-09-30_23:59:59" closeTime="2017-09-30_23:59:59"/>
+	  <data id="60020" activityId="6" stageId="20" startTime="2017-10-04_11:00:00" endTime="2017-10-08_10:00:00" closeTime="2017-10-08_10:00:00"/>
+	  <data id="60021" activityId="6" stageId="21" startTime="2017-10-12_11:00:00" endTime="2017-10-16_10:00:00" closeTime="2017-10-16_10:00:00"/>
+	  <data id="60022" activityId="6" stageId="22" startTime="2017-10-20_11:00:00" endTime="2017-10-24_10:00:00" closeTime="2017-10-24_10:00:00"/>
+	  <data id="60023" activityId="6" stageId="23" startTime="2017-10-28_11:00:00" endTime="2017-10-31_10:00:00" closeTime="2017-10-31_10:00:00"/>
+	  <data id="60024" activityId="6" stageId="24" startTime="2017-11-04_11:00:00" endTime="2017-11-08_10:00:00" closeTime="2017-11-08_10:00:00"/>
+	  <data id="60025" activityId="6" stageId="25" startTime="2017-11-12_11:00:00" endTime="2017-11-15_10:00:00" closeTime="2017-11-15_10:00:00"/>
+	  <data id="60026" activityId="6" stageId="26" startTime="2018-05-01_11:00:00" endTime="2018-06-01_10:00:00" closeTime="2018-06-01_10:00:00"/>
+	  <data id="60027" activityId="6" stageId="27" startTime="2018-06-03_11:00:00" endTime="2019-06-01_10:00:00" closeTime="2019-06-01_10:00:00"/>
+	  
+      <!-- 兑换字活动-->
+	  <data id="70001" activityId="7" stageId="1" startTime="2014-09-05_10:30:00" endTime="2014-09-10_00:00:00" closeTime="2014-09-12_00:00:00"/>
+	  <data id="70002" activityId="7" stageId="2" startTime="2018-05-01_10:30:00" endTime="2018-06-01_00:00:00" closeTime="2018-06-01_00:00:00"/>
+	  <data id="70003" activityId="7" stageId="3" startTime="2018-06-03_10:30:00" endTime="2019-06-01_00:00:00" closeTime="2019-06-01_00:00:00"/>
+	  
+      <!-- 调用活动地图表-->
+	  <data id="80001" activityId="8" stageId="1" startTime="2014-09-29_10:50:00" endTime="2014-09-29_23:59:59" closeTime="2014-09-29_23:59:59"/>
+	  <data id="80002" activityId="8" stageId="2" startTime="2017-04-04_11:00:00" endTime="2017-04-08_10:00:00" closeTime="2017-04-08_10:00:00"/>
+	  <data id="80003" activityId="8" stageId="3" startTime="2017-04-16_12:00:00" endTime="2017-04-20_10:00:00" closeTime="2017-04-20_10:00:00"/>
+	  <data id="80004" activityId="8" stageId="4" startTime="2017-04-28_11:00:00" endTime="2017-05-03_10:00:00" closeTime="2017-05-03_10:00:00"/>
+	  <data id="80005" activityId="8" stageId="5" startTime="2017-05-11_11:00:00" endTime="2017-05-15_10:00:00" closeTime="2017-05-15_10:00:00"/>
+	  <data id="80006" activityId="8" stageId="6" startTime="2017-05-19_11:00:00" endTime="2017-05-23_10:00:00" closeTime="2017-05-23_10:00:00"/>
+	  <data id="80007" activityId="8" stageId="7" startTime="2017-06-08_11:00:00" endTime="2017-06-12_10:00:00" closeTime="2017-06-12_10:00:00"/>
+	  <data id="80008" activityId="8" stageId="8" startTime="2017-06-30_11:00:00" endTime="2017-07-04_10:00:00" closeTime="2017-07-04_10:00:00"/>
+	  <data id="80009" activityId="8" stageId="9" startTime="2017-07-12_11:00:00" endTime="2017-07-16_10:00:00" closeTime="2017-07-16_10:00:00"/>
+	  <data id="80010" activityId="8" stageId="10" startTime="2017-07-31_11:00:00" endTime="2017-08-04_10:00:00" closeTime="2017-08-04_10:00:00"/>
+	  <data id="80011" activityId="8" stageId="11" startTime="2017-08-16_11:00:00" endTime="2017-08-20_10:00:00" closeTime="2017-08-20_10:00:00"/>
+	  <data id="80012" activityId="8" stageId="12" startTime="2017-08-31_11:00:00" endTime="2017-09-04_10:00:00" closeTime="2017-09-04_10:00:00"/>
+	  <data id="80013" activityId="8" stageId="13" startTime="2017-09-15_11:00:00" endTime="2017-09-19_10:00:00" closeTime="2017-09-19_10:00:00"/>
+	  <data id="80014" activityId="8" stageId="14" startTime="2017-09-30_11:00:00" endTime="2017-10-04_10:00:00" closeTime="2017-10-04_10:00:00"/>
+	  <data id="80015" activityId="8" stageId="15" startTime="2017-10-16_11:00:00" endTime="2017-10-20_10:00:00" closeTime="2017-10-20_10:00:00"/>
+	  <data id="80016" activityId="8" stageId="16" startTime="2017-10-28_11:00:00" endTime="2017-11-05_10:00:00" closeTime="2017-11-05_10:00:00"/>
+	  <data id="80017" activityId="8" stageId="17" startTime="2017-11-15_11:00:00" endTime="2017-11-20_10:00:00" closeTime="2017-11-20_10:00:00"/>
+	  <data id="80018" activityId="8" stageId="18" startTime="2018-05-01_11:00:00" endTime="2018-06-01_10:00:00" closeTime="2018-06-01_10:00:00"/>
+	  <data id="80019" activityId="8" stageId="19" startTime="2018-06-03_11:00:00" endTime="2019-06-01_10:00:00" closeTime="2019-06-01_10:00:00"/>
+	  
+      <!-- 单项充值双倍-->
+      <data id="90001" activityId="9" stageId="1" startTime="2014-09-30_10:50:00" endTime="2014-10-06_23:59:59" closeTime="2014-10-06_23:59:59"/>
+      <data id="90002" activityId="9" stageId="2" startTime="2018-05-01_10:50:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="90003" activityId="9" stageId="3" startTime="2018-06-03_10:50:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+
+	  
+	  
+	  
+      <!-- 假日宝藏 远古宝箱 少女的饰品-->
+      <data id="100001" activityId="10" stageId="1" startTime="2014-09-30_10:50:00" endTime="2014-10-03_23:59:59" closeTime="2014-10-03_23:59:59"/>
+      <data id="100002" activityId="10" stageId="2" startTime="2017-04-04_11:00:00" endTime="2017-04-08_10:00:00" closeTime="2017-04-08_10:00:00"/>
+      <data id="100003" activityId="10" stageId="3" startTime="2017-04-16_12:00:00" endTime="2017-04-20_10:00:00" closeTime="2017-04-20_10:00:00"/>
+      <data id="100004" activityId="10" stageId="4" startTime="2017-04-28_11:00:00" endTime="2017-05-03_10:00:00" closeTime="2017-05-03_10:00:00"/>
+      <data id="100005" activityId="10" stageId="5" startTime="2017-05-11_11:00:00" endTime="2017-05-15_10:00:00" closeTime="2017-05-15_10:00:00"/>
+      <data id="100006" activityId="10" stageId="6" startTime="2017-05-19_11:00:00" endTime="2017-05-23_10:00:00" closeTime="2017-05-23_10:00:00"/>
+      <data id="100007" activityId="10" stageId="7" startTime="2017-06-08_11:00:00" endTime="2017-06-12_10:00:00" closeTime="2017-06-12_10:00:00"/>
+      <data id="100008" activityId="10" stageId="8" startTime="2017-06-30_11:00:00" endTime="2017-07-04_10:00:00" closeTime="2017-07-04_10:00:00"/>
+      <data id="100009" activityId="10" stageId="9" startTime="2017-07-12_11:00:00" endTime="2017-07-16_10:00:00" closeTime="2017-07-16_10:00:00"/>
+      <data id="100010" activityId="10" stageId="10" startTime="2017-07-31_11:00:00" endTime="2017-08-04_10:00:00" closeTime="2017-08-04_10:00:00"/>
+      <data id="100011" activityId="10" stageId="11" startTime="2017-08-16_11:00:00" endTime="2017-08-20_10:00:00" closeTime="2017-08-20_10:00:00"/>
+      <data id="100012" activityId="10" stageId="12" startTime="2017-08-31_11:00:00" endTime="2017-09-04_10:00:00" closeTime="2017-09-04_10:00:00"/>
+      <data id="100013" activityId="10" stageId="13" startTime="2017-09-15_11:00:00" endTime="2017-09-19_10:00:00" closeTime="2017-09-19_10:00:00"/>
+      <data id="100014" activityId="10" stageId="14" startTime="2017-09-30_11:00:00" endTime="2017-10-04_10:00:00" closeTime="2017-10-04_10:00:00"/>
+      <data id="100015" activityId="10" stageId="15" startTime="2017-10-16_11:00:00" endTime="2017-10-20_10:00:00" closeTime="2017-10-20_10:00:00"/>
+      <data id="100016" activityId="10" stageId="16" startTime="2017-11-15_11:00:00" endTime="2017-11-20_10:00:00" closeTime="2017-11-20_10:00:00"/>
+      <data id="100017" activityId="10" stageId="17" startTime="2018-05-01_11:00:00" endTime="2018-06-01_10:00:00" closeTime="2018-06-01_10:00:00"/>
+	  <data id="100018" activityId="10" stageId="18" startTime="2018-06-03_11:00:00" endTime="2019-06-01_10:00:00" closeTime="2019-06-01_10:00:00"/>
+	  
+	  <!-- 每日累计充值（数额）-->
+	  <data id="110001" activityId="2" stageId="1" startTime="2014-09-30_10:50:00" endTime="2014-10-06_23:59:59" closeTime="2014-10-06_23:59:59"/>
+	  <data id="110002" activityId="2" stageId="2" startTime="2017-03-24_12:00:00" endTime="2017-03-28_10:30:00" closeTime="2017-03-28_10:30:00"/>
+	  <data id="110003" activityId="2" stageId="3" startTime="2017-04-04_11:00:00" endTime="2017-04-08_10:00:00" closeTime="2017-04-08_10:00:00"/>
+	  <data id="110004" activityId="2" stageId="4" startTime="2017-04-12_11:00:00" endTime="2017-04-16_10:00:00" closeTime="2017-04-16_10:00:00"/>
+	  <data id="110005" activityId="2" stageId="5" startTime="2017-04-20_12:00:00" endTime="2017-04-24_10:00:00" closeTime="2017-04-24_10:00:00"/>
+	  <data id="110006" activityId="2" stageId="6" startTime="2017-04-28_11:00:00" endTime="2017-05-01_23:59:59" closeTime="2017-05-01_23:59:59"/>
+	  <data id="110007" activityId="2" stageId="7" startTime="2017-05-07_11:00:00" endTime="2017-05-11_10:00:00" closeTime="2017-05-11_10:00:00"/>
+	  <data id="110008" activityId="2" stageId="8" startTime="2017-05-15_11:00:00" endTime="2017-05-19_10:00:00" closeTime="2017-05-19_10:00:00"/>
+	  <data id="110009" activityId="2" stageId="9" startTime="2017-05-24_11:00:00" endTime="2017-05-27_10:00:00" closeTime="2017-05-27_10:00:00"/>
+	  <data id="110010" activityId="2" stageId="10" startTime="2017-05-31_11:00:00" endTime="2017-06-04_10:00:00" closeTime="2017-06-04_10:00:00"/>
+	  <data id="110011" activityId="2" stageId="11" startTime="2017-06-08_11:00:00" endTime="2017-06-12_10:00:00" closeTime="2017-06-12_10:00:00"/>
+	  <data id="110012" activityId="2" stageId="12" startTime="2017-06-12_11:00:00" endTime="2017-06-16_10:00:00" closeTime="2017-06-16_10:00:00"/>
+	  <data id="110013" activityId="2" stageId="13" startTime="2017-06-20_11:00:00" endTime="2017-06-23_10:00:00" closeTime="2017-06-23_10:00:00"/>
+	  <data id="110014" activityId="2" stageId="14" startTime="2017-06-27_11:00:00" endTime="2017-06-30_10:00:00" closeTime="2017-06-30_10:00:00"/>
+	  <data id="110015" activityId="2" stageId="15" startTime="2017-06-30_11:00:00" endTime="2017-07-04_10:00:00" closeTime="2017-07-04_10:00:00"/>
+	  <data id="110016" activityId="2" stageId="16" startTime="2017-07-08_11:00:00" endTime="2017-07-12_10:00:00" closeTime="2017-07-12_10:00:00"/>
+	  <data id="110017" activityId="2" stageId="17" startTime="2017-07-20_11:00:00" endTime="2017-07-24_10:00:00" closeTime="2017-07-24_10:00:00"/>
+	  <data id="110018" activityId="2" stageId="18" startTime="2017-07-28_11:00:00" endTime="2017-07-31_10:00:00" closeTime="2017-07-31_10:00:00"/>
+	  <data id="110019" activityId="2" stageId="19" startTime="2017-07-31_11:00:00" endTime="2017-08-04_10:00:00" closeTime="2017-08-04_10:00:00"/>
+	  <data id="110020" activityId="2" stageId="20" startTime="2017-08-04_11:00:00" endTime="2017-08-08_10:00:00" closeTime="2017-08-08_10:00:00"/>
+	  <data id="110021" activityId="2" stageId="21" startTime="2017-08-12_11:00:00" endTime="2017-08-16_10:00:00" closeTime="2017-08-16_10:00:00"/>
+	  <data id="110022" activityId="2" stageId="22" startTime="2017-08-20_11:00:00" endTime="2017-08-24_10:00:00" closeTime="2017-08-24_10:00:00"/>
+	  <data id="110023" activityId="2" stageId="23" startTime="2017-08-31_11:00:00" endTime="2017-09-04_10:00:00" closeTime="2017-09-04_10:00:00"/>
+	  <data id="110024" activityId="2" stageId="24" startTime="2017-09-04_11:00:00" endTime="2017-09-08_10:00:00" closeTime="2017-09-08_10:00:00"/>
+	  <data id="110025" activityId="2" stageId="25" startTime="2017-09-08_11:00:00" endTime="2017-09-12_10:00:00" closeTime="2017-09-12_10:00:00"/>
+	  <data id="110026" activityId="2" stageId="26" startTime="2017-09-12_11:00:00" endTime="2017-09-15_10:00:00" closeTime="2017-09-15_10:00:00"/>
+	  <data id="110027" activityId="2" stageId="27" startTime="2017-09-15_11:00:00" endTime="2017-09-19_10:00:00" closeTime="2017-09-19_10:00:00"/>
+	  <data id="110028" activityId="2" stageId="28" startTime="2017-09-19_11:00:00" endTime="2017-09-23_10:00:00" closeTime="2017-09-23_10:00:00"/>
+	  <data id="110029" activityId="2" stageId="29" startTime="2017-09-23_11:00:00" endTime="2017-09-27_10:00:00" closeTime="2017-09-27_10:00:00"/>
+	  <data id="110030" activityId="2" stageId="30" startTime="2017-09-27_11:00:00" endTime="2017-09-30_10:00:00" closeTime="2017-09-30_10:00:00"/>
+	  <data id="110031" activityId="2" stageId="31" startTime="2017-09-30_11:00:00" endTime="2017-10-04_10:00:00" closeTime="2017-10-04_10:00:00"/>
+	  <data id="110032" activityId="2" stageId="32" startTime="2017-10-04_11:00:00" endTime="2017-10-08_10:00:00" closeTime="2017-10-08_10:00:00"/>
+	  <data id="110033" activityId="2" stageId="33" startTime="2017-10-08_11:00:00" endTime="2017-10-12_10:00:00" closeTime="2017-10-12_10:00:00"/>
+	  <data id="110034" activityId="2" stageId="34" startTime="2017-10-12_11:00:00" endTime="2017-10-16_10:00:00" closeTime="2017-10-16_10:00:00"/>
+	  <data id="110035" activityId="2" stageId="35" startTime="2017-10-16_11:00:00" endTime="2017-10-20_10:00:00" closeTime="2017-10-20_10:00:00"/>
+	  <data id="110036" activityId="2" stageId="36" startTime="2017-10-20_11:00:00" endTime="2017-10-24_10:00:00" closeTime="2017-10-24_10:00:00"/>
+	  <data id="110037" activityId="2" stageId="37" startTime="2017-10-24_11:00:00" endTime="2017-10-28_10:00:00" closeTime="2017-10-28_10:00:00"/>
+	  <data id="110038" activityId="2" stageId="38" startTime="2017-10-28_11:00:00" endTime="2017-10-31_10:00:00" closeTime="2017-10-31_10:00:00"/>
+	  <data id="110039" activityId="2" stageId="39" startTime="2017-10-31_11:00:00" endTime="2017-11-04_10:00:00" closeTime="2017-11-04_10:00:00"/>
+	  <data id="110040" activityId="2" stageId="40" startTime="2017-11-04_11:00:00" endTime="2017-11-08_10:00:00" closeTime="2017-11-08_10:00:00"/>
+	  <data id="110041" activityId="2" stageId="41" startTime="2017-11-08_11:00:00" endTime="2017-11-12_10:00:00" closeTime="2017-11-12_10:00:00"/>
+	  <data id="110042" activityId="2" stageId="42" startTime="2017-11-12_11:00:00" endTime="2017-11-15_10:00:00" closeTime="2017-11-15_10:00:00"/>
+	  <data id="110043" activityId="2" stageId="43" startTime="2017-11-15_11:00:00" endTime="2017-11-20_10:00:00" closeTime="2017-11-20_10:00:00"/>
+	  <data id="110044" activityId="2" stageId="44" startTime="2018-05-01_11:00:00" endTime="2018-06-01_10:00:00" closeTime="2018-06-01_10:00:00"/>
+	  <data id="110045" activityId="2" stageId="45" startTime="2018-06-03_11:00:00" endTime="2019-06-01_10:00:00" closeTime="2019-06-01_10:00:00"/>
+	  	  
+	  <!-- 双倍装备掉落 -->
+	  <data id="150001" activityId="15" stageId="1" startTime="2014-09-20_10:00:00" endTime="2014-09-21_23:59:59" closeTime="2014-09-21_23:59:59"/>
+	  <data id="150002" activityId="15" stageId="2" startTime="2017-03-25_00:01:00" endTime="2017-03-26_23:59:59" closeTime="2017-03-26_23:59:59"/>
+	  <data id="150003" activityId="15" stageId="3" startTime="2017-04-01_00:01:00" endTime="2017-04-02_23:59:59" closeTime="2017-04-02_23:59:59"/>
+	  <data id="150004" activityId="15" stageId="4" startTime="2017-04-09_00:01:00" endTime="2017-04-10_23:59:59" closeTime="2017-04-10_23:59:59"/>
+	  <data id="150005" activityId="15" stageId="5" startTime="2017-04-21_00:01:00" endTime="2017-04-23_23:59:59" closeTime="2017-04-23_23:59:59"/>
+	  <data id="150006" activityId="15" stageId="6" startTime="2017-05-01_00:01:00" endTime="2017-05-03_23:59:59" closeTime="2017-05-03_23:59:59"/>
+	  <data id="150007" activityId="15" stageId="7" startTime="2017-05-13_00:01:00" endTime="2017-05-14_23:59:59" closeTime="2017-05-14_23:59:59"/>
+	  <data id="150008" activityId="15" stageId="8" startTime="2017-05-27_00:01:00" endTime="2017-05-28_23:59:59" closeTime="2017-05-28_23:59:59"/>
+	  <data id="150009" activityId="15" stageId="9" startTime="2017-07-15_00:01:00" endTime="2017-07-16_23:59:59" closeTime="2017-07-16_23:59:59"/>
+	  <data id="150010" activityId="15" stageId="10" startTime="2017-07-29_00:01:00" endTime="2017-07-30_23:59:59" closeTime="2017-07-30_23:59:59"/>
+	  <data id="150011" activityId="15" stageId="11" startTime="2017-08-12_00:01:00" endTime="2017-08-13_23:59:59" closeTime="2017-08-13_23:59:59"/>
+	  <data id="150012" activityId="15" stageId="12" startTime="2017-08-26_00:01:00" endTime="2017-08-27_23:59:59" closeTime="2017-08-27_23:59:59"/>
+	  <data id="150013" activityId="15" stageId="13" startTime="2017-09-09_00:01:00" endTime="2017-09-10_23:59:59" closeTime="2017-09-10_23:59:59"/>
+	  <data id="150014" activityId="15" stageId="14" startTime="2017-09-23_00:01:00" endTime="2017-09-24_23:59:59" closeTime="2017-09-24_23:59:59"/>
+	  <data id="150015" activityId="15" stageId="15" startTime="2017-10-07_00:01:00" endTime="2017-10-08_23:59:59" closeTime="2017-10-08_23:59:59"/>
+	  <data id="150016" activityId="15" stageId="16" startTime="2017-10-21_00:01:00" endTime="2017-10-22_23:59:59" closeTime="2017-10-22_23:59:59"/>
+	  <data id="150017" activityId="15" stageId="17" startTime="2017-11-04_00:01:00" endTime="2017-11-05_23:59:59" closeTime="2017-11-05_23:59:59"/>
+	  <data id="150018" activityId="15" stageId="18" startTime="2017-11-18_00:01:00" endTime="2017-11-19_23:59:59" closeTime="2017-11-19_23:59:59"/>
+	  <data id="150019" activityId="15" stageId="19" startTime="2018-05-01_00:01:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="150020" activityId="15" stageId="20" startTime="2018-06-03_00:01:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 双倍经验掉落 -->
+	  <data id="130001" activityId="13" stageId="1" startTime="2014-10-23_00:01:00" endTime="2014-10-23_23:59:59" closeTime="2014-10-23_23:59:59"/>
+	  <data id="130002" activityId="13" stageId="2" startTime="2017-04-25_00:01:00" endTime="2017-04-27_23:59:59" closeTime="2017-04-27_23:59:59"/>
+	  <data id="130003" activityId="13" stageId="3" startTime="2017-04-30_00:01:00" endTime="2017-05-02_23:59:59" closeTime="2017-05-02_23:59:59"/>
+	  <data id="130004" activityId="13" stageId="4" startTime="2017-05-08_00:01:00" endTime="2017-05-09_23:59:59" closeTime="2017-05-09_23:59:59"/>
+	  <data id="130005" activityId="13" stageId="5" startTime="2017-05-20_00:01:00" endTime="2017-05-21_23:59:59" closeTime="2017-05-21_23:59:59"/>
+	  <data id="130006" activityId="13" stageId="6" startTime="2017-05-28_00:01:00" endTime="2017-05-29_23:59:59" closeTime="2017-05-29_23:59:59"/>
+	  <data id="130007" activityId="13" stageId="7" startTime="2017-06-01_00:01:00" endTime="2017-06-03_23:59:59" closeTime="2017-06-03_23:59:59"/>
+	  <data id="130008" activityId="13" stageId="8" startTime="2017-06-09_00:01:00" endTime="2017-06-10_23:59:59" closeTime="2017-06-10_23:59:59"/>
+	  <data id="130009" activityId="13" stageId="9" startTime="2017-06-17_00:01:00" endTime="2017-06-17_23:59:59" closeTime="2017-06-17_23:59:59"/>
+	  <data id="130010" activityId="13" stageId="10" startTime="2017-06-22_00:01:00" endTime="2017-06-22_23:59:59" closeTime="2017-06-22_23:59:59"/>
+	  <data id="130011" activityId="13" stageId="11" startTime="2017-06-25_00:01:00" endTime="2017-06-25_23:59:59" closeTime="2017-06-25_23:59:59"/>
+	  <data id="130012" activityId="13" stageId="12" startTime="2017-07-01_00:01:00" endTime="2017-07-02_23:59:59" closeTime="2017-07-02_23:59:59"/>
+	  <data id="130013" activityId="13" stageId="13" startTime="2017-07-09_00:01:00" endTime="2017-07-10_23:59:59" closeTime="2017-07-10_23:59:59"/>
+	  <data id="130014" activityId="13" stageId="14" startTime="2017-07-17_00:01:00" endTime="2017-07-18_23:59:59" closeTime="2017-07-18_23:59:59"/>
+	  <data id="130015" activityId="13" stageId="15" startTime="2017-07-25_00:01:00" endTime="2017-07-26_23:59:59" closeTime="2017-07-26_23:59:59"/>
+	  <data id="130016" activityId="13" stageId="16" startTime="2017-08-01_00:01:00" endTime="2017-08-03_23:59:59" closeTime="2017-08-03_23:59:59"/>
+	  <data id="130017" activityId="13" stageId="17" startTime="2017-08-09_00:01:00" endTime="2017-08-10_23:59:59" closeTime="2017-08-10_23:59:59"/>
+	  <data id="130018" activityId="13" stageId="18" startTime="2017-08-17_00:01:00" endTime="2017-08-18_23:59:59" closeTime="2017-08-18_23:59:59"/>
+	  <data id="130019" activityId="13" stageId="19" startTime="2017-08-25_00:01:00" endTime="2017-08-26_23:59:59" closeTime="2017-08-26_23:59:59"/>
+	  <data id="130020" activityId="13" stageId="20" startTime="2017-09-01_00:01:00" endTime="2017-09-03_23:59:59" closeTime="2017-09-03_23:59:59"/>
+	  <data id="130021" activityId="13" stageId="21" startTime="2017-09-09_00:01:00" endTime="2017-09-10_23:59:59" closeTime="2017-09-10_23:59:59"/>
+	  <data id="130022" activityId="13" stageId="22" startTime="2017-09-16_00:01:00" endTime="2017-09-17_23:59:59" closeTime="2017-09-17_23:59:59"/>
+	  <data id="130023" activityId="13" stageId="23" startTime="2017-09-24_00:01:00" endTime="2017-09-25_23:59:59" closeTime="2017-09-25_23:59:59"/>
+	  <data id="130024" activityId="13" stageId="24" startTime="2017-10-01_00:01:00" endTime="2017-10-03_23:59:59" closeTime="2017-10-03_23:59:59"/>
+	  <data id="130025" activityId="13" stageId="25" startTime="2017-10-09_00:01:00" endTime="2017-10-10_23:59:59" closeTime="2017-10-10_23:59:59"/>
+	  <data id="130026" activityId="13" stageId="26" startTime="2017-10-17_00:01:00" endTime="2017-10-18_23:59:59" closeTime="2017-10-18_23:59:59"/>
+	  <data id="130027" activityId="13" stageId="27" startTime="2017-10-25_00:01:00" endTime="2017-10-26_23:59:59" closeTime="2017-10-26_23:59:59"/>
+	  <data id="130028" activityId="13" stageId="28" startTime="2017-11-01_00:01:00" endTime="2017-11-03_23:59:59" closeTime="2017-11-03_23:59:59"/>
+	  <data id="130029" activityId="13" stageId="29" startTime="2017-11-09_00:01:00" endTime="2017-11-10_23:59:59" closeTime="2017-11-10_23:59:59"/>
+	  <data id="130030" activityId="13" stageId="30" startTime="2017-11-16_00:01:00" endTime="2017-11-17_23:59:59" closeTime="2017-11-17_23:59:59"/>
+	  <data id="130031" activityId="13" stageId="31" startTime="2018-05-01_00:01:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="130032" activityId="13" stageId="32" startTime="2018-06-03_00:01:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 双倍金币掉落 -->
+	  <data id="120001" activityId="12" stageId="1" startTime="2014-10-22_00:01:00" endTime="2014-10-22_23:59:59" closeTime="2014-10-22_23:59:59"/>
+	  <data id="120002" activityId="12" stageId="2" startTime="2017-03-25_00:01:00" endTime="2017-03-26_23:59:59" closeTime="2017-03-26_23:59:59"/>
+	  <data id="120003" activityId="12" stageId="3" startTime="2017-04-01_00:01:00" endTime="2017-04-02_23:59:59" closeTime="2017-04-02_23:59:59"/>
+	  <data id="120004" activityId="12" stageId="4" startTime="2017-04-17_00:01:00" endTime="2017-04-18_23:59:59" closeTime="2017-04-18_23:59:59"/>
+	  <data id="120005" activityId="12" stageId="5" startTime="2017-04-29_00:01:00" endTime="2017-04-30_23:59:59" closeTime="2017-04-30_23:59:59"/>
+	  <data id="120006" activityId="12" stageId="6" startTime="2017-05-06_00:01:00" endTime="2017-05-07_23:59:59" closeTime="2017-05-07_23:59:59"/>
+	  <data id="120007" activityId="12" stageId="7" startTime="2017-05-20_00:01:00" endTime="2017-05-21_23:59:59" closeTime="2017-05-21_23:59:59"/>
+	  <data id="120008" activityId="12" stageId="8" startTime="2017-06-03_00:01:00" endTime="2017-06-04_23:59:59" closeTime="2017-06-04_23:59:59"/>
+	  <data id="120009" activityId="12" stageId="9" startTime="2017-06-13_00:01:00" endTime="2017-06-13_23:59:59" closeTime="2017-06-13_23:59:59"/>
+	  <data id="120010" activityId="12" stageId="10" startTime="2017-06-24_00:01:00" endTime="2017-06-25_23:59:59" closeTime="2017-06-25_23:59:59"/>
+	  <data id="120011" activityId="12" stageId="11" startTime="2017-07-03_00:01:00" endTime="2017-07-03_23:59:59" closeTime="2017-07-03_23:59:59"/>
+	  <data id="120012" activityId="12" stageId="12" startTime="2017-07-22_00:01:00" endTime="2017-07-23_23:59:59" closeTime="2017-07-23_23:59:59"/>
+	  <data id="120013" activityId="12" stageId="13" startTime="2017-08-05_00:01:00" endTime="2017-08-06_23:59:59" closeTime="2017-08-06_23:59:59"/>
+	  <data id="120014" activityId="12" stageId="14" startTime="2017-08-19_00:01:00" endTime="2017-08-20_23:59:59" closeTime="2017-08-20_23:59:59"/>
+	  <data id="120015" activityId="12" stageId="15" startTime="2017-09-02_00:01:00" endTime="2017-09-03_23:59:59" closeTime="2017-09-03_23:59:59"/>
+	  <data id="120016" activityId="12" stageId="16" startTime="2017-09-16_00:01:00" endTime="2017-09-17_23:59:59" closeTime="2017-09-17_23:59:59"/>
+	  <data id="120017" activityId="12" stageId="17" startTime="2017-09-30_00:01:00" endTime="2017-10-01_23:59:59" closeTime="2017-10-01_23:59:59"/>
+	  <data id="120018" activityId="12" stageId="18" startTime="2017-10-14_00:01:00" endTime="2017-10-15_23:59:59" closeTime="2017-10-15_23:59:59"/>
+	  <data id="120019" activityId="12" stageId="19" startTime="2017-10-28_00:01:00" endTime="2017-10-29_23:59:59" closeTime="2017-10-29_23:59:59"/>
+	  <data id="120020" activityId="12" stageId="20" startTime="2017-11-11_00:01:00" endTime="2017-11-12_23:59:59" closeTime="2017-11-12_23:59:59"/>
+	  <data id="120021" activityId="12" stageId="21" startTime="2018-05-01_00:01:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="120022" activityId="12" stageId="22" startTime="2018-06-03_00:01:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 快速战斗双倍掉落 -->
+	  <data id="160001" activityId="16" stageId="1" startTime="2014-10-24_00:01:00" endTime="2014-10-24_23:59:59" closeTime="2014-10-24_23:59:59"/>
+	  <data id="160002" activityId="16" stageId="2" startTime="2017-05-04_00:01:00" endTime="2017-05-05_23:59:59" closeTime="2017-05-05_23:59:59"/>
+	  <data id="160003" activityId="16" stageId="3" startTime="2017-05-17_00:01:00" endTime="2017-05-18_23:59:59" closeTime="2017-05-18_23:59:59"/>
+	  <data id="160004" activityId="16" stageId="4" startTime="2017-05-24_00:01:00" endTime="2017-05-25_23:59:59" closeTime="2017-05-25_23:59:59"/>
+	  <data id="160005" activityId="16" stageId="5" startTime="2017-06-05_00:01:00" endTime="2017-06-06_23:59:59" closeTime="2017-06-06_23:59:59"/>
+	  <data id="160006" activityId="16" stageId="6" startTime="2017-06-14_00:01:00" endTime="2017-06-14_23:59:59" closeTime="2017-06-14_23:59:59"/>
+	  <data id="160007" activityId="16" stageId="7" startTime="2017-06-21_00:01:00" endTime="2017-06-21_23:59:59" closeTime="2017-06-21_23:59:59"/>
+	  <data id="160008" activityId="16" stageId="8" startTime="2017-06-29_00:01:00" endTime="2017-06-29_23:59:59" closeTime="2017-06-29_23:59:59"/>
+	  <data id="160009" activityId="16" stageId="9" startTime="2017-07-05_00:01:00" endTime="2017-07-05_23:59:59" closeTime="2017-07-05_23:59:59"/>
+	  <data id="1600010" activityId="16" stageId="10" startTime="2017-07-13_00:01:00" endTime="2017-07-13_23:59:59" closeTime="2017-07-13_23:59:59"/>
+	  <data id="1600011" activityId="16" stageId="11" startTime="2017-07-21_00:01:00" endTime="2017-07-21_23:59:59" closeTime="2017-07-21_23:59:59"/>
+	  <data id="1600012" activityId="16" stageId="12" startTime="2017-07-29_00:01:00" endTime="2017-07-29_23:59:59" closeTime="2017-07-29_23:59:59"/>
+	  <data id="1600013" activityId="16" stageId="13" startTime="2017-08-05_00:01:00" endTime="2017-08-05_23:59:59" closeTime="2017-08-05_23:59:59"/>
+	  <data id="1600014" activityId="16" stageId="14" startTime="2017-08-12_00:01:00" endTime="2017-08-12_23:59:59" closeTime="2017-08-12_23:59:59"/>
+	  <data id="1600015" activityId="16" stageId="15" startTime="2017-08-21_00:01:00" endTime="2017-08-21_23:59:59" closeTime="2017-08-21_23:59:59"/>
+	  <data id="1600016" activityId="16" stageId="16" startTime="2017-09-05_00:01:00" endTime="2017-09-05_23:59:59" closeTime="2017-09-05_23:59:59"/>
+	  <data id="1600017" activityId="16" stageId="17" startTime="2017-09-13_00:01:00" endTime="2017-09-13_23:59:59" closeTime="2017-09-13_23:59:59"/>
+	  <data id="1600018" activityId="16" stageId="18" startTime="2017-09-20_00:01:00" endTime="2017-09-20_23:59:59" closeTime="2017-09-20_23:59:59"/>
+	  <data id="1600019" activityId="16" stageId="19" startTime="2017-09-28_00:01:00" endTime="2017-09-28_23:59:59" closeTime="2017-09-28_23:59:59"/>
+	  <data id="1600020" activityId="16" stageId="20" startTime="2017-10-05_00:01:00" endTime="2017-10-05_23:59:59" closeTime="2017-10-05_23:59:59"/>
+	  <data id="1600021" activityId="16" stageId="21" startTime="2017-10-13_00:01:00" endTime="2017-10-13_23:59:59" closeTime="2017-10-13_23:59:59"/>
+	  <data id="1600022" activityId="16" stageId="22" startTime="2017-10-21_00:01:00" endTime="2017-10-21_23:59:59" closeTime="2017-10-21_23:59:59"/>
+	  <data id="1600023" activityId="16" stageId="23" startTime="2017-10-29_00:01:00" endTime="2017-10-29_23:59:59" closeTime="2017-10-29_23:59:59"/>
+	  <data id="1600024" activityId="16" stageId="24" startTime="2017-11-05_00:01:00" endTime="2017-11-05_23:59:59" closeTime="2017-11-05_23:59:59"/>
+	  <data id="1600025" activityId="16" stageId="25" startTime="2017-11-12_00:01:00" endTime="2017-11-12_23:59:59" closeTime="2017-11-12_23:59:59"/>
+	  <data id="1600026" activityId="16" stageId="26" startTime="2018-05-01_00:01:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="1600027" activityId="16" stageId="27" startTime="2018-06-03_00:01:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 熔炼双倍 -->
+	  <data id="170001" activityId="17" stageId="1" startTime="2014-12-03_00:01:00" endTime="2014-12-05_23:59:59" closeTime="2014-12-05_23:59:59"/>
+	  <data id="170002" activityId="17" stageId="2" startTime="2017-03-29_00:01:00" endTime="2017-03-30_23:59:59" closeTime="2017-03-30_23:59:59"/>
+	  <data id="170003" activityId="17" stageId="3" startTime="2017-04-05_00:01:00" endTime="2017-04-06_23:59:59" closeTime="2017-04-06_23:59:59"/>
+	  <data id="170004" activityId="17" stageId="4" startTime="2017-04-13_00:01:00" endTime="2017-04-14_23:59:59" closeTime="2017-04-14_23:59:59"/>
+	  <data id="170005" activityId="17" stageId="5" startTime="2017-04-19_00:01:00" endTime="2017-04-20_23:59:59" closeTime="2017-04-20_23:59:59"/>
+	  <data id="170006" activityId="17" stageId="6" startTime="2017-04-25_00:01:00" endTime="2017-04-26_23:59:59" closeTime="2017-04-26_23:59:59"/>
+	  <data id="170007" activityId="17" stageId="7" startTime="2017-05-10_00:01:00" endTime="2017-05-11_23:59:59" closeTime="2017-05-11_23:59:59"/>
+	  <data id="170008" activityId="17" stageId="8" startTime="2017-05-24_00:01:00" endTime="2017-05-25_23:59:59" closeTime="2017-05-25_23:59:59"/>
+	  <data id="170009" activityId="17" stageId="9" startTime="2017-06-01_00:01:00" endTime="2017-06-03_23:59:59" closeTime="2017-06-03_23:59:59"/>
+	  <data id="170010" activityId="17" stageId="10" startTime="2017-06-11_00:01:00" endTime="2017-06-12_23:59:59" closeTime="2017-06-12_23:59:59"/>
+	  <data id="170011" activityId="17" stageId="11" startTime="2017-06-28_00:01:00" endTime="2017-06-29_23:59:59" closeTime="2017-06-29_23:59:59"/>
+	  <data id="170012" activityId="17" stageId="12" startTime="2017-07-11_00:01:00" endTime="2017-07-11_23:59:59" closeTime="2017-07-11_23:59:59"/>
+	  <data id="170013" activityId="17" stageId="13" startTime="2017-07-17_00:01:00" endTime="2017-07-18_23:59:59" closeTime="2017-07-18_23:59:59"/>
+	  <data id="170014" activityId="17" stageId="14" startTime="2017-08-01_00:01:00" endTime="2017-08-02_23:59:59" closeTime="2017-08-02_23:59:59"/>
+	  <data id="170015" activityId="17" stageId="15" startTime="2017-08-14_00:01:00" endTime="2017-08-15_23:59:59" closeTime="2017-08-15_23:59:59"/>
+	  <data id="170016" activityId="17" stageId="16" startTime="2017-08-29_00:01:00" endTime="2017-08-30_23:59:59" closeTime="2017-08-30_23:59:59"/>
+	  <data id="170017" activityId="17" stageId="17" startTime="2017-09-05_00:01:00" endTime="2017-09-06_23:59:59" closeTime="2017-09-06_23:59:59"/>
+	  <data id="170018" activityId="17" stageId="18" startTime="2017-09-13_00:01:00" endTime="2017-09-14_23:59:59" closeTime="2017-09-14_23:59:59"/>
+	  <data id="170019" activityId="17" stageId="19" startTime="2017-09-20_00:01:00" endTime="2017-09-21_23:59:59" closeTime="2017-09-21_23:59:59"/>
+	  <data id="170020" activityId="17" stageId="20" startTime="2017-09-26_00:01:00" endTime="2017-09-27_23:59:59" closeTime="2017-09-27_23:59:59"/>
+	  <data id="170021" activityId="17" stageId="21" startTime="2017-10-03_00:01:00" endTime="2017-10-04_23:59:59" closeTime="2017-10-04_23:59:59"/>
+	  <data id="170022" activityId="17" stageId="22" startTime="2017-10-10_00:01:00" endTime="2017-10-11_23:59:59" closeTime="2017-10-11_23:59:59"/>
+	  <data id="170023" activityId="17" stageId="23" startTime="2017-10-17_00:01:00" endTime="2017-10-18_23:59:59" closeTime="2017-10-18_23:59:59"/>
+	  <data id="170024" activityId="17" stageId="24" startTime="2017-10-25_00:01:00" endTime="2017-10-26_23:59:59" closeTime="2017-10-26_23:59:59"/>
+	  <data id="170025" activityId="17" stageId="25" startTime="2017-10-31_00:01:00" endTime="2017-11-01_23:59:59" closeTime="2017-11-01_23:59:59"/>
+	  <data id="170026" activityId="17" stageId="26" startTime="2017-11-07_00:01:00" endTime="2017-11-08_23:59:59" closeTime="2017-11-08_23:59:59"/>
+	  <data id="170027" activityId="17" stageId="27" startTime="2017-11-14_00:01:00" endTime="2017-11-15_23:59:59" closeTime="2017-11-15_23:59:59"/>
+	  <data id="170028" activityId="17" stageId="28" startTime="2018-05-01_00:01:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="170029" activityId="17" stageId="29" startTime="2018-06-03_00:01:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  
+	  <!-- 卖装备双倍金币 -->
+	  <data id="180001" activityId="18" stageId="1" startTime="2014-10-26_00:01:00" endTime="2014-10-26_23:59:59" closeTime="2014-10-26_23:59:59"/>
+	  <data id="180002" activityId="18" stageId="2" startTime="2018-05-01_00:01:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="180003" activityId="18" stageId="3" startTime="2018-06-03_00:01:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  
+	  <!-- 快速战斗半价 -->
+	  <data id="190001" activityId="19" stageId="1" startTime="2014-10-27_00:01:00" endTime="2014-10-27_23:59:59" closeTime="2014-10-27_23:59:59"/>
+	  <data id="190002" activityId="19" stageId="2" startTime="2018-05-01_00:01:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="190003" activityId="19" stageId="3" startTime="2018-06-03_00:01:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+
+	  <!-- 每日充值奖励活动 -->
+	  <data id="210001" activityId="21" stageId="1" startTime="2017-10-27_00:01:00" endTime="2018-10-27_23:59:59" closeTime="2018-10-27_23:59:59"/>
+	  <data id="210002" activityId="21" stageId="2" startTime="2018-05-01_00:01:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="210003" activityId="21" stageId="3" startTime="2018-06-03_00:01:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- vip福利 -->
+	  <data id="230001" activityId="23" stageId="-1" startTime="0" endTime="0" closeTime="0"/>
+	  
+	  <!-- 周卡 （老周卡，少女版本已经弃用，限时周卡通过周卡表直接更改配置时间）-->
+	  <data id="240001" activityId="24" stageId="1" startTime="2014-10-20_10:30:00" endTime="2014-10-30_23:59:59" closeTime="2014-11-06_23:59:59"/>
+	  <data id="240002" activityId="24" stageId="2" startTime="2018-05-01_00:01:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="240003" activityId="24" stageId="3" startTime="2018-06-03_00:01:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 远征物资活动 -->
+	  <data id="250001" activityId="25" stageId="1" startTime="2014-11-01_10:00:00" endTime="2014-11-04_23:59:59" closeTime="2014-11-06_23:59:59"/>
+	  <data id="250002" activityId="25" stageId="2" startTime="2018-05-01_00:01:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="250003" activityId="25" stageId="3" startTime="2018-06-03_00:01:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 限时限购 限定特典-->
+	  <data id="260001" activityId="26" stageId="1" startTime="2014-11-11_10:00:00" endTime="2014-11-14_23:59:59" closeTime="2014-11-14_23:59:59"/>
+	  <data id="260002" activityId="26" stageId="2" startTime="2017-03-28_11:00:00" endTime="2017-04-08_10:00:00" closeTime="2017-04-08_10:00:00"/>
+	  <data id="260003" activityId="26" stageId="3" startTime="2017-04-10_11:00:00" endTime="2017-04-15_10:00:00" closeTime="2017-04-15_10:00:00"/>
+	  <data id="260004" activityId="26" stageId="4" startTime="2017-04-16_12:00:00" endTime="2017-04-20_10:00:00" closeTime="2017-04-20_10:00:00"/>
+	  <data id="260005" activityId="26" stageId="5" startTime="2017-04-28_11:00:00" endTime="2017-05-06_23:59:59" closeTime="2017-05-06_23:59:59"/>
+	  <data id="260006" activityId="26" stageId="6" startTime="2017-05-11_11:00:00" endTime="2017-05-15_10:00:00" closeTime="2017-05-15_10:00:00"/>
+	  <data id="260007" activityId="26" stageId="7" startTime="2017-05-19_11:00:00" endTime="2017-05-23_10:00:00" closeTime="2017-05-23_10:00:00"/>
+	  <data id="260008" activityId="26" stageId="8" startTime="2017-05-23_11:00:00" endTime="2017-05-27_10:00:00" closeTime="2017-05-27_10:00:00"/>
+	  <data id="260009" activityId="26" stageId="9" startTime="2017-05-27_11:00:00" endTime="2017-05-31_10:00:00" closeTime="2017-05-31_10:00:00"/>
+	  <data id="260010" activityId="26" stageId="10" startTime="2017-06-01_00:01:00" endTime="2017-06-04_10:00:00" closeTime="2017-06-04_10:00:00"/>
+	  <data id="260011" activityId="26" stageId="11" startTime="2017-06-08_11:00:00" endTime="2017-06-12_10:00:00" closeTime="2017-06-12_10:00:00"/>
+	  <data id="260012" activityId="26" stageId="12" startTime="2017-06-16_11:00:00" endTime="2017-06-20_10:00:00" closeTime="2017-06-20_10:00:00"/>
+	  <data id="260013" activityId="26" stageId="13" startTime="2017-06-20_11:00:00" endTime="2017-06-23_10:00:00" closeTime="2017-06-23_10:00:00"/>
+	  <data id="260014" activityId="26" stageId="14" startTime="2017-07-01_00:01:00" endTime="2017-07-04_10:00:00" closeTime="2017-07-04_10:00:00"/>
+	  <data id="260015" activityId="26" stageId="15" startTime="2017-07-08_11:00:00" endTime="2017-07-12_10:00:00" closeTime="2017-07-12_10:00:00"/>
+	  <data id="260016" activityId="26" stageId="16" startTime="2017-07-16_11:00:00" endTime="2017-07-20_10:00:00" closeTime="2017-07-20_10:00:00"/>
+	  <data id="260017" activityId="26" stageId="17" startTime="2017-07-24_11:00:00" endTime="2017-07-28_10:00:00" closeTime="2017-07-28_10:00:00"/>
+	  <data id="260018" activityId="26" stageId="18" startTime="2017-07-28_11:00:00" endTime="2017-07-31_10:00:00" closeTime="2017-07-31_10:00:00"/>
+	  <data id="260019" activityId="26" stageId="19" startTime="2017-08-01_00:01:00" endTime="2017-08-04_10:00:00" closeTime="2017-08-04_10:00:00"/>
+	  <data id="260020" activityId="26" stageId="20" startTime="2017-08-08_11:00:00" endTime="2017-08-12_10:00:00" closeTime="2017-08-12_10:00:00"/>
+	  <data id="260021" activityId="26" stageId="21" startTime="2017-08-16_11:00:00" endTime="2017-08-20_10:00:00" closeTime="2017-08-20_10:00:00"/>
+	  <data id="260022" activityId="26" stageId="22" startTime="2017-08-24_11:00:00" endTime="2017-08-28_10:00:00" closeTime="2017-08-28_10:00:00"/>
+	  <data id="260023" activityId="26" stageId="23" startTime="2017-09-01_00:01:00" endTime="2017-09-04_10:00:00" closeTime="2017-09-04_10:00:00"/>
+	  <data id="260024" activityId="26" stageId="24" startTime="2017-09-08_11:00:00" endTime="2017-09-12_10:00:00" closeTime="2017-09-12_10:00:00"/>
+	  <data id="260025" activityId="26" stageId="25" startTime="2017-09-15_11:00:00" endTime="2017-09-19_10:00:00" closeTime="2017-09-19_10:00:00"/>
+	  <data id="260026" activityId="26" stageId="26" startTime="2017-09-23_11:00:00" endTime="2017-09-27_10:00:00" closeTime="2017-09-27_10:00:00"/>
+	  <data id="260027" activityId="26" stageId="27" startTime="2017-09-30_11:00:00" endTime="2017-10-04_10:00:00" closeTime="2017-10-04_10:00:00"/>
+	  <data id="260028" activityId="26" stageId="28" startTime="2017-10-08_11:00:00" endTime="2017-10-12_10:00:00" closeTime="2017-10-12_10:00:00"/>
+	  <data id="260029" activityId="26" stageId="29" startTime="2017-10-16_11:00:00" endTime="2017-10-20_10:00:00" closeTime="2017-10-20_10:00:00"/>
+	  <data id="260030" activityId="26" stageId="30" startTime="2017-10-24_11:00:00" endTime="2017-10-28_10:00:00" closeTime="2017-10-28_10:00:00"/>
+	  <data id="260031" activityId="26" stageId="31" startTime="2017-10-31_11:00:00" endTime="2017-11-04_10:00:00" closeTime="2017-11-04_10:00:00"/>
+	  <data id="260032" activityId="26" stageId="32" startTime="2017-11-08_11:00:00" endTime="2017-11-12_10:00:00" closeTime="2017-11-12_10:00:00"/>
+	  <data id="260033" activityId="26" stageId="33" startTime="2017-11-15_11:00:00" endTime="2017-11-20_10:00:00" closeTime="2017-11-20_10:00:00"/>
+	  <data id="260034" activityId="26" stageId="34" startTime="2018-05-01_00:01:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="260035" activityId="26" stageId="35" startTime="2018-06-03_00:01:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	   
+	  <!-- 累计登录 -->
+	  <data id="270001" activityId="27" stageId="1" startTime="2014-11-11_10:00:00" endTime="2014-11-19_23:59:59" closeTime="2014-11-19_23:59:59"/>
+	  <data id="270002" activityId="27" stageId="2" startTime="2017-03-24_12:00:00" endTime="2017-03-30_23:59:59" closeTime="2017-03-30_23:59:59"/>
+	  <data id="270003" activityId="27" stageId="3" startTime="2017-03-31_11:00:00" endTime="2017-04-07_23:59:59" closeTime="2017-04-07_23:59:59"/>
+	  <data id="270004" activityId="27" stageId="4" startTime="2017-04-28_11:00:00" endTime="2017-05-06_23:59:59" closeTime="2017-05-06_23:59:59"/>
+	  <data id="270005" activityId="27" stageId="5" startTime="2017-05-31_11:00:00" endTime="2017-06-07_23:59:59" closeTime="2017-06-07_23:59:59"/>
+	  <data id="270006" activityId="27" stageId="6" startTime="2017-06-12_11:00:00" endTime="2017-06-19_23:59:59" closeTime="2017-06-19_23:59:59"/>
+	  <data id="270007" activityId="27" stageId="7" startTime="2017-08-08_11:00:00" endTime="2017-08-16_23:59:59" closeTime="2017-08-16_23:59:59"/>
+	  <data id="270008" activityId="27" stageId="8" startTime="2017-08-24_11:00:00" endTime="2017-09-01_23:59:59" closeTime="2017-09-01_23:59:59"/>
+	  <data id="270009" activityId="27" stageId="9" startTime="2017-09-08_11:00:00" endTime="2017-09-16_23:59:59" closeTime="2017-09-16_23:59:59"/>
+	  <data id="270010" activityId="27" stageId="10" startTime="2018-05-01_00:01:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="270011" activityId="27" stageId="11" startTime="2018-06-03_00:01:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 充值返利-->
+	  <data id="280001" activityId="28" stageId="1" startTime="2014-11-11_10:00:00" endTime="2020-11-13_23:59:59" closeTime="2020-12-13_23:59:59"/>
+	  <data id="280002" activityId="28" stageId="2" startTime="2018-06-03_10:00:00" endTime="2019-11-13_23:59:59" closeTime="2019-12-13_23:59:59"/>
+	  
+	  <!-- 宝石工坊-->
+	  <data id="290001" activityId="29" stageId="1" startTime="2014-11-22_10:00:00" endTime="2014-11-22_23:59:59" closeTime="2014-11-22_23:59:59"/>
+	  <data id="290002" activityId="29" stageId="2" startTime="2018-05-01_00:01:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="290003" activityId="29" stageId="3" startTime="2018-06-03_00:01:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 疯狂转盘-->
+	  <data id="300001" activityId="30" stageId="1" startTime="2014-11-22_10:00:00" endTime="2014-11-22_23:59:59" closeTime="2014-11-22_23:59:59"/>
+	  <data id="300002" activityId="30" stageId="2" startTime="2018-05-01_00:01:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="300003" activityId="30" stageId="3" startTime="2018-06-03_00:01:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 幸运宝箱-->
+	  <data id="310001" activityId="31" stageId="1" startTime="2015-04-17_12:00:00" endTime="2015-04-22_23:59:59" closeTime="2015-04-22_23:59:59"/>
+	  <data id="310002" activityId="31" stageId="2" startTime="2018-05-01_00:01:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="310003" activityId="31" stageId="3" startTime="2018-06-03_00:01:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 好友邀请-->
+	  <data id="330001" activityId="33" stageId="-1" startTime="0" endTime="0" closeTime="0"/>
+	  
+	  <!-- 雪地探宝-->
+	  <data id="350001" activityId="35" stageId="1" startTime="2014-03-22_10:00:00" endTime="2014-04-22_23:59:59" closeTime="2014-05-22_23:59:59"/>
+	  <data id="350002" activityId="35" stageId="2" startTime="2018-05-01_00:01:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="350003" activityId="35" stageId="3" startTime="2018-06-03_00:01:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 寻宝奇兵 甄姬的祝福-->	
+	  <data id="360001" activityId="36" stageId="1" startTime="2015-04-10_00:00:00" endTime="2015-04-10_23:59:59" closeTime="2015-04-10_23:59:59"/>
+	  <data id="360002" activityId="36" stageId="2" startTime="2017-04-12_11:00:00" endTime="2017-04-17_23:59:59" closeTime="2017-04-17_23:59:59"/>
+	  <data id="360003" activityId="36" stageId="3" startTime="2017-04-18_11:00:00" endTime="2017-04-24_10:00:00" closeTime="2017-04-24_10:00:00"/>
+	  <data id="360004" activityId="36" stageId="4" startTime="2017-04-24_11:00:00" endTime="2017-04-30_10:00:00" closeTime="2017-04-30_10:00:00"/>
+	  <data id="360005" activityId="36" stageId="5" startTime="2017-04-30_11:00:00" endTime="2017-05-03_10:00:00" closeTime="2017-05-03_10:00:00"/>
+	  <data id="360006" activityId="36" stageId="6" startTime="2017-05-03_11:00:00" endTime="2017-05-07_10:00:00" closeTime="2017-05-07_10:00:00"/>
+	  <data id="360007" activityId="36" stageId="7" startTime="2017-05-07_11:00:00" endTime="2017-05-11_10:00:00" closeTime="2017-05-11_10:00:00"/>
+	  <data id="360008" activityId="36" stageId="8" startTime="2017-05-11_11:00:00" endTime="2017-05-15_10:00:00" closeTime="2017-05-15_10:00:00"/>
+	  <data id="360009" activityId="36" stageId="9" startTime="2017-05-15_11:00:00" endTime="2017-05-19_10:00:00" closeTime="2017-05-19_10:00:00"/>
+	  <data id="360010" activityId="36" stageId="10" startTime="2017-05-19_11:00:00" endTime="2017-05-23_10:00:00" closeTime="2017-05-23_10:00:00"/>
+	  <data id="360011" activityId="36" stageId="11" startTime="2017-05-23_11:00:00" endTime="2017-05-27_10:00:00" closeTime="2017-05-27_10:00:00"/>
+	  <data id="360012" activityId="36" stageId="12" startTime="2017-05-27_11:00:00" endTime="2017-05-31_10:00:00" closeTime="2017-05-31_10:00:00"/>
+	  <data id="360013" activityId="36" stageId="13" startTime="2017-05-31_11:00:00" endTime="2017-06-04_10:00:00" closeTime="2017-06-04_10:00:00"/>
+	  <data id="360014" activityId="36" stageId="14" startTime="2017-06-04_11:00:00" endTime="2017-06-08_10:00:00" closeTime="2017-06-08_10:00:00"/>
+	  <data id="360015" activityId="36" stageId="15" startTime="2017-06-08_11:00:00" endTime="2017-06-12_10:00:00" closeTime="2017-06-12_10:00:00"/>
+	  <data id="360016" activityId="36" stageId="16" startTime="2017-06-12_11:00:00" endTime="2017-06-16_10:00:00" closeTime="2017-06-16_10:00:00"/>
+	  <data id="360017" activityId="36" stageId="17" startTime="2017-06-16_11:00:00" endTime="2017-06-20_10:00:00" closeTime="2017-06-20_10:00:00"/>
+	  <data id="360018" activityId="36" stageId="18" startTime="2017-06-20_11:00:00" endTime="2017-06-23_10:00:00" closeTime="2017-06-23_10:00:00"/>
+	  <data id="360019" activityId="36" stageId="19" startTime="2017-06-23_11:00:00" endTime="2017-06-27_10:00:00" closeTime="2017-06-27_10:00:00"/>
+	  <data id="360020" activityId="36" stageId="20" startTime="2017-06-27_11:00:00" endTime="2017-06-30_10:00:00" closeTime="2017-06-30_10:00:00"/>
+	  <data id="360021" activityId="36" stageId="21" startTime="2017-06-30_11:00:00" endTime="2017-07-04_10:00:00" closeTime="2017-07-04_10:00:00"/>
+	  <data id="360022" activityId="36" stageId="22" startTime="2017-07-04_11:00:00" endTime="2017-07-08_10:00:00" closeTime="2017-07-08_10:00:00"/>
+	  <data id="360023" activityId="36" stageId="23" startTime="2017-07-08_11:00:00" endTime="2017-07-12_10:00:00" closeTime="2017-07-12_10:00:00"/>
+	  <data id="360024" activityId="36" stageId="24" startTime="2017-07-12_11:00:00" endTime="2017-07-16_10:00:00" closeTime="2017-07-16_10:00:00"/>
+	  <data id="360025" activityId="36" stageId="25" startTime="2017-07-16_11:00:00" endTime="2017-07-20_10:00:00" closeTime="2017-07-20_10:00:00"/>
+	  <data id="360026" activityId="36" stageId="26" startTime="2017-07-20_11:00:00" endTime="2017-07-24_10:00:00" closeTime="2017-07-24_10:00:00"/>
+	  <data id="360027" activityId="36" stageId="27" startTime="2017-07-24_11:00:00" endTime="2017-07-28_10:00:00" closeTime="2017-07-28_10:00:00"/>
+	  <data id="360028" activityId="36" stageId="28" startTime="2017-07-28_11:00:00" endTime="2017-07-31_10:00:00" closeTime="2017-07-31_10:00:00"/>
+	  <data id="360029" activityId="36" stageId="29" startTime="2017-07-31_11:00:00" endTime="2017-08-04_10:00:00" closeTime="2017-08-04_10:00:00"/>
+	  <data id="360030" activityId="36" stageId="30" startTime="2017-08-04_11:00:00" endTime="2017-08-08_10:00:00" closeTime="2017-08-08_10:00:00"/>
+	  <data id="360031" activityId="36" stageId="31" startTime="2017-08-08_11:00:00" endTime="2017-08-12_10:00:00" closeTime="2017-08-12_10:00:00"/>
+	  <data id="360032" activityId="36" stageId="32" startTime="2017-08-12_11:00:00" endTime="2017-08-16_10:00:00" closeTime="2017-08-16_10:00:00"/>
+	  <data id="360033" activityId="36" stageId="33" startTime="2017-08-16_11:00:00" endTime="2017-08-20_10:00:00" closeTime="2017-08-20_10:00:00"/>
+	  <data id="360034" activityId="36" stageId="34" startTime="2017-08-20_11:00:00" endTime="2017-08-24_10:00:00" closeTime="2017-08-24_10:00:00"/>
+	  <data id="360035" activityId="36" stageId="35" startTime="2017-08-24_11:00:00" endTime="2017-08-28_10:00:00" closeTime="2017-08-28_10:00:00"/>
+	  <data id="360036" activityId="36" stageId="36" startTime="2017-08-28_11:00:00" endTime="2017-08-31_10:00:00" closeTime="2017-08-31_10:00:00"/>
+	  <data id="360037" activityId="36" stageId="37" startTime="2017-08-31_11:00:00" endTime="2017-09-04_10:00:00" closeTime="2017-09-04_10:00:00"/>
+	  <data id="360038" activityId="36" stageId="38" startTime="2017-09-04_11:00:00" endTime="2017-09-08_10:00:00" closeTime="2017-09-08_10:00:00"/>
+	  <data id="360039" activityId="36" stageId="39" startTime="2017-09-08_11:00:00" endTime="2017-09-12_10:00:00" closeTime="2017-09-12_10:00:00"/>
+	  <data id="360040" activityId="36" stageId="40" startTime="2017-09-12_11:00:00" endTime="2017-09-15_10:00:00" closeTime="2017-09-15_10:00:00"/>
+	  <data id="360041" activityId="36" stageId="41" startTime="2017-09-15_11:00:00" endTime="2017-09-19_10:00:00" closeTime="2017-09-19_10:00:00"/>
+	  <data id="360042" activityId="36" stageId="42" startTime="2017-09-19_11:00:00" endTime="2017-09-23_10:00:00" closeTime="2017-09-23_10:00:00"/>
+	  <data id="360043" activityId="36" stageId="43" startTime="2017-09-23_11:00:00" endTime="2017-09-27_10:00:00" closeTime="2017-09-27_10:00:00"/>
+	  <data id="360044" activityId="36" stageId="44" startTime="2017-09-27_11:00:00" endTime="2017-09-30_10:00:00" closeTime="2017-09-30_10:00:00"/>
+	  <data id="360045" activityId="36" stageId="45" startTime="2017-09-30_11:00:00" endTime="2017-10-04_10:00:00" closeTime="2017-10-04_10:00:00"/>
+	  <data id="360046" activityId="36" stageId="46" startTime="2017-10-04_11:00:00" endTime="2017-10-08_10:00:00" closeTime="2017-10-08_10:00:00"/>
+	  <data id="360047" activityId="36" stageId="47" startTime="2017-10-08_11:00:00" endTime="2017-10-12_10:00:00" closeTime="2017-10-12_10:00:00"/>
+	  <data id="360048" activityId="36" stageId="48" startTime="2017-10-12_11:00:00" endTime="2017-10-16_10:00:00" closeTime="2017-10-16_10:00:00"/>
+	  <data id="360049" activityId="36" stageId="49" startTime="2017-10-16_11:00:00" endTime="2017-10-20_10:00:00" closeTime="2017-10-20_10:00:00"/>
+	  <data id="360050" activityId="36" stageId="50" startTime="2017-10-20_11:00:00" endTime="2017-10-24_10:00:00" closeTime="2017-10-24_10:00:00"/>
+	  <data id="360051" activityId="36" stageId="51" startTime="2017-10-24_11:00:00" endTime="2017-10-28_10:00:00" closeTime="2017-10-28_10:00:00"/>
+	  <data id="360052" activityId="36" stageId="52" startTime="2017-10-28_11:00:00" endTime="2017-10-31_10:00:00" closeTime="2017-10-31_10:00:00"/>
+	  <data id="360053" activityId="36" stageId="53" startTime="2017-10-31_11:00:00" endTime="2017-11-04_10:00:00" closeTime="2017-11-04_10:00:00"/>
+	  <data id="360054" activityId="36" stageId="54" startTime="2017-11-04_11:00:00" endTime="2017-11-08_10:00:00" closeTime="2017-11-08_10:00:00"/>
+	  <data id="360055" activityId="36" stageId="55" startTime="2017-11-08_11:00:00" endTime="2017-11-12_10:00:00" closeTime="2017-11-12_10:00:00"/>
+	  <data id="360056" activityId="36" stageId="56" startTime="2017-11-12_11:00:00" endTime="2017-11-15_10:00:00" closeTime="2017-11-15_10:00:00"/>
+	  <data id="360057" activityId="36" stageId="57" startTime="2017-11-15_11:00:00" endTime="2017-11-20_10:00:00" closeTime="2017-11-20_10:00:00"/>
+	  <data id="360058" activityId="36" stageId="58" startTime="2018-03-19_11:00:00" endTime="2018-04-30_10:00:00" closeTime="2018-04-30_10:00:00"/>
+	  <data id="360059" activityId="36" stageId="59" startTime="2018-05-01_11:00:00" endTime="2018-06-01_10:00:00" closeTime="2018-06-01_10:00:00"/>
+	  <data id="360060" activityId="36" stageId="60" startTime="2018-06-03_11:00:00" endTime="2019-06-01_10:00:00" closeTime="2019-06-01_10:00:00"/>
+	  <!-- 部族的嘉奖-->
+	  <data id="370001" activityId="37" stageId="1" startTime="2015-04-08_00:00:00" endTime="2015-04-08_23:59:59" closeTime="2015-04-08_23:59:59"/>
+	  <data id="370002" activityId="37" stageId="2" startTime="2018-04-20_00:00:00" endTime="2018-04-30_23:59:59" closeTime="2018-04-30_23:59:59"/>
+	  <data id="370003" activityId="37" stageId="3" startTime="2018-05-01_00:00:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="370004" activityId="37" stageId="4" startTime="2018-06-03_00:00:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 财神献礼 -->
+	  <data id="380001" activityId="38" stageId="1" startTime="2015-04-11_00:00:00" endTime="2015-04-12_23:59:59" closeTime="2015-04-12_23:59:59"/>
+	  <data id="380002" activityId="38" stageId="2" startTime="2018-05-01_00:00:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="380003" activityId="38" stageId="3" startTime="2018-06-03_00:00:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 商城刷新半价/상점갱신가격50%할인-->
+	  <data id="390001" activityId="39" stageId="1" startTime="2015-02-08_00:01:00" endTime="2015-02-09_23:59:59" closeTime="2015-02-09_23:59:59"/>
+	  <data id="390002" activityId="39" stageId="2" startTime="2018-05-01_00:01:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="390003" activityId="39" stageId="3" startTime="2018-06-03_00:01:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 银月酒馆/은월주점 girls bar -->
+	  <data id="400001" activityId="40" stageId="1" startTime="2015-02-15_09:00:00" endTime="2015-02-19_23:59:59" closeTime="2015-02-19_23:59:59"/>
+	  <data id="400002" activityId="40" stageId="2" startTime="2017-04-24_11:00:00" endTime="2017-04-28_10:00:00" closeTime="2017-04-28_10:00:00"/>
+	  <data id="400003" activityId="40" stageId="3" startTime="2017-04-30_11:00:00" endTime="2017-05-03_10:00:00" closeTime="2017-05-03_10:00:00"/>
+	  <data id="400004" activityId="40" stageId="4" startTime="2017-05-03_11:00:00" endTime="2017-05-07_10:00:00" closeTime="2017-05-07_10:00:00"/>
+	  <data id="400005" activityId="40" stageId="5" startTime="2017-05-07_11:00:00" endTime="2017-05-11_10:00:00" closeTime="2017-05-11_10:00:00"/>
+	  <data id="400006" activityId="40" stageId="6" startTime="2017-05-11_11:00:00" endTime="2017-05-15_10:00:00" closeTime="2017-05-15_10:00:00"/>
+	  <data id="400007" activityId="40" stageId="7" startTime="2017-05-15_11:00:00" endTime="2017-05-19_10:00:00" closeTime="2017-05-19_10:00:00"/>
+	  <data id="400008" activityId="40" stageId="8" startTime="2017-05-19_11:00:00" endTime="2017-05-23_10:00:00" closeTime="2017-05-23_10:00:00"/>
+	  <data id="400009" activityId="40" stageId="9" startTime="2017-05-23_11:00:00" endTime="2017-05-27_10:00:00" closeTime="2017-05-27_10:00:00"/>
+	  <data id="400010" activityId="40" stageId="10" startTime="2017-05-27_11:00:00" endTime="2017-05-31_10:00:00" closeTime="2017-05-31_10:00:00"/>
+	  <data id="400011" activityId="40" stageId="11" startTime="2017-06-01_00:01:00" endTime="2017-06-04_10:00:00" closeTime="2017-06-04_10:00:00"/>
+	  <data id="400012" activityId="40" stageId="12" startTime="2017-06-04_11:00:00" endTime="2017-06-08_10:00:00" closeTime="2017-06-08_10:00:00"/>
+	  <data id="400013" activityId="40" stageId="13" startTime="2017-06-08_11:00:00" endTime="2017-06-12_10:00:00" closeTime="2017-06-12_10:00:00"/>
+	  <data id="400014" activityId="40" stageId="14" startTime="2017-06-12_11:00:00" endTime="2017-06-16_10:00:00" closeTime="2017-06-16_10:00:00"/>
+	  <data id="400015" activityId="40" stageId="15" startTime="2017-06-16_11:00:00" endTime="2017-06-20_10:00:00" closeTime="2017-06-20_10:00:00"/>
+	  <data id="400016" activityId="40" stageId="16" startTime="2017-06-20_11:00:00" endTime="2017-06-23_10:00:00" closeTime="2017-06-23_10:00:00"/>
+	  <data id="400017" activityId="40" stageId="17" startTime="2017-06-23_11:00:00" endTime="2017-06-27_10:00:00" closeTime="2017-06-27_10:00:00"/>
+	  <data id="400018" activityId="40" stageId="18" startTime="2017-06-27_11:00:00" endTime="2017-06-30_10:00:00" closeTime="2017-06-30_10:00:00"/>
+	  <data id="400019" activityId="40" stageId="19" startTime="2017-07-01_00:01:00" endTime="2017-07-04_10:00:00" closeTime="2017-07-04_10:00:00"/>
+	  <data id="400020" activityId="40" stageId="20" startTime="2017-07-04_11:00:00" endTime="2017-07-08_10:00:00" closeTime="2017-07-08_10:00:00"/>
+	  <data id="400021" activityId="40" stageId="21" startTime="2017-07-08_11:00:00" endTime="2017-07-12_10:00:00" closeTime="2017-07-12_10:00:00"/>
+	  <data id="400022" activityId="40" stageId="22" startTime="2017-07-12_11:00:00" endTime="2017-07-16_10:00:00" closeTime="2017-07-16_10:00:00"/>
+	  <data id="400023" activityId="40" stageId="23" startTime="2017-07-16_11:00:00" endTime="2017-07-20_10:00:00" closeTime="2017-07-20_10:00:00"/>
+	  <data id="400024" activityId="40" stageId="24" startTime="2017-07-20_11:00:00" endTime="2017-07-24_10:00:00" closeTime="2017-07-24_10:00:00"/>
+	  <data id="400025" activityId="40" stageId="25" startTime="2017-07-24_11:00:00" endTime="2017-07-28_10:00:00" closeTime="2017-07-28_10:00:00"/>
+	  <data id="400026" activityId="40" stageId="26" startTime="2017-07-28_11:00:00" endTime="2017-07-31_10:00:00" closeTime="2017-07-31_10:00:00"/>
+	  <data id="400027" activityId="40" stageId="27" startTime="2017-08-01_00:01:00" endTime="2017-08-04_10:00:00" closeTime="2017-08-04_10:00:00"/>
+	  <data id="400028" activityId="40" stageId="28" startTime="2017-08-04_11:00:00" endTime="2017-08-08_10:00:00" closeTime="2017-08-08_10:00:00"/>
+	  <data id="400029" activityId="40" stageId="29" startTime="2017-08-08_11:00:00" endTime="2017-08-12_10:00:00" closeTime="2017-08-12_10:00:00"/>
+	  <data id="400030" activityId="40" stageId="30" startTime="2017-08-12_11:00:00" endTime="2017-08-16_10:00:00" closeTime="2017-08-16_10:00:00"/>
+	  <data id="400031" activityId="40" stageId="31" startTime="2017-08-16_11:00:00" endTime="2017-08-20_10:00:00" closeTime="2017-08-20_10:00:00"/>
+	  <data id="400032" activityId="40" stageId="32" startTime="2017-08-20_11:00:00" endTime="2017-08-24_10:00:00" closeTime="2017-08-24_10:00:00"/>
+	  <data id="400033" activityId="40" stageId="33" startTime="2017-08-24_11:00:00" endTime="2017-08-28_10:00:00" closeTime="2017-08-28_10:00:00"/>
+	  <data id="400034" activityId="40" stageId="34" startTime="2017-08-28_11:00:00" endTime="2017-08-31_10:00:00" closeTime="2017-08-31_10:00:00"/>
+	  <data id="400035" activityId="40" stageId="35" startTime="2017-09-01_00:01:00" endTime="2017-09-04_10:00:00" closeTime="2017-09-04_10:00:00"/>
+	  <data id="400036" activityId="40" stageId="36" startTime="2017-09-04_11:00:00" endTime="2017-09-08_10:00:00" closeTime="2017-09-08_10:00:00"/>
+	  <data id="400037" activityId="40" stageId="37" startTime="2017-09-08_11:00:00" endTime="2017-09-12_10:00:00" closeTime="2017-09-12_10:00:00"/>
+	  <data id="400038" activityId="40" stageId="38" startTime="2017-09-12_11:00:00" endTime="2017-09-15_10:00:00" closeTime="2017-09-15_10:00:00"/>
+	  <data id="400039" activityId="40" stageId="39" startTime="2017-09-15_11:00:00" endTime="2017-09-19_10:00:00" closeTime="2017-09-19_10:00:00"/>
+	  <data id="400040" activityId="40" stageId="40" startTime="2017-09-19_11:00:00" endTime="2017-09-23_10:00:00" closeTime="2017-09-23_10:00:00"/>
+	  <data id="400041" activityId="40" stageId="41" startTime="2017-09-23_11:00:00" endTime="2017-09-27_10:00:00" closeTime="2017-09-27_10:00:00"/>
+	  <data id="400042" activityId="40" stageId="42" startTime="2017-09-27_11:00:00" endTime="2017-09-30_10:00:00" closeTime="2017-09-30_10:00:00"/>
+	  <data id="400043" activityId="40" stageId="43" startTime="2017-09-30_11:00:00" endTime="2017-10-04_10:00:00" closeTime="2017-10-04_10:00:00"/>
+	  <data id="400044" activityId="40" stageId="44" startTime="2017-10-04_11:00:00" endTime="2017-10-08_10:00:00" closeTime="2017-10-08_10:00:00"/>
+	  <data id="400045" activityId="40" stageId="45" startTime="2017-10-08_11:00:00" endTime="2017-10-12_10:00:00" closeTime="2017-10-12_10:00:00"/>
+	  <data id="400046" activityId="40" stageId="46" startTime="2017-10-12_11:00:00" endTime="2017-10-16_10:00:00" closeTime="2017-10-16_10:00:00"/>
+	  <data id="400047" activityId="40" stageId="47" startTime="2017-10-16_11:00:00" endTime="2017-10-20_10:00:00" closeTime="2017-10-20_10:00:00"/>
+	  <data id="400048" activityId="40" stageId="48" startTime="2017-10-20_11:00:00" endTime="2017-10-24_10:00:00" closeTime="2017-10-24_10:00:00"/>
+	  <data id="400049" activityId="40" stageId="49" startTime="2017-10-24_11:00:00" endTime="2017-10-28_10:00:00" closeTime="2017-10-28_10:00:00"/>
+	  <data id="400050" activityId="40" stageId="50" startTime="2017-10-28_11:00:00" endTime="2017-10-31_10:00:00" closeTime="2017-10-31_10:00:00"/>
+	  <data id="400051" activityId="40" stageId="51" startTime="2017-10-31_11:00:00" endTime="2017-11-04_10:00:00" closeTime="2017-11-04_10:00:00"/>
+	  <data id="400052" activityId="40" stageId="52" startTime="2017-11-04_11:00:00" endTime="2017-11-08_10:00:00" closeTime="2017-11-08_10:00:00"/>
+	  <data id="400053" activityId="40" stageId="53" startTime="2017-11-08_11:00:00" endTime="2017-11-12_10:00:00" closeTime="2017-11-12_10:00:00"/>
+	  <data id="400054" activityId="40" stageId="54" startTime="2017-11-12_11:00:00" endTime="2017-11-15_10:00:00" closeTime="2017-11-15_10:00:00"/>
+	  <data id="400055" activityId="40" stageId="55" startTime="2017-11-15_11:00:00" endTime="2017-11-20_10:00:00" closeTime="2017-11-20_10:00:00"/>
+	  <data id="400056" activityId="40" stageId="56" startTime="2018-03-19_11:00:00" endTime="2018-04-30_10:00:00" closeTime="2018-04-30_10:00:00"/>
+	  <data id="400057" activityId="40" stageId="57" startTime="2018-05-01_11:00:00" endTime="2018-06-01_10:00:00" closeTime="2018-06-01_10:00:00"/>
+	  <data id="400058" activityId="40" stageId="58" startTime="2018-06-03_11:00:00" endTime="2019-06-01_10:00:00" closeTime="2019-06-01_10:00:00"/>
+	  
+	  <!-- 大富豪会/재물클럽 -->
+	  <data id="410001" activityId="41" stageId="1" startTime="2015-02-21_10:00:00" endTime="2015-02-26_23:59:59" closeTime="2015-02-26_23:59:59"/>
+	  <data id="410002" activityId="41" stageId="2" startTime="2018-03-19_10:00:00" endTime="2018-04-30_23:59:59" closeTime="2018-04-30_23:59:59"/>
+	  <data id="410003" activityId="41" stageId="3" startTime="2018-05-01_10:00:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="410004" activityId="41" stageId="4" startTime="2018-06-03_10:00:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 抢红包/보너스빼앗기 -->
+	  <data id="420001" activityId="42" stageId="1" startTime="2015-02-15_09:00:00" endTime="2015-02-20_23:59:59" closeTime="2015-02-20_23:59:59"/>
+	  <data id="420002" activityId="42" stageId="2" startTime="2018-05-01_09:00:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="420003" activityId="42" stageId="3" startTime="2018-06-03_09:00:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 聊天彩蛋 -->
+	  <data id="430001" activityId="43" stageId="1" startTime="2015-02-15_09:00:00" endTime="2015-02-20_23:59:59" closeTime="2015-02-20_23:59:59"/>
+	  <data id="430002" activityId="43" stageId="2" startTime="2018-05-01_09:00:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="430003" activityId="43" stageId="3" startTime="2018-06-03_09:00:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 排名献礼（新服冲排名活动）-->
+	  <data id="440001" activityId="44" stageId="1" startTime="2015-05-01_09:00:00" endTime="2015-05-20_23:59:59" closeTime="2015-05-20_23:59:59"/>
+	  <data id="440002" activityId="44" stageId="2" startTime="2018-05-01_09:00:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="440003" activityId="44" stageId="3" startTime="2018-06-03_09:00:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 首充礼包 -->
+	  <data id="800001" activityId="80" stageId="-1" startTime="0" endTime="0" closeTime="0"/>
+	  
+	  <!-- 黑市/암시장 -->
+	  <data id="810001" activityId="81" stageId="1" startTime="2015-05-29_00:00:00" endTime="2015-05-31_23:59:59" closeTime="2015-05-31_23:59:59"/>
+	  <data id="810001" activityId="81" stageId="2" startTime="2018-04-20_00:00:00" endTime="2018-04-30_23:59:59" closeTime="2018-04-30_23:59:59"/>
+	  <data id="810003" activityId="81" stageId="3" startTime="2018-05-01_00:00:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="810004" activityId="81" stageId="4" startTime="2018-06-03_00:00:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 七夕兑换（超级兑换） -->
+	  <data id="860001" activityId="86" stageId="1" startTime="2016-07-06_11:00:00" endTime="2016-07-10_23:59:59" closeTime="2016-07-10_23:59:59"/>
+	  <data id="860002" activityId="86" stageId="2" startTime="2017-04-04_11:00:00" endTime="2017-04-09_23:59:59" closeTime="2017-04-09_23:59:59"/>
+	  <data id="860003" activityId="86" stageId="3" startTime="2017-04-12_11:00:00" endTime="2017-04-17_23:59:59" closeTime="2017-04-17_23:59:59"/>
+	  <data id="860004" activityId="86" stageId="4" startTime="2017-04-18_23:00:00" endTime="2017-04-24_23:59:59" closeTime="2017-04-24_23:59:59"/>
+	  <data id="860005" activityId="86" stageId="5" startTime="2017-04-28_11:00:00" endTime="2017-05-02_23:59:59" closeTime="2017-05-02_23:59:59"/>
+	  <data id="860006" activityId="86" stageId="6" startTime="2017-05-07_11:00:00" endTime="2017-05-11_10:00:00" closeTime="2017-05-11_10:00:00"/>
+	  <data id="860007" activityId="86" stageId="7" startTime="2017-05-11_11:00:00" endTime="2017-05-15_11:00:00" closeTime="2017-05-15_11:00:00"/>
+	  <data id="860008" activityId="86" stageId="8" startTime="2017-05-15_11:00:00" endTime="2017-05-19_11:00:00" closeTime="2017-05-19_11:00:00"/>
+	  <data id="860009" activityId="86" stageId="9" startTime="2017-05-19_11:00:00" endTime="2017-05-23_11:00:00" closeTime="2017-05-23_11:00:00"/>
+	  <data id="860010" activityId="86" stageId="10" startTime="2017-05-23_11:00:00" endTime="2017-05-27_11:00:00" closeTime="2017-05-27_11:00:00"/>
+	  <data id="860011" activityId="86" stageId="11" startTime="2017-05-27_11:00:00" endTime="2017-05-31_11:00:00" closeTime="2017-05-31_11:00:00"/>
+	  <data id="860012" activityId="86" stageId="12" startTime="2017-05-31_11:00:00" endTime="2017-06-04_11:00:00" closeTime="2017-06-04_11:00:00"/>
+	  <data id="860013" activityId="86" stageId="13" startTime="2017-06-04_11:00:00" endTime="2017-06-08_11:00:00" closeTime="2017-06-08_11:00:00"/>
+	  <data id="860014" activityId="86" stageId="14" startTime="2017-06-08_11:00:00" endTime="2017-06-12_11:00:00" closeTime="2017-06-12_11:00:00"/>
+	  <data id="860015" activityId="86" stageId="15" startTime="2017-06-12_11:00:00" endTime="2017-06-16_11:00:00" closeTime="2017-06-16_11:00:00"/>
+	  <data id="860016" activityId="86" stageId="16" startTime="2017-06-16_11:00:00" endTime="2017-06-20_11:00:00" closeTime="2017-06-20_11:00:00"/>
+	  <data id="860017" activityId="86" stageId="17" startTime="2017-06-20_11:00:00" endTime="2017-06-23_11:00:00" closeTime="2017-06-23_11:00:00"/>
+	  <data id="860018" activityId="86" stageId="18" startTime="2017-06-23_11:00:00" endTime="2017-06-27_11:00:00" closeTime="2017-06-27_11:00:00"/>
+	  <data id="860019" activityId="86" stageId="19" startTime="2017-06-27_11:00:00" endTime="2017-06-30_11:00:00" closeTime="2017-06-30_11:00:00"/>
+	  <data id="860020" activityId="86" stageId="20" startTime="2017-06-30_11:00:00" endTime="2017-07-04_11:00:00" closeTime="2017-07-04_11:00:00"/>
+	  <data id="860021" activityId="86" stageId="21" startTime="2017-07-04_11:00:00" endTime="2017-07-08_11:00:00" closeTime="2017-07-08_11:00:00"/>
+	  <data id="860022" activityId="86" stageId="22" startTime="2017-07-08_11:00:00" endTime="2017-07-12_11:00:00" closeTime="2017-07-12_11:00:00"/>
+	  <data id="860023" activityId="86" stageId="23" startTime="2017-07-12_11:00:00" endTime="2017-07-16_11:00:00" closeTime="2017-07-16_11:00:00"/>
+	  <data id="860024" activityId="86" stageId="24" startTime="2017-07-16_11:00:00" endTime="2017-07-20_11:00:00" closeTime="2017-07-20_11:00:00"/>
+	  <data id="860025" activityId="86" stageId="25" startTime="2017-07-20_11:00:00" endTime="2017-07-24_11:00:00" closeTime="2017-07-24_11:00:00"/>
+	  <data id="860026" activityId="86" stageId="26" startTime="2017-07-24_11:00:00" endTime="2017-07-28_11:00:00" closeTime="2017-07-28_11:00:00"/>
+	  <data id="860027" activityId="86" stageId="27" startTime="2017-07-28_11:00:00" endTime="2017-07-31_11:00:00" closeTime="2017-07-31_11:00:00"/>
+	  <data id="860028" activityId="86" stageId="28" startTime="2017-07-31_11:00:00" endTime="2017-08-04_11:00:00" closeTime="2017-08-04_11:00:00"/>
+	  <data id="860029" activityId="86" stageId="29" startTime="2017-08-04_11:00:00" endTime="2017-08-08_11:00:00" closeTime="2017-08-08_11:00:00"/>
+	  <data id="860030" activityId="86" stageId="30" startTime="2017-08-08_11:00:00" endTime="2017-08-12_11:00:00" closeTime="2017-08-12_11:00:00"/>
+	  <data id="860031" activityId="86" stageId="31" startTime="2017-08-12_11:00:00" endTime="2017-08-16_11:00:00" closeTime="2017-08-16_11:00:00"/>
+	  <data id="860032" activityId="86" stageId="32" startTime="2017-08-16_11:00:00" endTime="2017-08-20_11:00:00" closeTime="2017-08-20_11:00:00"/>
+	  <data id="860033" activityId="86" stageId="33" startTime="2017-08-20_11:00:00" endTime="2017-08-24_11:00:00" closeTime="2017-08-24_11:00:00"/>
+	  <data id="860034" activityId="86" stageId="34" startTime="2017-08-24_11:00:00" endTime="2017-08-28_11:00:00" closeTime="2017-08-28_11:00:00"/>
+	  <data id="860035" activityId="86" stageId="35" startTime="2017-08-28_11:00:00" endTime="2017-08-31_11:00:00" closeTime="2017-08-31_11:00:00"/>
+	  <data id="860036" activityId="86" stageId="36" startTime="2017-08-31_11:00:00" endTime="2017-09-04_11:00:00" closeTime="2017-09-04_11:00:00"/>
+	  <data id="860037" activityId="86" stageId="37" startTime="2017-09-04_11:00:00" endTime="2017-09-08_11:00:00" closeTime="2017-09-08_11:00:00"/>
+	  <data id="860038" activityId="86" stageId="38" startTime="2017-09-08_11:00:00" endTime="2017-09-12_11:00:00" closeTime="2017-09-12_11:00:00"/>
+	  <data id="860039" activityId="86" stageId="39" startTime="2017-09-12_11:00:00" endTime="2017-09-15_11:00:00" closeTime="2017-09-15_11:00:00"/>
+	  <data id="860040" activityId="86" stageId="40" startTime="2017-09-15_11:00:00" endTime="2017-09-19_11:00:00" closeTime="2017-09-19_11:00:00"/>
+	  <data id="860041" activityId="86" stageId="41" startTime="2017-09-19_11:00:00" endTime="2017-09-23_11:00:00" closeTime="2017-09-23_11:00:00"/>
+	  <data id="860042" activityId="86" stageId="42" startTime="2017-09-23_11:00:00" endTime="2017-09-27_11:00:00" closeTime="2017-09-27_11:00:00"/>
+	  <data id="860043" activityId="86" stageId="43" startTime="2017-09-27_11:00:00" endTime="2017-09-30_11:00:00" closeTime="2017-09-30_11:00:00"/>
+	  <data id="860044" activityId="86" stageId="44" startTime="2017-09-30_11:00:00" endTime="2017-10-04_11:00:00" closeTime="2017-10-04_11:00:00"/>
+	  <data id="860045" activityId="86" stageId="45" startTime="2017-10-04_11:00:00" endTime="2017-10-08_11:00:00" closeTime="2017-10-08_11:00:00"/>
+	  <data id="860046" activityId="86" stageId="46" startTime="2017-10-08_11:00:00" endTime="2017-10-12_11:00:00" closeTime="2017-10-12_11:00:00"/>
+	  <data id="860047" activityId="86" stageId="47" startTime="2017-10-12_11:00:00" endTime="2017-10-16_11:00:00" closeTime="2017-10-16_11:00:00"/>
+	  <data id="860048" activityId="86" stageId="48" startTime="2017-10-16_11:00:00" endTime="2017-10-20_11:00:00" closeTime="2017-10-20_11:00:00"/>
+	  <data id="860049" activityId="86" stageId="49" startTime="2017-10-20_11:00:00" endTime="2017-10-24_11:00:00" closeTime="2017-10-24_11:00:00"/>
+	  <data id="860050" activityId="86" stageId="50" startTime="2017-10-24_11:00:00" endTime="2017-10-28_11:00:00" closeTime="2017-10-28_11:00:00"/>
+	  <data id="860051" activityId="86" stageId="51" startTime="2017-10-28_11:00:00" endTime="2017-10-31_11:00:00" closeTime="2017-10-31_11:00:00"/>
+	  <data id="860052" activityId="86" stageId="52" startTime="2017-10-31_11:00:00" endTime="2017-11-04_11:00:00" closeTime="2017-11-04_11:00:00"/>
+	  <data id="860053" activityId="86" stageId="53" startTime="2017-11-04_11:00:00" endTime="2017-11-08_11:00:00" closeTime="2017-11-08_11:00:00"/>
+	  <data id="860054" activityId="86" stageId="54" startTime="2017-11-08_11:00:00" endTime="2017-11-12_11:00:00" closeTime="2017-11-12_11:00:00"/>
+	  <data id="860055" activityId="86" stageId="55" startTime="2017-11-12_11:00:00" endTime="2017-11-15_11:00:00" closeTime="2017-11-15_11:00:00"/>
+	  <data id="860056" activityId="86" stageId="56" startTime="2017-11-15_11:00:00" endTime="2017-11-20_11:00:00" closeTime="2017-11-20_11:00:00"/>
+	  <data id="860057" activityId="86" stageId="57" startTime="2018-03-19_11:00:00" endTime="2018-04-30_11:00:00" closeTime="2018-04-30_11:00:00"/>
+	  <data id="860058" activityId="86" stageId="58" startTime="2018-05-01_11:00:00" endTime="2018-06-01_11:00:00" closeTime="2018-06-01_11:00:00"/>
+	  <data id="860059" activityId="86" stageId="59" startTime="2018-06-03_11:00:00" endTime="2019-06-01_11:00:00" closeTime="2019-06-01_11:00:00"/>
+	  
+	  <!-- 终身月卡-->
+	  <data id="450001" activityId="45" stageId="-1" startTime="0" endTime="0" closeTime="0"/>
+	  
+	 <!-- 签到日常（开服8天后）-->
+	  <data id="870001" activityId="87" stageId="-1" startTime="0" endTime="0" closeTime="0"/>
+	  
+	  <!-- 捞鱼活动 捡贝壳 sunshine-->
+	  <data id="880001" activityId="88" stageId="1" startTime="2016-08-15_11:00:00" endTime="2016-08-22_10:00:00" closeTime="2016-08-23_23:59:59"/>
+	  <data id="880002" activityId="88" stageId="2" startTime="2017-06-04_11:00:00" endTime="2017-06-08_10:00:00" closeTime="2017-06-09_23:59:59"/>	  
+	  <data id="880003" activityId="88" stageId="3" startTime="2017-09-04_11:00:00" endTime="2017-09-08_10:00:00" closeTime="2017-09-09_23:59:59"/>	  
+	  <data id="880004" activityId="88" stageId="4" startTime="2017-09-19_11:00:00" endTime="2017-09-23_10:00:00" closeTime="2017-09-24_23:59:59"/>	  
+	  <data id="880005" activityId="88" stageId="5" startTime="2017-10-04_11:00:00" endTime="2017-10-08_10:00:00" closeTime="2017-10-09_23:59:59"/>	  
+	  <data id="880006" activityId="88" stageId="6" startTime="2017-10-20_11:00:00" endTime="2017-10-24_10:00:00" closeTime="2017-10-25_23:59:59"/>	  
+	  <data id="880007" activityId="88" stageId="7" startTime="2017-11-04_11:00:00" endTime="2017-11-17_10:00:00" closeTime="2017-11-20_23:59:59"/>
+	  <data id="880008" activityId="88" stageId="8" startTime="2018-03-19_11:00:00" endTime="2018-04-30_10:00:00" closeTime="2018-04-30_23:59:59"/>
+	  <data id="880009" activityId="88" stageId="9" startTime="2018-05-01_11:00:00" endTime="2018-06-01_10:00:00" closeTime="2018-06-01_23:59:59"/>
+	  <data id="8800010" activityId="88" stageId="10" startTime="2018-06-03_11:00:00" endTime="2019-06-01_10:00:00" closeTime="2019-06-01_23:59:59"/>	
+  
+	  
+	  <!-- 神装锻造 -->
+	  <data id="890001" activityId="89" stageId="1" startTime="2017-06-12_11:00:00" endTime="2017-06-13_23:59:59" closeTime="2017-06-13_23:59:59"/>
+	  <data id="890002" activityId="89" stageId="2" startTime="2017-06-14_00:01:00" endTime="2017-06-16_10:00:00" closeTime="2017-06-16_10:00:00"/>
+	  <data id="890003" activityId="89" stageId="3" startTime="2017-06-23_11:00:00" endTime="2017-06-27_10:00:00" closeTime="2017-06-27_10:00:00"/>
+	  <data id="890004" activityId="89" stageId="4" startTime="2017-07-04_11:00:00" endTime="2017-07-08_10:00:00" closeTime="2017-07-08_10:00:00"/>
+	  <data id="890005" activityId="89" stageId="5" startTime="2017-07-20_11:00:00" endTime="2017-07-24_10:00:00" closeTime="2017-07-24_10:00:00"/>
+	  <data id="890006" activityId="89" stageId="6" startTime="2018-03-19_11:00:00" endTime="2018-04-30_10:00:00" closeTime="2018-04-30_10:00:00"/>
+	  <data id="890007" activityId="89" stageId="7" startTime="2018-05-01_11:00:00" endTime="2018-06-01_10:00:00" closeTime="2018-06-01_10:00:00"/>
+	  <data id="890008" activityId="89" stageId="8" startTime="2018-06-03_11:00:00" endTime="2019-06-01_10:00:00" closeTime="2019-06-01_10:00:00"/>
+	  
+	  <!-- 气枪打靶 -->
+	  <data id="900005" activityId="90" stageId="5" startTime="2017-03-24_04:00:00" endTime="2057-03-23_22:59:59" closeTime="2057-03-23_22:59:59"/>
+	  <data id="900006" activityId="90" stageId="6" startTime="2018-06-03_04:00:00" endTime="2019-03-23_22:59:59" closeTime="2019-03-23_22:59:59"/>
+		
+	  <!-- 魔王宝藏 主人的宝藏-->
+	  <data id="910001" activityId="91" stageId="1" startTime="2017-03-31_11:00:00" endTime="2017-04-04_10:00:00" closeTime="2017-04-05_23:59:59"/>
+	  <data id="910002" activityId="91" stageId="2" startTime="2017-04-12_11:00:00" endTime="2017-04-17_10:00:00" closeTime="2017-04-18_10:00:00"/>
+	  <data id="910003" activityId="91" stageId="3" startTime="2017-04-18_11:00:00" endTime="2017-04-24_10:00:00" closeTime="2017-04-24_10:00:00"/>
+	  <data id="910004" activityId="91" stageId="4" startTime="2017-04-24_11:00:00" endTime="2017-05-19_10:00:00" closeTime="2017-05-21_23:59:59"/>
+	  <data id="910005" activityId="91" stageId="5" startTime="2017-05-23_11:00:00" endTime="2017-05-27_10:00:00" closeTime="2017-05-28_23:59:59"/>
+	  <data id="910006" activityId="91" stageId="6" startTime="2017-06-04_11:00:00" endTime="2017-06-08_10:00:00" closeTime="2017-06-09_23:59:59"/>
+	  <data id="910007" activityId="91" stageId="7" startTime="2017-06-12_11:00:00" endTime="2017-06-16_10:00:00" closeTime="2017-06-17_23:59:59"/>
+	  <data id="910008" activityId="91" stageId="8" startTime="2017-06-23_11:00:00" endTime="2017-06-27_10:00:00" closeTime="2017-06-28_23:59:59"/>
+	  <data id="910009" activityId="91" stageId="9" startTime="2017-07-04_11:00:00" endTime="2017-07-08_10:00:00" closeTime="2017-07-09_23:59:59"/>
+	  <data id="910010" activityId="91" stageId="10" startTime="2017-07-12_11:00:00" endTime="2017-07-16_10:00:00" closeTime="2017-07-17_23:59:59"/>
+	  <data id="910011" activityId="91" stageId="11" startTime="2017-07-20_11:00:00" endTime="2017-07-24_10:00:00" closeTime="2017-07-25_23:59:59"/>
+	  <data id="910012" activityId="91" stageId="12" startTime="2017-07-28_11:00:00" endTime="2017-07-31_23:59:59" closeTime="2017-08-01_23:59:59"/>
+	  <data id="910013" activityId="91" stageId="13" startTime="2017-08-04_11:00:00" endTime="2017-08-08_10:00:00" closeTime="2017-08-09_23:59:59"/>
+	  <data id="910014" activityId="91" stageId="14" startTime="2017-08-12_11:00:00" endTime="2017-08-16_10:00:00" closeTime="2017-08-17_23:59:59"/>
+	  <data id="910015" activityId="91" stageId="15" startTime="2017-08-20_11:00:00" endTime="2017-08-24_10:00:00" closeTime="2017-08-25_23:59:59"/>
+	  <data id="910016" activityId="91" stageId="16" startTime="2017-08-28_11:00:00" endTime="2017-08-31_23:59:59" closeTime="2017-09-01_23:59:59"/>
+	  <data id="910017" activityId="91" stageId="17" startTime="2018-03-19_11:00:00" endTime="2018-04-30_23:59:59" closeTime="2018-04-30_23:59:59"/>
+	  <data id="910018" activityId="91" stageId="18" startTime="2018-05-01_11:00:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="910019" activityId="91" stageId="19" startTime="2018-06-03_11:00:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 充值折扣礼包 -->
+	  <data id="940001" activityId="94" stageId="1" startTime="2016-03-31_11:00:00" endTime="2057-04-04_10:00:00" closeTime="2057-04-04_10:00:00"/>
+	  <data id="940002" activityId="94" stageId="2" startTime="2016-06-03_11:00:00" endTime="2019-04-04_10:00:00" closeTime="2019-04-04_10:00:00"/>
+	  
+
+	  <!-- 幸运副将 美人计-->
+	  <data id="980001" activityId="98" stageId="1" startTime="2017-04-30_11:00:00" endTime="2017-05-03_10:00:00" closeTime="2017-05-03_10:00:00"/>
+	  <data id="980002" activityId="98" stageId="2" startTime="2017-05-03_11:00:00" endTime="2017-05-07_10:00:00" closeTime="2017-05-07_10:00:00"/>
+	  <data id="980003" activityId="98" stageId="3" startTime="2017-05-07_11:00:00" endTime="2017-05-11_10:00:00" closeTime="2017-05-11_10:00:00"/>
+	  <data id="980004" activityId="98" stageId="4" startTime="2017-05-11_11:00:00" endTime="2017-05-15_10:00:00" closeTime="2017-05-15_10:00:00"/>
+	  <data id="980005" activityId="98" stageId="5" startTime="2017-05-15_11:00:00" endTime="2017-05-19_10:00:00" closeTime="2017-05-19_10:00:00"/>
+	  <data id="980006" activityId="98" stageId="6" startTime="2017-05-19_11:00:00" endTime="2017-05-23_10:00:00" closeTime="2017-05-23_10:00:00"/>
+	  <data id="980007" activityId="98" stageId="7" startTime="2017-05-23_11:00:00" endTime="2017-05-27_10:00:00" closeTime="2017-05-27_10:00:00"/>
+	  <data id="980008" activityId="98" stageId="8" startTime="2017-05-27_11:00:00" endTime="2017-05-31_10:00:00" closeTime="2017-05-31_10:00:00"/>
+	  <data id="980009" activityId="98" stageId="9" startTime="2017-06-01_00:01:00" endTime="2017-06-04_10:00:00" closeTime="2017-06-04_10:00:00"/>
+	  <data id="980010" activityId="98" stageId="10" startTime="2017-06-04_11:00:00" endTime="2017-06-08_10:00:00" closeTime="2017-06-08_10:00:00"/>
+	  <data id="980011" activityId="98" stageId="11" startTime="2017-06-08_11:00:00" endTime="2017-06-12_10:00:00" closeTime="2017-06-12_10:00:00"/>
+	  <data id="980012" activityId="98" stageId="12" startTime="2017-06-12_11:00:00" endTime="2017-06-16_10:00:00" closeTime="2017-06-16_10:00:00"/>
+	  <data id="980013" activityId="98" stageId="13" startTime="2017-06-16_11:00:00" endTime="2017-06-20_10:00:00" closeTime="2017-06-20_10:00:00"/>
+	  <data id="980014" activityId="98" stageId="14" startTime="2017-06-20_11:00:00" endTime="2017-06-23_10:00:00" closeTime="2017-06-23_10:00:00"/>
+	  <data id="980015" activityId="98" stageId="15" startTime="2017-06-23_11:00:00" endTime="2017-06-27_10:00:00" closeTime="2017-06-27_10:00:00"/>
+	  <data id="980016" activityId="98" stageId="16" startTime="2017-06-27_11:00:00" endTime="2017-06-30_10:00:00" closeTime="2017-06-30_10:00:00"/>
+	  <data id="980017" activityId="98" stageId="17" startTime="2017-07-01_00:01:00" endTime="2017-07-04_10:00:00" closeTime="2017-07-04_10:00:00"/>
+	  <data id="980018" activityId="98" stageId="18" startTime="2017-07-04_11:00:00" endTime="2017-07-08_10:00:00" closeTime="2017-07-08_10:00:00"/>
+	  <data id="980019" activityId="98" stageId="19" startTime="2017-07-08_11:00:00" endTime="2017-07-12_10:00:00" closeTime="2017-07-12_10:00:00"/>
+	  <data id="980020" activityId="98" stageId="20" startTime="2017-07-12_11:00:00" endTime="2017-07-16_10:00:00" closeTime="2017-07-16_10:00:00"/>
+	  <data id="980021" activityId="98" stageId="21" startTime="2017-07-16_11:00:00" endTime="2017-07-20_10:00:00" closeTime="2017-07-20_10:00:00"/>
+	  <data id="980022" activityId="98" stageId="22" startTime="2017-07-20_11:00:00" endTime="2017-07-24_10:00:00" closeTime="2017-07-24_10:00:00"/>
+	  <data id="980023" activityId="98" stageId="23" startTime="2017-07-24_11:00:00" endTime="2017-07-28_10:00:00" closeTime="2017-07-28_10:00:00"/>
+	  <data id="980024" activityId="98" stageId="24" startTime="2017-07-28_11:00:00" endTime="2017-07-31_10:00:00" closeTime="2017-07-31_10:00:00"/>
+	  <data id="980025" activityId="98" stageId="25" startTime="2017-08-01_00:01:00" endTime="2017-08-04_10:00:00" closeTime="2017-08-04_10:00:00"/>
+	  <data id="980026" activityId="98" stageId="26" startTime="2017-08-04_11:00:00" endTime="2017-08-08_10:00:00" closeTime="2017-08-08_10:00:00"/>
+	  <data id="980027" activityId="98" stageId="27" startTime="2017-08-08_11:00:00" endTime="2017-08-12_10:00:00" closeTime="2017-08-12_10:00:00"/>
+	  <data id="980028" activityId="98" stageId="28" startTime="2017-08-12_11:00:00" endTime="2017-08-16_10:00:00" closeTime="2017-08-16_10:00:00"/>
+	  <data id="980029" activityId="98" stageId="29" startTime="2017-08-16_11:00:00" endTime="2017-08-20_10:00:00" closeTime="2017-08-20_10:00:00"/>
+	  <data id="980030" activityId="98" stageId="30" startTime="2017-08-20_11:00:00" endTime="2017-08-24_10:00:00" closeTime="2017-08-24_10:00:00"/>
+	  <data id="980031" activityId="98" stageId="31" startTime="2017-08-24_11:00:00" endTime="2017-08-28_10:00:00" closeTime="2017-08-28_10:00:00"/>
+	  <data id="980032" activityId="98" stageId="32" startTime="2017-08-28_11:00:00" endTime="2017-08-31_10:00:00" closeTime="2017-08-31_10:00:00"/>
+	  <data id="980033" activityId="98" stageId="33" startTime="2017-09-01_00:01:00" endTime="2017-09-04_10:00:00" closeTime="2017-09-04_10:00:00"/>
+	  <data id="980034" activityId="98" stageId="34" startTime="2017-09-04_11:00:00" endTime="2017-09-08_10:00:00" closeTime="2017-09-08_10:00:00"/>
+	  <data id="980035" activityId="98" stageId="35" startTime="2017-09-08_11:00:00" endTime="2017-09-12_10:00:00" closeTime="2017-09-12_10:00:00"/>
+	  <data id="980036" activityId="98" stageId="36" startTime="2017-09-12_11:00:00" endTime="2017-09-15_10:00:00" closeTime="2017-09-15_10:00:00"/>
+	  <data id="980037" activityId="98" stageId="37" startTime="2017-09-15_11:00:00" endTime="2017-09-19_10:00:00" closeTime="2017-09-19_10:00:00"/>
+	  <data id="980038" activityId="98" stageId="38" startTime="2017-09-19_11:00:00" endTime="2017-09-23_10:00:00" closeTime="2017-09-23_10:00:00"/>
+	  <data id="980039" activityId="98" stageId="39" startTime="2017-09-23_11:00:00" endTime="2017-09-27_10:00:00" closeTime="2017-09-27_10:00:00"/>
+	  <data id="980040" activityId="98" stageId="40" startTime="2017-09-27_11:00:00" endTime="2017-09-30_10:00:00" closeTime="2017-09-30_10:00:00"/>
+	  <data id="980041" activityId="98" stageId="41" startTime="2017-09-30_11:00:00" endTime="2017-10-04_10:00:00" closeTime="2017-10-04_10:00:00"/>
+	  <data id="980042" activityId="98" stageId="42" startTime="2017-10-04_11:00:00" endTime="2017-10-08_10:00:00" closeTime="2017-10-08_10:00:00"/>
+	  <data id="980043" activityId="98" stageId="43" startTime="2017-10-08_11:00:00" endTime="2017-10-12_10:00:00" closeTime="2017-10-12_10:00:00"/>
+	  <data id="980044" activityId="98" stageId="44" startTime="2017-10-12_11:00:00" endTime="2017-10-16_10:00:00" closeTime="2017-10-16_10:00:00"/>
+	  <data id="980045" activityId="98" stageId="45" startTime="2017-10-16_11:00:00" endTime="2017-10-20_10:00:00" closeTime="2017-10-20_10:00:00"/>
+	  <data id="980046" activityId="98" stageId="46" startTime="2017-10-20_11:00:00" endTime="2017-10-24_10:00:00" closeTime="2017-10-24_10:00:00"/>
+	  <data id="980047" activityId="98" stageId="47" startTime="2017-10-24_11:00:00" endTime="2017-10-28_10:00:00" closeTime="2017-10-28_10:00:00"/>
+	  <data id="980048" activityId="98" stageId="48" startTime="2017-10-28_11:00:00" endTime="2017-10-31_10:00:00" closeTime="2017-10-31_10:00:00"/>
+	  <data id="980049" activityId="98" stageId="49" startTime="2017-10-31_11:00:00" endTime="2017-11-04_10:00:00" closeTime="2017-11-04_10:00:00"/>
+	  <data id="980050" activityId="98" stageId="50" startTime="2017-11-04_11:00:00" endTime="2017-11-08_10:00:00" closeTime="2017-11-08_10:00:00"/>
+	  <data id="980051" activityId="98" stageId="51" startTime="2017-11-08_11:00:00" endTime="2017-11-12_10:00:00" closeTime="2017-11-12_10:00:00"/>
+	  <data id="980052" activityId="98" stageId="52" startTime="2017-11-12_11:00:00" endTime="2017-11-15_10:00:00" closeTime="2017-11-15_10:00:00"/>
+	  <data id="980053" activityId="98" stageId="53" startTime="2017-11-15_11:00:00" endTime="2017-11-20_10:00:00" closeTime="2017-11-20_10:00:00"/>
+	  <data id="980054" activityId="98" stageId="54" startTime="2018-03-19_11:00:00" endTime="2018-04-30_10:00:00" closeTime="2018-04-30_10:00:00"/>
+	  <data id="980055" activityId="98" stageId="55" startTime="2018-05-01_11:00:00" endTime="2018-06-01_10:00:00" closeTime="2018-06-01_10:00:00"/>
+	  <data id="980056" activityId="98" stageId="56" startTime="2018-06-03_11:00:00" endTime="2019-06-01_10:00:00" closeTime="2019-06-01_10:00:00"/>
+
+	  
+	  <!-- 神将投放（卧龙初登场）-->
+	  <data id="990001" activityId="99" stageId="1" startTime="2017-05-19_11:00:00" endTime="2017-05-23_10:00:00" closeTime="2017-05-23_10:00:00"/>
+	  <data id="990002" activityId="99" stageId="2" startTime="2017-05-24_11:00:00" endTime="2017-05-27_10:00:00" closeTime="2017-05-27_10:00:00"/>
+	  <data id="990003" activityId="99" stageId="3" startTime="2017-06-01_00:01:00" endTime="2017-06-05_23:59:59" closeTime="2017-06-05_23:59:59"/>
+	  <data id="990004" activityId="99" stageId="4" startTime="2017-06-16_11:00:00" endTime="2017-06-22_23:59:59" closeTime="2017-06-22_23:59:59"/>
+	  <data id="990005" activityId="99" stageId="5" startTime="2017-07-01_00:01:00" endTime="2017-07-07_23:59:59" closeTime="2017-07-07_23:59:59"/>
+	  <data id="990006" activityId="99" stageId="6" startTime="2017-07-08_11:00:00" endTime="2017-07-12_10:00:00" closeTime="2017-07-12_10:00:00"/>
+	  <data id="990007" activityId="99" stageId="7" startTime="2017-07-16_11:00:00" endTime="2017-07-22_10:00:00" closeTime="2017-07-22_10:00:00"/>
+	  <data id="990008" activityId="99" stageId="8" startTime="2017-08-01_00:01:00" endTime="2017-08-07_23:59:59" closeTime="2017-08-07_23:59:59"/>
+	  <data id="990009" activityId="99" stageId="9" startTime="2017-08-16_11:00:00" endTime="2017-08-21_23:59:59" closeTime="2017-08-21_23:59:59"/>
+	  <data id="990010" activityId="99" stageId="10" startTime="2017-08-24_11:00:00" endTime="2017-08-29_23:59:59" closeTime="2017-08-29_23:59:59"/>
+	  <data id="990011" activityId="99" stageId="11" startTime="2017-09-01_00:01:00" endTime="2017-09-07_23:59:59" closeTime="2017-09-07_23:59:59"/>
+	  <data id="990012" activityId="99" stageId="12" startTime="2017-09-08_11:00:00" endTime="2017-09-13_23:59:59" closeTime="2017-09-13_23:59:59"/>
+	  <data id="990013" activityId="99" stageId="13" startTime="2017-09-15_11:00:00" endTime="2017-09-20_23:59:59" closeTime="2017-09-20_23:59:59"/>
+	  <data id="990014" activityId="99" stageId="14" startTime="2017-09-23_11:00:00" endTime="2017-09-28_23:59:59" closeTime="2017-09-28_23:59:59"/>
+	  <data id="990015" activityId="99" stageId="15" startTime="2017-09-30_11:00:00" endTime="2017-10-07_23:59:59" closeTime="2017-10-07_23:59:59"/>
+	  <data id="990016" activityId="99" stageId="16" startTime="2017-10-08_11:00:00" endTime="2017-10-14_23:59:59" closeTime="2017-10-14_23:59:59"/>
+	  <data id="990017" activityId="99" stageId="17" startTime="2017-10-16_11:00:00" endTime="2017-10-22_23:59:59" closeTime="2017-10-22_23:59:59"/>
+	  <data id="990018" activityId="99" stageId="18" startTime="2017-10-24_11:00:00" endTime="2017-10-30_23:59:59" closeTime="2017-10-30_23:59:59"/>
+	  <data id="990019" activityId="99" stageId="19" startTime="2017-10-31_11:00:00" endTime="2017-11-07_23:59:59" closeTime="2017-11-07_23:59:59"/>
+	  <data id="990020" activityId="99" stageId="20" startTime="2017-11-08_11:00:00" endTime="2017-11-14_23:59:59" closeTime="2017-11-14_23:59:59"/>
+	  <data id="990021" activityId="99" stageId="21" startTime="2017-11-15_11:00:00" endTime="2017-12-23_23:59:59" closeTime="2017-12-23_23:59:59"/>
+	  <data id="990022" activityId="99" stageId="22" startTime="2018-03-19_11:00:00" endTime="2018-04-30_23:59:59" closeTime="2018-04-30_23:59:59"/>
+	  <data id="990023" activityId="99" stageId="23" startTime="2018-05-01_11:00:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="990024" activityId="99" stageId="24" startTime="2018-06-03_11:00:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 对话框皮肤售卖 聊天气泡-->
+	  <data id="1000001" activityId="100" stageId="1" startTime="2017-05-27_11:00:00" endTime="2017-05-31_10:00:00" closeTime="2017-05-31_10:00:00"/>
+	  <data id="1000002" activityId="100" stageId="2" startTime="2017-06-01_00:01:00" endTime="2017-06-04_10:00:00" closeTime="2017-06-04_10:00:00"/>
+	  <data id="1000003" activityId="100" stageId="3" startTime="2017-06-12_11:00:00" endTime="2017-06-16_10:00:00" closeTime="2017-06-16_10:00:00"/>
+	  <data id="1000004" activityId="100" stageId="4" startTime="2017-07-12_11:00:00" endTime="2017-07-16_10:00:00" closeTime="2017-07-16_10:00:00"/> 
+	  <data id="1000005" activityId="100" stageId="5" startTime="2017-08-04_11:00:00" endTime="2017-08-08_10:00:00" closeTime="2017-08-08_10:00:00"/> 
+	  <data id="1000006" activityId="100" stageId="6" startTime="2017-09-04_11:00:00" endTime="2017-09-08_10:00:00" closeTime="2017-09-08_10:00:00"/> 
+	  <data id="1000007" activityId="100" stageId="7" startTime="2017-10-12_11:00:00" endTime="2017-10-16_10:00:00" closeTime="2017-10-16_10:00:00"/> 
+	  <data id="1000008" activityId="100" stageId="8" startTime="2017-10-24_11:00:00" endTime="2017-10-28_10:00:00" closeTime="2017-10-28_10:00:00"/> 
+	  <data id="1000009" activityId="100" stageId="9" startTime="2017-11-08_11:00:00" endTime="2017-11-12_10:00:00" closeTime="2017-11-12_10:00:00"/> 
+	  <data id="1000010" activityId="100" stageId="10" startTime="2018-03-19_11:00:00" endTime="2018-04-30_10:00:00" closeTime="2018-04-30_10:00:00"/>
+	  <data id="1000011" activityId="100" stageId="11" startTime="2018-05-01_11:00:00" endTime="2018-06-01_10:00:00" closeTime="2018-06-01_10:00:00"/> 
+	  <data id="1000012" activityId="100" stageId="12" startTime="2018-05-01_11:00:00" endTime="2019-06-01_10:00:00" closeTime="2019-06-01_10:00:00"/> 
+	  <data id="1000013" activityId="100" stageId="13" startTime="2018-06-03_11:00:00" endTime="2019-06-01_10:00:00" closeTime="2019-06-01_10:00:00"/> 
+	  
+	  <!-- 兑换道具 碎片兑换-->
+	  <data id="1020001" activityId="102" stageId="1" startTime="2017-06-20_11:00:00" endTime="2017-06-23_10:00:00" closeTime="2017-06-23_10:00:00"/>
+	  <data id="1020002" activityId="102" stageId="2" startTime="2017-07-04_11:00:00" endTime="2017-07-08_10:00:00" closeTime="2017-07-08_10:00:00"/>
+	  <data id="1020003" activityId="102" stageId="3" startTime="2017-07-20_11:00:00" endTime="2017-07-24_10:00:00" closeTime="2017-07-24_10:00:00"/>
+	  <data id="1020004" activityId="102" stageId="4" startTime="2017-08-04_11:00:00" endTime="2017-08-08_10:00:00" closeTime="2017-08-08_10:00:00"/>
+	  <data id="1020005" activityId="102" stageId="5" startTime="2017-08-20_11:00:00" endTime="2017-08-24_10:00:00" closeTime="2017-08-24_10:00:00"/>
+	  <data id="1020006" activityId="102" stageId="6" startTime="2017-09-04_11:00:00" endTime="2017-09-08_10:00:00" closeTime="2017-09-08_10:00:00"/>
+	  <data id="1020007" activityId="102" stageId="7" startTime="2017-09-19_11:00:00" endTime="2017-09-23_10:00:00" closeTime="2017-09-23_10:00:00"/>
+	  <data id="1020008" activityId="102" stageId="8" startTime="2017-09-27_11:00:00" endTime="2017-09-30_23:59:59" closeTime="2017-09-30_23:59:59"/>
+	  <data id="1020009" activityId="102" stageId="9" startTime="2017-10-12_11:00:00" endTime="2017-10-16_10:00:00" closeTime="2017-10-16_10:00:00"/>
+	  <data id="1020010" activityId="102" stageId="10" startTime="2017-10-28_11:00:00" endTime="2017-10-31_10:00:00" closeTime="2017-10-31_10:00:00"/>
+	  <data id="1020011" activityId="102" stageId="11" startTime="2018-03-19_11:00:00" endTime="2018-04-30_10:00:00" closeTime="2018-04-30_10:00:00"/>
+	  <data id="1020012" activityId="102" stageId="12" startTime="2018-05-01_11:00:00" endTime="2018-06-01_10:00:00" closeTime="2018-06-01_10:00:00"/>
+	  <data id="1020013" activityId="102" stageId="13" startTime="2018-06-03_11:00:00" endTime="2019-06-01_10:00:00" closeTime="2019-06-01_10:00:00"/>
+	  
+	  <!-- 仙女的加护-->
+	  <data id="1030001" activityId="103" stageId="1" startTime="2017-07-16_11:00:00" endTime="2017-07-20_10:00:00" closeTime="2017-07-20_10:00:00"/>
+	  <data id="1030002" activityId="103" stageId="2" startTime="2017-07-28_11:00:00" endTime="2017-07-31_10:00:00" closeTime="2017-07-31_10:00:00"/>
+	  <data id="1030003" activityId="103" stageId="3" startTime="2017-08-08_11:00:00" endTime="2017-08-12_10:00:00" closeTime="2017-08-12_10:00:00"/>
+	  <data id="1030004" activityId="103" stageId="4" startTime="2017-08-16_11:00:00" endTime="2017-08-20_10:00:00" closeTime="2017-08-20_10:00:00"/>
+	  <data id="1030005" activityId="103" stageId="5" startTime="2017-08-24_11:00:00" endTime="2017-08-28_10:00:00" closeTime="2017-08-28_10:00:00"/>
+	  <data id="1030006" activityId="103" stageId="6" startTime="2017-09-04_11:00:00" endTime="2017-09-08_10:00:00" closeTime="2017-09-08_10:00:00"/>
+	  <data id="1030007" activityId="103" stageId="7" startTime="2017-09-19_11:00:00" endTime="2017-09-23_10:00:00" closeTime="2017-09-23_10:00:00"/>
+	  <data id="1030008" activityId="103" stageId="8" startTime="2017-10-04_11:00:00" endTime="2017-10-08_10:00:00" closeTime="2017-10-08_10:00:00"/>
+	  <data id="1030009" activityId="103" stageId="9" startTime="2017-10-20_11:00:00" endTime="2017-10-24_10:00:00" closeTime="2017-10-24_10:00:00"/>
+	  <data id="1030010" activityId="103" stageId="10" startTime="2017-11-04_11:00:00" endTime="2017-11-08_10:00:00" closeTime="2017-11-08_10:00:00"/>
+	  <data id="1030011" activityId="103" stageId="11" startTime="2017-11-15_11:00:00" endTime="2017-11-20_10:00:00" closeTime="2017-11-20_10:00:00"/>
+	  <data id="1030012" activityId="103" stageId="12" startTime="2018-03-19_11:00:00" endTime="2018-04-30_10:00:00" closeTime="2018-04-30_10:00:00"/>
+	  <data id="1030013" activityId="103" stageId="13" startTime="2018-05-01_11:00:00" endTime="2018-06-01_10:00:00" closeTime="2018-06-01_10:00:00"/>
+	  <data id="1030014" activityId="103" stageId="14" startTime="2018-06-03_11:00:00" endTime="2019-06-01_10:00:00" closeTime="2019-06-01_10:00:00"/>
+	  
+	  <!-- 少女的邂逅-->
+	  <data id="1040001" activityId="104" stageId="1" startTime="2017-08-04_11:00:00" endTime="2017-08-08_10:00:00" closeTime="2017-08-08_10:00:00"/>
+	  <data id="1040002" activityId="104" stageId="2" startTime="2017-08-20_11:00:00" endTime="2017-08-24_10:00:00" closeTime="2017-08-25_23:59:59"/>
+	  <data id="1040003" activityId="104" stageId="3" startTime="2017-09-04_11:00:00" endTime="2017-09-08_10:00:00" closeTime="2017-09-09_23:59:59"/>
+	  <data id="1040004" activityId="104" stageId="4" startTime="2017-09-19_11:00:00" endTime="2017-09-23_10:00:00" closeTime="2017-09-24_23:59:59"/>
+	  <data id="1040005" activityId="104" stageId="5" startTime="2017-10-04_11:00:00" endTime="2017-10-08_10:00:00" closeTime="2017-10-09_23:59:59"/>
+	  <data id="1040006" activityId="104" stageId="6" startTime="2017-10-20_11:00:00" endTime="2017-10-24_10:00:00" closeTime="2017-10-25_23:59:59"/>
+	  <data id="1040007" activityId="104" stageId="7" startTime="2017-10-31_11:00:00" endTime="2017-11-03_23:59:59" closeTime="2017-11-04_10:00:00"/>
+	  <data id="1040008" activityId="104" stageId="8" startTime="2017-11-04_11:00:00" endTime="2017-11-08_10:00:00" closeTime="2017-11-09_23:59:59"/>
+	  <data id="1040009" activityId="104" stageId="9" startTime="2017-11-15_11:00:00" endTime="2017-11-19_23:59:59" closeTime="2017-11-20_10:00:00"/>
+	  <data id="1040010" activityId="104" stageId="10" startTime="2018-03-19_11:00:00" endTime="2018-04-30_23:59:59" closeTime="2018-05-01_10:00:00"/>
+	  <data id="1040011" activityId="104" stageId="11" startTime="2018-05-01_11:00:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-02_10:00:00"/>
+	  <data id="1040012" activityId="104" stageId="12" startTime="2018-06-03_11:00:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-02_10:00:00"/>
+	  
+	  <!-- 鬼节活动（夏季风物诗）-->
+	  <data id="1050001" activityId="105" stageId="1" startTime="2017-08-08_11:00:00" endTime="2017-08-13_23:59:59" closeTime="2017-08-13_23:59:59"/>
+	  <data id="1050002" activityId="105" stageId="2" startTime="2018-03-19_11:00:00" endTime="2018-04-30_23:59:59" closeTime="2018-04-30_23:59:59"/>
+	  <data id="1050003" activityId="105" stageId="3" startTime="2018-05-01_11:00:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="1050004" activityId="105" stageId="4" startTime="2018-06-03_11:00:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 天降元宝 -->
+	  <data id="1060001" activityId="106" stageId="1" startTime="2017-08-28_11:00:00" endTime="2017-09-04_10:00:00" closeTime="2017-09-04_10:00:00"/>
+	  <data id="1060002" activityId="106" stageId="2" startTime="2017-10-01_00:01:00" endTime="2017-10-04_10:00:00" closeTime="2017-10-04_10:00:00"/>
+	  <data id="1060003" activityId="106" stageId="3" startTime="2017-11-01_00:01:00" endTime="2017-11-04_10:00:00" closeTime="2017-11-04_10:00:00"/>
+	  <data id="1060004" activityId="106" stageId="4" startTime="2018-03-19_00:01:00" endTime="2018-04-30_10:00:00" closeTime="2018-04-30_10:00:00"/>
+	  <data id="1060005" activityId="106" stageId="5" startTime="2018-04-20_00:01:00" endTime="2018-04-30_10:00:00" closeTime="2018-04-30_10:00:00"/>
+	  <data id="1060006" activityId="106" stageId="6" startTime="2018-05-01_00:01:00" endTime="2018-06-01_10:00:00" closeTime="2018-06-01_10:00:00"/>
+	  <data id="1060007" activityId="106" stageId="7" startTime="2018-06-03_00:01:00" endTime="2019-06-01_10:00:00" closeTime="2019-06-01_10:00:00"/>
+	  
+	  <!-- 大转盘 満開ﾙｰﾚｯﾄ -->
+	  <data id="1080001" activityId="108" stageId="1" startTime="2017-10-12_11:00:00" endTime="2017-10-16_10:00:00" closeTime="2017-10-17_23:59:59"/>
+	  <data id="1080002" activityId="108" stageId="2" startTime="2017-11-12_11:00:00" endTime="2017-11-15_10:00:00" closeTime="2017-11-16_23:59:59"/>
+	  <data id="1080003" activityId="108" stageId="3" startTime="2018-04-20_00:01:00" endTime="2018-04-30_10:00:00" closeTime="2018-04-30_23:59:59"/>
+	  <data id="1080004" activityId="108" stageId="4" startTime="2018-05-01_00:01:00" endTime="2018-06-01_10:00:00" closeTime="2018-06-01_23:59:59"/>
+	  <data id="1080005" activityId="108" stageId="5" startTime="2018-06-03_00:01:00" endTime="2019-06-01_10:00:00" closeTime="2019-06-01_23:59:59"/>
+	  	  
+	  <!-- 万圣节活动 魔女の仮-->
+	  <data id="1090001" activityId="109" stageId="1" startTime="2017-10-28_11:00:00" endTime="2017-11-05_10:00:00" closeTime="2017-11-06_23:59:59"/>
+	  <data id="1090002" activityId="109" stageId="2" startTime="2018-04-20_11:00:00" endTime="2018-04-30_10:00:00" closeTime="2018-04-30_23:59:59"/>
+	  <data id="1090003" activityId="109" stageId="3" startTime="2018-05-01_11:00:00" endTime="2018-06-01_10:00:00" closeTime="2018-06-01_23:59:59"/>
+	  <data id="1090004" activityId="109" stageId="4" startTime="2018-06-03_11:00:00" endTime="2019-06-01_10:00:00" closeTime="2019-06-01_23:59:59"/>
+	  
+	  <!-- 小时卡（高速战斗卷）使用次数翻倍-->
+	  <data id="1100001" activityId="110" stageId="1" startTime="2017-11-07_00:01:00" endTime="2017-11-07_23:59:59" closeTime="2017-11-07_23:59:59"/>
+	  <data id="1100002" activityId="110" stageId="2" startTime="2017-11-13_00:01:00" endTime="2017-11-13_23:59:59" closeTime="2017-11-13_23:59:59"/>
+	  <data id="1100003" activityId="110" stageId="3" startTime="2018-04-20_00:01:00" endTime="2018-04-30_23:59:59" closeTime="2018-04-30_23:59:59"/>
+	  <data id="1100004" activityId="110" stageId="4" startTime="2018-05-01_00:01:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="1100005" activityId="110" stageId="5" startTime="2018-06-03_00:01:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+
+	  <data id="1110001" activityId="111" stageId="1" startTime="2017-11-15_11:00:00" endTime="2017-12-23_23:59:59" closeTime="2017-12-23_23:59:59"/>
+	  <data id="1110002" activityId="111" stageId="2" startTime="2018-04-20_11:00:00" endTime="2018-04-30_23:59:59" closeTime="2018-04-30_23:59:59"/>
+	  <data id="1110003" activityId="111" stageId="3" startTime="2018-05-01_11:00:00" endTime="2018-06-01_23:59:59" closeTime="2018-06-01_23:59:59"/>
+	  <data id="1110004" activityId="111" stageId="4" startTime="2018-06-03_11:00:00" endTime="2019-06-01_23:59:59" closeTime="2019-06-01_23:59:59"/>
+</root>

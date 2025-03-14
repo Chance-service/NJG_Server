@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data shopId="1" gemId="104002" goldPrice="40" gemVolumePrice="30000_104001_50" VIPVisible="0" gemVolumeBuy="2" coinCost="10000_1002_5000"/>
+	  <data shopId="2" gemId="104003" goldPrice="80" gemVolumePrice="30000_104001_100" VIPVisible="0" gemVolumeBuy="2" coinCost="10000_1002_7500"/>
+	  <data shopId="3" gemId="104004" goldPrice="160" gemVolumePrice="30000_104001_200" VIPVisible="0" gemVolumeBuy="2" coinCost="10000_1002_10000"/>
+	  <data shopId="4" gemId="104012" goldPrice="320" gemVolumePrice="30000_104011_50" VIPVisible="0" gemVolumeBuy="2" coinCost="10000_1002_12500"/>
+	  <data shopId="5" gemId="104013" goldPrice="640" gemVolumePrice="30000_104011_100" VIPVisible="0" gemVolumeBuy="2" coinCost="10000_1002_15000"/>
+	  <data shopId="6" gemId="104014" goldPrice="1280" gemVolumePrice="30000_104011_200" VIPVisible="0" gemVolumeBuy="2" coinCost="10000_1002_17500"/>
+	  <data shopId="7" gemId="104022" goldPrice="2560" gemVolumePrice="30000_104021_50" VIPVisible="0" gemVolumeBuy="2" coinCost="10000_1002_20000"/>
+	  <data shopId="8" gemId="104023" goldPrice="5120" gemVolumePrice="30000_104021_100" VIPVisible="0" gemVolumeBuy="2" coinCost="10000_1002_22500"/>
+	  <data shopId="9" gemId="104024" goldPrice="10240" gemVolumePrice="30000_104021_200" VIPVisible="0" gemVolumeBuy="2" coinCost="10000_1002_25000"/>
+	  <data shopId="10" gemId="104032" goldPrice="40" gemVolumePrice="30000_104031_50" VIPVisible="0" gemVolumeBuy="2" coinCost="10000_1002_27500"/>
+	  <data shopId="11" gemId="104033" goldPrice="80" gemVolumePrice="30000_104031_100" VIPVisible="0" gemVolumeBuy="2" coinCost="10000_1002_30000"/>
+	  <data shopId="12" gemId="104034" goldPrice="160" gemVolumePrice="30000_104031_200" VIPVisible="0" gemVolumeBuy="2" coinCost="10000_1002_32500"/>
+	  <data shopId="13" gemId="110101" goldPrice="320" gemVolumePrice="30000_104037_1000" VIPVisible="0" gemVolumeBuy="2" coinCost="10000_1002_5000"/>
+	  <data shopId="14" gemId="110102" goldPrice="640" gemVolumePrice="30000_104037_2000" VIPVisible="0" gemVolumeBuy="2" coinCost="10000_1002_20000"/>
+	  <data shopId="15" gemId="110103" goldPrice="1280" gemVolumePrice="30000_104037_3000" VIPVisible="0" gemVolumeBuy="2" coinCost="10000_1002_40000"/>
+	  <data shopId="16" gemId="110201" goldPrice="2560" gemVolumePrice="30000_104038_1000" VIPVisible="0" gemVolumeBuy="2" coinCost="10000_1002_5000"/>
+	  <data shopId="17" gemId="110202" goldPrice="5120" gemVolumePrice="30000_104038_2000" VIPVisible="0" gemVolumeBuy="2" coinCost="10000_1002_20000"/>
+	  <data shopId="18" gemId="110203" goldPrice="10240" gemVolumePrice="30000_104038_3000" VIPVisible="0" gemVolumeBuy="2" coinCost="10000_1002_40000"/>
+</root>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1"  costItems="30000_299981_1,30000_299982_1,30000_299983_1,30000_299984_1" exchangeItems="30000_111306_1" limitTimes="20"/>
+      <data id="2"  costItems="30000_299981_1,30000_299982_1" exchangeItems="30000_313070_35" limitTimes="20"/>
+      <data id="3"  costItems="30000_299981_1,30000_299982_1" exchangeItems="30000_313010_35" limitTimes="20"/>
+      <data id="4"  costItems="30000_299983_1,30000_299984_1" exchangeItems="30000_313030_35" limitTimes="30"/>
+      <data id="5"  costItems="30000_299983_1,30000_299984_1" exchangeItems="30000_313090_35" limitTimes="30"/>
+      <data id="6"  costItems="30000_299981_1" exchangeItems="30000_104203_1" limitTimes="30"/>
+      <data id="7"  costItems="30000_299982_1" exchangeItems="30000_203002_3" limitTimes="30"/>
+      <data id="8"  costItems="30000_299983_1" exchangeItems="30000_103001_3" limitTimes="30"/>
+      <data id="9"  costItems="30000_299984_1" exchangeItems="10000_1011_500" limitTimes="30"/>
+</root>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+副将抽卡配置
+	singleCost:     单次锻造消耗
+	continuousCost: 连续锻造消耗
+	interval:       再次免费时间间隔（单位：分钟）
+	givenRaward:    累计N次抽奖获得指定奖励ID
+	prizeRule:      普通抽奖规则 Eg:奖励池ID_抽奖总次数,奖励池ID_抽奖总次数
+	limits:         全服出现个数限制 itemType_itemId_itemCount_limit,itemType_itemId_itemCount_limit
+-->
+<root>
+	<!-- 普通抽卡 -->
+	<data level="1" singleCost="300" continuousCost="2880" interval="10" givenRaward="4000_18" prizeRule="1_31,2_91,3_121,4_161" limits="30000_2500001_1-5"/>
+	<!-- 高级抽卡 -->
+	<data level="2" singleCost="300" continuousCost="2880" interval="0" givenRaward="4000_18" prizeRule="5_31,6_91,7_121,8_161" limits="30000_2500001_1-5"/>
+</root>

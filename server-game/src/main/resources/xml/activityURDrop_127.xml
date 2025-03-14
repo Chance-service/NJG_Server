@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" poolId="1" rewards="30000_104203_1" drawRate="10" limitTimes="0"/>
+	  <data id="2" poolId="1" rewards="30000_203003_1" drawRate="20" limitTimes="0"/>
+	  <data id="3" poolId="1" rewards="30000_203002_1" drawRate="10" limitTimes="0"/>
+	  <data id="4" poolId="1" rewards="30000_111307_1" drawRate="4" limitTimes="0"/>
+	  <data id="5" poolId="1" rewards="30000_103001_3" drawRate="10" limitTimes="0"/>
+	  <data id="6" poolId="1" rewards="30000_201003_1" drawRate="16" limitTimes="0"/>
+	  <data id="7" poolId="1" rewards="10000_1011_500" drawRate="20" limitTimes="0"/>
+	  <data id="8" poolId="1" rewards="30000_299993_1" drawRate="10" limitTimes="5,21,33"/>
+	  <data id="9" poolId="2" rewards="30000_111307_1" drawRate="100" limitTimes="0"/>
+</root>

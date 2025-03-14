@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+转生限定配置
+	stage: 转生等阶
+	levelLimit: 转生等级
+	rebirthMapId: 转生地图配置ID
+	
+-->
+<root>
+    <data stage="1" levelLimit="100" rebirthMapId="65"/>
+</root>

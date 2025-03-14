@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" type="1" completeCountCfg="1" minLevel="1" maxLevel="200" point="10" award="10000_1001_20"/>
+	  <data id="2" type="16" completeCountCfg="2" minLevel="1" maxLevel="200" point="10" award="30000_7001_10000"/>
+	  <data id="3" type="21" completeCountCfg="2" minLevel="1" maxLevel="200" point="10" award="30000_6004_3"/>
+	  <data id="4" type="20" completeCountCfg="5" minLevel="1" maxLevel="200" point="10" award="10000_1002_5000"/>
+	  <data id="5" type="18" completeCountCfg="2" minLevel="1" maxLevel="200" point="10" award="10000_1002_10000"/>
+	  <data id="6" type="9" completeCountCfg="3" minLevel="1" maxLevel="200" point="10" award="30000_7001_5000"/>
+	  <data id="7" type="12" completeCountCfg="3" minLevel="1" maxLevel="200" point="10" award="10000_1002_20000"/>
+	  <data id="8" type="4" completeCountCfg="2" minLevel="1" maxLevel="200" point="10" award="10000_1001_30"/>
+	  <data id="9" type="6" completeCountCfg="2" minLevel="1" maxLevel="200" point="10" award="30000_6005_1"/>
+	  <data id="10" type="15" completeCountCfg="1" minLevel="1" maxLevel="200" point="10" award="10000_1002_5000"/>
+	  <data id="11" type="17" completeCountCfg="1" minLevel="1" maxLevel="200" point="10" award="10000_1002_5000"/>
+	  <data id="12" type="19" completeCountCfg="1" minLevel="1" maxLevel="200" point="10" award="10000_1002_5000"/>
+</root>

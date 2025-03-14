@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data group="1"  winReward="10000_1011_50,30000_202001_2,10000_1010_50" failReward="10000_1011_25,30000_202001_1,10000_1010_25" costGold="20" costCoins="0"/>
+      <data group="2"  winReward="10000_1011_70,30000_202001_3,10000_1010_100" failReward="10000_1011_35,30000_202001_1,10000_1010_50" costGold="30" costCoins="0"/>
+      <data group="3"  winReward="10000_1011_100,30000_202002_2,10000_1010_150" failReward="10000_1011_50,30000_202002_1,10000_1010_75" costGold="40" costCoins="0"/>
+      <data group="4"  winReward="10000_1011_150,30000_202002_3,10000_1010_200" failReward="10000_1011_75,30000_202002_1,10000_1010_100" costGold="50" costCoins="0"/>
+      <data group="5"  winReward="10000_1011_200,30000_202003_2,10000_1010_250" failReward="10000_1011_100,30000_202003_1,10000_1010_125" costGold="60" costCoins="0"/>
+</root>

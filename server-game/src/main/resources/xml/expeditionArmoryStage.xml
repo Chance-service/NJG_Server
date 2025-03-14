@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<data stage="1" needExp="300000" nextStage="2" finishAwards="30000_11134_3,30000_60001_150,30000_90004_2" awardsNeedExp="800"/>
+	<data stage="2" needExp="500000" nextStage="3" finishAwards="30000_11134_4,30000_60001_200,30000_90004_3" awardsNeedExp="1200"/>
+	<data stage="3" needExp="800000" nextStage="4" finishAwards="30000_11134_6,30000_60001_240,30000_90005_2" awardsNeedExp="1600"/>
+	<data stage="4" needExp="0" nextStage="-1" finishAwards="30000_11134_10,30000_60001_300,30000_90005_3" awardsNeedExp="2800"/>
+</root>

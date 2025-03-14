@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- 联盟boss配置 -->
+<root>
+      <data id="1"  level="1" dayOfWeek="1,2,3,4,5" time="240" bossId="1" bossHp="160000" openBossVitality="1000"/>
+</root>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" poolId="1" rewards="30000_104003_3" drawRate="13" limitTimes="0"/>
+	  <data id="2" poolId="1" rewards="30000_101001_100" drawRate="25" limitTimes="0"/>
+	  <data id="3" poolId="1" rewards="30000_106001_20" drawRate="26" limitTimes="0"/>
+	  <data id="4" poolId="1" rewards="70000_170_3" drawRate="1" limitTimes="6,22,56,78"/>
+	  <data id="5" poolId="1" rewards="30000_104004_1" drawRate="11" limitTimes="0"/>
+	  <data id="6" poolId="1" rewards="30000_103001_2" drawRate="9" limitTimes="0"/>
+	  <data id="7" poolId="1" rewards="30000_103002_2" drawRate="9" limitTimes="0"/>
+	  <data id="8" poolId="2" rewards="70000_170_12" drawRate="100" limitTimes="0"/>
+	  <data id="9" poolId="1" rewards="30000_202013_2" drawRate="6" limitTimes="0"/>
+	  <data id="10" poolId="3" rewards="30000_104003_3" drawRate="13" limitTimes="0"/>
+	  <data id="11" poolId="3" rewards="30000_101001_100" drawRate="25" limitTimes="0"/>
+	  <data id="12" poolId="3" rewards="30000_106001_20" drawRate="25" limitTimes="0"/>
+	  <data id="13" poolId="3" rewards="70000_216_2" drawRate="2" limitTimes="18,47,65,68,72"/>
+	  <data id="14" poolId="3" rewards="30000_104004_1" drawRate="11" limitTimes="0"/>
+	  <data id="15" poolId="3" rewards="30000_103001_2" drawRate="9" limitTimes="0"/>
+	  <data id="16" poolId="3" rewards="30000_103002_2" drawRate="9" limitTimes="0"/>
+	  <data id="17" poolId="4" rewards="70000_216_5" drawRate="100" limitTimes="0"/>
+	  <data id="18" poolId="3" rewards="30000_202013_2" drawRate="6" limitTimes="0"/>
+</root>

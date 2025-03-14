@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<data id="54" days="7" reward="10000_1001_500,30000_101002_20,30000_104212_50" costMoney="30" goodsId="54" addExpBuff="0" startTime="2017-11-12_11:00:00" endTime="2025-11-18_23:59:59"/>
+	<data id="51" days="7" reward="10000_1001_50,30000_103102_1,30000_106101_2" costMoney="30" goodsId="51" addExpBuff="0" startTime="2017-11-08_11:00:00" endTime="2025-11-14_23:59:59"/>
+	<data id="52" days="7" reward="10000_1001_100,30000_104003_10,30000_106102_1" costMoney="30" goodsId="52" addExpBuff="0" startTime="2017-05-27_00:00:00" endTime="2025-05-19_23:59:59"/>
+	<data id="53" days="7" reward="10000_1001_200,30000_106011_2,30000_106102_2" costMoney="30" goodsId="53" addExpBuff="0" startTime="2017-05-27_00:00:00" endTime="2025-05-19_23:59:59"/>
+	<data id="55" days="7" reward="10000_1001_1200,30000_104101_100,30000_106011_5" costMoney="30" goodsId="55" addExpBuff="0" startTime="2017-05-29_00:00:00" endTime="2025-05-19_23:59:59"/>
+</root>  

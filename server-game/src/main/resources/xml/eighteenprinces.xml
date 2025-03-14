@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<data id="1" challengeArenaRank="80" mustRewards=""
+		randRewards="2200001_0_1_10000" />
+	<data id="2" challengeArenaRank="75" mustRewards=""
+		randRewards="2200001_0_1_10000" />
+	<data id="3" challengeArenaRank="70" mustRewards="10000_1024_1"
+		randRewards="2200001_0_1_10000" />
+	<data id="4" challengeArenaRank="65" mustRewards=""
+		randRewards="2200001_0_1_9000,2200002_0_1_1000" />
+	<data id="5" challengeArenaRank="60" mustRewards=""
+		randRewards="2200001_0_1_8000,2200002_0_1_2000" />
+	<data id="6" challengeArenaRank="55" mustRewards="2200002_0_1,10000_1024_1"
+		randRewards="2200001_0_1_7000,2200002_0_1_3000" />
+	<data id="7" challengeArenaRank="50" mustRewards=""
+		randRewards="2200001_0_1_6000,2200002_0_1_4000" />
+	<data id="8" challengeArenaRank="45" mustRewards=""
+		randRewards="2200001_0_1_5000,2200002_0_1_5000" />
+	<data id="9" challengeArenaRank="40" mustRewards="10000_1024_1"
+		randRewards="2200001_0_1_5000,2200002_0_1_5000" />
+	<data id="10" challengeArenaRank="35" mustRewards=""
+		randRewards="2200001_0_1_4000,2200002_0_1_5000,2200003_0_1_1000" />
+	<data id="11" challengeArenaRank="30" mustRewards=""
+		randRewards="2200001_0_1_4000,2200002_0_1_5000,2200003_0_1_1000" />
+	<data id="12" challengeArenaRank="20" mustRewards="2200003_0_1,10000_1023_1"
+		randRewards="2200001_0_1_3000,2200002_0_1_4000,2200003_0_1_3000" />
+	<data id="13" challengeArenaRank="15" mustRewards=""
+		randRewards="2200001_0_1_3000,2200002_0_1_4000,2200003_0_1_3000" />
+	<data id="14" challengeArenaRank="10" mustRewards=""
+		randRewards="2200002_0_1_5000,2200003_0_1_5000" />
+	<data id="15" challengeArenaRank="7" mustRewards="10000_1022_1"
+		randRewards="2200002_0_1_5000,2200003_0_1_5000" />
+	<data id="16" challengeArenaRank="5" mustRewards=""
+		randRewards="2200002_0_1_4900,2200003_0_1_5000,2200004_0_1_100" />
+	<data id="17" challengeArenaRank="3" mustRewards=""
+		randRewards="2200002_0_1_3700,2200003_0_1_6000,2200004_0_1_300" />
+	<data id="18" challengeArenaRank="1" mustRewards="2200004_0_1"
+		randRewards="2200002_0_1_3500,2200003_0_1_6000,2200004_0_1_500" />
+</root>

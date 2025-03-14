@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	挖宝功能配置
+	cellCount:    				活动宝藏个数
+	poolRate：	      			奖池概率，奖池类型_概率,奖池类型_概率,奖池类型_概率（万分比）
+	freeTime:     				再次免费时间间隔
+	priceStr:     				各次点击抽奖价格
+	addScoreStr:  				各次点击抽奖增加积分
+	topAwardMinRateLimitStr: 	最高奖励的 最小概率下限（万分比）
+	topAwardRateDampingStr: 	最高奖励衰减（万分比）
+-->
+<root>
+	<data cellCount="12" poolRateStr="1_5000,2_3500,3_1500" topAwardRateDampingStr="300" topAwardMinRateLimitStr="100" freeTime="24" priceStr="1_300,2_300,3_300,4_300,5_300,6_300,7_300,8_300,9_300,10_300,11_300,12_300" addScoreStr="1_50,2_50,3_50,4_50,5_50,6_50,7_50,8_50,9_50,10_50,11_50,12_50"/>
+</root>

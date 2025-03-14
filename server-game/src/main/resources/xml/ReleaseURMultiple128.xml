@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><!-- 活动内时间段内双倍奖励 --><root>    <data id="1" startTime="08:00" endTime="10:00" rate="2"/>    <data id="2" startTime="20:00" endTime="22:00" rate="2"/></root>

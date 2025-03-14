@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- type 货币类型 1钻石 2金币-->
+<root>
+	<data gemLevel="4" costGemLevel="4" sameCostGem="1" diffCostGem="1" sameCostMoney="10" diffCostMoney="50"/>
+	<data gemLevel="5" costGemLevel="5" sameCostGem="1" diffCostGem="1" sameCostMoney="15" diffCostMoney="90"/>
+	<data gemLevel="6" costGemLevel="6" sameCostGem="1" diffCostGem="1" sameCostMoney="20" diffCostMoney="170"/>
+	<data gemLevel="7" costGemLevel="7" sameCostGem="1" diffCostGem="1" sameCostMoney="25" diffCostMoney="320"/>
+</root>

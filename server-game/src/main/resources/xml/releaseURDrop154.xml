@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" rewards="70000_501_2" drawRate="125"/>
+	  <data id="2" rewards="70000_502_2" drawRate="125"/>
+	  <data id="3" rewards="70000_503_2" drawRate="125"/>
+	  <data id="4" rewards="70000_504_2" drawRate="32"/>
+	  <data id="5" rewards="70000_505_2" drawRate="32"/>
+	  <data id="6" rewards="70000_501_5" drawRate="95"/>
+	  <data id="7" rewards="70000_502_5" drawRate="95"/>
+	  <data id="8" rewards="70000_503_5" drawRate="95"/>
+	  <data id="9" rewards="70000_504_5" drawRate="20"/>
+	  <data id="10" rewards="70000_505_5" drawRate="20"/>
+	  <data id="11" rewards="70000_501_10" drawRate="70"/>
+	  <data id="12" rewards="70000_502_10" drawRate="70"/>
+	  <data id="13" rewards="70000_503_10" drawRate="70"/>
+	  <data id="14" rewards="70000_504_10" drawRate="10"/>
+	  <data id="15" rewards="70000_505_10" drawRate="10"/>
+	  <data id="16" rewards="70000_501_100" drawRate="2"/>
+	  <data id="17" rewards="70000_502_100" drawRate="2"/>
+	  <data id="18" rewards="70000_503_100" drawRate="2"/>
+	  <data id="19" rewards="70000_504_100" drawRate="0"/>
+	  <data id="20" rewards="70000_505_100" drawRate="0"/>
+</root>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" price="4499" serverLimit="15000" serverLimitType="3" personalLimit="6" personalLimitType="2" vipLimit="0" levelLimit="20" items="30000_211158_1" limitGetItem=""/>
+	  <data id="2" price="499" serverLimit="5000" serverLimitType="3" personalLimit="1" personalLimitType="2" vipLimit="0" levelLimit="20" items="30000_211152_1" limitGetItem=""/>
+	  <data id="3" price="1499" serverLimit="100" serverLimitType="3" personalLimit="1" personalLimitType="2" vipLimit="0" levelLimit="20" items="30000_211125_1" limitGetItem=""/>
+	  <data id="4" price="1799" serverLimit="100" serverLimitType="3" personalLimit="1" personalLimitType="2" vipLimit="0" levelLimit="20" items="30000_211153_1" limitGetItem=""/>
+	  <data id="5" price="2799" serverLimit="30000" serverLimitType="3" personalLimit="1" personalLimitType="1" vipLimit="0" levelLimit="20" items="30000_211129_1" limitGetItem=""/>
+	  <data id="6" price="3699" serverLimit="30000" serverLimitType="3" personalLimit="1" personalLimitType="2" vipLimit="0" levelLimit="20" items="30000_211154_1" limitGetItem=""/>
+	  <data id="7" price="4399" serverLimit="5000" serverLimitType="3" personalLimit="1" personalLimitType="2" vipLimit="0" levelLimit="20" items="30000_104213_100" limitGetItem=""/>
+	  <data id="8" price="9999" serverLimit="5000" serverLimitType="3" personalLimit="1" personalLimitType="2" vipLimit="0" levelLimit="20" items="30000_211134_1" limitGetItem=""/>
+	  <data id="9" price="9999" serverLimit="5000" serverLimitType="3" personalLimit="1" personalLimitType="2" vipLimit="0" levelLimit="20" items="30000_211135_1" limitGetItem=""/>
+</root>

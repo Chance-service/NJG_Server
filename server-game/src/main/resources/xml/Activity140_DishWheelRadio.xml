@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" type="1" index="1" ratio="5000" weight="2000"/>
+	  <data id="2" type="1" index="2" ratio="5500" weight="1900"/>
+	  <data id="3" type="1" index="3" ratio="6000" weight="1700"/>
+	  <data id="4" type="1" index="4" ratio="6500" weight="1600"/>
+	  <data id="5" type="1" index="5" ratio="7000" weight="1500"/>
+	  <data id="6" type="1" index="6" ratio="7500" weight="1300"/>
+	  <data id="7" type="2" index="1" ratio="10000" weight="4800"/>
+	  <data id="8" type="2" index="2" ratio="20000" weight="2400"/>
+	  <data id="9" type="2" index="3" ratio="30000" weight="1600"/>
+	  <data id="10" type="2" index="4" ratio="40000" weight="1200"/>
+</root>

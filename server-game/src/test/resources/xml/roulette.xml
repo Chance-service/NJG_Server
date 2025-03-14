@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<data id="1" weightValue="2" items="30000_60001_500"/>
+	<data id="2" weightValue="15" items="10000_1001_50"/>
+	<data id="3" weightValue="13" items="30000_41002_1"/>
+	<data id="4" weightValue="5" items="30000_90006_1"/>
+	<data id="5" weightValue="15" items="30000_10001_1"/>
+	<data id="6" weightValue="10" items="10000_1001_100"/>
+	<data id="7" weightValue="30" items="30000_41001_5"/>
+	<data id="8" weightValue="10" items="30000_90005_1"/>
+</root>

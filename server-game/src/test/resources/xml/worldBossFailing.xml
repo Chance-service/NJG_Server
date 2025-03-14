@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1"  startHp="9500" endHp="7500" time="60000" count="2" intervalTime="10000"/>
+      <data id="2"  startHp="5500" endHp="3500" time="60000" count="2" intervalTime="10000"/>
+      <data id="3"  startHp="2000" endHp="0" time="60000" count="2" intervalTime="10000"/>
+</root>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1"   include="37,40,42" awardItem="30000_104212_100,30000_104101_30" awardAttribute="103_1_400,104_1_400,1007_2_80"/>
+      <data id="2"   include="12,17" awardItem="30000_104212_50,30000_104101_20" awardAttribute="101_2_6000,110_3_30"/>
+      <data id="3"   include="44,8,25,3" awardItem="30000_104213_50,30000_104101_40" awardAttribute="101_1_800,1009_2_150"/>
+      <data id="4"   include="19,18,17,16" awardItem="30000_104213_50,30000_104101_40" awardAttribute="101_2_42000,105_2_2000"/>
+      <data id="5"   include="37,6,29,55" awardItem="30000_104213_50,30000_104101_40" awardAttribute="105_1_600,106_1_800"/>
+      <data id="6"   include="31,33" awardItem="30000_104212_50,30000_104101_20" awardAttribute="103_2_2000,104_2_2000"/>
+      <data id="7"   include="12,8,4" awardItem="30000_104212_100,30000_104101_30" awardAttribute="107_1_800"/>
+      <data id="8"   include="19,26,46" awardItem="30000_104212_100,30000_104101_30" awardAttribute="105_2_2000,107_2_2000"/>
+      <data id="9"   include="43,34,15,39" awardItem="30000_104213_50,30000_104101_40" awardAttribute="101_2_28000,111_3_30"/>
+      <data id="10"   include="5,7,29,14" awardItem="30000_104213_50,30000_104101_40" awardAttribute="108_3_40,109_3_30"/>
+      <data id="11"   include="9,43,24,28,20" awardItem="30000_104213_100,30000_104101_50" awardAttribute="103_1_400,104_1_400,2104_2_120"/>
+      <data id="12"   include="9,41" awardItem="30000_104212_50,30000_104101_20" awardAttribute="3003_2_800"/>
+      <data id="13"   include="23,5,31,45" awardItem="30000_104213_50,30000_104101_40" awardAttribute="101_1_500,1008_2_400"/>
+      <data id="14"   include="47,27,48,49,56" awardItem="30000_104213_100,30000_104101_50" awardAttribute="103_1_300,104_1_300,1008_2_800"/>
+      <data id="15"   include="50,61,36" awardItem="30000_104212_100,30000_104101_30" awardAttribute="105_1_600,2103_2_80"/>
+      <data id="16"   include="57,20,41" awardItem="30000_104212_100,30000_104101_30" awardAttribute="106_3_40,107_3_40"/>
+      <data id="17"   include="42,23,56,2" awardItem="30000_104213_50,30000_104101_40" awardAttribute="1010_2_800,108_3_40"/>
+      <data id="18"   include="48,11,28,14" awardItem="30000_104213_50,30000_104101_40" awardAttribute="105_3_50,111_3_30"/>
+      <data id="19"   include="57,35,45,30" awardItem="30000_104213_50,30000_104101_40" awardAttribute="107_1_600,101_3_300"/>
+      <data id="20"   include="40,32,60" awardItem="30000_104212_100,30000_104101_30" awardAttribute="101_1_800,1009_2_200"/>
+      <data id="21"   include="59,21,13,3" awardItem="30000_104213_50,30000_104101_40" awardAttribute="101_2_15000"/>
+      <data id="22"   include="24,58,61" awardItem="30000_104212_100,30000_104101_30" awardAttribute="109_3_40,108_3_20"/>
+      <data id="23"   include="47,51" awardItem="30000_104212_50,30000_104101_20" awardAttribute="103_1_200,104_1_200,1007_2_60"/>
+      <data id="24"   include="55,53" awardItem="30000_104212_50,30000_104101_20" awardAttribute="105_1_300,106_1_300"/>
+      <data id="25"   include="22,32,60,11,7" awardItem="30000_104213_100,30000_104101_50" awardAttribute="103_1_600,104_1_600,101_1_1000"/>
+      <data id="26"   include="51,52,53,38,54" awardItem="30000_104213_100,30000_104101_50" awardAttribute="105_1_1000,1009_2_300"/>
+      <data id="27"   include="22,6,18,58,54" awardItem="30000_104213_100,30000_104101_50" awardAttribute="1006_2_1000，101_1_800"/>
+      <data id="28"   include="27,64,34" awardItem="30000_104212_100,30000_104101_30" awardAttribute="1007_2_80,1008_2_250"/>
+      <data id="29"   include="35,67,68" awardItem="30000_104212_100,30000_104101_30" awardAttribute="101_1_900"/>
+      <data id="30"   include="72,26,2" awardItem="30000_104212_100,30000_104101_30" awardAttribute="1007_2_100"/>
+</root>

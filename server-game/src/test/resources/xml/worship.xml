@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data worshipId="1" worshipName="初级膜拜" worshipCost="10000_1002_100000" worshipReward="10000_1011_20,10000_1013_20"/>
+      <data worshipId="2" worshipName="中级膜拜" worshipCost="10000_1001_50" worshipReward="10000_1011_100,10000_1013_150"/>
+      <data worshipId="3" worshipName="高级膜拜" worshipCost="10000_1001_200" worshipReward="10000_1011_200,10000_1013_600"/>
+</root>

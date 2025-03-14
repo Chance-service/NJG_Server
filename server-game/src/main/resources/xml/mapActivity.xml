@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" nextMapId="0" bossId="1001" monsterIds="1_1,2_1,3_1" countWeight="1_10000,2_0,3_0" dropItems="30000_501016_10_10000,40000_999881_1_10000,40000_999887_1_10000,40000_999893_1_10000" bossDropItems="30000_501016_10_10000,40000_999881_1_10000,40000_999887_1_10000,40000_999893_1_10000" firstDropItems="30000_501016_10_10000,40000_999881_1_10000,40000_999887_1_10000,40000_999893_1_10000" secondDropItems="30000_501016_10_10000,40000_999881_1_10000,40000_999887_1_10000,40000_999893_1_10000" maxBattleLevel="200" dropRate="920" maxFightTimes="240" coinDrop="10" expDrop="0" recommendLevel="1" mapGroup="0" limitLevel="0" dependMap="0"/>
+</root>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root currency="JPY" moneyGoldRatio="10">
+	<Recharge id="1" name ="jp.co.school.battle.60" type = "0" amount="60" addNum="6" costMoney="120" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="60元宝" desc="120日元充值档位"/>
+	<Recharge id="2" name ="jp.co.school.battle.300" type = "0" amount="300" addNum="40" costMoney="600" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="300元宝" desc="600日元充值档位"/>
+	<Recharge id="3" name ="jp.co.school.battle.480" type = "0" amount="480" addNum="70" costMoney="960" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="480元宝" desc="960日元充值档位"/>
+	<Recharge id="4" name ="jp.co.school.battle.1100" type = "0" amount="1100" addNum="200" costMoney="2200" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="1100元宝" desc="2200日元充值档位"/>
+	<Recharge id="5" name ="jp.co.school.battle.2050" type = "0" amount="2050" addNum="400" costMoney="4100" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="2050元宝" desc="4100日元充值档位"/>
+	<Recharge id="6" name ="jp.co.school.battle.4900" type = "0" amount="4900" addNum="1100" costMoney="9800" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="4900元宝" desc="9800日元充值档位"/>
+	<!--下面的月卡配置项是对应客户端配置 -->
+	<Recharge id="30" name ="month" type = "1" amount="0" addNum="0" costMoney="960" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "30" productName="月卡" desc="960日元购买月卡"/>
+	<Recharge id="31" name ="month2" type = "1" amount="0" addNum="0" costMoney="960" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "30" productName="至尊月卡" desc="30元购买月卡"/>
+	<Recharge id="32" name ="jp.co.school.battle.month3" type = "11" amount="0" addNum="0" costMoney="2400" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="消耗型月卡" desc="30元购买月卡"/>
+	<Recharge id="41" name ="jp.co.school.battle.gift1" type = "3" amount="0" addNum="0" costMoney="1200" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "6" productName="童話世界" desc="6元新手打折礼包"/>
+	<Recharge id="42" name ="jp.co.school.battle.gift2" type = "3" amount="0" addNum="0" costMoney="3600" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "30" productName="四葉物語" desc="30元新手打折礼包"/>
+	<Recharge id="43" name ="jp.co.school.battle.gift3" type = "3" amount="0" addNum="0" costMoney="6800" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "68" productName="落英繽紛" desc="68元新手打折礼包"/>
+	<Recharge id="51" name ="jp.co.school.battle.present1" type = "6" amount="0" addNum="0" costMoney="120" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "6" productName="幸运礼物" desc="6元每周特惠礼包"/>
+	<Recharge id="52" name ="jp.co.school.battle.present2" type = "6" amount="0" addNum="0" costMoney="600" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "30" productName="随缘礼物" desc="30元每周特惠礼包"/>
+	<Recharge id="53" name ="jp.co.school.battle.present3" type = "6" amount="0" addNum="0" costMoney="1200" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "68" productName="招福礼物" desc="68元每周特惠礼包"/>
+	<Recharge id="55" name ="jp.co.school.battle.present5" type = "6" amount="0" addNum="0" costMoney="3600" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "328" productName="美姬礼物" desc="328元每周特惠礼包"/>
+	<!--下面的周卡配置项是对应客户端配置 -->
+	<Recharge id="71" name ="week" type = "10" amount="0" addNum="0" costMoney="360" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "6" productName="周卡" desc="360日元购买周卡"/>
+	<Recharge id="72" name ="week2" type = "10" amount="0" addNum="0" costMoney="360" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "30" productName="深海" desc="30元的7天聊天气泡"/>
+	<Recharge id="73" name ="week3" type = "10" amount="0" addNum="0" costMoney="1200" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "68" productName="烈焰" desc="68元的7天聊天气泡"/>
+	<Recharge id="74" name ="jp.co.school.battle.week4" type = "10" amount="0" addNum="0" costMoney="960" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="消耗型周卡" desc="6元的7天聊天气泡"/>
+	<Recharge id="81" name ="jp.co.school.battle.gift4" type = "5" amount="0" addNum="0" costMoney="10800" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "6" productName="極楽気分" desc="10800日元购买礼包"/>
+	<Recharge id="82" name ="jp.co.school.battle.present4" type = "5" amount="0" addNum="0" costMoney="1800" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "30" productName="金運上昇" desc="1800日元购买礼包"/>
+	<Recharge id="83" name ="jp.co.school.battle.gift5" type = "5" amount="0" addNum="0" costMoney="11800" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "68" productName="一期一会" desc="11800日元购买礼包"/>
+	<Recharge id="84" name ="jp.co.school.battle.newpresent4" type = "5" amount="0" addNum="0" costMoney="960" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "128" productName="願望実現" desc="960日元购买礼包"/>
+	<Recharge id="85" name ="jp.co.school.battle.newpresent2" type = "5" amount="0" addNum="0" costMoney="360" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "328" productName="順風満帆" desc="360日元购买礼包"/>
+	<!--下面这两行是亚马逊特殊处理  和上面  month  和 week 一一对应的 -->
+	<Recharge id="86" name ="jp.co.school.battle.monthauto" type = "1" amount="0" addNum="0" costMoney="960" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "30" productName="月卡" desc="960日元购买月卡"/>	
+	<Recharge id="87" name ="jp.co.school.battle.weekauto" type = "10" amount="0" addNum="0" costMoney="360" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "6" productName="周卡" desc="360日元购买周卡"/>
+</root>

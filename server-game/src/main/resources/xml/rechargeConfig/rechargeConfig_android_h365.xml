@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root currency="JPY" moneyGoldRatio="10">
+<!--
+(type == 1)// 月卡   活動編號83
+(type == 11)// 消耗型月卡 活動編號130
+(type == 6)// 新周卡  活動編號96
+(type == 3)// 打折礼包  活動編號82
+(type == 4)// 限时限购  活動編號26
+(type == 8)// 聊天皮肤  活動編號100
+(type == 0)// 邮件处理  無
+(type == 5)// 折扣礼包 活動編號94
+(type == 12)// 等級通行證 活動編號162
+(type == 13)// 關卡通行證 活動編號163
+(type == 14)// 爬塔通行證 活動編號164
+(type == 15)// 每月付費獎勵(高級) 活動編號161
+(type == 16)// 每月付費獎勵(豪華) 活動編號161
+(type == 17)// 特權購買 活動編號168
+(type == 18)// 等級彈跳禮包 活動編號132
+(type == 19)// 關卡彈跳禮包 活動編號151
+(type == 20)// 活動彈跳禮包 活動編號
+-->
+	<Recharge id="1" name ="NG.Girl.60" type = "0" amount="60" addNum="12" costMoney="100" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="60鑽石" desc="6RMB充值档位"/>
+	<Recharge id="2" name ="NG.Girl.300" type = "0" amount="300" addNum="30" costMoney="400" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="300鑽石" desc="30RMB充值档位"/>
+	<Recharge id="3" name ="NG.Girl.980" type = "0" amount="980" addNum="150" costMoney="1300" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="980鑽石" desc="98RMB充值档位"/>
+	<Recharge id="4" name ="NG.Girl.1980" type = "0" amount="1980" addNum="400" costMoney="2600" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="1980鑽石" desc="198RMB充值档位"/>
+	<Recharge id="5" name ="NG.Girl.3280" type = "0" amount="3280" addNum="800" costMoney="4300" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="3280鑽石" desc="328RMB充值档位"/>
+	<Recharge id="6" name ="NG.Girl.6480" type = "0" amount="6480" addNum="1600" costMoney="8400" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="6480鑽石" desc="648RMB充值档位"/>
+	<Recharge id="7" name ="NG.Girl.MonthPremium" type = "15" amount="0" addNum="0" costMoney="2200" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="普通补给" desc="普通补给"/>
+	<Recharge id="8" name ="NG.Girl.MonthLuxury" type = "16" amount="0" addNum="0" costMoney="5500" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="高级补给" desc="高级补给"/>
+	<Recharge id="9" name ="NG.Girl.DailyRecharge1" type = "5" amount="0" addNum="0" costMoney="0" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="每日充值1" desc="每日充值1"/>	
+	<Recharge id="10" name ="NG.Girl.DailyRecharge2" type = "5" amount="0" addNum="0" costMoney="100" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="每日充值2" desc="每日充值2"/>
+	<Recharge id="11" name ="NG.Girl.DailyRecharge3" type = "5" amount="0" addNum="0" costMoney="100" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="每日充值3" desc="每日充值3"/>
+	<Recharge id="12" name ="NG.Girl.DailyRecharge4" type = "5" amount="0" addNum="0" costMoney="300" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="每日充值4" desc="每日充值4"/>
+	<Recharge id="13" name ="NG.Girl.DailyRecharge5" type = "5" amount="0" addNum="0" costMoney="400" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="每日充值5" desc="一鍵購買2~4"/>
+	<Recharge id="14" name ="NG.Girl.DailyGigt1" type = "5" amount="0" addNum="0" costMoney="0" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="免费日礼包" desc="免费日礼包"/>
+	<Recharge id="15" name ="NG.Girl.DailyGigt2" type = "5" amount="0" addNum="0" costMoney="200" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="英雄召唤日礼包" desc="英雄召唤日礼包"/>
+	<Recharge id="16" name ="NG.Girl.DailyGigt3" type = "5" amount="0" addNum="0" costMoney="500" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="圣所英雄强化日礼包" desc="圣所英雄强化日礼包"/>
+	<Recharge id="17" name ="NG.Girl.DailyGigt4" type = "5" amount="0" addNum="0" costMoney="500" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="圣所金币资源日礼包" desc="圣所金币资源日礼包"/>
+	<Recharge id="18" name ="NG.Girl.DailyGigt5" type = "5" amount="0" addNum="0" costMoney="500" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="光辉三星橘装日礼包" desc="光辉三星橘装日礼包"/>
+	<Recharge id="19" name ="NG.Girl.DailyGigt6" type = "5" amount="0" addNum="0" costMoney="500" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="光辉英雄召唤日礼包" desc="光辉英雄召唤日礼包"/>
+	<Recharge id="20" name ="NG.Girl.DailyGigt7" type = "5" amount="0" addNum="0" costMoney="500" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="三属英雄战力日礼包" desc="三属英雄战力日礼包"/>
+	<Recharge id="21" name ="NG.Girl.DailyGigt8" type = "5" amount="0" addNum="0" costMoney="500" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="黄金英雄召唤日礼包" desc="黄金英雄召唤日礼包"/>
+	<Recharge id="22" name ="NG.Girl.DailyGigt9" type = "5" amount="0" addNum="0" costMoney="1000" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="神话三属英雄日礼包" desc="神话三属英雄日礼包"/>
+	<Recharge id="23" name ="NG.Girl.DailyGigt10" type = "5" amount="0" addNum="0" costMoney="1000" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="特惠商品日礼包" desc="特惠商品日礼包"/>
+	<Recharge id="24" name ="NG.Girl.WeekGigt1" type = "5" amount="0" addNum="0" costMoney="0" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="免费周礼包" desc="免费周礼包"/>
+	<Recharge id="25" name ="NG.Girl.WeekGigt2" type = "5" amount="0" addNum="0" costMoney="100" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="超值英雄经验周礼包" desc="超值英雄经验周礼包"/>
+	<Recharge id="26" name ="NG.Girl.WeekGigt3" type = "5" amount="0" addNum="0" costMoney="500" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="珍贵女神召唤周礼包" desc="珍贵女神召唤周礼包"/>
+	<Recharge id="27" name ="NG.Girl.WeekGigt4" type = "5" amount="0" addNum="0" costMoney="1000" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="稀有女神召唤周礼包" desc="稀有女神召唤周礼包"/>
+	<Recharge id="28" name ="NG.Girl.WeekGigt5" type = "5" amount="0" addNum="0" costMoney="2000" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="传奇英雄培养周礼包" desc="传奇英雄培养周礼包"/>
+	<Recharge id="29" name ="NG.Girl.WeekGigt6" type = "5" amount="0" addNum="0" costMoney="3100" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="珍贵女神召唤周礼包2" desc="珍贵女神召唤周礼包2"/>
+	<Recharge id="30" name ="NG.Girl.WeekGigt7" type = "5" amount="0" addNum="0" costMoney="3100" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="英雄祈愿占星周礼包" desc="英雄祈愿占星周礼包"/>
+	<Recharge id="31" name ="NG.Girl.WeekGigt8" type = "5" amount="0" addNum="0" costMoney="3100" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="超值特惠周礼包1" desc="超值特惠周礼包1"/>
+	<Recharge id="33" name ="NG.Girl.WeekGigt9" type = "5" amount="0" addNum="0" costMoney="3100" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="超值特惠周礼包2" desc="超值特惠周礼包2"/>
+	<Recharge id="34" name ="NG.Girl.WeekGigt10" type = "5" amount="0" addNum="0" costMoney="5200" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="传奇三属英雄培育周礼包1" desc="传奇三属英雄培育周礼包1"/>
+	<Recharge id="35" name ="NG.Girl.WeekGigt11" type = "5" amount="0" addNum="0" costMoney="5200" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="超级符石周礼包" desc="超级符石周礼包"/>
+	<Recharge id="36" name ="NG.Girl.WeekGigt12" type = "5" amount="0" addNum="0" costMoney="5200" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="传奇三属英雄培育周礼包2" desc="传奇三属英雄培育周礼包2"/>
+	<Recharge id="37" name ="NG.Girl.WeekGigt13" type = "5" amount="0" addNum="0" costMoney="10300" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="稀有橘色符文周礼包" desc="稀有橘色符文周礼包"/>
+	<Recharge id="38" name ="NG.Girl.WeekGigt14" type = "5" amount="0" addNum="0" costMoney="10300" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="传奇派系召唤周礼包" desc="传奇派系召唤周礼包"/>
+	<Recharge id="39" name ="NG.Girl.WeekGigt15" type = "5" amount="0" addNum="0" costMoney="10300" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="传奇光暗英雄培育周礼包" desc="传奇光暗英雄培育周礼包"/>
+	<Recharge id="40" name ="NG.Girl.WeekGigt16" type = "5" amount="0" addNum="0" costMoney="10300" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="超值特惠周礼包3" desc="超值特惠周礼包3"/>
+	<Recharge id="41" name ="NG.Girl.WeekGigt17" type = "5" amount="0" addNum="0" costMoney="10300" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="特级三属英雄召唤周礼包" desc="特级三属英雄召唤周礼包"/>
+	<Recharge id="42" name ="NG.Girl.MonthGigt1" type = "5" amount="0" addNum="0" costMoney="0" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="免费月礼包" desc="免费月礼包"/>
+	<Recharge id="43" name ="NG.Girl.MonthGigt2" type = "5" amount="0" addNum="0" costMoney="900" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="英雄培育资源月礼包" desc="英雄培育资源月礼包"/>
+	<Recharge id="44" name ="NG.Girl.MonthGigt3" type = "5" amount="0" addNum="0" costMoney="1000" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="三属英雄红装月礼包" desc="三属英雄红装月礼包"/>
+	<Recharge id="45" name ="NG.Girl.MonthGigt4" type = "5" amount="0" addNum="0" costMoney="3100" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="红装金币月礼包" desc="红装金币月礼包"/>
+	<Recharge id="46" name ="NG.Girl.MonthGigt5" type = "5" amount="0" addNum="0" costMoney="5200" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="三属英雄符文月礼包" desc="三属英雄符文月礼包"/>
+	<Recharge id="47" name ="NG.Girl.MonthGigt6" type = "5" amount="0" addNum="0" costMoney="5400" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="造型特惠月礼包" desc="造型特惠月礼包"/>
+	<Recharge id="48" name ="NG.Girl.MonthGigt7" type = "5" amount="0" addNum="0" costMoney="7500" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="三属英雄特惠月礼包" desc="三属英雄特惠月礼包"/>
+	<Recharge id="49" name ="NG.Girl.MonthGigt8" type = "5" amount="0" addNum="0" costMoney="10300" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="超值光暗英雄特惠月礼包" desc="超值光暗英雄特惠月礼包"/>
+	<Recharge id="50" name ="NG.Girl.MonthGigt9" type = "5" amount="0" addNum="0" costMoney="10300" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="随机三星红装月礼包" desc="随机三星红装月礼包"/>
+	<Recharge id="51" name ="NG.Girl.MonthGigt10" type = "5" amount="0" addNum="0" costMoney="10300" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="随机光暗英雄月礼包" desc="随机光暗英雄月礼包"/>
+	<Recharge id="52" name ="NG.Girl.MonthGigt11" type = "5" amount="0" addNum="0" costMoney="10300" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="超值特惠月礼包" desc="超值特惠月礼包"/>
+	<Recharge id="53" name ="NG.Girl.MonthGigt12" type = "5" amount="0" addNum="0" costMoney="10300" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="超值橘色符文月礼包" desc="超值橘色符文月礼包"/>
+	<Recharge id="54" name ="NG.Girl.MonthGigt13" type = "5" amount="0" addNum="0" costMoney="10300" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="超值占星英雄召唤月礼包" desc="超值占星英雄召唤月礼包"/>
+	<Recharge id="32" name ="NG.Girl.MonthCardS" type = "11" amount="0" addNum="0" costMoney="800" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="小月卡" desc="小月卡"/>
+	<Recharge id="74" name ="NG.Girl.MonthCardL" type = "10" amount="0" addNum="0" costMoney="1300" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="大月卡" desc="大月卡"/>
+	<Recharge id="101" name ="NG.Girl.LvPass" type = "12" amount="0" addNum="0" costMoney="2000" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="等級通行證" desc="帳號等級獎勵"/>
+	<Recharge id="102" name ="NG.Girl.StoryPass" type = "13" amount="0" addNum="0" costMoney="1500" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="關卡通行證" desc="通過關卡獎勵"/>
+	<Recharge id="103" name ="NG.Girl.TowerPass" type = "14" amount="0" addNum="0" costMoney="2000" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="爬塔通行證" desc="通關塔層獎勵"/>
+	<Recharge id="151" name ="NG.Girl.NewPlayerGift" type = "5" amount="0" addNum="0" costMoney="3200" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="新手造型优惠" desc="新手造型优惠"/>
+	<Recharge id="201" name ="NG.Girl.SubscribeGrowth" type = "17" amount="0" addNum="0" costMoney="1000" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="先锋捆绑包" desc="先锋捆绑包"/>
+	<Recharge id="202" name ="NG.Girl.SubscribeSummon" type = "17" amount="0" addNum="0" costMoney="1000" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="升级包" desc="升级包"/>
+	<Recharge id="203" name ="NG.Girl.SubscribeSprite" type = "17" amount="0" addNum="0" costMoney="2000" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="精靈特權" desc="精靈特權"/>
+	<Recharge id="204" name ="NG.Girl.SubscribeWishingWell" type = "17" amount="0" addNum="0" costMoney="1000" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="占星祈愿包" desc="占星祈愿包"/>
+	<Recharge id="301" name ="NG.Girl.10levelGift" type = "18" amount="0" addNum="0" costMoney="400" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="10等禮包" desc="10等禮包"/>
+	<Recharge id="302" name ="NG.Girl.20levelGift" type = "18" amount="0" addNum="0" costMoney="400" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="20等禮包" desc="20等禮包"/>
+	<Recharge id="303" name ="NG.Girl.30levelGift" type = "18" amount="0" addNum="0" costMoney="400" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="30等禮包" desc="30等禮包"/>
+	<Recharge id="304" name ="NG.Girl.40levelGift" type = "18" amount="0" addNum="0" costMoney="400" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="40等禮包" desc="40等禮包"/>
+	<Recharge id="305" name ="NG.Girl.50levelGift" type = "18" amount="0" addNum="0" costMoney="400" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="50等禮包" desc="50等禮包"/>
+	<Recharge id="306" name ="NG.Girl.60levelGift" type = "18" amount="0" addNum="0" costMoney="400" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="60等禮包" desc="60等禮包"/>
+	<Recharge id="307" name ="NG.Girl.70levelGift" type = "18" amount="0" addNum="0" costMoney="400" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="70等禮包" desc="70等禮包"/>
+	<Recharge id="308" name ="NG.Girl.80levelGift" type = "18" amount="0" addNum="0" costMoney="400" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="80等禮包" desc="80等禮包"/>
+	<Recharge id="401" name ="NG.Girl.5StageGift" type = "19" amount="0" addNum="0" costMoney="400" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="5關禮包" desc="5關禮包"/>
+	<Recharge id="402" name ="NG.Girl.10StageGift" type = "19" amount="0" addNum="0" costMoney="400" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="10關禮包" desc="10關禮包"/>
+	<Recharge id="403" name ="NG.Girl.20StageGift" type = "19" amount="0" addNum="0" costMoney="400" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="20關禮包" desc="20關禮包"/>
+	<Recharge id="404" name ="NG.Girl.30StageGift" type = "19" amount="0" addNum="0" costMoney="400" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="30關禮包" desc="30關禮包"/>
+	<Recharge id="405" name ="NG.Girl.40StageGift" type = "19" amount="0" addNum="0" costMoney="400" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="40關禮包" desc="40關禮包"/>
+	<Recharge id="406" name ="NG.Girl.50StageGift" type = "19" amount="0" addNum="0" costMoney="400" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="50關禮包" desc="50關禮包"/>
+	<Recharge id="407" name ="NG.Girl.60StageGift" type = "19" amount="0" addNum="0" costMoney="400" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="60關禮包" desc="60關禮包"/>
+	<Recharge id="408" name ="NG.Girl.70StageGift" type = "19" amount="0" addNum="0" costMoney="400" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="70關禮包" desc="70關禮包"/>
+	<Recharge id="1001" name ="NG.Girl.NewyearGift" type = "20" amount="0" addNum="0" costMoney="6000" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="活動禮包" desc="活動禮包"/>
+	<Recharge id="2001" name ="NG.Girl.ValentineGift" type = "21" amount="0" addNum="0" costMoney="6000" showAddNum = "0" valid = "true" roleId = "0" minLevel = "1" costAmount = "0" productName="活動禮包" desc="活動禮包"/>
+</root>

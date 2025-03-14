@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" item="30000_7001_50" price="10000_1001_1000" count="99" discount="100" lv="75"/>
+	  <data id="2" item="30000_7001_80" price="10000_1001_500" count="99" discount="100" lv="75"/>
+	  <data id="3" item="30000_7001_90" price="10000_1001_200" count="10" discount="100" lv="75"/>
+	  <data id="4" item="30000_7001_100" price="10000_1001_100" count="10" discount="100" lv="75"/>
+	  <data id="5" item="30000_7001_120" price="10000_1002_1000" count="5" discount="100" lv="0"/>
+	  <data id="6" item="30000_7001_150" price="10000_1002_500" count="5" discount="100" lv="0"/>
+	  <data id="7" item="30000_7001_180" price="10000_1002_200" count="5" discount="100" lv="0"/>
+	  <data id="8" item="30000_7001_200" price="10000_1002_100" count="5" discount="100" lv="0"/>
+	  <data id="9" item="30000_7001_220" price="10000_1001_1000" count="10" discount="100" lv="0"/>
+	  <data id="10" item="30000_7001_240" price="10000_1001_500" count="10" discount="100" lv="0"/>
+	  <data id="11" item="30000_7001_260" price="10000_1001_200" count="5" discount="100" lv="0"/>
+	  <data id="12" item="30000_7001_280" price="10000_1001_100" count="99" discount="100" lv="0"/>
+	  <data id="13" item="30000_7001_300" price="10000_1002_1000" count="99" discount="100" lv="0"/>
+	  <data id="14" item="30000_7001_320" price="10000_1002_500" count="20" discount="100" lv="0"/>
+	  <data id="15" item="30000_7001_350" price="10000_1002_200" count="10" discount="100" lv="0"/>
+	  <data id="16" item="30000_7001_370" price="10000_1002_100" count="10" discount="100" lv="0"/>
+	  <data id="17" item="30000_7001_400" price="10000_1002_100" count="1" discount="100" lv="0"/>
+</root>

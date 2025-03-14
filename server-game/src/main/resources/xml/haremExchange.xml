@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="2" costCredits="0" costItems="30000_106011_1" exchangeItems="70000_119_1" limitTimes="100" isReset="0"/>
+	  <data id="3" costCredits="0" costItems="30000_106011_1" exchangeItems="70000_136_1" limitTimes="120" isReset="0"/>
+	  <data id="4" costCredits="0" costItems="30000_106011_1" exchangeItems="70000_105_1" limitTimes="120" isReset="0"/>
+	  <data id="5" costCredits="0" costItems="30000_106011_1" exchangeItems="70000_153_1" limitTimes="100" isReset="0"/>
+	  <data id="6" costCredits="0" costItems="30000_106011_1" exchangeItems="70000_144_1" limitTimes="120" isReset="0"/>
+	  <data id="7" costCredits="0" costItems="30000_106011_2" exchangeItems="70000_117_5" limitTimes="16" isReset="0"/>
+	  <data id="8" costCredits="0" costItems="30000_106011_2" exchangeItems="70000_203_5" limitTimes="10" isReset="0"/>
+	  <data id="9" costCredits="0" costItems="30000_106011_2" exchangeItems="70000_114_5" limitTimes="16" isReset="0"/>
+	  <data id="10" costCredits="0" costItems="30000_106011_2" exchangeItems="70000_150_5" limitTimes="16" isReset="0"/>
+	  <data id="15" costCredits="30" costItems="" exchangeItems="30000_101001_20" limitTimes="200" isReset="1"/>
+	  <data id="16" costCredits="0" costItems="30000_106011_1" exchangeItems="70000_108_1" limitTimes="120" isReset="0"/>
+	  <data id="17" costCredits="0" costItems="30000_106011_2" exchangeItems="30000_104202_5" limitTimes="199" isReset="1"/>
+	  <data id="18" costCredits="0" costItems="30000_106011_2" exchangeItems="30000_104003_5" limitTimes="199" isReset="1"/>
+	  <data id="19" costCredits="0" costItems="30000_106011_1" exchangeItems="30000_104212_15" limitTimes="999" isReset="1"/>
+	  <data id="20" costCredits="0" costItems="30000_106011_1" exchangeItems="30000_106001_15" limitTimes="999" isReset="1"/>
+	  <data id="21" costCredits="0" costItems="30000_106011_1" exchangeItems="30000_101002_3" limitTimes="199" isReset="1"/>
+	  <data id="22" costCredits="10" costItems="" exchangeItems="30000_104211_30" limitTimes="50" isReset="1"/>
+	  <data id="23" costCredits="15" costItems="" exchangeItems="30000_104001_20" limitTimes="50" isReset="1"/>
+	  <data id="24" costCredits="30" costItems="" exchangeItems="30000_104201_20" limitTimes="200" isReset="1"/>
+	  <data id="25" costCredits="30" costItems="" exchangeItems="10000_1011_500" limitTimes="200" isReset="1"/>
+	  <data id="26" costCredits="0" costItems="30000_106011_1" exchangeItems="70000_163_1" limitTimes="120" isReset="0"/>
+	  <data id="27" costCredits="40" costItems="" exchangeItems="30000_299992_1" limitTimes="999999" isReset="0"/>
+</root>

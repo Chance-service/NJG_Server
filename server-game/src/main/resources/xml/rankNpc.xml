@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1"  minRank="2" monsterIds="10401,10407,10403,10406,10412"/>
+      <data id="2"  minRank="5" monsterIds="10413,10404,10403,10321,10316"/>
+      <data id="3"  minRank="10" monsterIds="10422,10305,10306,10301,10403"/>
+      <data id="4"  minRank="50" monsterIds="10301,10313,10306,10321,10317"/>
+      <data id="5"  minRank="100" monsterIds="10310,10307,10321,10214,10215"/>
+      <data id="6"  minRank="300" monsterIds="10219,10222,10321,10315,10210"/>
+      <data id="7"  minRank="500" monsterIds="10222,10219,10202,10206,10201"/>
+      <data id="8"  minRank="1000" monsterIds="10204,10201,10122,10124,10203"/>
+      <data id="9"  minRank="1500" monsterIds="10116,10205,10117,10221,10108"/>
+      <data id="10"  minRank="2000" monsterIds="10114,10116,10108,10101,10121"/>
+      <data id="11"  minRank="2500" monsterIds="10107,10001,10014,10121,10012"/>
+      <data id="12"  minRank="3000" monsterIds="10001,10010,10006,10017,10021"/>
+</root>

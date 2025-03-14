@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+魔王宝藏积分商店
+	id:              道具序号
+	costCredits:     兑换所需积分
+	exchangeItems:   兑换道具内容
+	limitTimes:      该道具兑换次数限制
+-->
+<root>
+	<data id="10" costCredits="100" exchangeItems="70000_116_10" limitTimes="8"/>
+	<data id="11" costCredits="300" exchangeItems="30000_104203_1" limitTimes="20"/>
+	<data id="12" costCredits="250" exchangeItems="30000_203003_1" limitTimes="20"/>
+	<data id="13" costCredits="100" exchangeItems="30000_104202_1" limitTimes="400"/>
+	<data id="14" costCredits="100" exchangeItems="30000_203002_1" limitTimes="400"/>
+	<data id="15" costCredits="200" exchangeItems="30000_103002_1" limitTimes="20"/>
+	<data id="16" costCredits="150" exchangeItems="30000_103001_1" limitTimes="20"/>
+	<data id="17" costCredits="50" exchangeItems="10000_1011_100" limitTimes="400"/>
+</root>

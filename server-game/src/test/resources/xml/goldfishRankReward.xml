@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- 捞金鱼活动排名奖励 最低排名为1 value<=minRank -->
+<root>
+    <data minRank="1" awards="30000_104101_100,30000_104004_50"/>
+    <data minRank="3" awards="30000_104101_50,30000_104004_30"/>
+    <data minRank="10" awards="30000_104101_40,30000_104004_20"/>
+    <data minRank="20" awards="30000_104101_30,30000_104004_10"/>
+    <data minRank="50" awards="30000_104101_20,30000_104004_5"/>
+    <data minRank="100" awards="30000_104101_10,30000_104004_2"/>
+    <data minRank="999" awards="30000_104101_5,30000_104004_1"/>
+</root>

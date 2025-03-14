@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1"  poolId="1" cost="30" min="36" max="39" drawRate="10"/>
+      <data id="2"  poolId="1" cost="30" min="39" max="45" drawRate="20"/>
+      <data id="3"  poolId="1" cost="30" min="45" max="60" drawRate="70"/>
+      <data id="4"  poolId="2" cost="300" min="360" max="390" drawRate="10"/>
+      <data id="5"  poolId="2" cost="300" min="390" max="450" drawRate="20"/>
+      <data id="6"  poolId="2" cost="300" min="450" max="600" drawRate="70"/>
+      <data id="7"  poolId="3" cost="3000" min="3600" max="3900" drawRate="55"/>
+      <data id="8"  poolId="3" cost="3000" min="3900" max="4500" drawRate="30"/>
+      <data id="9"  poolId="3" cost="3000" min="4500" max="6000" drawRate="15"/>
+      <data id="10"  poolId="4" cost="30000" min="36000" max="39000" drawRate="75"/>
+      <data id="11"  poolId="4" cost="30000" min="39000" max="45000" drawRate="20"/>
+      <data id="12"  poolId="4" cost="30000" min="45000" max="60000" drawRate="5"/>
+</root>

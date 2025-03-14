@@ -1,0 +1,68 @@
+<assembly>
+	<id>release</id>
+	<!-- 最终打包成一个用于发布的zip文件 -->
+	<formats>
+		<format>zip</format>
+	</formats>
+
+	<!-- Adds dependencies to zip package under lib directory -->
+	<dependencySets>
+		<dependencySet>
+			<!-- 不使用项目的artifact，第三方jar不要解压，打包进zip文件的lib目录 -->
+			<useProjectArtifact>true</useProjectArtifact>
+			<outputDirectory>lib</outputDirectory>
+			<unpack>false</unpack>
+		</dependencySet>
+	</dependencySets>
+
+	<fileSets>
+		<!-- 把项目的配置文件，打包进zip文件的config目录 -->
+		<fileSet>
+			<directory>${project.basedir}/src/main/resources</directory>
+			<outputDirectory>conf</outputDirectory>
+			<includes>
+				<include>cfg/*.xml</include>
+				<include>cfg/*.cfg</include>
+				<include>lib/*.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>${project.basedir}/src/main/resources/lib</directory>
+			<includes>
+				<include>*.dll</include>
+				<include>*.so</include>
+				<include>*.jar</include>
+			</includes>
+			<outputDirectory>lib</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>${project.basedir}/src/main/resources/xml</directory>
+			<outputDirectory>xml</outputDirectory>
+			<includes>
+				<include>*.xml</include>
+				<include>*.cfg</include>
+				<include>rechargeConfig/*.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>${project.basedir}/src/script</directory>
+			<outputDirectory>script</outputDirectory>
+		</fileSet>
+		<!-- 把项目的脚本文件目录（ src/main/scripts ）中的启动脚本文件，打包进zip文件的跟目录 -->
+		<fileSet>
+			<directory>${project.basedir}/src/main/scripts</directory>
+			<outputDirectory>.</outputDirectory>
+			<includes>
+				<include>startup.*</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>${project.basedir}/target</directory>
+			<outputDirectory>.</outputDirectory>
+			<includes>
+				<include>*SNAPSHOT.jar</include>
+			</includes>
+		</fileSet>
+
+	</fileSets>
+</assembly> 

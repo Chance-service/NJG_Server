@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<data id="1" inviteAmount="1" 	awards="10000_1001_10,30000_10001_1,30000_30001_1" />
+	<data id="2" inviteAmount="2" 	awards="10000_1001_15,30000_50001_1" />
+	<data id="3" inviteAmount="3" 	awards="30000_30001_1,30000_50001_1" />
+	<data id="4" inviteAmount="4" 	awards="10000_1001_10,30000_50002_1" />
+	<data id="5" inviteAmount="5" 	awards="10000_1001_30,30000_50003_1" />
+</root>

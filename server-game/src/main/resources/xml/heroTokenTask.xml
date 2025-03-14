@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="401" levelLimit="40" count="200" reward="30000_80001_2"/>
+      <data id="402" levelLimit="40" count="300" reward="30000_80001_6"/>
+      <data id="403" levelLimit="40" count="400" reward="30000_80001_20"/>
+      <data id="404" levelLimit="40" count="500" reward="30000_80001_60"/>
+      <data id="405" levelLimit="40" count="600" reward="30000_80001_160"/>
+</root>

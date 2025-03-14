@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" type="2" refer="1" count="60"/>
+	  <data id="2" type="2" refer="2" count="60"/>
+	  <data id="3" type="2" refer="3" count="60"/>
+	  <data id="4" type="1" refer="4" count="60"/>
+	  <data id="5" type="1" refer="5" count="60"/>
+	  <data id="6" type="1" refer="6" count="60"/>
+	  <data id="7" type="2" refer="7" count="60"/>
+	  <data id="8" type="2" refer="8" count="60"/>
+	  <data id="9" type="2" refer="9" count="60"/>
+	  <data id="10" type="1" refer="10" count="60"/>
+	  <data id="11" type="1" refer="11" count="60"/>
+	  <data id="12" type="1" refer="12" count="60"/>
+	  <data id="13" type="2" refer="13" count="60"/>
+	  <data id="14" type="2" refer="14" count="60"/>
+	  <data id="15" type="2" refer="15" count="60"/>
+	  <data id="16" type="1" refer="16" count="60"/>
+	  <data id="17" type="1" refer="17" count="60"/>
+	  <data id="18" type="1" refer="18" count="60"/>
+	  <data id="19" type="2" refer="19" count="60"/>
+	  <data id="20" type="2" refer="20" count="60"/>
+	  <data id="21" type="2" refer="21" count="60"/>
+	  <data id="22" type="2" refer="22" count="60"/>
+	  <data id="23" type="2" refer="23" count="60"/>
+	  <data id="24" type="2" refer="24" count="60"/>
+	  <data id="501" type="3" refer="501" count="100"/>
+	  <data id="502" type="3" refer="502" count="100"/>
+	  <data id="503" type="3" refer="503" count="100"/>
+	  <data id="504" type="3" refer="504" count="100"/>
+	  <data id="505" type="2" refer="505" count="50"/>
+	  <data id="506" type="2" refer="506" count="50"/>
+	  <data id="507" type="2" refer="507" count="50"/>
+	  <data id="508" type="2" refer="508" count="50"/>
+	  <data id="509" type="1" refer="509" count="30"/>
+	  <data id="510" type="1" refer="510" count="30"/>
+	  <data id="511" type="1" refer="511" count="30"/>
+	  <data id="512" type="1" refer="512" count="30"/>
+</root>

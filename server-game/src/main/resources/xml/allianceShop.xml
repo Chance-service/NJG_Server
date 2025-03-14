@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1"  luckyScore="1" itemId="101001" itemType="30000" itemCount="1" contribution="10" weight="100"/>
+      <data id="2"  luckyScore="1" itemId="104001" itemType="30000" itemCount="1" contribution="60" weight="100"/>
+      <data id="3"  luckyScore="1" itemId="104212" itemType="30000" itemCount="1" contribution="40" weight="100"/>
+      <data id="4"  luckyScore="1" itemId="202001" itemType="30000" itemCount="1" contribution="50" weight="100"/>
+      <data id="5"  luckyScore="1" itemId="202002" itemType="30000" itemCount="1" contribution="100" weight="100"/>
+      <data id="6"  luckyScore="1" itemId="202003" itemType="30000" itemCount="1" contribution="200" weight="100"/>
+      <!--data id="7"  luckyScore="1" itemId="113" itemType="70000" itemCount="1" contribution="300" weight="100"/-->
+</root>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data mode="1" drawTimes="1" costPhyc="3"/>
+	  <data mode="2" drawTimes="1" costPhyc="3"/>
+	  <data mode="2" drawTimes="3" costPhyc="5"/>
+	  <data mode="2" drawTimes="7" costPhyc="7"/>
+	  <data mode="2" drawTimes="9" costPhyc="10"/>
+	  <data mode="2" drawTimes="11" costPhyc="15"/>
+</root>

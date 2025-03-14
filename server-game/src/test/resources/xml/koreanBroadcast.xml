@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data message="안녕하세요! 일분RPG입니다."/>
+      <data message="미접속중에도 사냥은 자동으로 진행됩니다."/>
+      <data message="아이템을 분해후 새로운 아이템제작이 가능합니다."/>
+      <data message="보스도전 성공시 다음 던전이 열립니다."/>
+      <data message="용병은 15레벨에 고용가능합니다."/>
+      <data message="정예던전은 30레벨에 오픈됩니다."/>
+      <data message="전투력 1,000 이상 경기장 참여가 가능합니다."/>
+      <data message="경기장 보상은 매일 오후 9시에 지급됩니다."/>
+      <data message="길드가입은 12레벨 부터 가능합니다."/>
+      <data message="카톡친구를 초대하면 보상을 지급합니다."/>
+      <data message="강화석으로 아이템을 강화해 보세요."/>
+      <data message="분해시 사용된 강화석은 돌려 드립니다."/>
+      <data message="이벤트 메뉴를 확인해 보세요. "/>
+      <data message="파티전에 참여시 엄청난 보상을 드립니다."/>
+      <data message="자신만의 가언을 만들어보세요."/>
+</root>

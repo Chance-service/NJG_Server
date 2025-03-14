@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" TWID="20" FreeReward="10000_1001_200" CostReward="10000_1001_6000"/>
+	  <data id="2" TWID="40" FreeReward="10000_1001_200" CostReward="10000_1001_2000"/>
+	  <data id="3" TWID="60" FreeReward="10000_1001_200" CostReward="10000_1001_2000"/>
+	  <data id="4" TWID="80" FreeReward="10000_1001_200" CostReward="10000_1001_2000"/>
+	  <data id="5" TWID="100" FreeReward="10000_1001_200" CostReward="10000_1001_2000"/>
+	  <data id="6" TWID="120" FreeReward="10000_1001_200" CostReward="10000_1001_2000"/>
+	  <data id="7" TWID="140" FreeReward="10000_1001_200" CostReward="10000_1001_2000"/>
+	  <data id="8" TWID="160" FreeReward="10000_1001_200" CostReward="10000_1001_2000"/>
+	  <data id="9" TWID="180" FreeReward="10000_1001_200" CostReward="10000_1001_2000"/>
+	  <data id="10" TWID="200" FreeReward="10000_1001_200" CostReward="10000_1001_6888"/>
+</root>

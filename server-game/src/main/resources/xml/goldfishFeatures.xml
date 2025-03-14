@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+捞金鱼功能配置
+	freeTimes:      免费次数
+	singleCost:     单次捞鱼消耗
+	continuousCost: 连续捞鱼消耗
+	fishingWeight:  捞鱼概率
+	totalWeight:    捞鱼总概率
+	failScore:      失败后获得积分
+	poolWeight:     奖池概率配置
+	additional:     十连额外获得奖励配置
+	startTime:      积分翻倍开始时间
+	endTime:        积分翻倍结束时间
+	rankNumber:     排行榜上榜个数
+-->
+<root>
+	<data freeTimes="1" singleCost="300" continuousCost="2980" fishingWeight="100" totalWeight="100" failScore="20" poolWeight="1_700,2_300,3_0" additional="2_0,3_100" startTime="20" endTime="22" rankNumber="50"/>
+</root>

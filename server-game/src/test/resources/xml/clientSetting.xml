@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<data key="appstoreReviewing" value="1"></data>
+	<data key="spineOpening" value="1"></data>
+	<data key="slideForEquip" value="1"></data>
+	<data key="slideForSkill" value="1"></data>
+	<data key="optimize1" value="1"></data>
+	<data key="optimize2" value="1"></data>
+	<data key="optimize3" value="1"></data>
+	<data key="optimize4" value="1"></data>
+	<data key="IsUseNewPackagePage" value="0"></data>
+	<data key="IsUseNewSkillPage" value="1"></data>
+	<data key="allianceBattleAutoRefresh" value="200"></data>
+	<data key="isUseVoiceChat" value="1"></data>
+</root>

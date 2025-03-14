@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="101" poolType="1" itemNo="1" items="30000_230101_1" drawRate="12" limitTimes="8,25,45,50,53,61,108,114,120,168,183,200,214,234,240,264,266,267,271,287"/>
+	  <data id="102" poolType="1" itemNo="2" items="30000_230102_1" drawRate="12" limitTimes="13,30,41,51,71,87,89,145,154,156,176,184,196,197,210,211,212,233,270,299"/>
+	  <data id="103" poolType="1" itemNo="3" items="30000_104201_1" drawRate="8" limitTimes="0"/>
+	  <data id="104" poolType="1" itemNo="4" items="30000_203001_1" drawRate="5" limitTimes="0"/>
+	  <data id="105" poolType="1" itemNo="5" items="30000_103001_1" drawRate="3" limitTimes="0"/>
+	  <data id="106" poolType="1" itemNo="6" items="30000_106001_2" drawRate="15" limitTimes="0"/>
+	  <data id="107" poolType="1" itemNo="7" items="30000_101001_10" drawRate="25" limitTimes="0"/>
+	  <data id="108" poolType="1" itemNo="8" items="10000_1011_30" drawRate="20" limitTimes="0"/>
+	  <data id="201" poolType="2" itemNo="1" items="30000_230103_1" drawRate="8" limitTimes="8,25,45,50,53,61,108,114,120,168,183,200,214,234,240,264,266,267,271,287"/>
+	  <data id="202" poolType="2" itemNo="2" items="30000_230104_1" drawRate="9" limitTimes="13,30,41,51,71,87,89,145,154,156,176,184,196,197,210,211,212,233,270,299"/>
+	  <data id="203" poolType="2" itemNo="3" items="30000_104202_1" drawRate="10" limitTimes="0"/>
+	  <data id="204" poolType="2" itemNo="4" items="30000_203002_1" drawRate="15" limitTimes="0"/>
+	  <data id="205" poolType="2" itemNo="5" items="30000_103001_1" drawRate="3" limitTimes="0"/>
+	  <data id="206" poolType="2" itemNo="6" items="30000_201002_1" drawRate="15" limitTimes="0"/>
+	  <data id="207" poolType="2" itemNo="7" items="30000_101001_20" drawRate="25" limitTimes="0"/>
+	  <data id="208" poolType="2" itemNo="8" items="10000_1011_100" drawRate="15" limitTimes="0"/>
+	  <data id="301" poolType="3" itemNo="1" items="30000_230105_1" drawRate="7" limitTimes="8,25,45,50,53,61,108,114,120,168,183,200,214,234,240,264,266,267,271,287"/>
+	  <data id="302" poolType="3" itemNo="2" items="30000_230106_1" drawRate="8" limitTimes="13,30,41,51,71,87,89,145,154,156,176,184,196,197,210,211,212,233,270,299"/>
+	  <data id="303" poolType="3" itemNo="3" items="30000_104203_1" drawRate="6" limitTimes="0"/>
+	  <data id="304" poolType="3" itemNo="4" items="30000_203003_1" drawRate="15" limitTimes="0"/>
+	  <data id="305" poolType="3" itemNo="5" items="30000_103001_3" drawRate="4" limitTimes="0"/>
+	  <data id="306" poolType="3" itemNo="6" items="30000_201004_1" drawRate="15" limitTimes="0"/>
+	  <data id="307" poolType="3" itemNo="7" items="30000_101001_100" drawRate="25" limitTimes="0"/>
+	  <data id="308" poolType="3" itemNo="8" items="10000_1011_500" drawRate="20" limitTimes="0"/>
+</root>

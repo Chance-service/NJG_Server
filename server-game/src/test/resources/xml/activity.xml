@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- timeType 1永久开放 2开服活动 3按期开放 4注册天数活动 5活动关闭-->
+<root>
+	<data id="83" timeType="1" name="日本月卡" levelLimit="1"/>
+	<data id="2" timeType="3" name="每日累计充值（数额）" levelLimit="1" />
+	<data id="3" timeType="4" name="连续充值（天数）（绑定角色的活动）" levelLimit="1">
+		<property key="keepDays" type="int">10</property>
+	</data>
+	<data id="4" timeType="1" name="每项首值3倍（仅第一次）" levelLimit="1"/>
+	<data id="5" timeType="5" name="微信关注" levelLimit="1"/>
+	<data id="6" timeType="3" name="累计消费（数额）" levelLimit="1"/>
+	<data id="7" timeType="5" name="中秋兑换字活动" levelLimit="1"/>
+	<data id="8" timeType="3" name="地图掉落活动" levelLimit="1"/>
+	<data id="9" timeType="5" name="单项充值双倍" levelLimit="1">
+		<!--
+		type 1 表示 所有项目仅触发一次充值翻倍。
+		type 2 表示 每项仅触发一次，所有项目都能触发。
+		-->
+		<property key="type" type="int">2</property>	
+	</data>
+	<data id="10" timeType="3" name="假日宝藏" levelLimit="1"/>
+	<data id="11" timeType="5" name="公测字活动" levelLimit="1"/>
+	<data id="12" timeType="3" name="金币掉落双倍" levelLimit="1">
+		<property key="ratio" type="int">2</property>	
+		<property key="activeDay" type="date">2014-01-01 00:00:00</property>	
+	</data>	
+	<data id="13" timeType="3" name="经验掉落双倍" levelLimit="1">
+		<property key="ratio" type="int">2</property>	
+		<property key="activeDay" type="date">2014-01-01 00:00:00</property>	
+	</data>	
+	<!-- 
+	<data id="14" timeType="5" name="竞技场奖励双倍" levelLimit="1">
+		<property key="ratio" type="int">2</property>	
+	</data>
+	-->
+	<data id="15" timeType="3" name="装备掉落双倍" levelLimit="1">
+		<property key="ratio" type="int">2</property>	
+		<property key="activeDay" type="date">2014-01-01 00:00:00</property>	
+	</data>	
+	<data id="16" timeType="3" name="快速战斗收益双倍" levelLimit="1">
+		<property key="ratio" type="int">2</property>	
+		<property key="activeDay" type="date">2014-01-01 00:00:00</property>	
+	</data>	
+	<data id="17" timeType="3" name="熔炼值双倍" levelLimit="1">
+		<property key="ratio" type="int">2</property>	
+		<property key="activeDay" type="date">2014-01-01 00:00:00</property>	
+	</data>	
+	<data id="18" timeType="3" name="装备出售价格双倍" levelLimit="1">
+		<property key="ratio" type="int">2</property>
+		<property key="activeDay" type="date">2014-01-01 00:00:00</property>
+	</data>
+	<data id="19" timeType="3" name="快速战斗消耗减半" levelLimit="1">
+		<property key="ratio" type="float">0.5</property>	
+		<property key="activeDay" type="date">2014-01-01 00:00:00</property>	
+	</data>
+	<data id="20" timeType="5" name="开服双倍活动" levelLimit="1">
+		<property key="day1" type="int">15</property>
+		<property key="day2" type="int">15</property>
+		<property key="day3" type="int">12</property>
+		<property key="day4" type="int">13</property>
+		<property key="day5" type="int">18</property>
+		<property key="day6" type="int">16</property>
+		<property key="day7" type="int">17</property>
+		<property key="day8" type="int">19</property>
+	</data>
+	<data id="21" timeType="3" name="每日单项充值" levelLimit="1" />
+	<data id="22" timeType="4" name="（角色创建时）充值返利" levelLimit="1">
+		<property key="delayDays" type="int">3</property>
+		<property key="rechargeDays" type="int">2</property>
+		<property key="rebateDays" type="int">30</property>
+	</data>
+	<data id="23" timeType="1" name="vip福利" levelLimit="1"></data>
+	<data id="24" timeType="5" name="周卡（废弃）" levelLimit="1"/>
+	<data id="25" timeType="5" name="远征物资征集活动" levelLimit="1"></data>
+	<data id="26" timeType="3" name="限时限购" levelLimit="1"></data>
+	<data id="27" timeType="3" name="累计登录活动" levelLimit="1"></data>
+	<data id="28" timeType="5" name="（周期开放）充值返利" levelLimit="1"></data>
+	<data id="29" timeType="5" name="宝石工坊" levelLimit="1"></data>
+	<data id="30" timeType="5" name="疯狂转轮" levelLimit="1"></data>
+	<data id="31" timeType="5" name="幸运宝箱" levelLimit="1"></data>
+	<data id="32" timeType="5" name="五星好评" levelLimit="1"></data>
+	<data id="33" timeType="5" name="好友邀请" levelLimit="1"></data>
+	<data id="34" timeType="5" name="台湾大车队" levelLimit="1"></data>
+	<data id="35" timeType="5" name="雪地探宝" levelLimit="1"></data>
+	<data id="36" timeType="3" name="夺宝奇兵" levelLimit="1"></data>
+	<data id="37" timeType="5" name="部族的嘉奖" levelLimit="1"></data>
+	<data id="38" timeType="5" name="财神献礼" levelLimit="1"></data>
+	<data id="86" timeType="3" name="七夕兑换" levelLimit="1"></data>
+	
+	<data id="39" timeType="5" name="商店刷新价格减半" levelLimit="1">
+		<property key="ratio" type="float">0.5</property>	
+		<property key="activeDay" type="date">2014-01-01 00:00:00</property>	
+	</data>
+	
+	<data id="40" timeType="3" name="银月酒馆" levelLimit="1"/>
+	<data id="41" timeType="5" name="财富俱乐部" levelLimit="1"/>
+	<data id="42" timeType="5" name="抢红包" levelLimit="1"/>
+	<data id="43" timeType="5" name="聊天彩蛋" levelLimit="1"/>
+	<data id="44" timeType="5" name="排名献礼（新服冲排名活动）" levelLimit="1">
+		<property key="startHoursAfterOpenSer" type="int">0</property>		
+		<property key="openHours" type="int">408</property>	
+		<property key="activeDay" type="date">2014-01-01 00:00:00</property>
+		<property key="rankHours" type="int">168</property>
+	</data>
+	<data id="45" timeType="5" name="终身卡" levelLimit="1"/>
+	<data id="46" timeType="5" name="呀呀兑换排行榜" levelLimit="1"/>
+	
+	<data id="82" timeType="4" name="新手折扣礼包" levelLimit="1">
+		<property key="keepDays" type="int">10</property>
+	</data>
+	
+	<data id="84" timeType="1" name="首冲赠送礼包" levelLimit="1"/>
+	
+	<data id="87" timeType="2" name="签到日常" levelLimit="1">
+		<property key="startHoursAfterOpenSer" type="int">156</property>		
+		<property key="openHours" type="int">999999</property>	
+		<property key="activeDay" type="date">2016-08-01 00:01:00</property>
+	</data>
+	<data id="88" timeType="3" name="捞鱼活动" levelLimit="1"></data>
+	<data id="89" timeType="3" name="神装锻造" levelLimit="1"></data>
+	<data id="90" timeType="3" name="气枪打靶" levelLimit="1"></data>
+	<data id="91" timeType="3" name="魔王的宝藏" levelLimit="1"></data>
+	<data id="94" timeType="3" name="充值折扣礼包" levelLimit="1"></data>
+	<data id="95" timeType="1" name="VIP礼包" levelLimit="1"></data>
+	<data id="96" timeType="1" name="新周卡（多档周卡）" levelLimit="1"></data>
+	<data id="97" timeType="1" name="成长基金" levelLimit="1"></data>
+	<data id="98" timeType="3" name="幸运副将" levelLimit="1"></data>
+	<data id="99" timeType="3" name="神将投放（卧龙初登场）" levelLimit="1"></data>
+	<data id="100" timeType="3" name="对话框皮肤售卖" levelLimit="1"></data>
+	<data id="101" timeType="1" name="王的后宫（百花美人）" levelLimit="1">
+		<property key="newStrictLimitLevel" type="int">20</property>
+		<!--新手限定活动有效时间,单位:天-->
+		<property key="newStrictLimitDay" type="int">4</property>
+	</data>
+	<data id="102" timeType="3" name="兑换道具" levelLimit="1"></data>
+	<data id="103" timeType="3" name="仙女的加护" levelLimit="1"></data>
+	<data id="104" timeType="3" name="少女的邂逅" levelLimit="1"></data>
+	<data id="105" timeType="3" name="鬼节活动（夏季风物诗）" levelLimit="1"></data>
+	<data id="106" timeType="3" name="天降元宝" levelLimit="1"></data>
+	<data id="107" timeType="1" name="新手UR折扣活动" levelLimit="1">
+		<property key="newURLimitLevel" type="int">40</property>
+		<!--新手限定活动有效时间,单位:天-->
+		<property key="newURLimitDay" type="int">4</property>
+	</data>
+	<data id="108" timeType="3" name="大转盘" levelLimit="1"></data>
+	<data id="109" timeType="3" name="万圣节活动（魔女）" levelLimit="1"></data>
+	<data id="110" timeType="3" name="快速战斗券使用上限翻倍活动" levelLimit="1">
+		<property key="ratio" type="int">2</property>	
+	</data>	
+	<data id="111" timeType="3" name="神将投放（卧龙初登场）" levelLimit="1"></data>
+	<data id="113" timeType="3" name="玩家登录签到" levelLimit="1">
+		<property key="keepDays" type="int">10</property>
+	</data>
+	<data id="114" timeType="3" name="7日之诗活动" levelLimit="1">
+		<property key="keepDays" type="int">10</property>
+	</data>
+</root>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1"  suitId="1" count="2" attr="1004_400" skillLevel="0" levelAttribute="0"/>
+      <data id="2"  suitId="1" count="3" attr="2009_500" skillLevel="0" levelAttribute="0"/>
+      <data id="3"  suitId="1" count="4" attr="1004_200" skillLevel="0" levelAttribute="0"/>
+      <data id="4"  suitId="2" count="2" attr="1004_500" skillLevel="0" levelAttribute="0"/>
+      <data id="5"  suitId="2" count="3" attr="2009_700" skillLevel="0" levelAttribute="0"/>
+      <data id="6"  suitId="2" count="4" attr="1004_400" skillLevel="0" levelAttribute="0"/>
+      <data id="7"  suitId="3" count="2" attr="1004_700" skillLevel="0" levelAttribute="0"/>
+      <data id="8"  suitId="3" count="3" attr="2009_900" skillLevel="0" levelAttribute="0"/>
+      <data id="9"  suitId="3" count="4" attr="1004_500" skillLevel="0" levelAttribute="0"/>
+      <data id="10"  suitId="4" count="2" attr="1004_800" skillLevel="0" levelAttribute="0"/>
+      <data id="11"  suitId="4" count="3" attr="2009_1200" skillLevel="0" levelAttribute="0"/>
+      <data id="12"  suitId="4" count="4" attr="1004_600" skillLevel="0" levelAttribute="0"/>
+      <data id="13"  suitId="5" count="2" attr="1004_1000" skillLevel="0" levelAttribute="0"/>
+      <data id="14"  suitId="5" count="3" attr="2009_1400" skillLevel="0" levelAttribute="0"/>
+      <data id="15"  suitId="5" count="4" attr="1004_700" skillLevel="0" levelAttribute="0"/>
+      <data id="16"  suitId="6" count="2" attr="1004_1100" skillLevel="0" levelAttribute="0"/>
+      <data id="17"  suitId="6" count="3" attr="2009_1600" skillLevel="0" levelAttribute="0"/>
+      <data id="18"  suitId="6" count="4" attr="1004_900" skillLevel="0" levelAttribute="0"/>
+      <data id="19"  suitId="7" count="2" attr="1004_1300" skillLevel="0" levelAttribute="0"/>
+      <data id="20"  suitId="7" count="3" attr="2009_1800" skillLevel="0" levelAttribute="0"/>
+      <data id="21"  suitId="7" count="4" attr="1004_1000" skillLevel="0" levelAttribute="0"/>
+      <data id="22"  suitId="8" count="2" attr="1004_1400" skillLevel="0" levelAttribute="0"/>
+      <data id="23"  suitId="8" count="3" attr="2009_2000" skillLevel="0" levelAttribute="0"/>
+      <data id="24"  suitId="8" count="4" attr="1004_1100" skillLevel="0" levelAttribute="0"/>
+</root>

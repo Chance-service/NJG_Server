@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data type="1" freeRefreshTime="0" oneTimeCost="100000" tenTimeCost="500000" poolType="1" maxCount="5"/>
+	  <data type="2" freeRefreshTime="24" oneTimeCost="50" tenTimeCost="450" poolType="2" maxCount="10"/>
+	  <data type="3" freeRefreshTime="24" oneTimeCost="300" tenTimeCost="2700" poolType="3" maxCount="10"/>
+</root>

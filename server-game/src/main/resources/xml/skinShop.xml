@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" item="20000_1_1" price="30000_6002_100" count="1" discount="100"/>
+	  <data id="3" item="20000_3_1" price="30000_6002_100" count="1" discount="100"/>
+	  <data id="4" item="20000_4_1" price="30000_6002_60" count="1" discount="100"/>
+	  <data id="5" item="20000_5_1" price="30000_6002_60" count="1" discount="100"/>
+	  <data id="7" item="20000_7_1" price="30000_6002_100" count="1" discount="100"/>
+	  <data id="8" item="20000_8_1" price="30000_6002_100" count="1" discount="100"/>
+	  <data id="11" item="20000_11_1" price="30000_6002_60" count="1" discount="100"/>
+	  <data id="12" item="20000_12_1" price="30000_6002_60" count="1" discount="100"/>
+	  <data id="13" item="20000_13_1" price="30000_6002_100" count="1" discount="100"/>
+	  <data id="15" item="20000_15_1" price="30000_6002_100" count="1" discount="100"/>
+	  <data id="18" item="20000_18_1" price="30000_6002_60" count="1" discount="100"/>
+	  <data id="20" item="20000_20_1" price="30000_6002_100" count="1" discount="100"/>
+	  <data id="23" item="20000_23_1" price="30000_6002_100" count="1" discount="100"/>
+</root>

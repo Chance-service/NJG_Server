@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data type="1"  openVip="0" cost="10000_1002_5000" costItem="30000_104211_1" uperLimit="3000" lowerLimit="500" maxFailure="7500" upInterval="1,14" dowmInterval="-12,-1"/>
+      <data type="2"  openVip="0" cost="10000_1001_20" costItem="30000_104212_1" uperLimit="5400" lowerLimit="2800" maxFailure="6200" upInterval="6,17" dowmInterval="-12,-1"/>
+      <data type="3"  openVip="3" cost="10000_1001_60" costItem="30000_104213_1" uperLimit="7600" lowerLimit="5200" maxFailure="4500" upInterval="16,25" dowmInterval="-12,-1"/>
+      <data type="4"  openVip="7" cost="10000_1001_200" costItem="" uperLimit="10000" lowerLimit="7800" maxFailure="0" upInterval="30,40" dowmInterval="-1,0"/>
+</root>

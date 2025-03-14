@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" poolType="1" freeChance="0" freeCd="0" itemCost="" oneTimeCost="100000" tenTimesCost="1000000" addScore="0" startTime="2015-10-07_10:00:00" endTime="2055-10-07_10:00:00" maxDayTotalTimes="50"/>
+	  <data id="2" poolType="2" freeChance="3" freeCd="600" itemCost="30000_106101_1" oneTimeCost="50" tenTimesCost="450" addScore="3" startTime="2015-10-07_10:00:00" endTime="2055-10-07_10:00:00" maxDayTotalTimes="0"/>
+	  <data id="3" poolType="3" freeChance="1" freeCd="0" itemCost="30000_106102_1" oneTimeCost="200" tenTimesCost="1800" addScore="20" startTime="2017-10-30_11:00:00" endTime="2055-10-07_10:00:00" maxDayTotalTimes="0"/>
+	  <data id="4" poolType="4" freeChance="1" freeCd="0" itemCost="30000_106102_1" oneTimeCost="240" tenTimesCost="2380" addScore="20" startTime="2015-10-07_10:00:00" endTime="2055-10-07_10:00:00" maxDayTotalTimes="0"/>
+	  <data id="5" poolType="5" freeChance="1" freeCd="0" itemCost="30000_106102_1" oneTimeCost="300" tenTimesCost="2700" addScore="0" startTime="2017-10-30_10:00:00" endTime="2055-10-07_10:00:00" maxDayTotalTimes="0"/>
+</root>

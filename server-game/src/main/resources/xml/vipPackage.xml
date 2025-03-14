@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<data id="1" vipLimit="0" price="50" awardStr="30000_106001_10,30000_103102_1"/>
+	<data id="2" vipLimit="1" price="150" awardStr="30000_106001_20,30000_103102_2,30000_106102_2"/>
+	<data id="3" vipLimit="2" price="300" awardStr="30000_106001_50,30000_103103_2,30000_106102_4"/>
+	<data id="4" vipLimit="3" price="6000" awardStr="70000_112_120,30000_104101_90"/>
+	<data id="5" vipLimit="3" price="600" awardStr="30000_104003_10,30000_103103_3,30000_104212_60"/>
+	<data id="6" vipLimit="4" price="1200" awardStr="30000_104003_20,30000_103104_2,30000_104212_90"/>
+	<data id="7" vipLimit="5" price="2400" awardStr="30000_104003_50,30000_103104_3,30000_104212_150"/>
+	<data id="8" vipLimit="6" price="3600" awardStr="30000_104004_20,30000_104101_50,30000_104213_50"/>
+	<data id="9" vipLimit="7" price="7000" awardStr="30000_104004_40,30000_104101_75,30000_104213_100"/>
+	<data id="10" vipLimit="8" price="12000" awardStr="30000_104004_80,30000_104101_100,30000_104213_150"/>
+	<data id="11" vipLimit="9" price="24000" awardStr="70000_201_120,30000_104101_240"/>
+	<data id="12" vipLimit="9" price="18000" awardStr="30000_104004_150,30000_104101_150,30000_104213_200"/>
+	<data id="13" vipLimit="10" price="26000" awardStr="30000_104004_200,30000_104101_200,30000_104213_300"/>
+	<data id="14" vipLimit="11" price="34000" awardStr="30000_104004_250,30000_104101_250,30000_104213_500"/>
+	<data id="15" vipLimit="12" price="42000" awardStr="30000_104004_300,30000_104101_300,30000_104213_800"/>
+	<data id="16" vipLimit="6" price="9000" awardStr="70000_231_60,30000_104101_120"/>
+</root>

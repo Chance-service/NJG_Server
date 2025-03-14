@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- id：配置编号 minRank:适用该套规制的最小排名
+monsterIds：随机怪物Id集合	awardStr：该排名区间对应的每日奖励字符串-->
+<root>
+      <data id="1" minRank="100"  monsterIds="9030,9029,9028,9027,9026" awardStr="10000_1002_100,30001_2_5"/>
+	  <data id="2" minRank="300"  monsterIds="9025,9024,9023,9022,9021" awardStr="10000_1002_90,30001_2_4"/>
+	  <data id="3" minRank="500" monsterIds="9020,9019,9018,9017" awardStr="10000_1002_80,30001_2_3"/>
+	  <data id="4" minRank="700" monsterIds="9016,9015,9014,9013" awardStr="10000_1002_70,30001_2_3"/>
+	  <data id="5" minRank="1000" monsterIds="9012,9011,9010,9009" awardStr="10000_id_70,30001_2_2"/>
+	  <data id="6" minRank="3200" monsterIds="9008,9007,9006,9005" awardStr="10000_id_60,30001_2_2"/>
+	  <data id="7" minRank="5000" monsterIds="9004,9003,9002,9001,9000" awardStr="10000_id_50,30001_2_1"/>
+</root>

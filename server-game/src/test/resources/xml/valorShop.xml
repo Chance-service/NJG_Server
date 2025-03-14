@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- 
+勇气商店配置
+	itemId:   物品ID
+	itemType: 物品类型
+	itemCount:物品数量
+	needScore:需要的勇气值
+-->
+<root>
+      <data id="1" itemId="90004" itemType="30000" itemCount="1" needScore="200" needHistoryScore="0"/>
+      <data id="2" itemId="90008" itemType="30000" itemCount="1" needScore="1500" needHistoryScore="0"/>
+      <data id="3" itemId="1006" itemType="10000" itemCount="1000" needScore="300" needHistoryScore="0"/>
+      <data id="4" itemId="200001" itemType="30000" itemCount="1" needScore="500" needHistoryScore="0"/>
+      <data id="5" itemId="300001" itemType="30000" itemCount="1" needScore="500" needHistoryScore="0"/>
+      <data id="6" itemId="100001" itemType="30000" itemCount="1" needScore="750" needHistoryScore="0"/>
+      <data id="7" itemId="100002" itemType="30000" itemCount="1" needScore="750" needHistoryScore="0"/>
+      <data id="8" itemId="100003" itemType="30000" itemCount="1" needScore="750" needHistoryScore="0"/>
+      <data id="9" itemId="500004" itemType="30000" itemCount="1" needScore="1200" needHistoryScore="0"/>
+      <data id="10" itemId="600004" itemType="30000" itemCount="1" needScore="1200" needHistoryScore="0"/>
+      <data id="11" itemId="700003" itemType="30000" itemCount="1" needScore="1200" needHistoryScore="0"/>
+      <data id="12" itemId="900002" itemType="30000" itemCount="1" needScore="2500" needHistoryScore="0"/>
+      <data id="13" itemId="1000005" itemType="30000" itemCount="1" needScore="2500" needHistoryScore="0"/>
+      <data id="14" itemId="1000006" itemType="30000" itemCount="1" needScore="2500" needHistoryScore="0"/>
+      <data id="15" itemId="1100005" itemType="30000" itemCount="1" needScore="2500" needHistoryScore="0"/>
+      <data id="16" itemId="1100006" itemType="30000" itemCount="1" needScore="2500" needHistoryScore="0"/>
+      <data id="17" itemId="1200005" itemType="30000" itemCount="1" needScore="2500" needHistoryScore="0"/>
+      <data id="18" itemId="1200006" itemType="30000" itemCount="1" needScore="2500" needHistoryScore="0"/>
+      <data id="19" itemId="60002" itemType="30000" itemCount="1" needScore="800" needHistoryScore="0"/>
+      <data id="20" itemId="60003" itemType="30000" itemCount="1" needScore="2500" needHistoryScore="0"/>
+      <data id="21" itemId="60004" itemType="30000" itemCount="1" needScore="8000" needHistoryScore="0"/>
+</root>

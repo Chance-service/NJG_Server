@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<!-- 大额充值翻倍 -->
+	<data goodsId="9" ratio="2"/>
+	<data goodsId="10" ratio="2"/>
+	<data goodsId="11" ratio="2"/>
+</root>

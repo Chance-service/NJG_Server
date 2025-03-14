@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- extraReward1为公会争霸奖励中，对应的第一个奖励的百分比加成 100为1% -->
+<!-- costGold为公会争鼓舞的花費 -->
+<!-- hpAdd harmAdd 为单次的血量、伤害加成 1000为10%-->
+<root>
+      <data fightGroup="1" times="1" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="1" times="2" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="1" times="3" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="1" times="4" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="1" times="5" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="2" times="1" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="2" times="2" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="2" times="3" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="2" times="4" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="2" times="5" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="3" times="1" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="3" times="2" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="3" times="3" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="3" times="4" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="3" times="5" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="4" times="1" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="4" times="2" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="4" times="3" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="4" times="4" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="4" times="5" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="5" times="1" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="5" times="2" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="5" times="3" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="5" times="4" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+      <data fightGroup="5" times="5" costGold="20" hpAdd="1000" harmAdd="1000" extraReward1="100" extraReward2="0" extraReward3="0"/>
+</root>

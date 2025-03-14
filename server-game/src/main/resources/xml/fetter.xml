@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" include="1,2,3" formula="2" awardItem="10000_1001_300" awardAttribute="113_2_200,114_2_200,101_2_3000"/>
+	  <data id="2" include="4,5,6" formula="1" awardItem="10000_1001_100" awardAttribute="113_2_100,114_2_100,101_2_1500"/>
+	  <data id="3" include="7,8,9" formula="2" awardItem="10000_1001_300" awardAttribute="113_2_200,114_2_200,101_2_3000"/>
+	  <data id="4" include="10,11,12" formula="1" awardItem="10000_1001_100" awardAttribute="113_2_100,114_2_100,101_2_1500"/>
+	  <data id="5" include="13,14,15" formula="2" awardItem="10000_1001_300" awardAttribute="113_2_200,114_2_200,101_2_3000"/>
+	  <data id="6" include="16,17,18" formula="1" awardItem="10000_1001_100" awardAttribute="113_2_100,114_2_100,101_2_1500"/>
+	  <data id="7" include="19,20,21" formula="2" awardItem="10000_1001_300" awardAttribute="113_2_200,114_2_200,101_2_3000"/>
+	  <data id="8" include="22,23,24" formula="2" awardItem="10000_1001_300" awardAttribute="113_2_200,114_2_200,101_2_3000"/>
+	  <data id="9" include="501,502" formula="4" awardItem="10000_1001_300" awardAttribute="113_2_900,114_2_900,101_2_3000"/>
+	  <data id="10" include="503,504" formula="4" awardItem="10000_1001_300" awardAttribute="113_2_900,114_2_900,101_2_3000"/>
+	  <data id="11" include="505,506" formula="3" awardItem="10000_1001_300" awardAttribute="113_2_300,114_2_300,101_2_2000"/>
+	  <data id="12" include="507,508" formula="3" awardItem="10000_1001_300" awardAttribute="113_2_300,114_2_300,101_2_2000"/>
+	  <data id="13" include="509,510" formula="1" awardItem="10000_1001_300" awardAttribute="113_2_100,114_2_100,101_2_1000"/>
+	  <data id="14" include="511,512" formula="1" awardItem="10000_1001_300" awardAttribute="113_2_100,114_2_100,101_2_1000"/>
+</root>

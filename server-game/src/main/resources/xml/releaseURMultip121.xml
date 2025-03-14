@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1"  startlucky="1" endlucky="4" rate="1000"/>
+      <data id="2"  startlucky="5" endlucky="8" rate="2000"/>
+      <data id="3"  startlucky="9" endlucky="11" rate="5000"/>
+      <data id="4"  startlucky="12" endlucky="-1" rate="10000"/>
+</root>
