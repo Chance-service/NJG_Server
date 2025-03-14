@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+    <data type="1" oneDayMaxTimes="5" oneTimeCost="100000" currency="2" desc="铜货"/>
+	<data type="2" oneDayMaxTimes="99999" oneTimeCost="50" currency="1" desc="元宝"/>
+	<data type="3" oneDayMaxTimes="99999" oneTimeCost="300" currency="1" desc="元宝"/>
+</root>

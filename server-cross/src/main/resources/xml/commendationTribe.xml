@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<data id="1" goldExcCount="100" scoreCost="1" needLuckyValue="50" perClickLuckyAdd="10" passRate="2000" awards="10000_1013_500,10000_1002_200000,30000_60002_6"/>
+	<data id="2" goldExcCount="100" scoreCost="2" needLuckyValue="120" perClickLuckyAdd="20" passRate="1100" awards="10000_1013_800,10000_1002_500000,30000_60002_9"/>
+	<data id="3" goldExcCount="100" scoreCost="3" needLuckyValue="300" perClickLuckyAdd="30" passRate="500" awards="10000_1013_1000,30000_90001_3,30000_60003_2"/>
+	<data id="4" goldExcCount="100" scoreCost="4" needLuckyValue="600" perClickLuckyAdd="40" passRate="260" awards="10000_1013_1500,30000_90001_3,30000_60003_3"/>
+	<data id="5" goldExcCount="100" scoreCost="5" needLuckyValue="900" perClickLuckyAdd="50" passRate="140" awards="10000_1013_2000,30000_90001_5,30000_60004_2"/>
+</root>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<data stageId="0" weekStartDay="1" startTime="00:00:00" weekEndDay="3" endTime="23:00:00" />
+	<data stageId="100" weekStartDay="3" startTime="23:00:00" weekEndDay="4" endTime="18:00:00" />
+	<data stageId="101" weekStartDay="4" startTime="18:00:00" weekEndDay="4" endTime="20:45:00" />
+	<data stageId="102" weekStartDay="4" startTime="20:45:00" weekEndDay="4" endTime="21:45:00" />
+	<data stageId="103" weekStartDay="4" startTime="21:45:00" weekEndDay="5" endTime="12:00:00" />
+	<data stageId="104" weekStartDay="5" startTime="12:00:00" weekEndDay="5" endTime="13:00:00" />
+	<data stageId="105" weekStartDay="5" startTime="13:00:00" weekEndDay="5" endTime="20:45:00" />
+	<data stageId="106" weekStartDay="5" startTime="20:45:00" weekEndDay="5" endTime="21:45:00" />
+	<data stageId="107" weekStartDay="5" startTime="21:45:00" weekEndDay="6" endTime="12:00:00" />
+	<data stageId="108" weekStartDay="6" startTime="12:00:00" weekEndDay="6" endTime="13:00:00" />
+	<data stageId="109" weekStartDay="6" startTime="13:00:00" weekEndDay="6" endTime="20:45:00" />
+	<data stageId="110" weekStartDay="6" startTime="20:45:00" weekEndDay="6" endTime="21:45:00" />
+	<data stageId="201" weekStartDay="6" startTime="21:45:00" weekEndDay="7" endTime="23:59:59" />
+</root>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- 
+	联盟捐献功能
+	id id列
+	type 捐献类型
+	consume 捐献消耗物品
+	allianceAward 联盟奖励
+	personAward 个人奖励
+	activity 活跃度
+ -->
+<root>
+      <data id="1" type="1" activeValue="10" consume="" allianceAward="" personAward=""/>
+      <data id="2" type="2" activeValue="10" consume="" allianceAward="" personAward=""/>
+      <data id="3" type="3" activeValue="10" consume="" allianceAward="" personAward=""/>
+</root>

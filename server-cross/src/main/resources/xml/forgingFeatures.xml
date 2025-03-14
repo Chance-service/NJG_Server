@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+神装锻造功能配置
+	singleCost:     单次锻造消耗
+	continuousCost: 连续锻造消耗
+	interval:       再次免费时间间隔
+	givenRaward:    累计N次抽奖获得指定奖励ID
+	prizeRule:      普通抽奖规则 Eg:奖励池ID_抽奖总次数,奖励池ID_抽奖总次数
+	limits:         全服出现个数限制 itemType_itemId_itemCount_limit,itemType_itemId_itemCount_limit
+-->
+<root>
+	<data singleCost="300" continuousCost="2880" interval="24" givenRaward="8000_36" prizeRule="2_31,3_91,4_121,5_146" limits="40000_61320001_1-999"/>
+</root>

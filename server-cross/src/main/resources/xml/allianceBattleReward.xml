@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data top="1"  position="0" reward="10000_1011_1500,30000_103002_6,30000_106001_40" getKey="@ABR_getKey1" gameType="@ABR_gameType1" positionShow="@ABR_positionShow"/>
+      <data top="1"  position="1" reward="10000_1011_1500,30000_103002_6,30000_106001_40" getKey="@ABR_getKey1" gameType="@ABR_gameType1" positionShow="@GuildPosition1"/>
+      <data top="1"  position="2" reward="10000_1011_1700,30000_103002_8,30000_106001_50" getKey="@ABR_getKey1" gameType="@ABR_gameType1" positionShow="@GuildPosition2"/>
+      <data top="2"  position="0" reward="10000_1011_1100,30000_103002_6,30000_106001_30" getKey="@ABR_getKey1" gameType="@ABR_gameType2" positionShow="@ABR_positionShow"/>
+      <data top="2"  position="1" reward="10000_1011_1100,30000_103002_6,30000_106001_30" getKey="@ABR_getKey1" gameType="@ABR_gameType2" positionShow="@GuildPosition1"/>
+      <data top="2"  position="2" reward="10000_1011_1300,30000_103002_8,30000_106001_40" getKey="@ABR_getKey1" gameType="@ABR_gameType2" positionShow="@GuildPosition2"/>
+      <data top="3"  position="0" reward="10000_1011_900,30000_103002_4,30000_106001_25" getKey="@ABR_getKey2" gameType="@ABR_gameType3" positionShow="@ABR_positionShow"/>
+      <data top="3"  position="1" reward="10000_1011_900,30000_103002_4,30000_106001_25" getKey="@ABR_getKey2" gameType="@ABR_gameType3" positionShow="@GuildPosition1"/>
+      <data top="3"  position="2" reward="10000_1011_1100,30000_103002_6,30000_106001_35" getKey="@ABR_getKey2" gameType="@ABR_gameType3" positionShow="@GuildPosition2"/>
+      <data top="4"  position="0" reward="10000_1011_700,30000_103002_3,30000_106001_20" getKey="@ABR_getKey2" gameType="@ABR_gameType4" positionShow="@ABR_positionShow"/>
+      <data top="4"  position="1" reward="10000_1011_700,30000_103002_3,30000_106001_20" getKey="@ABR_getKey2" gameType="@ABR_gameType4" positionShow="@GuildPosition1"/>
+      <data top="4"  position="2" reward="10000_1011_800,30000_103002_4,30000_106001_25" getKey="@ABR_getKey2" gameType="@ABR_gameType4" positionShow="@GuildPosition2"/>
+      <data top="5"  position="0" reward="10000_1011_500,30000_103002_2,30000_106001_15" getKey="@ABR_getKey2" gameType="@ABR_gameType5" positionShow="@ABR_positionShow"/>
+      <data top="5"  position="1" reward="10000_1011_500,30000_103002_2,30000_106001_15" getKey="@ABR_getKey2" gameType="@ABR_gameType5" positionShow="@GuildPosition1"/>
+      <data top="5"  position="2" reward="10000_1011_600,30000_103002_3,30000_106001_20" getKey="@ABR_getKey2" gameType="@ABR_gameType5" positionShow="@GuildPosition2"/>
+      <data top="6"  position="0" reward="10000_1011_400,30000_103002_1,30000_106001_10" getKey="@ABR_getKey2" gameType="@ABR_gameType6" positionShow="@ABR_positionShow"/>
+      <data top="6"  position="1" reward="10000_1011_440,30000_103002_1,30000_106001_10" getKey="@ABR_getKey2" gameType="@ABR_gameType6" positionShow="@GuildPosition1"/>
+      <data top="6"  position="2" reward="10000_1011_500,30000_103002_2,30000_106001_12" getKey="@ABR_getKey2" gameType="@ABR_gameType6" positionShow="@GuildPosition2"/>
+      <data top="7"  position="0" reward="10000_1011_100,30000_103002_1,30000_106001_5" getKey="@ABR_getKey2" gameType="@ABR_gameType7" positionShow="@ABR_positionShow"/>
+      <data top="7"  position="1" reward="10000_1011_100,30000_103002_1,30000_106001_5" getKey="@ABR_getKey2" gameType="@ABR_gameType7" positionShow="@GuildPosition1"/>
+      <data top="7"  position="2" reward="10000_1011_150,30000_103002_1,30000_106001_6" getKey="@ABR_getKey2" gameType="@ABR_gameType7" positionShow="@GuildPosition2"/>
+</root>

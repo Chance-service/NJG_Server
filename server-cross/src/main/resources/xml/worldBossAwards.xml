@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data awardsId="1"  minRank="0" maxRank="0" awards="10000_1011_3000,30000_106001_20"/>
+      <data awardsId="1"  minRank="0" maxRank="1" awards="10000_1011_3000,30000_101001_200,10000_1002_1000000"/>
+      <data awardsId="1"  minRank="2" maxRank="2" awards="10000_1011_2500,30000_101001_180,10000_1002_800000"/>
+      <data awardsId="1"  minRank="3" maxRank="3" awards="10000_1011_2000,30000_101001_150,10000_1002_700000"/>
+      <data awardsId="1"  minRank="4" maxRank="4" awards="10000_1011_1700,30000_101001_120,10000_1002_600000"/>
+      <data awardsId="1"  minRank="5" maxRank="5" awards="10000_1011_1500,30000_101001_100,10000_1002_500000"/>
+      <data awardsId="1"  minRank="6" maxRank="10" awards="10000_1011_1200,30000_101001_70,10000_1002_400000"/>
+      <data awardsId="1"  minRank="11" maxRank="20" awards="10000_1011_1000,30000_101001_50,10000_1002_300000"/>
+      <data awardsId="1"  minRank="21" maxRank="30" awards="10000_1011_800,30000_101001_40,10000_1002_200000"/>
+      <data awardsId="1"  minRank="31" maxRank="50" awards="10000_1011_500,30000_101001_30,10000_1002_150000"/>
+      <data awardsId="1"  minRank="51" maxRank="100" awards="10000_1011_300,30000_101001_20,10000_1002_100000"/>
+      <data awardsId="1"  minRank="101" maxRank="200" awards="10000_1011_200,30000_101001_15,10000_1002_80000"/>
+      <data awardsId="1"  minRank="201" maxRank="500" awards="10000_1011_100,30000_101001_12,10000_1002_60000"/>
+      <data awardsId="1"  minRank="501" maxRank="2000" awards="10000_1011_50,30000_101001_5,10000_1002_50000"/>
+      <data awardsId="1"  minRank="2001" maxRank="10000" awards="10000_1011_30,30000_101001_4,10000_1002_40000"/>
+      <data awardsId="2"  minRank="0" maxRank="0" awards="10000_1011_3000,30000_106001_20"/>
+      <data awardsId="2"  minRank="0" maxRank="1" awards="10000_1011_3000,30000_101001_200,10000_1002_1000000"/>
+      <data awardsId="2"  minRank="2" maxRank="2" awards="10000_1011_2500,30000_101001_180,10000_1002_800000"/>
+      <data awardsId="2"  minRank="3" maxRank="3" awards="10000_1011_2000,30000_101001_150,10000_1002_700000"/>
+      <data awardsId="2"  minRank="4" maxRank="4" awards="10000_1011_1700,30000_101001_120,10000_1002_600000"/>
+      <data awardsId="2"  minRank="5" maxRank="5" awards="10000_1011_1500,30000_101001_100,10000_1002_500000"/>
+      <data awardsId="2"  minRank="6" maxRank="10" awards="10000_1011_1200,30000_101001_70,10000_1002_400000"/>
+      <data awardsId="2"  minRank="11" maxRank="20" awards="10000_1011_1000,30000_101001_50,10000_1002_300000"/>
+      <data awardsId="2"  minRank="21" maxRank="30" awards="10000_1011_800,30000_101001_40,10000_1002_200000"/>
+      <data awardsId="2"  minRank="31" maxRank="50" awards="10000_1011_500,30000_101001_30,10000_1002_150000"/>
+      <data awardsId="2"  minRank="51" maxRank="100" awards="10000_1011_300,30000_101001_20,10000_1002_100000"/>
+      <data awardsId="2"  minRank="101" maxRank="200" awards="10000_1011_200,30000_101001_15,10000_1002_80000"/>
+      <data awardsId="2"  minRank="201" maxRank="500" awards="10000_1011_100,30000_101001_12,10000_1002_60000"/>
+      <data awardsId="2"  minRank="501" maxRank="2000" awards="10000_1011_50,30000_101001_5,10000_1002_50000"/>
+      <data awardsId="2"  minRank="2001" maxRank="10000" awards="10000_1011_30,30000_101001_4,10000_1002_40000"/>
+</root>

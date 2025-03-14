@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<data id="1" singleRecharge="60" 	awards="10000_1001_30,70000_103102_1" maxRechargeTimes="3"/>
+	<data id="2" singleRecharge="300" 	awards="10000_1001_150,30000_103102_1,70000_104212_20" maxRechargeTimes="3" />
+	<data id="3" singleRecharge="680" 	awards="10000_1001_340,30000_103102_3,70000_104002_10" maxRechargeTimes="3" />
+	<data id="4" singleRecharge="1280" 	awards="10000_1001_640,30000_103103_2,70000_106102_5" maxRechargeTimes="3" />
+	<data id="5" singleRecharge="3280" 	awards="10000_1001_1640,30000_103103_2,30000_201004_10,70000_101002_20" maxRechargeTimes="3" />
+	<data id="6" singleRecharge="6480" 	awards="10000_1001_3240,30000_103103_5,30000_104212_50,70000_104101_20" maxRechargeTimes="3" />
+</root>

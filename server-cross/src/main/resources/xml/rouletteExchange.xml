@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<data id="1" costCredits="5" exchangeItems="30000_90001_1"/>
+	<data id="2" costCredits="10" exchangeItems="30000_90006_1"/>
+	<data id="3" costCredits="5" exchangeItems="30000_90008_1"/>
+	<data id="4" costCredits="3" exchangeItems="30000_90005_1"/>
+	<data id="5" costCredits="4" exchangeItems="30000_10001_1"/>
+	<data id="6" costCredits="1" exchangeItems="30000_60001_10"/>
+	<data id="7" costCredits="1" exchangeItems="30000_20101_2"/>
+	<data id="8" costCredits="1" exchangeItems="30000_20201_2"/>
+	<data id="9" costCredits="1" exchangeItems="30000_20301_2"/>
+	<data id="10" costCredits="1" exchangeItems="30000_20401_2"/>
+</root>

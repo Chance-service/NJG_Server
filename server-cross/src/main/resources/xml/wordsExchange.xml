@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<data type="1" itemNeed="30000_10020_3,30000_10021_3,30000_10022_3,30000_10023_3,30000_10024_3" itemObtain="30000_10028_1" dailyLimit="-1"/>
+	<data type="2" itemNeed="30000_10023_1,30000_10024_1" itemObtain="30000_10027_1" dailyLimit="-1"/>
+	<data type="3" itemNeed="30000_10020_5,30000_10021_5,30000_10022_5" itemObtain="30000_10026_1" dailyLimit="-1"/>
+	<data type="4" itemNeed="30000_10020_1" itemObtain="30000_10025_1" dailyLimit="-1"/>
+	<data type="4" itemNeed="30000_10021_1" itemObtain="30000_10025_1" dailyLimit="-1"/>
+	<data type="4" itemNeed="30000_10022_1" itemObtain="30000_10025_1" dailyLimit="-1"/>
+	<data type="4" itemNeed="30000_10023_1" itemObtain="30000_10025_1" dailyLimit="-1"/>
+	<data type="4" itemNeed="30000_10024_1" itemObtain="30000_10025_1" dailyLimit="-1"/>
+</root>

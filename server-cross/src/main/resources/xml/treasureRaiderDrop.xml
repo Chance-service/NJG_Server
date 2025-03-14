@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" poolId="1" rewards="10000_1011_200" drawRate="20" limitTimes="0"/>
+      <data id="2" poolId="1" rewards="30000_104202_1" drawRate="15" limitTimes="0"/>
+      <data id="3" poolId="1" rewards="30000_106001_5" drawRate="12" limitTimes="0"/>
+      <data id="4" poolId="1" rewards="30000_106001_3" drawRate="10" limitTimes="0"/>
+      <data id="5" poolId="1" rewards="30000_203003_1" drawRate="8" limitTimes="0"/>
+      <data id="6" poolId="1" rewards="30000_203002_1" drawRate="25" limitTimes="0"/>
+      <data id="7" poolId="1" rewards="30000_103001_1" drawRate="5" limitTimes="0"/>
+      <data id="8" poolId="1" rewards="30000_103002_1" drawRate="5" limitTimes="0"/>
+      <data id="9" poolId="2" rewards="30000_299993_1,10000_1011_300" drawRate="15" limitTimes="1,5,9,14,18,22,24,29,32,35,42,53,68,72,85,96,104,118,125,134,144,152,164,178,182,196,205,208,214,226,234,245,252,263,277,285,296,300"/>
+      <data id="10" poolId="2" rewards="30000_299993_1,30000_103001_1" drawRate="15" limitTimes="4,8,11,15,21,26,34,40,47,58,73,79,88,92,102,112,128,139,146,158,167,173,185,192,207,219,228,237,249,258,267,273,289,294,303"/>
+      <data id="11" poolId="2" rewards="30000_299993_2,10000_1011_300" drawRate="27" limitTimes="3,13,19,23,28,33,43,48,55,63,71,78,82,108,123,147,165,184,206,224,247,268,283"/>
+      <data id="12" poolId="2" rewards="30000_299993_2,30000_103001_1" drawRate="27" limitTimes="7,12,17,25,31,45,56,66,74,77,95,115,133,157,175,195,218,233,257,272,293"/>
+      <data id="13" poolId="2" rewards="30000_299993_5,10000_1011_300" drawRate="3" limitTimes="6"/>
+      <data id="14" poolId="2" rewards="30000_299993_5,30000_103001_1" drawRate="3" limitTimes="0"/>
+</root>

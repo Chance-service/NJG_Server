@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <data id="1" listId="1" item="10000_1011_500" weight="2500" raward="" isReset="false"/>
+    <data id="2" listId="1" item="30000_104202_3" weight="1500" raward="" isReset="false"/>
+    <data id="3" listId="1" item="30000_201003_1" weight="1200" raward="" isReset="false"/>
+    <data id="4" listId="1" item="30000_203003_1" weight="1200" raward="" isReset="false"/>
+    <data id="5" listId="1" item="30000_104203_1" weight="1200" raward="" isReset="false"/>
+    <data id="6" listId="1" item="30000_103001_3" weight="400" raward="" isReset="false"/>
+    <data id="7" listId="1" item="30000_110805_1" weight="1200" raward="" isReset="false"/>
+    <data id="8" listId="1" item="30000_312070_10" weight="800" raward="" isReset="false"/>
+	<data id="9" listId="2" item="10000_1011_500" weight="2500" raward="" isReset="false"/>
+    <data id="10" listId="2" item="30000_104202_3" weight="1500" raward="" isReset="false"/>
+    <data id="11" listId="2" item="30000_201003_1" weight="1200" raward="" isReset="false"/>
+    <data id="12" listId="2" item="30000_203003_1" weight="1400" raward="" isReset="false"/>
+    <data id="13" listId="2" item="30000_104203_1" weight="1400" raward="" isReset="false"/>
+    <data id="14" listId="2" item="30000_103001_3" weight="400" raward="" isReset="false"/>
+    <data id="15" listId="2" item="30000_110805_1" weight="800" raward="" isReset="false"/>
+    <data id="16" listId="2" item="30000_312070_10" weight="790" raward="" isReset="false"/>
+    <data id="17" listId="2" item="40000_61320001_1" weight="10" raward="10000_1001_50" isReset="true"/>
+	<data id="18" listId="3" item="10000_1011_500" weight="2400" raward="" isReset="false"/>
+    <data id="19" listId="3" item="30000_104202_3" weight="1500" raward="" isReset="false"/>
+    <data id="20" listId="3" item="30000_201003_1" weight="1200" raward="" isReset="false"/>
+    <data id="21" listId="3" item="30000_203003_1" weight="1400" raward="" isReset="false"/>
+    <data id="22" listId="3" item="30000_104203_1" weight="1400" raward="" isReset="false"/>
+    <data id="23" listId="3" item="30000_103001_3" weight="400" raward="" isReset="false"/>
+    <data id="24" listId="3" item="30000_110805_1" weight="800" raward="" isReset="false"/>
+    <data id="25" listId="3" item="30000_312070_10" weight="800" raward="" isReset="false"/>
+    <data id="26" listId="3" item="40000_61320001_1" weight="100" raward="10000_1001_50" isReset="true"/>
+	<data id="27" listId="4" item="10000_1011_500" weight="2500" raward="" isReset="false"/>
+    <data id="28" listId="4" item="30000_104202_3" weight="1200" raward="" isReset="false"/>
+    <data id="29" listId="4" item="30000_201003_1" weight="1200" raward="" isReset="false"/>
+    <data id="30" listId="4" item="30000_203003_1" weight="1200" raward="" isReset="false"/>
+    <data id="31" listId="4" item="30000_104203_1" weight="1200" raward="" isReset="false"/>
+    <data id="32" listId="4" item="30000_103001_3" weight="400" raward="" isReset="false"/>
+    <data id="33" listId="4" item="30000_110805_1" weight="800" raward="" isReset="false"/>
+    <data id="34" listId="4" item="30000_312070_10" weight="800" raward="" isReset="false"/>
+    <data id="35" listId="4" item="40000_61320001_1" weight="150" raward="10000_1001_50" isReset="true"/>
+    <data id="36" listId="5" item="40000_61320001_1" weight="10000" raward="10000_1001_50" isReset="true"/>
+    <data id="37" listId="6" isDonate="true" item="30000_299993_1,10000_1011_500" weight="50" raward="" isReset="false"/>
+    <data id="38" listId="6" isDonate="true" item="30000_299993_2,10000_1011_500" weight="35" raward="" isReset="false"/>
+    <data id="39" listId="6" isDonate="true" item="30000_299993_3,10000_1011_500" weight="15" raward="" isReset="false"/>
+
+</root>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data minRank="1"  upSection="0" downSection="3" randomUp="0" randomDown ="3"/>
+      <data minRank="2"  upSection="1" downSection="2" randomUp="1" randomDown ="2"/>
+      <data minRank="3"  upSection="2" downSection="2" randomUp="2" randomDown ="1"/>
+      <data minRank="4"  upSection="3" downSection="2" randomUp="2" randomDown ="2"/>
+      <data minRank="5"  upSection="3" downSection="3" randomUp="2" randomDown ="2"/>
+      <data minRank="6"  upSection="3" downSection="3" randomUp="2" randomDown ="2"/>
+      <data minRank="7"  upSection="3" downSection="3" randomUp="2" randomDown ="2"/>
+      <data minRank="8"  upSection="3" downSection="3" randomUp="2" randomDown ="2"/>
+      <data minRank="9"  upSection="3" downSection="3" randomUp="2" randomDown ="2"/>
+      <data minRank="10"  upSection="4" downSection="4" randomUp="2" randomDown ="2"/>
+      <data minRank="11"  upSection="4" downSection="4" randomUp="3" randomDown ="2"/>
+      <data minRank="12"  upSection="4" downSection="4" randomUp="3" randomDown ="2"/>
+      <data minRank="13"  upSection="4" downSection="4" randomUp="3" randomDown ="2"/>
+      <data minRank="14"  upSection="4" downSection="4" randomUp="3" randomDown ="2"/>
+      <data minRank="15"  upSection="4" downSection="4" randomUp="3" randomDown ="2"/>
+      <data minRank="16"  upSection="4" downSection="4" randomUp="3" randomDown ="2"/>
+      <data minRank="17"  upSection="4" downSection="4" randomUp="3" randomDown ="2"/>
+      <data minRank="18"  upSection="4" downSection="4" randomUp="3" randomDown ="2"/>
+      <data minRank="19"  upSection="4" downSection="4" randomUp="3" randomDown ="2"/>
+      <data minRank="20"  upSection="4" downSection="4" randomUp="3" randomDown ="2"/>
+      <data minRank="25"  upSection="5" downSection="5" randomUp="3" randomDown ="2"/>
+      <data minRank="30"  upSection="5" downSection="5" randomUp="3" randomDown ="2"/>
+      <data minRank="40"  upSection="5" downSection="5" randomUp="3" randomDown ="2"/>
+      <data minRank="50"  upSection="6" downSection="6" randomUp="3" randomDown ="2"/>
+      <data minRank="70"  upSection="6" downSection="6" randomUp="3" randomDown ="2"/>
+      <data minRank="100"  upSection="7" downSection="7" randomUp="3" randomDown ="2"/>
+      <data minRank="130"  upSection="7" downSection="7" randomUp="3" randomDown ="2"/>
+      <data minRank="160"  upSection="7" downSection="7" randomUp="3" randomDown ="2"/>
+      <data minRank="200"  upSection="7" downSection="7" randomUp="3" randomDown ="2"/>
+      <data minRank="250"  upSection="7" downSection="7" randomUp="3" randomDown ="2"/>
+      <data minRank="300"  upSection="7" downSection="7" randomUp="3" randomDown ="2"/>
+      <data minRank="400"  upSection="7" downSection="7" randomUp="3" randomDown ="2"/>
+      <data minRank="500"  upSection="7" downSection="7" randomUp="3" randomDown ="2"/>
+      <data minRank="9999"  upSection="7" downSection="7" randomUp="3" randomDown ="2"/>
+</root>

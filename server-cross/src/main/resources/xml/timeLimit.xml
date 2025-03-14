@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" price="100" serverLimit="5000" serverLimitType="1" personalLimit="5000" personalLimitType="3" vipLimit="0" levelLimit="20" items="30000_202101_1"/>
+      <data id="2" price="2980" serverLimit="100" serverLimitType="3" personalLimit="1" personalLimitType="1" vipLimit="0" levelLimit="20" items="30000_211129_1"/>
+      <data id="3" price="10999" serverLimit="30000" serverLimitType="3" personalLimit="1" personalLimitType="1" vipLimit="0" levelLimit="20" items="30000_211134_1"/>
+      <data id="4" price="4500" serverLimit="5000" serverLimitType="3" personalLimit="1" personalLimitType="2" vipLimit="0" levelLimit="20" items="30000_104213_100"/>
+      <data id="5" price="1799" serverLimit="100" serverLimitType="3" personalLimit="1" personalLimitType="2" vipLimit="0" levelLimit="20" items="30000_211130_1"/>
+      <data id="6" price="10999" serverLimit="30000" serverLimitType="3" personalLimit="1" personalLimitType="1" vipLimit="0" levelLimit="20" items="30000_211135_1"/>
+      <data id="7" price="10999" serverLimit="30000" serverLimitType="3" personalLimit="1" personalLimitType="1" vipLimit="0" levelLimit="20" items="30000_211136_1"/>
+      <data id="8" price="6599" serverLimit="5000" serverLimitType="3" personalLimit="1" personalLimitType="1" vipLimit="0" levelLimit="20" items="30000_211133_1"/>
+      <data id="9" price="399" serverLimit="10" serverLimitType="3" personalLimit="3" personalLimitType="2" vipLimit="0" levelLimit="20" items="30000_211118_1"/>
+      <data id="10" price="1500" serverLimit="10" serverLimitType="3" personalLimit="1" personalLimitType="2" vipLimit="0" levelLimit="20" items="30000_211125_1"/>
+      <data id="11" price="79" serverLimit="10" serverLimitType="3" personalLimit="3" personalLimitType="2" vipLimit="0" levelLimit="20" items="30000_103102_1"/>
+</root>

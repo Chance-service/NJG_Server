@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="84"  salegift="10000_1001_600,30000_104101_30,30000_104004_20,30000_103102_2" LimitType="2" LimitNum="1" MinLevel="1" MaxLevel="200" endTime="2047-07-10_10:00:00"/>
+      <data id="81"  salegift="10000_1001_30,30000_104212_10,30000_104002_5" LimitType="1" LimitNum="1" MinLevel="1" MaxLevel="200" endTime="2047-11-19_23:59:59"/>
+      <data id="85"  salegift="10000_1001_1500,30000_104004_50,30000_106102_3,30000_104213_100" LimitType="2" LimitNum="1" MinLevel="1" MaxLevel="200" endTime="2047-07-10_10:00:00"/>
+      <data id="82"  salegift="10000_1001_100,30000_104002_10,30000_104213_3" LimitType="1" LimitNum="1" MinLevel="1" MaxLevel="200" endTime="2047-07-14_23:59:59"/>
+      <data id="83"  salegift="10000_1001_350,30000_103102_2,30000_104101_10,30000_106102_2" LimitType="1" LimitNum="1" MinLevel="1" MaxLevel="200" endTime="2047-07-14_23:59:59"/>
+</root>  

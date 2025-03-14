@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<data cityId="1" name="江夏" level="0" monsterIds="" chainIds="" unlock="" boxLevel="0" reward="" seasonAward=""/>
+	<data cityId="2" name="云南" level="0" monsterIds="" chainIds="" unlock="" boxLevel="0" reward="" seasonAward=""/>
+	<data cityId="3" name="汉中" level="0" monsterIds="" chainIds="" unlock="" boxLevel="0" reward="" seasonAward=""/>
+	<data cityId="4" name="襄平" level="0" monsterIds="" chainIds="" unlock="" boxLevel="0" reward="" seasonAward=""/>
+	<data cityId="5" name="下邳" level="0" monsterIds="" chainIds="" unlock="" boxLevel="0" reward="" seasonAward=""/>
+	<data cityId="6" name="天水" level="1" monsterIds="9211,9212,9213,9214,9215,9216" chainIds="22,3,7,8" unlock="" boxLevel="1" reward="10000_1002_300000" seasonAward="10000_1002_300000"/>
+	<data cityId="7" name="武威" level="1" monsterIds="9201,9202,9203,9204,9205,9206" chainIds="22,3,6,8" unlock="" boxLevel="1" reward="10000_1002_300000" seasonAward="10000_1002_300000"/>
+	<data cityId="8" name="安定" level="1" monsterIds="9191,9192,9193,9194,9195,9196" chainIds="22,3,7,6" unlock="" boxLevel="1" reward="10000_1002_300000" seasonAward="10000_1002_400000"/>
+	<data cityId="9" name="晋阳" level="1" monsterIds="9181,9182,9183,9184,9185,9186" chainIds="23,4,10,11" unlock="" boxLevel="1" reward="10000_1002_300000" seasonAward="10000_1002_300000"/>
+	<data cityId="10" name="北平" level="1" monsterIds="9171,9172,9173,9174,9175,9176" chainIds="23,4,9,11" unlock="" boxLevel="1" reward="10000_1002_300000" seasonAward="10000_1002_300000"/>
+	<data cityId="11" name="邺城" level="1" monsterIds="9161,9162,9163,9164,9165,9166" chainIds="23,4,9,10" unlock="" boxLevel="1" reward="10000_1002_300000" seasonAward="10000_1002_300000"/>
+	<data cityId="12" name="吴" level="1" monsterIds="9151,9152,9153,9154,9155,9156" chainIds="24,5,13,14" unlock="" boxLevel="1" reward="10000_1002_300000" seasonAward="10000_1002_300000"/>
+	<data cityId="13" name="庐江" level="1" monsterIds="9141,9142,9143,9144,9145,9146" chainIds="24,5,12,14" unlock="" boxLevel="1" reward="10000_1002_300000" seasonAward="10000_1002_300000"/>
+	<data cityId="14" name="会稽" level="1" monsterIds="9131,9132,9133,9134,9135,9136" chainIds="24,5,13,13" unlock="" boxLevel="1" reward="10000_1002_300000" seasonAward="10000_1002_300000"/>
+	<data cityId="15" name="江陵" level="1" monsterIds="9121,9122,9123,9124,9125,9126" chainIds="25,1,16,17" unlock="" boxLevel="1" reward="10000_1002_300000" seasonAward="10000_1002_300000"/>
+	<data cityId="16" name="柴桑" level="1" monsterIds="9111,9112,9113,9114,9115,9116" chainIds="25,1,15,17" unlock="" boxLevel="1" reward="10000_1002_300000" seasonAward="10000_1002_300000"/>
+	<data cityId="17" name="武陵" level="1" monsterIds="9101,9102,9103,9104,9105,9106" chainIds="25,1,16,15" unlock="" boxLevel="1" reward="10000_1002_300000" seasonAward="10000_1002_300000"/>
+	<data cityId="18" name="江州" level="1" monsterIds="9091,9092,9093,9094,9095,9096" chainIds="26,2,19,21" unlock="" boxLevel="1" reward="10000_1002_300000" seasonAward="10000_1002_300000"/>
+	<data cityId="19" name="永安" level="1" monsterIds="9081,9082,9083,9084,9085,9086" chainIds="26,2,18,21" unlock="" boxLevel="1" reward="10000_1002_300000" seasonAward="10000_1002_300000"/>
+	<data cityId="20" name="梓潼" level="1" monsterIds="9071,9072,9073,9074,9075,9076" chainIds="26,2,19,21" unlock="" boxLevel="1" reward="10000_1002_300000" seasonAward="10000_1002_300000"/>
+	<data cityId="21" name="长安" level="2" monsterIds="9051,9052,9053,9054,9055,9056" chainIds="6,7,8,22,25,26" unlock="1_2" boxLevel="2" reward="10000_1002_1000000" seasonAward="10000_1002_300000"/>
+	<data cityId="22" name="洛阳" level="2" monsterIds="9041,9042,9043,9044,9045,9046" chainIds="9,10,11,21,23,26" unlock="1_2" boxLevel="2" reward="10000_1002_1000000" seasonAward="10000_1002_300000"/>
+	<data cityId="23" name="建业" level="2" monsterIds="9031,9032,9033,9034,9035,9036" chainIds="12,13,14,22,24,26" unlock="1_2" boxLevel="2" reward="10000_1002_1000000" seasonAward="10000_1002_300000"/>
+	<data cityId="24" name="襄阳" level="2" monsterIds="9021,9022,9023,9024,9025,9026" chainIds="15,16,17,23,25,26" unlock="1_2" boxLevel="2" reward="10000_1002_1000000" seasonAward="10000_1002_300000"/>
+	<data cityId="25" name="成都" level="2" monsterIds="9021,9022,9023,9024,9025,9026" chainIds="18,19,20,21,24,26" unlock="1_2" boxLevel="2" reward="10000_1002_1000000" seasonAward="10000_1002_300000"/>
+	<data cityId="26" name="许昌" level="3" monsterIds="9011,9012,9013,9014,9015,9016" chainIds="21,22,23,24,25" unlock="2_1" boxLevel="3" reward="10000_1002_2000000" seasonAward="10000_1002_300000"/>
+</root>

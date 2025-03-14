@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data winTimes="100"  score="7"/>
+      <data winTimes="80"  score="6"/>
+      <data winTimes="70"  score="6"/>
+      <data winTimes="50"  score="6"/>
+      <data winTimes="40"  score="5"/>
+      <data winTimes="30"  score="5"/>
+      <data winTimes="20"  score="4"/>
+      <data winTimes="10"  score="3"/>
+      <data winTimes="5"  score="2"/>
+      <data winTimes="3"  score="1"/>
+</root>

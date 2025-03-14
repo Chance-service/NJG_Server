@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1"  multiple="1" rate="60"/>
+      <data id="2"  multiple="2" rate="30"/>
+      <data id="3"  multiple="5" rate="10"/>
+</root>

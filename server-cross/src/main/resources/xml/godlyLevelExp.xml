@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data level="1"  exp="1" exp2="1"/>
+      <data level="2"  exp="2" exp2="3"/>
+      <data level="3"  exp="3" exp2="6"/>
+      <data level="4"  exp="4" exp2="10"/>
+      <data level="5"  exp="5" exp2="15"/>
+      <data level="6"  exp="6" exp2="21"/>
+      <data level="7"  exp="7" exp2="28"/>
+      <data level="8"  exp="36" exp2="36"/>
+      <data level="9"  exp="45" exp2="45"/>
+      <data level="10"  exp="55" exp2="55"/>
+      <data level="11"  exp="65" exp2="65"/>
+      <data level="12"  exp="75" exp2="75"/>
+      <data level="13"  exp="86" exp2="86"/>
+      <data level="14"  exp="98" exp2="98"/>
+      <data level="15"  exp="111" exp2="111"/>
+      <data level="16"  exp="125" exp2="125"/>
+      <data level="17"  exp="140" exp2="140"/>
+      <data level="18"  exp="156" exp2="156"/>
+      <data level="19"  exp="173" exp2="173"/>
+      <data level="20"  exp="191" exp2="191"/>
+      <data level="21"  exp="210" exp2="210"/>
+      <data level="22"  exp="230" exp2="230"/>
+      <data level="23"  exp="251" exp2="251"/>
+      <data level="24"  exp="273" exp2="273"/>
+      <data level="25"  exp="296" exp2="296"/>
+      <data level="26"  exp="320" exp2="320"/>
+      <data level="27"  exp="345" exp2="345"/>
+      <data level="28"  exp="371" exp2="371"/>
+      <data level="29"  exp="398" exp2="398"/>
+      <data level="30"  exp="426" exp2="426"/>
+      <data level="31"  exp="455" exp2="455"/>
+      <data level="32"  exp="485" exp2="485"/>
+      <data level="33"  exp="516" exp2="516"/>
+      <data level="34"  exp="548" exp2="548"/>
+      <data level="35"  exp="581" exp2="581"/>
+      <data level="36"  exp="615" exp2="615"/>
+      <data level="37"  exp="650" exp2="650"/>
+      <data level="38"  exp="686" exp2="686"/>
+      <data level="39"  exp="723" exp2="723"/>
+      <data level="40"  exp="761" exp2="761"/>
+</root>

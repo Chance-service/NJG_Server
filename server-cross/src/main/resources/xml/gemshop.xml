@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data shopId="1"  gemId="501001" goldPrice="40" gemVolumePrice="30000_106001_2" VIPVisible="0" gemVolumeBuy="2"/>
+      <data shopId="2"  gemId="502001" goldPrice="40" gemVolumePrice="30000_106001_2" VIPVisible="0" gemVolumeBuy="2"/>
+      <data shopId="3"  gemId="503001" goldPrice="40" gemVolumePrice="30000_106001_2" VIPVisible="0" gemVolumeBuy="2"/>
+      <data shopId="4"  gemId="504001" goldPrice="40" gemVolumePrice="30000_106001_2" VIPVisible="0" gemVolumeBuy="2"/>
+      <data shopId="5"  gemId="505001" goldPrice="40" gemVolumePrice="30000_106001_2" VIPVisible="0" gemVolumeBuy="2"/>
+      <data shopId="6"  gemId="506001" goldPrice="40" gemVolumePrice="30000_106001_2" VIPVisible="0" gemVolumeBuy="2"/>
+      <data shopId="7"  gemId="507001" goldPrice="40" gemVolumePrice="30000_106001_2" VIPVisible="0" gemVolumeBuy="2"/>
+      <data shopId="8"  gemId="508001" goldPrice="40" gemVolumePrice="30000_106001_2" VIPVisible="0" gemVolumeBuy="2"/>
+      <data shopId="9"  gemId="509001" goldPrice="40" gemVolumePrice="30000_106001_2" VIPVisible="0" gemVolumeBuy="2"/>
+      <data shopId="10"  gemId="510001" goldPrice="40" gemVolumePrice="30000_106001_2" VIPVisible="0" gemVolumeBuy="2"/>
+      <data shopId="11"  gemId="511001" goldPrice="40" gemVolumePrice="30000_106001_2" VIPVisible="0" gemVolumeBuy="2"/>
+      <data shopId="12"  gemId="512001" goldPrice="40" gemVolumePrice="30000_106001_2" VIPVisible="0" gemVolumeBuy="2"/>
+      <data shopId="13"  gemId="513001" goldPrice="40" gemVolumePrice="30000_106001_2" VIPVisible="0" gemVolumeBuy="2"/>
+      <data shopId="14"  gemId="514001" goldPrice="40" gemVolumePrice="30000_106001_2" VIPVisible="0" gemVolumeBuy="2"/>
+      <data shopId="15"  gemId="515001" goldPrice="40" gemVolumePrice="30000_106001_2" VIPVisible="0" gemVolumeBuy="2"/>
+</root>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<data id="3001" basicArg1="8" growArg1="2" basicArg2="240" growArg2="60"/>
+	<data id="3002" basicArg1="116" growArg1="4" basicArg2="500" growArg2="125"/>
+	<data id="3003" basicArg1="2000" growArg1="100" basicArg2="0" growArg2="0"/>
+</root>

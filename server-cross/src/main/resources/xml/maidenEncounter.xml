@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1"  type="1" interactCostItems="30000_299986_1" interactCostGold="300" refreshGold="30" autoLeaveTime="-1" exclusiveReward="30000_299981_1" exclusiveRate="1_15,2_30,3_100" maidenRate="20" cheat="0"/>
+      <data id="2"  type="1" interactCostItems="30000_299986_1" interactCostGold="300" refreshGold="30" autoLeaveTime="-1" exclusiveReward="30000_299982_1" exclusiveRate="1_20,2_35,3_100" maidenRate="30" cheat="0"/>
+      <data id="3"  type="1" interactCostItems="30000_299986_1" interactCostGold="300" refreshGold="30" autoLeaveTime="-1" exclusiveReward="30000_299983_1" exclusiveRate="1_15,2_30,3_100" maidenRate="20" cheat="0"/>
+      <data id="4"  type="1" interactCostItems="30000_299986_1" interactCostGold="300" refreshGold="30" autoLeaveTime="-1" exclusiveReward="30000_299984_1" exclusiveRate="1_20,2_35,3_100" maidenRate="30" cheat="0"/>
+      <data id="5"  type="2" interactCostItems="30000_299985_1" interactCostGold="20" refreshGold="30" autoLeaveTime="14400" exclusiveReward="" exclusiveRate="" maidenRate="0" cheat="0"/>
+</root>

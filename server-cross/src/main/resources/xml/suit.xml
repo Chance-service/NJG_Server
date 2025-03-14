@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1"  suitId="1" count="4" attr="2009_400" skillLevel="0" levelAttribute="0"/>
+      <data id="2"  suitId="2" count="2" attr="102_1800" skillLevel="0" levelAttribute="0"/>
+      <data id="3"  suitId="2" count="4" attr="102_1800,2009_700" skillLevel="0" levelAttribute="0"/>
+      <data id="4"  suitId="2" count="6" attr="102_1800,2009_700,1007_100" skillLevel="0" levelAttribute="0"/>
+      <data id="5"  suitId="3" count="2" attr="2009_600" skillLevel="0" levelAttribute="0"/>
+      <data id="6"  suitId="3" count="4" attr="2009_600,1004_1500" skillLevel="0" levelAttribute="0"/>
+      <data id="7"  suitId="3" count="6" attr="2009_600,1004_1500,2009_1000" skillLevel="0" levelAttribute="0"/>
+      <data id="8"  suitId="3" count="8" attr="2009_600,1004_1500,2009_1000,1007_150" skillLevel="0" levelAttribute="0"/>
+      <data id="9"  suitId="4" count="4" attr="1010_2000,3003_2000" skillLevel="0" levelAttribute="0"/>
+      <data id="10"  suitId="5" count="2" attr="1007_200" skillLevel="0" levelAttribute="0"/>
+      <data id="11"  suitId="5" count="4" attr="1007_200,1004_1500" skillLevel="0" levelAttribute="0"/>
+      <data id="12"  suitId="5" count="6" attr="1007_200,1004_1500,2009_1000" skillLevel="0" levelAttribute="0"/>
+      <data id="13"  suitId="6" count="2" attr="1007_300" skillLevel="0" levelAttribute="0"/>
+      <data id="14"  suitId="6" count="4" attr="1007_300,2009_1200" skillLevel="0" levelAttribute="0"/>
+      <data id="15"  suitId="6" count="6" attr="1007_300,2009_1200,1004_2000" skillLevel="0" levelAttribute="0"/>
+      <data id="16"  suitId="6" count="8" attr="1007_300,2009_1200,1004_2000,2009_1300" skillLevel="0" levelAttribute="0"/>
+      <data id="19"  suitId="7" count="4" attr="1004_700" skillLevel="0" levelAttribute="0"/>
+      <data id="20"  suitId="8" count="2" attr="1004_1500" skillLevel="0" levelAttribute="0"/>
+      <data id="21"  suitId="8" count="4" attr="1004_1500,1007_200" skillLevel="0" levelAttribute="0"/>
+      <data id="22"  suitId="8" count="6" attr="1004_1500,1007_200,2009_1000" skillLevel="0" levelAttribute="0"/>
+      <data id="23"  suitId="9" count="2" attr="2009_1200" skillLevel="0" levelAttribute="0"/>
+      <data id="24"  suitId="9" count="4" attr="2009_1200,1004_2000" skillLevel="0" levelAttribute="0"/>
+      <data id="25"  suitId="9" count="6" attr="2009_1200,1004_2000,1007_300" skillLevel="0" levelAttribute="0"/>
+      <data id="26"  suitId="9" count="8" attr="2009_1200,1004_2000,1007_300,2009_1300,1004_1300" skillLevel="0" levelAttribute="0"/>
+      <data id="28"  suitId="10" count="2" attr="1004_1000" skillLevel="" levelAttribute="0"/>
+      <data id="29"  suitId="10" count="4" attr="1004_1000,2009_1000" skillLevel="" levelAttribute="0"/>
+      <data id="30"  suitId="11" count="2" attr="1004_1600" skillLevel="" levelAttribute="0"/>
+      <data id="31"  suitId="11" count="4" attr="1004_1600,2009_1200" skillLevel="" levelAttribute="0"/>
+      <data id="32"  suitId="11" count="6" attr="1004_1600,2009_1200,2008_3000" skillLevel="" levelAttribute="0"/>
+      <data id="33"  suitId="12" count="2" attr="1004_2200" skillLevel="" levelAttribute="0"/>
+      <data id="34"  suitId="12" count="4" attr="1004_2200,2009_1400" skillLevel="" levelAttribute="0"/>
+      <data id="35"  suitId="12" count="6" attr="1004_2200,2009_1400,1007_300" skillLevel="" levelAttribute="0"/>
+      <data id="36"  suitId="12" count="8" attr="1004_2200,2009_1400,1007_300" skillLevel="" levelAttribute="4_80"/>
+      <data id="37"  suitId="12" count="10" attr="1004_2200,2009_1400,1007_300,2009_1400" skillLevel="" levelAttribute="4_80"/>
+      <data id="38"  suitId="13" count="2" attr="2009_1600" skillLevel="" levelAttribute="0"/>
+      <data id="39"  suitId="13" count="4" attr="2009_1600" skillLevel="" levelAttribute="4_130"/>
+      <data id="40"  suitId="13" count="6" attr="2009_1600,1007_500" skillLevel="" levelAttribute="4_130"/>
+      <data id="41"  suitId="13" count="8" attr="2009_1600,1007_500,2009_1800" skillLevel="" levelAttribute="4_130"/>
+      <data id="42"  suitId="13" count="10" attr="2009_1600,1007_500,2009_1800,1004_3000" skillLevel="" levelAttribute="4_130"/>
+</root>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" items="30000_90004_1" needScore="200" needHistoryScore="0"/>
+      <data id="2" items="30000_90008_1" needScore="1500" needHistoryScore="0"/>
+      <data id="3" items="10000_1006_1000" needScore="300" needHistoryScore="0"/>
+      <data id="4" items="30000_200001_1" needScore="500" needHistoryScore="0"/>
+      <data id="5" items="30000_300001_1" needScore="500" needHistoryScore="0"/>
+      <data id="6" items="30000_100001_1" needScore="750" needHistoryScore="0"/>
+      <data id="7" items="30000_100002_1" needScore="750" needHistoryScore="0"/>
+      <data id="8" items="30000_100003_1" needScore="750" needHistoryScore="0"/>
+      <data id="9" items="30000_500004_1" needScore="1200" needHistoryScore="0"/>
+      <data id="10" items="30000_600004_1" needScore="1200" needHistoryScore="0"/>
+      <data id="11" items="30000_700003_1" needScore="1200" needHistoryScore="0"/>
+      <data id="12" items="30000_900002_1" needScore="2500" needHistoryScore="0"/>
+      <data id="13" items="30000_1000005_1" needScore="2500" needHistoryScore="0"/>
+      <data id="14" items="30000_1000006_1" needScore="2500" needHistoryScore="0"/>
+      <data id="15" items="30000_1100005_1" needScore="2500" needHistoryScore="0"/>
+      <data id="16" items="30000_1100006_1" needScore="2500" needHistoryScore="0"/>
+      <data id="17" items="30000_1200005_1" needScore="2500" needHistoryScore="0"/>
+      <data id="18" items="30000_1200006_1" needScore="2500" needHistoryScore="0"/>
+</root>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+财富聚乐部功能配置
+	settleTime:  结算时间
+	formula:     返利比公式 %s:充值人数
+	belowNumber: 充值人数小于设定初始数值
+	autoAdd:     每小时自动添加充值人数
+	amountLimit: 返利金额上限
+	reward:      邮件奖励
+-->
+<root>
+	<data settleTime="23:55" formula="Math.min(80+5*(%s/30),120)" belowNumber="135" autoAdd="15" amountLimit="20000" reward="10000_1001_%s"/>
+</root>

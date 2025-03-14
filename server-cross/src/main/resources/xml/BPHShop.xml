@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<!--
+	item:物品信息
+	count:可购买次数
+	price:没开启折扣活动的价格
+	activityPrice:开启折扣活动后的价格
+	-->
+    
+	<data id="1" item="30000_81040_1" count="5" price="150" activityPrice="75"/>
+	<data id="2" item="30000_82040_1" count="5" price="500" activityPrice="250"/>
+</root>
